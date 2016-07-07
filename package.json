@@ -1,0 +1,52 @@
+{
+  "name": "mimizuku",
+  "author": "inc2734",
+  "license": "GPL-2.0+",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inc2734/mimizuku"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "underscore": "global:_",
+    "backbone": "global:Backbone"
+  },
+  "dependencies": {
+    "sass-basis": "^5.1.0",
+    "sass-basis-drawer": "^2.0.0",
+    "sass-basis-hamburger-btn": "^0.1.2",
+    "sass-basis-layout": "^1.0.0",
+    "sass-basis-menu": "^0.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "cssnano": "^3.7.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "test": "composer test"
+  }
+}

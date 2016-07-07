@@ -1,0 +1,20 @@
+{
+  "name": "inc2734/mimizuku",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "2.*",
+    "wp-coding-standards/wpcs": "2014-12-11",
+    "phpmd/phpmd": "2.*"
+  },
+  "scripts" :{
+    "post-install-cmd": [
+      "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
+    ],
+    "post-update-cmd": [
+      "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
+    ],
+    "test": [
+      "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
+      "phpmd footer.php,functions.php,header.php,index.php,sidebar.php,single.php,template-parts,classes text phpmd.ruleset.xml --suffixes php"
+    ]
+  }
+}
