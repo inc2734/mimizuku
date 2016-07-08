@@ -8,12 +8,12 @@
 
 <div class="_c-container" role="document">
 	<div class="_c-row">
-		<div class="_c-row__col _c-row__col--md-2-3">
+		<div class="_c-row__col _c-row__col--md-3-4">
 			<main role="main">
 				<?php Mimizuku\Controller::load_view(); ?>
 			</main>
 		</div>
-		<div class="_c-row__col _c-row__col--md-1-3">
+		<div class="_c-row__col _c-row__col--md-1-4">
 			<?php get_sidebar(); ?>
 		</div>
 	</div>
