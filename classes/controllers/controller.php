@@ -48,7 +48,7 @@ class Controller {
 	protected static function _render_loop() {
 		while ( have_posts() ) {
 			the_post();
-			get_template_part( static::$layout );
+			static::_load_layout();
 		}
 	}
 
@@ -58,7 +58,7 @@ class Controller {
 	 * @return void
 	 */
 	protected static function _render_direct() {
-		get_template_part( static::$layout );
+		static::_load_layout();
 	}
 
 	/**
@@ -81,6 +81,16 @@ class Controller {
 	public static function set_view( $view, $view_suffix = '' ) {
 		static::$view = $view;
 		static::$view_suffix = $view_suffix;
+	}
+
+	/**
+	 * Loading the layout template
+	 *
+	 * @return void
+	 */
+	protected static function _load_layout() {
+		$layout = apply_filters( 'mimizuku_layout', static::$layout );
+		get_template_part( $layout );
 	}
 
 	/**
