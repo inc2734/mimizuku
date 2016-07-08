@@ -14,6 +14,11 @@ if ( ! isset( $content_width ) ) {
 get_template_part( 'functions/setup' );
 
 /**
+ * Sets up widget areas
+ */
+get_template_part( 'functions/widgets-init' );
+
+/**
  * Enqueues scripts and styles.
  */
 get_template_part( 'functions/enqueue-scripts' );
