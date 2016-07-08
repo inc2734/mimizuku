@@ -10,12 +10,7 @@
 	<div class="_c-row">
 		<div class="_c-row__col _c-row__col--md-2-3">
 			<main role="main">
-				<?php
-				get_template_part(
-					apply_filters( 'mimizuku_view', '' ),
-					apply_filters( 'mimizuku_view_suffix', '' )
-				);
-				?>
+				<?php Mimizuku\Controller::load_view(); ?>
 			</main>
 		</div>
 		<div class="_c-row__col _c-row__col--md-1-3">
