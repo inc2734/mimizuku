@@ -23,3 +23,8 @@ get_template_part( 'functions/widgets-init' );
  * Enqueues scripts and styles.
  */
 get_template_part( 'functions/enqueue-scripts' );
+
+/**
+ * Setup head content
+ */
+get_template_part( 'functions/setup-head' );
