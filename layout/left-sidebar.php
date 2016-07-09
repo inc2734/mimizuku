@@ -13,9 +13,12 @@
 				<?php Mimizuku\Controller::load_view(); ?>
 			</main>
 		</div>
+
+		<?php if ( Mimizuku\Tags\has_sidebar() ) : ?>
 		<div class="_c-row__col _c-row__col--md-1-4">
 			<?php get_sidebar(); ?>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>
 

@@ -1,5 +1,6 @@
 <?php
 include_once( get_template_directory() . '/classes/controllers/controller.php' );
+include_once( get_template_directory() . '/template-tags/loader.php' );
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
