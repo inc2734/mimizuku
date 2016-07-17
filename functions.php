@@ -20,6 +20,16 @@ get_template_part( 'functions/setup' );
 get_template_part( 'functions/widgets-init' );
 
 /**
+ * Sets up post class
+ */
+get_template_part( 'functions/setup-post-class' );
+
+/**
+ * Sets up TinyMCE
+ */
+get_template_part( 'functions/setup-tinymce' );
+
+/**
  * Sets up comment form
  */
 get_template_part( 'functions/setup-comment-form' );

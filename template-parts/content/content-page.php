@@ -1,8 +1,9 @@
 <article <?php post_class(); ?>>
-	<header>
-		<h1><?php the_title(); ?></h1>
+	<header class="p-entry__header">
+		<h1 class="p-entry__title"><?php the_title(); ?></h1>
 	</header>
-	<div>
+
+	<div class="p-entry__content">
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>
