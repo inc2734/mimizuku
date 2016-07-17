@@ -12,3 +12,11 @@ License URI: license.txt
 */
 
 @import '../../node_modules/sass-basis/src/scss/basis';
+
+body {
+	word-wrap: break-word;
+}
+
+._l-container {
+	overflow: hidden;
+}

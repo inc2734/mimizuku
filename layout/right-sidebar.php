@@ -3,25 +3,30 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
+<div class="_l-container">
+	<?php get_header(); ?>
 
-<?php get_header(); ?>
+	<div class="_l-contents" role="document">
+		<div class="_c-container">
+			<div class="_c-row _c-row--margin">
+				<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-3-4">
+					<main role="main">
+						<?php Mimizuku\Controller::load_view(); ?>
+					</main>
+				</div>
 
-<div class="_c-container" role="document">
-	<div class="_c-row">
-		<div class="_c-row__col _c-row__col--md-3-4">
-			<main role="main">
-				<?php Mimizuku\Controller::load_view(); ?>
-			</main>
+				<?php if ( Mimizuku\Tags\has_sidebar() ) : ?>
+				<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-1-4">
+					<?php get_sidebar(); ?>
+				</div>
+				<?php endif; ?>
+			</div>
 		</div>
-
-		<?php if ( Mimizuku\Tags\has_sidebar() ) : ?>
-		<div class="_c-row__col _c-row__col--md-1-4">
-			<?php get_sidebar(); ?>
-		</div>
-		<?php endif; ?>
 	</div>
+
+	<?php get_footer(); ?>
 </div>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>
