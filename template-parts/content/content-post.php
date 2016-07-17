@@ -4,6 +4,7 @@
 	</header>
 	<div>
 		<?php the_content(); ?>
+		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>
 
 	<?php
