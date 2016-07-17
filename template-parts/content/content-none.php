@@ -1,3 +1,3 @@
 <div class="_c-container">
-	<?php _e( 'No posts.', 'mimizuku' ); ?>
+	<?php esc_html_e( 'No posts.', 'mimizuku' ); ?>
 </div>

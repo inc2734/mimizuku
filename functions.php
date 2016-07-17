@@ -20,6 +20,11 @@ get_template_part( 'functions/setup' );
 get_template_part( 'functions/widgets-init' );
 
 /**
+ * Sets up comment form
+ */
+get_template_part( 'functions/setup-comment-form' );
+
+/**
  * Enqueues scripts and styles.
  */
 get_template_part( 'functions/enqueue-scripts' );
