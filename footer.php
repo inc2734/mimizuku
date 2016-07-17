@@ -1,4 +1,4 @@
-<footer class="content-info">
+<footer role="content-info">
 	<div class="_c-container">
 		<?php bloginfo( 'name' ); ?>
 	</div>
