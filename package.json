@@ -12,10 +12,10 @@
     "backbone": "global:Backbone"
   },
   "dependencies": {
-    "sass-basis": "^5.1.0",
+    "sass-basis": "^5.2.0",
     "sass-basis-drawer": "^2.0.0",
     "sass-basis-hamburger-btn": "^0.1.2",
-    "sass-basis-layout": "^1.0.0",
+    "sass-basis-layout": "^1.1.1",
     "sass-basis-menu": "^0.2.2"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "browser-sync": "^2.13.0",
     "browserify": "^13.0.1",
     "browserify-shim": "^3.8.12",
-    "cssnano": "^3.7.1",
+    "cssnano": "^3.7.3",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
