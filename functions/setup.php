@@ -35,17 +35,6 @@ function setup() {
 	 * Use main stylesheet for visual editor
 	 */
 	add_editor_style();
-
-	/**
-	 * Register wp_nav_menu() menus
-	 *
-	 * http://codex.wordpress.org/Function_Reference/register_nav_menus
-	 */
-	register_nav_menus( [
-		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
-		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
-		'footer-nav' => esc_html__( 'Footer Navigation', 'mimizuku' ),
-	] );
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );

@@ -15,6 +15,11 @@ if ( ! isset( $content_width ) ) {
 get_template_part( 'functions/setup' );
 
 /**
+ * Sets up nav menus
+ */
+get_template_part( 'functions/setup-nav-menus' );
+
+/**
  * Sets up widget areas
  */
 get_template_part( 'functions/widgets-init' );
