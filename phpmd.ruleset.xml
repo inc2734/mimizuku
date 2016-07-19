@@ -9,9 +9,13 @@
   <description>A custom set of PHPMD rules to check for WordPress themes.</description>
 
   <!-- Import the entire unused code rule set -->
-  <rule ref="rulesets/cleancode.xml" />
+  <rule ref="rulesets/cleancode.xml">
+    <exclude name="ElseExpression" />
+  </rule>
   <rule ref="rulesets/codesize.xml" />
   <rule ref="rulesets/design.xml" />
   <rule ref="rulesets/naming.xml" />
-  <rule ref="rulesets/unusedcode.xml" />
+  <rule ref="rulesets/unusedcode.xml">
+    <exclude name="UnusedFormalParameter" />
+  </rule>
 </ruleset>
