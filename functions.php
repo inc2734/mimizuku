@@ -22,7 +22,12 @@ get_template_part( 'functions/nav-menus' );
 /**
  * Sets up widget areas
  */
-get_template_part( 'functions/widgets-init' );
+get_template_part( 'functions/widgets' );
+
+/**
+ * Sets up body class
+ */
+get_template_part( 'functions/body-class' );
 
 /**
  * Sets up post class

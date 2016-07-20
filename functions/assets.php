@@ -40,6 +40,13 @@ function enqueue_styles() {
 		$version
 	);
 
+	wp_enqueue_style(
+		'font-awesome',
+		$url . '/assets/css/font-awesome/css/font-awesome.min.css',
+		[get_template()],
+		$version
+	);
+
 	if ( is_child_theme() ) {
 		wp_enqueue_style(
 			get_stylesheet(),

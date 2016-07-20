@@ -12,6 +12,7 @@
     "backbone": "global:Backbone"
   },
   "dependencies": {
+    "font-awesome": "^4.6.3",
     "sass-basis": "^5.2.0",
     "sass-basis-drawer": "^2.0.0",
     "sass-basis-hamburger-btn": "^0.1.2",

@@ -12,17 +12,29 @@ var autoprefixer = require( 'autoprefixer' );
 
 var dir = {
 	src: {
-		css: './src/scss/**/*.scss',
-		js : './src/js/app.js'
+		css   : ['./src/scss/**/*.scss', '!./src/scss/style.scss', '!./src/scss/editor-style.scss'],
+		wpcss : ['./src/scss/style.scss', './src/scss/editor-style.scss'],
+		js    : './src/js/app.js'
 	},
 	dist: {
-		css: './',
-		js : './assets/js'
+		css   : './assets/css',
+		wpcss : './',
+		js    : './assets/js'
 	}
 }
 
-gulp.task( 'sass', function() {
-	return gulp.src( dir.src.css )
+gulp.task( 'css', function() {
+	return sass_compile( dir.src.css, dir.dist.css );
+} );
+
+gulp.task( 'wpcss', function() {
+	return sass_compile( dir.src.wpcss, dir.dist.wpcss );
+} );
+
+gulp.task( 'sass', ['css', 'wpcss'] );
+
+function sass_compile( src, dist ) {
+	return gulp.src( src )
 		.pipe( sass() )
 		.pipe( postcss( [
 			autoprefixer( {
@@ -30,10 +42,15 @@ gulp.task( 'sass', function() {
 				cascade: false
 			})
 		] ) )
-		.pipe( gulp.dest( dir.dist.css ) )
+		.pipe( gulp.dest( dist ) )
 		.pipe( postcss( [cssnano()] ) )
 		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( gulp.dest( dir.dist.css ) );
+		.pipe( gulp.dest( dist ) );
+}
+
+gulp.task( 'font-awesome', function() {
+	return gulp.src( './node_modules/font-awesome/**/*' )
+		.pipe( gulp.dest( './assets/css/font-awesome/' ) );
 } );
 
 gulp.task( 'browserify', function() {
@@ -51,7 +68,7 @@ gulp.task( 'browserify', function() {
 		} );
 } );
 
-gulp.task( 'build', ['sass', 'browserify'] );
+gulp.task( 'build', ['css', 'wpcss', 'font-awesome', 'browserify'] );
 
 gulp.task( 'browsersync', function() {
 	browser_sync.init( {
@@ -60,9 +77,18 @@ gulp.task( 'browsersync', function() {
 } );
 
 gulp.task( 'default', ['build', 'browsersync'], function() {
-	gulp.watch( [ dir.src.css ], ['sass'] );
+	gulp.watch( [ dir.src.css ], ['css'] );
+	gulp.watch( [ dir.src.wpcss ], ['wpcss'] );
 	gulp.watch( [ dir.src.js ], ['browserify'] );
-	gulp.watch( ['**/*.php', dir.src.js + '/*', 'style.min.css'], function() {
-		browser_sync.reload();
-	} );
+	gulp.watch(
+		[
+			'**/*.php',
+			dir.dist.js + '/**.*',
+			dir.dist.css + '/**.*',
+			'style.min.css'
+		],
+		function() {
+			browser_sync.reload();
+		}
+	);
 } );

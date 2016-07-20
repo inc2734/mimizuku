@@ -40,7 +40,7 @@ function setup_wp_nav_menu( $nav_menu, $args ) {
 	if ( 'drawer-nav' === $args->theme_location ) {
 		$nav_menu = preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<div class="c-drawer__toggle"><i class="fa fa-angle-right"></i></div><ul class="c-drawer__submenu">',
+			'<div class="_c-drawer__toggle"><i class="fa fa-angle-right"></i></div><ul class="_c-drawer__submenu">',
 			$nav_menu
 		);
 		return $nav_menu;
