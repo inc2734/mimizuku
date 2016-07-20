@@ -1,0 +1,15 @@
+.#{$bs-prefix}c-global-nav {
+	.#{$bs-prefix}c-menu__submenu {
+		background-color: rgba($bs-color-black, .8);
+	}
+
+	.#{$bs-prefix}c-menu__subitem {
+		@include bs-hover() {
+			background-color: rgba(#fff, .05);
+		}
+
+		> a {
+			color: #fff;
+		}
+	}
+}
