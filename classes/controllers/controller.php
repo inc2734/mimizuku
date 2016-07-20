@@ -99,9 +99,11 @@ class Controller {
 	 * @return void
 	 */
 	public static function load_view() {
-		get_template_part(
-			static::$view,
-			static::$view_suffix
-		);
+		$view_args = [
+			'slug' => static::$view,
+			'name' => static::$view_suffix,
+		];
+		$view = apply_filters( 'mimizuku_view', $view_args );
+		get_template_part( $view['slug'], $view['name'] );
 	}
 }
