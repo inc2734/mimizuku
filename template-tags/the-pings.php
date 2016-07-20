@@ -1,6 +1,11 @@
 <?php
 namespace Mimizuku\Tags;
 
+/**
+ * Callback function of the each pings
+ *
+ * @return void
+ */
 function the_pings() {
 	?>
 	<li <?php comment_class( array( 'p-trackbacks__item' ) ); ?> id="li-comment-<?php comment_ID() ?>">

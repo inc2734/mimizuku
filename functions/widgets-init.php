@@ -1,8 +1,13 @@
 <?php
-namespace Mimizuku\Functions;
+namespace Mimizuku\Functions\Widgets;
 
-function widgets_init() {
-	register_sidebar( array(
+/**
+ * Register sidebar
+ *
+ * @return void
+ */
+function register_sidebars() {
+	register_sidebar( [
 		'name'          => __( 'Sidebar', 'mimizuku' ),
 		'id'            => 'sidebar',
 		'description'   => __( 'Sidebar', 'mimizuku' ),
@@ -10,7 +15,6 @@ function widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h1 class="c-widget__title">',
 		'after_title'   => '</h1>',
-	) );
+	] );
 }
-
-add_action( 'widgets_init', __NAMESPACE__ . '\\widgets_init' );
+add_action( 'widgets_init', __NAMESPACE__ . '\\register_sidebars' );

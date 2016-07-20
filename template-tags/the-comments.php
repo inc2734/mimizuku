@@ -1,6 +1,14 @@
 <?php
 namespace Mimizuku\Tags;
 
+/**
+ * Callback function of the each comments
+ *
+ * @param WP_Comment $comment Comment to display
+ * @param array $args An array of arguments
+ * @param int $depth Depth of the current comment
+ * @return void
+ */
 function the_comments( $comment, $args, $depth ) {
 	?>
 	<li <?php comment_class( ['p-comments__item'] ); ?> id="li-comment-<?php comment_ID() ?>">

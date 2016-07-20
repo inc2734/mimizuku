@@ -1,25 +1,25 @@
 <?php
-namespace Mimizuku\Functions;
+namespace Mimizuku\Functions\NavMenus;
 
 /**
  * Register wp_nav_menu() menus
  *
- * http://codex.wordpress.org/Function_Reference/register_nav_menus
+ * @return void
+ * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
  */
-function setup_nav_menus() {
+function register() {
 	register_nav_menus( [
 		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
 		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
 	] );
 }
-
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_nav_menus' );
-
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\register' );
 
 /**
  * Sets up nav menu attributs
  *
- * https://developer.wordpress.org/reference/functions/wp_nav_menu/
+ * @return void
+ * @see https://developer.wordpress.org/reference/functions/wp_nav_menu/
  */
 function setup_wp_nav_menu( $nav_menu, $args ) {
 	$nav_menu = preg_replace(
@@ -48,13 +48,13 @@ function setup_wp_nav_menu( $nav_menu, $args ) {
 
 	return $nav_menu;
 }
-
 add_filter( 'wp_nav_menu', __NAMESPACE__ . '\\setup_wp_nav_menu', 10, 2 );
 
 /**
  * Sets up menu classes
  *
- * https://developer.wordpress.org/reference/classes/walker_nav_menu/
+ * @return void
+ * @see https://developer.wordpress.org/reference/classes/walker_nav_menu/
  */
 function nav_menu_css_class( $classes, $item, $args, $depth ) {
 	if ( 'global-nav' === $args->theme_location ) {
@@ -77,5 +77,4 @@ function nav_menu_css_class( $classes, $item, $args, $depth ) {
 
 	return $classes;
 }
-
 add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\nav_menu_css_class', 10, 4 );

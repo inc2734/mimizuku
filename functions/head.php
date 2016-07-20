@@ -1,7 +1,12 @@
 <?php
-namespace Mimizuku\Functions;
+namespace Mimizuku\Functions\Head;
 
-function setup_head() {
+/**
+ * Sets up content of the head element
+ *
+ * @return void
+ */
+function setup() {
 	?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -11,5 +16,4 @@ function setup_head() {
 	<?php endif; ?>
 	<?php
 }
-
-add_action( 'wp_head', __NAMESPACE__ . '\\setup_head', 1 );
+add_action( 'wp_head', __NAMESPACE__ . '\\setup', 1 );

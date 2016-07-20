@@ -17,7 +17,7 @@ get_template_part( 'functions/setup' );
 /**
  * Sets up nav menus
  */
-get_template_part( 'functions/setup-nav-menus' );
+get_template_part( 'functions/nav-menus' );
 
 /**
  * Sets up widget areas
@@ -27,24 +27,24 @@ get_template_part( 'functions/widgets-init' );
 /**
  * Sets up post class
  */
-get_template_part( 'functions/setup-post-class' );
+get_template_part( 'functions/post-class' );
 
 /**
  * Sets up TinyMCE
  */
-get_template_part( 'functions/setup-tinymce' );
+get_template_part( 'functions/tinymce' );
 
 /**
  * Sets up comment form
  */
-get_template_part( 'functions/setup-comment-form' );
+get_template_part( 'functions/comment-form' );
 
 /**
  * Enqueues scripts and styles.
  */
-get_template_part( 'functions/enqueue-scripts' );
+get_template_part( 'functions/assets' );
 
 /**
  * Setup head content
  */
-get_template_part( 'functions/setup-head' );
+get_template_part( 'functions/head' );
