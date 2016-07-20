@@ -12,7 +12,7 @@ function setup( $classes ) {
 		unset( $classes['hentry'] );
 	}
 
-	$classes['p-entry'] = 'p-entry';
+	$classes['_c-entry'] = '_c-entry';
 	return $classes;
 }
 add_action( 'post_class', __NAMESPACE__ . '\\setup' );

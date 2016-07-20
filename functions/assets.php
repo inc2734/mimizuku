@@ -17,7 +17,7 @@ function enqueue_scripts() {
 	wp_enqueue_script(
 		get_template(),
 		$url . '/assets/js/app.min.js',
-		array( 'jquery' ),
+		['jquery'],
 		$version,
 		true
 	);
@@ -36,7 +36,7 @@ function enqueue_styles() {
 	wp_enqueue_style(
 		get_template(),
 		$url . '/style.min.css',
-		array(),
+		[],
 		$version
 	);
 
@@ -51,7 +51,7 @@ function enqueue_styles() {
 		wp_enqueue_style(
 			get_stylesheet(),
 			get_stylesheet_uri(),
-			array( get_template() ),
+			[get_template()],
 			$version
 		);
 	}
