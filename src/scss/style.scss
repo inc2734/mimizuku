@@ -12,20 +12,8 @@ License URI: license.txt
 */
 
 @import '../../node_modules/sass-basis/src/scss/basis';
-@import '../../node_modules/sass-basis-menu/src/scss/object/component/menu';
-@import '../../node_modules/sass-basis-drawer/src/scss/object/component/drawer';
-@import '../../node_modules/sass-basis-hamburger-btn/src/scss/object/component/hamburger-btn';
+@import 'wordpress';
 
+@import 'foundation/foundation';
+@import 'layout/layout';
 @import 'object/object';
-
-#wpadminbar {
-	z-index: 1;
-}
-
-body {
-	word-wrap: break-word;
-}
-
-._l-container {
-	overflow: hidden;
-}

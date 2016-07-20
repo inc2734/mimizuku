@@ -3,7 +3,7 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
-<div class="_l-container _c-drawer-nav _c-drawer">
+<div class="_l-container _c-drawer">
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<?php get_header(); ?>
 

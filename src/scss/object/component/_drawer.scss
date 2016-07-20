@@ -1,4 +1,4 @@
-.#{$bs-prefix}c-drawer-nav {
+.#{$bs-prefix}c-drawer {
 	&__body {
 		z-index: 10000;
 	}
@@ -39,7 +39,7 @@
 		padding: ($bs-base-line-height / 2) 0 0;
 	}
 
-	.#{$bs-prefix}c-drawer__toggle {
+	&__toggle {
 		position: absolute;
 		top: ($bs-base-line-height / 2);
 		right: 5px;
