@@ -9,6 +9,7 @@
 				<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
 			</div>
 			<?php endif; ?>
+		</div>
 	</div>
 
 	<div class="_u-hidden-sm _u-hidden-md">
