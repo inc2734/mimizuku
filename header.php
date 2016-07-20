@@ -1,16 +1,3 @@
-<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
-<nav class="_c-drawer__body _c-drawer__body--fixed" role="navigation" aria-expanded="false">
-	<?php
-	wp_nav_menu( [
-		'theme_location' => 'drawer-nav',
-		'container'      => false,
-		'menu_class'     => '_c-drawer__menu',
-		'depth'          => 0,
-	] );
-	?>
-</nav>
-<?php endif; ?>
-
 <header role="banner">
 	<div class="_c-container">
 		<h1><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ) ?></a></h1>
