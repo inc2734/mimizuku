@@ -33,9 +33,17 @@ function enqueue_styles() {
 	$url     = get_template_directory_uri();
 	$version = _get_theme_version();
 
+	if ( ! is_child_theme() ) {
+		$handle = get_template();
+		$src    = $url . '/style.min.css';
+	} else {
+		$handle = get_stylesheet();
+		$src    = get_stylesheet_uri();
+	}
+
 	wp_enqueue_style(
-		get_template(),
-		$url . '/style.min.css',
+		$handle,
+		$src,
 		[],
 		$version
 	);
@@ -43,18 +51,9 @@ function enqueue_styles() {
 	wp_enqueue_style(
 		'font-awesome',
 		$url . '/assets/css/font-awesome/css/font-awesome.min.css',
-		[get_template()],
+		[],
 		$version
 	);
-
-	if ( is_child_theme() ) {
-		wp_enqueue_style(
-			get_stylesheet(),
-			get_stylesheet_uri(),
-			[get_template()],
-			$version
-		);
-	}
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles' );
 
