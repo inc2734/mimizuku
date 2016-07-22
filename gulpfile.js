@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp         = require( 'gulp' );
 var sass         = require( 'gulp-sass' );
 var postcss      = require( 'gulp-postcss' );
@@ -9,32 +11,58 @@ var babelify     = require( 'babelify' );
 var source       = require( 'vinyl-source-stream' );
 var browser_sync = require( 'browser-sync' );
 var autoprefixer = require( 'autoprefixer' );
+var rimraf       = require( 'rimraf' );
+var runSequence  = require( 'run-sequence' );
 
 var dir = {
 	src: {
-		css   : ['./src/scss/**/*.scss', '!./src/scss/style.scss', '!./src/scss/editor-style.scss'],
-		wpcss : ['./src/scss/style.scss', './src/scss/editor-style.scss'],
-		js    : './src/js/app.js'
+		css     : './src/scss',
+		js      : './src/js',
+		packages: './node_modules'
 	},
 	dist: {
-		css   : './assets/css',
-		wpcss : './',
-		js    : './assets/js'
+		css     : './',
+		js      : './assets/js',
+		packages: './src/packages',
+		vendor  : './assets/vendor'
 	}
 }
 
-gulp.task( 'css', function() {
-	return sass_compile( dir.src.css, dir.dist.css );
+/**
+ * The font-awesome moved to assets directory
+ */
+gulp.task( 'font-awesome', function() {
+	return gulp.src( dir.src.packages + '/font-awesome/**', { base: 'node_modules' } )
+		.pipe( gulp.dest( dir.dist.vendor ) );
 } );
 
-gulp.task( 'wpcss', function() {
-	return sass_compile( dir.src.wpcss, dir.dist.wpcss );
+/**
+ * Remove directory for copied node modules
+ */
+gulp.task( 'remove-packages-dir', function( cb ) {
+	rimraf( dir.dist.packages, cb );
 } );
 
-gulp.task( 'sass', ['css', 'wpcss'] );
+/**
+ * Copy dependencies node modules to src directory
+ */
+gulp.task( 'copy-packages', ['remove-packages-dir'], function( cb ) {
+	var packages = [
+		dir.src.packages + '/sass-basis/**',
+		dir.src.packages + '/sass-basis-drawer/**',
+		dir.src.packages + '/sass-basis-hamburger-btn/**',
+		dir.src.packages + '/sass-basis-layout/**',
+		dir.src.packages + '/sass-basis-menu/**'
+	];
+	return gulp.src( packages, { base: 'node_modules' } )
+		.pipe( gulp.dest( dir.dist.packages ) );
+} );
 
-function sass_compile( src, dist ) {
-	return gulp.src( src )
+/**
+ * Build sass
+ */
+gulp.task( 'sass', function() {
+	return gulp.src( dir.src.css + '/*.scss' )
 		.pipe( sass() )
 		.pipe( postcss( [
 			autoprefixer( {
@@ -42,19 +70,17 @@ function sass_compile( src, dist ) {
 				cascade: false
 			})
 		] ) )
-		.pipe( gulp.dest( dist ) )
+		.pipe( gulp.dest( dir.dist.css ) )
 		.pipe( postcss( [cssnano()] ) )
 		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( gulp.dest( dist ) );
-}
-
-gulp.task( 'font-awesome', function() {
-	return gulp.src( './node_modules/font-awesome/**/*' )
-		.pipe( gulp.dest( './assets/css/font-awesome/' ) );
+		.pipe( gulp.dest( dir.dist.css ) );
 } );
 
+/**
+ * Build javascript
+ */
 gulp.task( 'browserify', function() {
-	return browserify( dir.src.js )
+	return browserify( dir.src.js + '/app.js' )
 		.transform( 'babelify', { presets: ['es2015'] } )
 		.transform( 'browserify-shim' )
 		.bundle()
@@ -68,23 +94,33 @@ gulp.task( 'browserify', function() {
 		} );
 } );
 
-gulp.task( 'build', ['css', 'wpcss', 'font-awesome', 'browserify'] );
+/**
+ * Build Mimizuku
+ */
+gulp.task( 'build', ['copy-packages'], function() {
+	return runSequence( 'sass', 'font-awesome', 'browserify' );
+} );
 
+/**
+ * browsersync
+ */
 gulp.task( 'browsersync', function() {
 	browser_sync.init( {
 		proxy: '127.0.0.1:8080'
 	} );
 } );
 
+/**
+ * Auto build and browsersync
+ */
 gulp.task( 'default', ['build', 'browsersync'], function() {
-	gulp.watch( [ dir.src.css ], ['css'] );
-	gulp.watch( [ dir.src.wpcss ], ['wpcss'] );
-	gulp.watch( [ dir.src.js ], ['browserify'] );
+	gulp.watch( [dir.src.css + '/*.scss'], ['sass'] );
+	gulp.watch( [dir.src.js + '/app.js'] , ['browserify'] );
 	gulp.watch(
 		[
 			'**/*.php',
-			dir.dist.js + '/**.*',
-			dir.dist.css + '/**.*',
+			dir.dist.js + '/**/*',
+			dir.dist.css + '/**/*',
 			'style.min.css'
 		],
 		function() {

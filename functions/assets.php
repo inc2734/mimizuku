@@ -50,7 +50,7 @@ function enqueue_styles() {
 
 	wp_enqueue_style(
 		'font-awesome',
-		$url . '/assets/css/font-awesome/css/font-awesome.min.css',
+		$url . '/assets/vendor/font-awesome/css/font-awesome.min.css',
 		[],
 		$version
 	);

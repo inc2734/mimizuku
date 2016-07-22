@@ -8,4 +8,5 @@ style.min.css
 editor-style.css
 editor-style.min.css
 vendor/
+packages/
 composer.lock
