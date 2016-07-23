@@ -1,0 +1,27 @@
+<header <?php Mimizuku\Tags\header_class( ['_l-header--center'] ); ?> role="banner">
+	<div class="_c-container">
+		<div class="_c-row">
+			<div class="_c-row__col _c-row__col--auto _c-row__col--lg-1-1">
+				<?php get_template_part( 'template-parts/site-branding' ); ?>
+			</div>
+
+			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
+			<div class="_c-row__col _c-row__col--auto _u-hidden-lg _c-row _c-row--right _c-row--middle">
+				<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
+			</div>
+			<?php endif; ?>
+		</div>
+	</div>
+
+	<div class="_u-hidden-sm _u-hidden-md">
+		<?php
+		add_filter( 'wp_nav_menu_args', function( $args ) {
+			if ( 'global-nav' === $args['theme_location'] ) {
+				$args['menu_class'] = '_c-menu';
+			}
+			return $args;
+		} );
+		get_template_part( 'template-parts/global-nav' );
+		?>
+	</div>
+</header>

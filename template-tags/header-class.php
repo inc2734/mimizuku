@@ -4,9 +4,10 @@ namespace Mimizuku\Tags;
 /**
  * Display the header class attribute
  *
+ * @param array $add_classes Array of classes you want to add
  * @return void
  */
-function header_class() {
+function header_class( $add_classes = [] ) {
 	$classes[] = '_l-header';
 
 	$is_overlay_header = apply_filters( 'mimizuku_is_overlay_header', false );
@@ -18,6 +19,8 @@ function header_class() {
 	if ( $is_overlay_header && $is_sticky_header ) {
 		$classes[] = '_l-header--sticky';
 	}
+
+	$classes = array_merge( $classes, $add_classes );
 
 	printf(
 		'class="%s"',

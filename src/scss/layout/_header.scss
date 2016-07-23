@@ -1,3 +1,7 @@
 .#{$bs-prefix}l-header {
 	background-color: #fff;
+
+	&--center {
+		text-align: center;
+	}
 }
