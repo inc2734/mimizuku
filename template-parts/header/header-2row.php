@@ -1,4 +1,4 @@
-<header class="_l-header" role="banner">
+<header <?php Mimizuku\Tags\header_class(); ?> role="banner">
 	<div class="_c-container">
 		<div class="_c-row">
 			<div class="_c-row__col _c-row__col--auto _c-row__col--lg-1-1">
