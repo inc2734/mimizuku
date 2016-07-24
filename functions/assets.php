@@ -1,5 +1,6 @@
 <?php
 namespace Mimizuku\Functions\Assets;
+use Mimizuku\Tags as Tags;
 
 /**
  * Enqueues scripts
@@ -21,6 +22,18 @@ function enqueue_scripts() {
 		$version,
 		true
 	);
+
+	if ( Tags\is_supported_ie9() ) {
+		wp_enqueue_script(
+			'html5shiv',
+			$url . '/assets/vendor/html5.js'
+		);
+		wp_script_add_data(
+			'html5shiv',
+			'conditional',
+			'lt IE 9'
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_scripts' );
 
@@ -54,6 +67,19 @@ function enqueue_styles() {
 		[],
 		$version
 	);
+
+	if ( Tags\is_supported_ie9() ) {
+		wp_enqueue_style(
+			'basis-ie9',
+			$url . '/assets/vendor/basis-ie9/basis-ie9.min.css',
+			[$handle],
+			$version
+		);
+		wp_style_add_data(
+			'basis-ie9',
+			'conditional', 'lt IE 10'
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles' );
 
