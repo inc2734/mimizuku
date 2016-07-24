@@ -1,0 +1,7 @@
+.#{$bs-prefix}c-entry {
+	&__title {
+		@include bs-margin-bottom(1);
+		@include bs-font-size-line-height($bs-base-font-size * 2.5);
+		font-weight: bold;
+	}
+}

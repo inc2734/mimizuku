@@ -11,6 +11,13 @@ License: GPLv2 or later
 License URI: license.txt
 */
 
+$bs-h1-font-size-scale: 1;
+$bs-h2-font-size-scale: 2;
+$bs-h3-font-size-scale: 1.5;
+$bs-h4-font-size-scale: 1.25;
+$bs-h5-font-size-scale: 1;
+$bs-h6-font-size-scale: 1;
+
 @import '../packages/sass-basis/src/scss/basis';
 @import 'wordpress';
 
