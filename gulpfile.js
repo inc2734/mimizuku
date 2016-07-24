@@ -118,9 +118,8 @@ gulp.task( 'default', ['build', 'browsersync'], function() {
 	gulp.watch( [dir.src.js + '/app.js'] , ['browserify'] );
 	gulp.watch(
 		[
-			'**/*.php',
-			dir.dist.js + '/**/*',
-			dir.dist.css + '/**/*',
+			'./**/*.php',
+			dir.dist.js + '/app.min.js',
 			'style.min.css'
 		],
 		function() {
