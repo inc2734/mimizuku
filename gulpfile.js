@@ -16,15 +16,16 @@ var runSequence  = require( 'run-sequence' );
 
 var dir = {
 	src: {
-		css     : './src/scss',
-		js      : './src/js',
-		packages: './node_modules'
+		css     : 'src/scss',
+		js      : 'src/js',
+		packages: 'node_modules',
+		vendor  : 'src/vendor'
 	},
 	dist: {
 		css     : './',
-		js      : './assets/js',
-		packages: './src/packages',
-		vendor  : './assets/vendor'
+		js      : 'assets/js',
+		packages: 'src/packages',
+		vendor  : 'assets/vendor'
 	}
 }
 
@@ -55,14 +56,28 @@ gulp.task( 'copy-packages', ['remove-packages-dir'], function( cb ) {
 		dir.src.packages + '/sass-basis-menu/**'
 	];
 	return gulp.src( packages, { base: 'node_modules' } )
-		.pipe( gulp.dest( dir.dist.packages ) );
+		.pipe( gulp.dest( dir.dist.packages ) )
+		.on( 'end', function() {
+			var files = [
+				dir.src.packages + '/sass-basis/vendor/html5.js'
+			];
+			return gulp.src( files )
+				.pipe( gulp.dest( dir.dist.vendor ) );
+		} );
 } );
 
 /**
  * Build sass
  */
 gulp.task( 'sass', function() {
-	return gulp.src( dir.src.css + '/*.scss' )
+	return sassCompile( dir.src.css + '/*.scss', dir.dist.css )
+		.on( 'end', function() {
+			return sassCompile( dir.src.vendor + '/**/*.scss', dir.dist.vendor );
+		} );
+} );
+
+function sassCompile( src, dest ) {
+	return gulp.src( src )
 		.pipe( sass() )
 		.pipe( postcss( [
 			autoprefixer( {
@@ -70,11 +85,11 @@ gulp.task( 'sass', function() {
 				cascade: false
 			})
 		] ) )
-		.pipe( gulp.dest( dir.dist.css ) )
+		.pipe( gulp.dest( dest ) )
 		.pipe( postcss( [cssnano()] ) )
 		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( gulp.dest( dir.dist.css ) );
-} );
+		.pipe( gulp.dest( dest ) )
+}
 
 /**
  * Build javascript

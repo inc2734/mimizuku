@@ -7,7 +7,7 @@ style.css
 style.min.css
 editor-style.css
 editor-style.min.css
-vendor/
+/vendor/
 packages/
 composer.lock
 *.sql
