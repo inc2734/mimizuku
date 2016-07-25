@@ -1,0 +1,9 @@
+.#{$bs-prefix}c-sidebar-widgets {
+	> .#{$bs-prefix}c-widget {
+		@include bs-margin-bottom(1);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
