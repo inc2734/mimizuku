@@ -1,4 +1,11 @@
 <?php
+add_filter( 'wp_link_pages_link', function( $link ) {
+	$link = preg_replace( '/^(\d+)$/', '<span class="page-numbers current">$1</span>', $link );
+	$link = preg_replace( '/^<a([^>]+)>(\d+?)<\/a>$/', '<a class="page-numbers" $1>$2</a>', $link );
+	$link .= "\n";
+	return $link;
+} );
+
 wp_link_pages( [
 	'before'           => '<div class="_c-pagination"><h2 class="screen-reader-text">' . esc_html__( 'Posts navigation', 'mimizuku' ) . '</h2><div class="nav-links">',
 	'after'            => '</div></div>',
@@ -7,5 +14,5 @@ wp_link_pages( [
 	'separator'        => '',
 	'nextpagelink'     => '&gt;',
 	'previouspagelink' => '%lt;',
-	'pagelink'         => '<span>%</span>',
+	'pagelink'         => '%',
 ] );
