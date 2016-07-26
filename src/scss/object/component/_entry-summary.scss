@@ -18,8 +18,16 @@
 		}
 	}
 
+	&__title {
+		@include bs-font-size-line-height($bs-base-font-size * 1.5);
+	}
+
 	&__content {
 		display: none;
+
+		> p {
+			margin: 0;
+		}
 
 		@include bs-bp-md-min() {
 			display: block;
