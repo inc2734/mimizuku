@@ -8,6 +8,6 @@
 	&__item {
 		margin: 0;
 		display: inline;
-		@include bs-padding(0, .5, 0, 0);
+		padding-right: .75em;
 	}
 }

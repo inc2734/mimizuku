@@ -1,0 +1,38 @@
+.#{$bs-prefix}c-entry-summary {
+	&__figure {
+		background-color: bs-lighter($bs-color-gray);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		align-self: flex-start;
+		flex-basis: 33%;
+
+		@include bs-bp-md-min() {
+			flex-basis: 25%;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 75%;
+		}
+	}
+
+	&__content {
+		display: none;
+
+		@include bs-bp-md-min() {
+			display: block;
+		}
+	}
+
+	@include bs-bp-sm-only() {
+		.#{$bs-prefix}c-entry-meta {
+			&__item {
+				&--author, &--tags {
+					display: none;
+				}
+			}
+		}
+	}
+}
