@@ -48,15 +48,49 @@
 		table {
 			width: 100%;
 
-			thead {
-				th {
-					text-align: center;
+			caption {
+				@include bs-font-size-line-height(14px);
+				font-weight: bold;
+				@include bs-padding(0, 0, .5);
+				letter-spacing: .2em;
+			}
+
+			th, td {
+				@include bs-font-size-line-height(12px);
+				@include bs-padding(.25, .5);
+			}
+
+			thead th, tbody td {
+				text-align: center;
+
+				> a {
+					display: inline-block;
+					background-color: bs-lighter($bs-color-gray);
+					border-radius: 2px;
+					color: $bs-color-text;
+					width: 24px;
+					margin: -2px -5px;
+					padding: 2px 0;
+					text-decoration: none;
+					@include bs-transition-all();
+
+					@include bs-hover() {
+						opacity: .8;
+					}
 				}
 			}
 
-			tbody {
-				td {
+			tfoot {
+				#prev {
+					text-align: left;
+				}
+
+				#next {
 					text-align: right;
+				}
+
+				a {
+					color: $bs-color-text;
 				}
 			}
 		}
