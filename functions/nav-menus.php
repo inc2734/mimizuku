@@ -31,7 +31,7 @@ function setup_wp_nav_menu( $nav_menu, $args ) {
 	if ( 'global-nav' === $args->theme_location ) {
 		$nav_menu = preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<ul class="_c-menu__submenu">',
+			'<ul class="_p-menu__submenu _c-menu__submenu">',
 			$nav_menu
 		);
 		return $nav_menu;
@@ -40,7 +40,7 @@ function setup_wp_nav_menu( $nav_menu, $args ) {
 	if ( 'drawer-nav' === $args->theme_location ) {
 		$nav_menu = preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<div class="_c-drawer__toggle"><i class="fa fa-angle-right"></i></div><ul class="_c-drawer__submenu">',
+			'<div class="_p-drawer__toggle _c-drawer__toggle"><i class="fa fa-angle-right"></i></div><ul class="_p-drawer__submenu _c-drawer__submenu">',
 			$nav_menu
 		);
 		return $nav_menu;
@@ -68,9 +68,9 @@ function nav_menu_css_class( $classes, $item, $args, $depth ) {
 
 	if ( 'drawer-nav' === $args->theme_location ) {
 		if ( $depth > 0 ) {
-			$classes[] = '_c-drawer__subitem';
+			$classes[] = '_p-drawer__subitem _c-drawer__subitem';
 		} else {
-			$classes[] = '_c-drawer__item';
+			$classes[] = '_p-drawer__item _c-drawer__item';
 		}
 		return $classes;
 	}
