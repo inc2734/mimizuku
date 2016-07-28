@@ -1,8 +1,8 @@
 <?php if ( have_posts() ) : ?>
 
-	<ul class="_c-entries">
+	<ul class="_p-entries">
 		<?php while ( have_posts() ) : the_post(); ?>
-		<li class="_c-entries__item"><?php get_template_part( 'template-parts/content/content', 'summary' ); ?></li>
+		<li class="_p-entries__item"><?php get_template_part( 'template-parts/content/content', 'summary' ); ?></li>
 		<?php endwhile; ?>
 	</ul>
 
