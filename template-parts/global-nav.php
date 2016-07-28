@@ -3,7 +3,7 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 	return;
 }
 ?>
-<nav class="_c-global-nav" role="navigation">
+<nav class="_p-global-nav" role="navigation">
 	<div class="_c-container">
 		<?php
 		wp_nav_menu( [
