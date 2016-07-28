@@ -1,4 +1,4 @@
-.#{$bs-prefix}c-entry-summary {
+.#{$bs-prefix}p-entry-summary {
 	&__title {
 		@include bs-font-size-line-height($bs-base-font-size * 1.5);
 	}
@@ -14,7 +14,7 @@
 	}
 
 	&--media {
-		.#{$bs-prefix}c-entry-summary__figure {
+		.#{$bs-prefix}p-entry-summary__figure {
 			background-color: bs-lighter($bs-color-gray);
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
