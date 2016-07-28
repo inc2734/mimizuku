@@ -48,10 +48,10 @@ if ( $tags ) {
 
 $entry_meta = apply_filters( 'mimizuku_entry_meta_items', $entry_meta );
 ?>
-<div class="_c-entry-meta">
-	<ul class="_c-entry-meta__list">
+<div class="_p-entry-meta">
+	<ul class="_p-entry-meta__list">
 		<?php foreach ( $entry_meta as $key => $item ) : ?>
-		<li class="_c-entry-meta__item _c-entry-meta__item--<?php echo esc_attr( $key ); ?>">
+		<li class="_p-entry-meta__item _p-entry-meta__item--<?php echo esc_attr( $key ); ?>">
 			<?php echo wp_kses( $item, wp_kses_allowed_html( 'post' ) ); ?>
 		</li>
 		<?php endforeach; ?>
