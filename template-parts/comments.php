@@ -16,7 +16,7 @@ $comments_by_type = $wp_query->comments_by_type;
 		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-			<div class="_c-pagination">
+			<div class="_p-pagination">
 				<?php the_comments_pagination(); ?>
 			</div>
 		<?php endif; ?>

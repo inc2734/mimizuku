@@ -7,7 +7,7 @@ add_filter( 'wp_link_pages_link', function( $link ) {
 } );
 
 wp_link_pages( [
-	'before'           => '<div class="_c-pagination"><h2 class="screen-reader-text">' . esc_html__( 'Posts navigation', 'mimizuku' ) . '</h2><div class="nav-links">',
+	'before'           => '<div class="_p-pagination"><h2 class="screen-reader-text">' . esc_html__( 'Posts navigation', 'mimizuku' ) . '</h2><div class="nav-links">',
 	'after'            => '</div></div>',
 	'link_before'      => '',
 	'link_after'       => '',
