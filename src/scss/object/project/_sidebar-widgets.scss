@@ -1,5 +1,5 @@
 .#{$bs-prefix}p-sidebar-widgets {
-	> .#{$bs-prefix}c-widget {
+	> .#{$bs-prefix}p-widget {
 		@include bs-margin-bottom(1);
 
 		&:last-child {
