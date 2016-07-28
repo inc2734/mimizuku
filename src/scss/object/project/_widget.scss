@@ -67,8 +67,25 @@
 	}
 
 	&.widget_tag_cloud {
-		.tagcloud {
-			line-height: $bs-base-line-height;
+		a {
+			@include mimizuku-fa("\f02b");
+			background-color: bs-lighter($bs-color-gray);
+			border: 1px solid bs-light($bs-color-gray);
+			border-radius: 3px;
+			color: $bs-color-gray;
+			@include bs-font-size-line-height(12px);
+			margin: 4px 0 0;
+			padding: 1px 6px;
+			text-decoration: none;
+			@include bs-transition-all();
+
+			@include bs-hover() {
+				opacity: .8;
+			}
+
+			&::before {
+				margin-right: 3px;
+			}
 		}
 	}
 }

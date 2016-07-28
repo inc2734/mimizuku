@@ -21,6 +21,7 @@ $bs-h6-font-size-scale: 1;
 @import '../packages/sass-basis/src/scss/basis';
 @import 'wordpress';
 
+@import 'core/core';
 @import 'foundation/foundation';
 @import 'layout/layout';
 @import 'object/object';

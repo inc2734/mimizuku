@@ -18,3 +18,20 @@ function register_sidebars() {
 	] );
 }
 add_action( 'widgets_init', __NAMESPACE__ . '\\register_sidebars' );
+
+/**
+ * Register wp_nav_menu() menus
+ *
+ * @param $args array Argments of wp_tag_cloud
+ * @return array
+ * @see https://developer.wordpress.org/reference/classes/wp_widget_tag_cloud/widget/
+ */
+function widget_tag_cloud_args( $args ) {
+	$args = array_merge( $args, [
+		'smallest' => 12,
+		'largest'  => 12,
+		'unit'     => 'px',
+	] );
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', __NAMESPACE__ . '\\widget_tag_cloud_args' );
