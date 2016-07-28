@@ -1,4 +1,4 @@
-<form role="search" method="get" class="_c-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" class="_p-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label class="screen-reader-text" for="s"><?php echo esc_html_x( 'Search for:', 'label' ); ?></label>
 	<div class="_c-input-group">
 		<div class="_c-input-group__field">
