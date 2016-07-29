@@ -1,7 +1,7 @@
 <header <?php Mimizuku\Tags\header_class(); ?> role="banner">
 	<div class="_c-container">
 		<div class="_c-row">
-			<div class="_c-row__col _c-row__col--auto">
+			<div class="_c-row__col _c-row__col--auto _c-row _c-row--middle">
 				<?php get_template_part( 'template-parts/site-branding' ); ?>
 			</div>
 

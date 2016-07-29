@@ -14,6 +14,17 @@
 	</div>
 
 	<div class="_u-hidden-sm _u-hidden-md">
-		<?php get_template_part( 'template-parts/global-nav' ); ?>
+		<?php
+		add_filter( 'wp_nav_menu_args', function( $args ) {
+			if ( 'global-nav' == $args['theme_location']  ) {
+				$args = array_merge( $args, [
+					'container'       => 'div',
+					'container_class' => '_c-container',
+				] );
+			}
+			return $args;
+		} );
+		get_template_part( 'template-parts/global-nav' );
+		?>
 	</div>
 </header>

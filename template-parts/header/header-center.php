@@ -17,7 +17,11 @@
 		<?php
 		add_filter( 'wp_nav_menu_args', function( $args ) {
 			if ( 'global-nav' === $args['theme_location'] ) {
-				$args['menu_class'] = '_c-menu';
+				$args = array_merge( $args, [
+					'container'       => 'div',
+					'container_class' => '_c-container',
+					'menu_class'      => '_c-menu',
+				] );
 			}
 			return $args;
 		} );
