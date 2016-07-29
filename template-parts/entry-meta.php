@@ -23,14 +23,15 @@ $entry_meta['author'] = sprintf(
 );
 
 // Categories
-$categories = get_the_category_list( ', ' );
+$categories = get_the_terms( get_the_ID(), 'category' );
 if ( $categories ) {
 	$entry_meta['categories'] = sprintf(
 		'<span class="screen-reader-text">%s</span>
 		<i class="fa fa-folder"></i>
-		%s',
+		<a href="%s">%s</a>',
 		esc_html__( 'Categories', 'mimizuku' ),
-		get_the_category_list( ', ' )
+		esc_url( get_term_link( $categories[0] ) ),
+		esc_html( $categories[0]->name )
 	);
 }
 
