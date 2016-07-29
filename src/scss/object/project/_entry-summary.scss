@@ -1,9 +1,16 @@
 .#{$bs-prefix}p-entry-summary {
 	&__title {
 		@include bs-font-size-line-height($bs-base-font-size * 1.5);
+		@include bs-margin(0, 0, .25);
+
+		> a {
+			text-decoration: none;
+		}
 	}
 
 	&__content {
+		@include bs-margin-top(.25);
+
 		> p {
 			margin: 0;
 		}

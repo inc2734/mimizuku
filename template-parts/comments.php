@@ -1,12 +1,12 @@
 <?php
 $comments_by_type = $wp_query->comments_by_type;
 ?>
-<section class="_c-comments">
-	<h1 class="_c-comments__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h1>
+<section class="_p-comments">
+	<h1 class="_p-comments__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h1>
 
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
 
-		<ol class="_c-comments__list">
+		<ol class="_p-comments__list">
 			<?php
 			wp_list_comments( [
 				'type'     => 'comment',
@@ -23,7 +23,7 @@ $comments_by_type = $wp_query->comments_by_type;
 
 	<?php else : ?>
 
-		<p class="_c-comments__nocomments">
+		<p class="_p-comments__nocomments">
 			<?php esc_html_e( 'No comments.', 'mimizuku' ); ?>
 		</p>
 
@@ -31,7 +31,7 @@ $comments_by_type = $wp_query->comments_by_type;
 
 	<?php if ( comments_open() ) : ?>
 
-		<div id="respond" class="_c-comments__respond">
+		<div id="respond" class="_p-comments__respond">
 
 			<?php if ( get_option( 'comment_registration' ) && empty( $user_ID ) ) : ?>
 
@@ -47,7 +47,7 @@ $comments_by_type = $wp_query->comments_by_type;
 
 			<?php else : ?>
 
-				<div class="_c-comments__form">
+				<div class="_p-comments__form">
 					<?php comment_form(); ?>
 				</div>
 

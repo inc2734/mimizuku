@@ -24,4 +24,8 @@
 			color: #fff;
 		}
 	}
+
+	* + & {
+		@include bs-padding-top(2);
+	}
 }

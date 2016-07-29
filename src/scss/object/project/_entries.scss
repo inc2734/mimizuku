@@ -1,10 +1,10 @@
 .#{$bs-prefix}p-entries {
 	list-style: none;
-	@include bs-margin(0, 0, -1);
+	@include bs-margin(0, 0, -1.5);
 	padding: 0;
 
 	&__item {
-		@include bs-margin(0, 0, 1);
+		@include bs-margin(0, 0, 1.5);
 		padding: 0;
 	}
 }

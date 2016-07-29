@@ -1,4 +1,10 @@
 .#{$bs-prefix}p-entry-meta {
+	@include bs-font-size-line-height($bs-base-font-size-px - 2);
+
+	&, a {
+		color: $bs-color-gray;
+	}
+
 	&__list {
 		list-style: none;
 		margin: 0;

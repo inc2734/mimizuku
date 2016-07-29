@@ -3,7 +3,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<aside class="_c-response">
+<aside class="_p-response">
 	<?php
 	if ( ! empty( $comments_by_type['comment'] ) || comments_open() ) {
 		get_template_part( 'template-parts/comments' );

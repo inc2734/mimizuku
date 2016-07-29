@@ -4,6 +4,8 @@
 	}
 
 	.#{$bs-prefix}c-menu__subitem {
+		@include bs-font-size-line-height($bs-base-font-size-px - 2);
+
 		@include bs-hover() {
 			background-color: rgba(#fff, .05);
 		}

@@ -9,8 +9,8 @@ namespace Mimizuku\Tags;
 function the_pings() {
 	?>
 	<li <?php comment_class( ['_c-trackbacks__item'] ); ?> id="li-comment-<?php comment_ID() ?>">
-		<dl class="_c-trackback" id="comment-<?php comment_ID(); ?>">
-			<dt class="_c-trackback__meta">
+		<dl class="_p-trackback" id="comment-<?php comment_ID(); ?>">
+			<dt class="_p-trackback__meta">
 				<?php
 				printf(
 					__( '<cite class="fn">%1$s</cite> said on %2$s at %3$s', 'mimizuku' ),
@@ -21,7 +21,7 @@ function the_pings() {
 				edit_comment_link( 'edit', '  ', '' );
 				?>
 			</dt>
-			<dd class="_c-trackback__body">
+			<dd class="_p-trackback__body">
 				<?php comment_text() ?>
 			</dd>
 		</dl>

@@ -1,7 +1,12 @@
 .#{$bs-prefix}l-header {
+	@include bs-margin(0, 0, 2);
 	background-color: #fff;
 
 	&--center {
 		text-align: center;
+	}
+
+	.#{$bs-prefix}p-site-branding {
+		@include bs-padding(.5, 0);
 	}
 }
