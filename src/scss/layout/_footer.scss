@@ -1,0 +1,8 @@
+.#{$bs-prefix}l-footer {
+	@include bs-margin(2, 0, 0);
+
+	.#{$bs-prefix}p-footer-nav,
+	.#{$bs-prefix}p-copyright {
+		@include bs-padding(.25, 0);
+	}
+}

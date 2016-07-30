@@ -1,0 +1,32 @@
+.#{$bs-prefix}p-footer-nav {
+	@include bs-font-size-line-height($bs-base-font-size-px - 2);
+
+	.menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu-item {
+		display: block;
+
+		> a {
+			display: block;
+			@include bs-padding(.5);
+			text-align: center;
+			text-decoration: none;
+		}
+
+		@include bs-bp-md-min() {
+			display: inline-block;
+
+			@include bs-margin(0, .5, 0, 0);
+			padding: 0;
+
+			> a {
+				display: inline-block;
+				padding: 0;
+			}
+		}
+	}
+}

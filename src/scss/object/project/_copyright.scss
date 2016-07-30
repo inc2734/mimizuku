@@ -1,0 +1,3 @@
+.#{$bs-prefix}p-copyright {
+	@include bs-font-size-line-height($bs-base-font-size-px - 2);
+}
