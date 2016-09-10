@@ -45,6 +45,11 @@ get_template_part( 'functions/tinymce' );
 get_template_part( 'functions/comment-form' );
 
 /**
+ * Sets up password form
+ */
+get_template_part( 'functions/password-form' );
+
+/**
  * Enqueues scripts and styles.
  */
 get_template_part( 'functions/assets' );
