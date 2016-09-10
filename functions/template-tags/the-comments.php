@@ -11,7 +11,7 @@ namespace Mimizuku\Tags;
  */
 function the_comments( $comment, $args, $depth ) {
 	?>
-	<li <?php comment_class( ['_c-comments__item'] ); ?> id="li-comment-<?php comment_ID() ?>">
+	<li <?php comment_class( ['_p-comments__item'] ); ?> id="li-comment-<?php comment_ID() ?>">
 		<div class="_p-comment _c-media" id="comment-<?php comment_ID(); ?>">
 			<div class="_c-media__figure">
 				<?php echo get_avatar( $comment, '48' ); ?>
@@ -42,7 +42,7 @@ function the_comments( $comment, $args, $depth ) {
 				?>
 
 				<?php if ( ! empty( get_comment_reply_link( $args ) ) ) : ?>
-				<div class="_p-comment__reply _c-btn">
+				<div class="_p-comment__reply">
 					<?php comment_reply_link( $args ); ?>
 				</div>
 				<?php endif; ?>

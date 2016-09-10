@@ -1,0 +1,43 @@
+.{bs-prefix}p-comments {
+	&__title {
+		bs-margin(0, 0, 1);
+		bs-font-size-line-height(bs-base-font-size-px * bs-h3-font-size-scale);
+		font-weight: bold;
+	}
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.children {
+		list-style: none;
+		bs-margin(1, 0, 0);
+		bs-padding(0, 0, 0, 1);
+	}
+
+	&__item {
+		bs-margin(1, 0, 0);
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__form {
+		.required {
+			color: bs-color-red;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 4px;
+		}
+
+		.{bs-prefix}c-form-control {
+			display: block;
+			width: 100%;
+		}
+	}
+}
