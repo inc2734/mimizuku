@@ -1,5 +1,4 @@
 <?php
-get_template_part( 'functions/template-tags/get-entries-item-template' );
 get_template_part( 'functions/template-tags/has-sidebar' );
 get_template_part( 'functions/template-tags/header-class' );
 get_template_part( 'functions/template-tags/is-supported-ie9' );
