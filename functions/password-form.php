@@ -11,12 +11,12 @@ function the_password_form( $output ) {
 	ob_start();
 	?>
 	<form action="<?php echo esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ); ?>" class="post-password-form" method="post">
-    <p>
-			<?php echo __( 'This content is password protected. To view it please enter your password below:' ); ?>
+		<p>
+			<?php esc_html_e( 'This content is password protected. To view it please enter your password below:' ); ?>
 		</p>
 		<div class="_c-input-group">
 			<div class="_c-input-group__addon">
-				<?php echo __( 'Password:' ); ?>
+				<?php esc_html_e( 'Password:' ); ?>
 			</div>
 			<div class="_c-input-group__field">
 				<input class="_c-input-group__control" name="post_password" type="password" size="20" />

@@ -14,7 +14,7 @@
     ],
     "test": [
       "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
-      "phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/"
+      "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/"
     ]
   }
 }
