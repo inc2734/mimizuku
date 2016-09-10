@@ -1,9 +1,0 @@
-.#{$bs-prefix}p-sidebar-widgets {
-	> .#{$bs-prefix}p-widget {
-		@include bs-margin-bottom(1);
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}

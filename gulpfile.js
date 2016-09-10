@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp         = require( 'gulp' );
-var sass         = require( 'gulp-sass' );
+var stylus       = require( 'gulp-stylus' );
 var postcss      = require( 'gulp-postcss' );
 var cssnano      = require( 'cssnano' );
 var rename       = require( 'gulp-rename' );
@@ -16,7 +16,7 @@ var runSequence  = require( 'run-sequence' );
 
 var dir = {
 	src: {
-		css     : 'src/scss',
+		css     : 'src/stylus',
 		js      : 'src/js',
 		packages: 'node_modules',
 		vendor  : 'src/vendor'
@@ -49,17 +49,17 @@ gulp.task( 'remove-packages-dir', function( cb ) {
  */
 gulp.task( 'copy-packages', ['remove-packages-dir'], function( cb ) {
 	var packages = [
-		dir.src.packages + '/sass-basis/**',
-		dir.src.packages + '/sass-basis-drawer/**',
-		dir.src.packages + '/sass-basis-hamburger-btn/**',
-		dir.src.packages + '/sass-basis-layout/**',
-		dir.src.packages + '/sass-basis-menu/**'
+		dir.src.packages + '/getbasis/**',
+		dir.src.packages + '/getbasis-drawer/**',
+		dir.src.packages + '/getbasis-hamburger-btn/**',
+		dir.src.packages + '/getbasis-layout/**',
+		dir.src.packages + '/getbasis-menu/**'
 	];
 	return gulp.src( packages, { base: 'node_modules' } )
 		.pipe( gulp.dest( dir.dist.packages ) )
 		.on( 'end', function() {
 			var files = [
-				dir.src.packages + '/sass-basis/vendor/html5.js'
+				dir.src.packages + '/getbasis/vendor/html5.js'
 			];
 			return gulp.src( files )
 				.pipe( gulp.dest( dir.dist.vendor ) );
@@ -67,18 +67,20 @@ gulp.task( 'copy-packages', ['remove-packages-dir'], function( cb ) {
 } );
 
 /**
- * Build sass
+ * Build Stylus
  */
-gulp.task( 'sass', function() {
-	return sassCompile( dir.src.css + '/*.scss', dir.dist.css )
+gulp.task( 'stylus', function() {
+	return stylusCompile( dir.src.css + '/*.styl', dir.dist.css )
 		.on( 'end', function() {
-			return sassCompile( dir.src.vendor + '/**/*.scss', dir.dist.vendor );
+			return stylusCompile( dir.src.vendor + '/**/*.styl', dir.dist.vendor );
 		} );
 } );
 
-function sassCompile( src, dest ) {
+function stylusCompile( src, dest ) {
 	return gulp.src( src )
-		.pipe( sass() )
+		.pipe( stylus( {
+			'resolve url nocheck': true
+		} ) )
 		.pipe( postcss( [
 			autoprefixer( {
 				browsers: ['last 2 versions'],
@@ -113,7 +115,7 @@ gulp.task( 'browserify', function() {
  * Build Mimizuku
  */
 gulp.task( 'build', ['copy-packages'], function() {
-	return runSequence( 'sass', 'font-awesome', 'browserify' );
+	return runSequence( 'stylus', 'font-awesome', 'browserify' );
 } );
 
 /**
@@ -129,7 +131,7 @@ gulp.task( 'browsersync', function() {
  * Auto build and browsersync
  */
 gulp.task( 'default', ['build', 'browsersync'], function() {
-	gulp.watch( [dir.src.css + '/*.scss'], ['sass'] );
+	gulp.watch( [dir.src.css + '/*.scss'], ['stylus'] );
 	gulp.watch( [dir.src.js + '/app.js'] , ['browserify'] );
 	gulp.watch(
 		[

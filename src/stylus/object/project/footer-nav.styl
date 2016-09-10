@@ -1,5 +1,5 @@
-.#{$bs-prefix}p-footer-nav {
-	@include bs-font-size-line-height($bs-base-font-size-px - 2);
+.{bs-prefix}p-footer-nav {
+	bs-font-size-line-height(bs-base-font-size-px - 2);
 
 	.menu {
 		list-style: none;
@@ -12,15 +12,15 @@
 
 		> a {
 			display: block;
-			@include bs-padding(.5);
+			bs-padding(.5);
 			text-align: center;
 			text-decoration: none;
 		}
 
-		@include bs-bp-md-min() {
+		+bs-bp-md-min() {
 			display: inline-block;
 
-			@include bs-margin(0, .5, 0, 0);
+			bs-margin(0, .5, 0, 0);
 			padding: 0;
 
 			> a {

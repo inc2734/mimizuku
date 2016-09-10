@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "font-awesome": "^4.6.3",
-    "sass-basis": "^5.4.1",
-    "sass-basis-drawer": "^2.0.0",
-    "sass-basis-hamburger-btn": "^0.1.2",
-    "sass-basis-layout": "^1.1.2",
-    "sass-basis-menu": "^0.2.2"
+    "getbasis": "^1.0.5",
+    "getbasis-drawer": "^1.0.0",
+    "getbasis-hamburger-btn": "^1.0.0",
+    "getbasis-layout": "^1.0.1",
+    "getbasis-menu": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -30,7 +30,7 @@
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
+    "gulp-stylus": "^2.5.0",
     "gulp-uglify": "^1.5.4",
     "run-sequence": "^1.2.2",
     "vinyl-source-stream": "^1.1.0"

@@ -2,7 +2,7 @@
  * .wp-caption
  */
 .wp-caption {
-	@include bs-margin(0, 0, 1);
+	bs-margin(0, 0, 1);
 	border: none;
 	text-align: left;
 	background-color: transparent;
@@ -11,9 +11,9 @@
 	max-width: 100%;
 
 	&-text {
-		color: $bs-color-gray;
+		color: bs-color-gray;
 		margin-top: 5px;
-		@include bs-font-size-line-height(12px);
+		bs-font-size-line-height(12px);
 		line-height: 1.4;
 	}
 }
@@ -51,7 +51,7 @@
  */
 .gallery {
 	margin: 0;
-	@include bs-margin(0, 0, 1);
+	bs-margin(0, 0, 1);
 
 	&-item {
 		display: inline-block;
@@ -60,9 +60,9 @@
 		vertical-align: top;
 		width: 100%;
 
-		@for $i from 2 through 9 {
-			.gallery-columns-#{$i} & {
-				max-width: percentage(1 / $i);
+		for i in 2..9 {
+			.gallery-columns-{i} & {
+				max-width: percentage(1 / i);
 			}
 		}
 	}

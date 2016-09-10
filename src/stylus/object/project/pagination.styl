@@ -1,0 +1,31 @@
+.{bs-prefix}p-pagination {
+	text-align: center;
+
+	.page-numbers {
+		display: inline-block;
+		bs-font-size(12px);
+		line-height: 1;
+		padding: 8px 10px;
+		text-decoration: none;
+	}
+
+	.current {
+		background-color: bs-light(bs-color-text);
+		color: #fff;
+	}
+
+	a.page-numbers, .dots {
+		bs-transition-all();
+		background-color: bs-lighter(bs-color-gray);
+		color: bs-color-gray;
+
+		+bs-hover() {
+			background-color: bs-light(bs-color-text);
+			color: #fff;
+		}
+	}
+
+	* + & {
+		bs-padding-top(2);
+	}
+}
