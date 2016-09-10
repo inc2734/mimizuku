@@ -11,9 +11,11 @@
 			</div>
 			<?php endif; ?>
 
+			<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 			<div class="_c-row__col _c-row__col--auto _u-hidden-sm _u-hidden-md _c-row _c-row--right">
 				<?php get_template_part( 'template-parts/global-nav' ); ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </header>

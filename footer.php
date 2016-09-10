@@ -1,3 +1,3 @@
 <?php
-$footer_layout = apply_filters( 'mimizuku_footer_layout', '1row' );
-get_template_part( 'template-parts/footer/footer', $footer_layout );
+$footer = apply_filters( 'mimizuku_footer', 'layout/footer/2row' );
+get_template_part( $footer );

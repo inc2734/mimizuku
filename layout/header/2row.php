@@ -13,6 +13,7 @@
 		</div>
 	</div>
 
+	<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 	<div class="_u-hidden-sm _u-hidden-md">
 		<?php
 		add_filter( 'wp_nav_menu_args', function( $args ) {
@@ -27,4 +28,5 @@
 		get_template_part( 'template-parts/global-nav' );
 		?>
 	</div>
+	<?php endif; ?>
 </header>

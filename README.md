@@ -35,25 +35,23 @@ add_filter( 'mimizuku_view', function( $view ) {
 } );
 ```
 
-### mimizuku_header_layout
+### mimizuku_header
 
 Filtering header layout file.
-The file loaded at `template-parts/header/header-{$header_layout}.php`
 
 ```
-add_filter( 'mimizuku_header_layout', function( $header_layout ) {
-	return $header_layout;
+add_filter( 'mimizuku_header', function( $header ) {
+	return $header;
 } );
 ```
 
-### mimizuku_footer_layout
+### mimizuku_footer
 
 Filtering footer layout file.
-The file loaded at `template-parts/footer/footer-{$footer_layout}.php`
 
 ```
-add_filter( 'mimizuku_footer_layout', function( $footer_layout ) {
-	return $footer_layout;
+add_filter( 'mimizuku_footer', function( $footer ) {
+	return $footer;
 } );
 ```
 
