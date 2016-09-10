@@ -16,11 +16,9 @@
 					</main>
 				</div>
 
-				<?php if ( Mimizuku\Tags\has_sidebar() ) : ?>
 				<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-1-4">
 					<?php get_sidebar(); ?>
 				</div>
-				<?php endif; ?>
 			</div>
 		</div>
 	</div>

@@ -55,16 +55,6 @@ add_filter( 'mimizuku_footer', function( $footer ) {
 } );
 ```
 
-### mimizuku_has_sidebar
-
-Filtering displaying sidebar.
-
-```
-add_filter( 'mimizuku_has_sidebar', function( $boolean ) {
-	return $boolean;
-} );
-```
-
 ### mimizuku_content_width
 
 Filtering `$content_width` of WordPress.
