@@ -3,6 +3,9 @@ Minizuku is a WordPress theme to develop the child theme.
 
 * GitHub: https://github.com/inc2734/mimizuku/
 
+## Required
+* PHP 5.6+
+
 ## How to build
 1. `$ npm install`
 2. `$ npm run gulp build`
