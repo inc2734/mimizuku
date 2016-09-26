@@ -31,11 +31,10 @@ before_deploy:
   - git clone -b wprepository --quiet https://github.com/inc2734/mimizuku.git wprepository
   - cd wprepository
   - ls | xargs rm -rf
-  - rm -rf .gitignore .travis.yml
-  - cp -a ../* ./
+  - rsync -a ../ ./ --exclude "/wprepository/" --exclude "/node_modules/" --exclude "/vendor/"
   - rm -rf bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml
+  - rm -rf .gitignore .travis.yml .DS_Store
   - ls -la
-  - cd ../
 deploy:
   provider: script
   script: bash ./bin/wprepository.sh
