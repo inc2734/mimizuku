@@ -25,7 +25,7 @@ install:
   - nvm install 6
   - npm install
 script:
-  - npm run build
+  - npm run gulp build
   - ls -la style.css
   - composer test
 before_deploy:
