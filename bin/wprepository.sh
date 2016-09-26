@@ -17,4 +17,4 @@ cd wprepository
 git add -A
 git status
 git commit -m "[ci skip] wprepository branch update from travis $TRAVIS_COMMIT"
-git push --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" wprepository 2> /dev/null
+git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" wprepository 2> /dev/null
