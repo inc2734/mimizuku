@@ -1,8 +1,8 @@
 {
   "name": "inc2734/mimizuku",
   "require-dev": {
-    "squizlabs/php_codesniffer": "2.*",
-    "wp-coding-standards/wpcs": "2014-12-11",
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "*",
     "phpmd/phpmd": "2.*"
   },
   "scripts" :{
