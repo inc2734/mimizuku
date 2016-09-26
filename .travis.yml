@@ -1,0 +1,39 @@
+language: php
+php:
+  - 5.3
+  - 5.6
+  - 7
+sudo: false
+branches:
+  only:
+    - master
+    - develop
+env:
+  global:
+    - GIT_COMMITTER_NAME=travis-ci
+    - GIT_COMMITTER_EMAIL=inc@2inc.org
+    - GIT_AUTHOR_NAME=travis-ci
+    - GIT_AUTHOR_EMAIL=inc@2inc.org
+    - secure: "uxtHTHzmz4OLTu70c8SAD/i3Zye/qIcSrRJwxk5BwE43X0tT7Hr1thpuQBFooCvaqQH2hGoKHDyqBmaqXnhN3DkC8czFMd9F+G9+4A1kgowJuLyytY1WPpHHrOBrAjLXrxMpIx1wIQiyj/gdWK+yKIVlLGmgNhbhtHOwWg43ZupQVs+7gc8Idl38frJhHlSOwn1Dakho+UmhJPm/w3hRZCmMAHXiTuiFBCsBWSCBkpwoHnrxd6GRNMlv7vle7V4EXVAyj7xekwMubXrLVRZpWzrj6rkqoVDFu625gxvnSoG4dUQa37ckSamTxz6UC03uj3lhPinM5KrRhNyGHwyaY0QzmgFoHiTY+bYCe/4+t3pt7SWj8R56UWWI02g0csJrdzq8BdecI+xDC7g22CFOTH0nWEfufPfun8r1ekp6ZGBOzcc9o/7A0FA4ZxV6bLh8YQO+NPKuP3eQI7IKxdmvxxgCK62QvX1U1i4m0w6VVK3aGFy5N+m5xvPFqVQrAE3b0qAl0viRGkq/y/puo1JGJf+qSL+HOG3kELPZDK5O/M5VR8jX0ckKXG3EGf3Ea8yUi9ZzlW+YaiY4UFdu+pOMvn8G+oaVosgUVxuDZ6PpHRuHZgIG8hmuJ6xpINE6OsnoW5ltfxjm5U1FwQNAl1J/Bp2593JIvYqgU7/G+ISEDjE="
+install:
+  - composer install
+  - nvm install 6
+  - npm install
+script:
+  - npm run build
+  - ls -la style.css
+  - composer test
+before_deploy:
+  - git clone -b wprepository --quiet https://github.com/inc2734/mimizuku.git wprepository
+  - cd wprepository
+  - ls | xargs rm -rf
+  - rm -rf .gitignore .travis.yml
+  - rm -rf bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml
+  - cd ../
+deploy:
+  provider: script
+  script: ./bin/wprepository.sh
+  skip_cleanup: true
+  on:
+    branch: master
+    php: 7
