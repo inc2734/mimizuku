@@ -1,8 +1,14 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Functions\Widgets;
 
 /**
- * Register sidebar
+ * Registers sidebar
  *
  * @return void
  */
@@ -20,7 +26,7 @@ function register_sidebars() {
 add_action( 'widgets_init', __NAMESPACE__ . '\\register_sidebars' );
 
 /**
- * Register wp_nav_menu() menus
+ * Registers wp_nav_menu() menus
  *
  * @param $args array Argments of wp_tag_cloud
  * @return array

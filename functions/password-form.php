@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Functions\PasswordForm;
 
 /**
@@ -25,7 +31,7 @@ function the_password_form( $output ) {
 	</form>
 	<?php
 	$output = ob_get_clean();
-	$output = str_replace( ["\n", "\r", "\n\r", "\t"], '', $output );
+	$output = str_replace( [ "\n", "\r", "\n\r", "\t" ], '', $output );
 	return $output;
 }
 add_action( 'the_password_form', __NAMESPACE__ . '\\the_password_form' );

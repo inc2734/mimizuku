@@ -1,8 +1,14 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Functions\NavMenus;
 
 /**
- * Register wp_nav_menu() menus
+ * Registers wp_nav_menu() menus
  *
  * @return void
  * @see http://codex.wordpress.org/Function_Reference/register_nav_menus

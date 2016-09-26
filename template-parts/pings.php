@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 $comments_by_type = $wp_query->comments_by_type;
 ?>
 <section class="_p-trackbacks">
@@ -10,7 +16,7 @@ $comments_by_type = $wp_query->comments_by_type;
 			<?php
 			wp_list_comments( [
 				'type'     => 'pings',
-				'callback' => 'Mimizuku\Tags\the_pings'
+				'callback' => 'Mimizuku\Tags\the_pings',
 			] );
 			?>
 		</ol>

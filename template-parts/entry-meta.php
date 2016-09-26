@@ -1,7 +1,15 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 $entry_meta = [];
 
-// Published
+/**
+ * Published
+ */
 $entry_meta['published'] = sprintf(
 	'<time datetime="%s">
 		<span class="screen-reader-text">%s</span>
@@ -12,7 +20,9 @@ $entry_meta['published'] = sprintf(
 	esc_html( get_the_date() )
 );
 
-// Author
+/**
+ * Author
+ */
 $entry_meta['author'] = sprintf(
 	'<span class="screen-reader-text">%s</span>
 	<i class="fa fa-user"></i>
@@ -22,7 +32,9 @@ $entry_meta['author'] = sprintf(
 	esc_html( get_the_author() )
 );
 
-// Categories
+/**
+ * Categories
+ */
 $categories = get_the_terms( get_the_ID(), 'category' );
 if ( $categories ) {
 	$entry_meta['categories'] = sprintf(
@@ -35,7 +47,9 @@ if ( $categories ) {
 	);
 }
 
-// Tags
+/**
+ * Tags
+ */
 $tags = get_the_tag_list( '', ', ' );
 if ( $tags ) {
 	$entry_meta['tags'] = sprintf(

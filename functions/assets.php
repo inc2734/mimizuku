@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Functions\Assets;
 use Mimizuku\Tags as Tags;
 
@@ -18,7 +24,7 @@ function enqueue_scripts() {
 	wp_enqueue_script(
 		get_template(),
 		$url . '/assets/js/app.min.js',
-		['jquery'],
+		[ 'jquery' ],
 		$version,
 		true
 	);
@@ -72,7 +78,7 @@ function enqueue_styles() {
 		wp_enqueue_style(
 			'basis-ie9',
 			$url . '/assets/vendor/basis-ie9/basis-ie9.min.css',
-			[$handle],
+			[ $handle ],
 			$version
 		);
 		wp_style_add_data(

@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 $comments_by_type = $wp_query->comments_by_type;
 ?>
 <section class="_p-comments">
@@ -21,6 +27,12 @@ $comments_by_type = $wp_query->comments_by_type;
 			</div>
 		<?php endif; ?>
 
+		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+			<p class="_p-comments__nocomments">
+				<?php esc_html_e( 'Comments are closed.', 'mimizuku' ); ?><
+			</p>
+		<?php endif; ?>
+
 	<?php else : ?>
 
 		<p class="_p-comments__nocomments">
@@ -33,25 +45,9 @@ $comments_by_type = $wp_query->comments_by_type;
 
 		<div id="respond" class="_p-comments__respond">
 
-			<?php if ( get_option( 'comment_registration' ) && empty( $user_ID ) ) : ?>
-
-				<p>
-					<?php
-					printf(
-						__( 'It is necessary to <a href="%/wp-login.php?redirect_to=%s">login</a> to write comment.', 'mimizuku' ),
-						home_url(),
-						get_permalink()
-					);
-					?>
-				</p>
-
-			<?php else : ?>
-
-				<div class="_p-comments__form">
-					<?php comment_form(); ?>
-				</div>
-
-			<?php endif; ?>
+			<div class="_p-comments__form">
+				<?php comment_form(); ?>
+			</div>
 
 		</div>
 

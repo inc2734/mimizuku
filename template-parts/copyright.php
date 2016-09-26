@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 $theme_url     = 'http://2inc.org';
 $wordpress_url = 'http://wordpress.org/';
 $theme_link = sprintf(

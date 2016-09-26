@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Functions;
 
 /**
@@ -31,7 +37,7 @@ function setup() {
 	 *
 	 * @see http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
 	 */
-	add_theme_support( 'html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form'] );
+	add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
 
 	/**
 	 * Use main stylesheet for visual editor

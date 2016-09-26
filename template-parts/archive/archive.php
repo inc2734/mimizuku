@@ -1,3 +1,10 @@
+<?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+?>
 <ul class="_p-entries">
 	<?php while ( have_posts() ) : the_post(); ?>
 	<li class="_p-entries__item">

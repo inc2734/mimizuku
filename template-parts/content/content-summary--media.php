@@ -1,3 +1,10 @@
+<?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+?>
 <section class="_p-entry-summary _p-entry-summary--media">
 	<div class="_c-flex-media">
 		<?php $thumbnail_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>

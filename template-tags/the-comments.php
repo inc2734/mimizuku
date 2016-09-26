@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Tags;
 
 /**
@@ -11,7 +17,7 @@ namespace Mimizuku\Tags;
  */
 function the_comments( $comment, $args, $depth ) {
 	?>
-	<li <?php comment_class( ['_p-comments__item'] ); ?> id="li-comment-<?php comment_ID() ?>">
+	<li <?php comment_class( [ '_p-comments__item' ] ); ?> id="li-comment-<?php comment_ID() ?>">
 		<div class="_p-comment _c-media" id="comment-<?php comment_ID(); ?>">
 			<div class="_c-media__figure">
 				<?php echo get_avatar( $comment, '48' ); ?>
@@ -22,11 +28,14 @@ function the_comments( $comment, $args, $depth ) {
 				<?php endif; ?>
 				<div class="_p-comment__meta">
 					<?php
+					$author = sprintf( '<cite>%s</cite>', get_comment_author_link() );
+					$date   = get_comment_date();
+					$time   = get_comment_time();
 					printf(
-						__( '<cite class="fn">%1$s</cite> said on %2$s at %3$s', 'mimizuku' ),
-						get_comment_author_link(),
-						get_comment_date(),
-						get_comment_time()
+						esc_html__( '%1$s said on %2$s at %3$s', 'mimizuku' ),
+						wp_kses_post( $author ),
+						wp_kses_post( $date ),
+						wp_kses_post( $time )
 					);
 					edit_comment_link( 'edit', '  ', '' );
 					?>

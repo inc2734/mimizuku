@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package mimizuku
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 namespace Mimizuku\Functions\CommentForm;
 
 /**
@@ -9,7 +15,7 @@ namespace Mimizuku\Functions\CommentForm;
  */
 function comment_form_default_fields( $fields ) {
 		foreach ( $fields as $key => $field ) {
-			$fields[$key] = _add_class_attribute( $field );
+			$fields[ $key ] = _add_class_attribute( $field );
 		}
 		return $fields;
 }
