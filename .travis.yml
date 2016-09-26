@@ -35,6 +35,7 @@ before_deploy:
   - rm -rf bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml
   - rm -rf .gitignore .travis.yml .DS_Store
   - ls -la
+  - cd ../
 deploy:
   provider: script
   script: bash ./bin/wprepository.sh
