@@ -43,3 +43,5 @@ deploy:
   on:
     branch: master
     php: 7
+after_deploy:
+  - git status
