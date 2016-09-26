@@ -32,11 +32,13 @@ before_deploy:
   - cd wprepository
   - ls | xargs rm -rf
   - rm -rf .gitignore .travis.yml
+  - cp -a ../* ./
   - rm -rf bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml
+  - ls -la
   - cd ../
 deploy:
   provider: script
-  script: ./bin/wprepository.sh
+  script: bash ./bin/wprepository.sh
   skip_cleanup: true
   on:
     branch: master
