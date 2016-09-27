@@ -41,7 +41,9 @@ function the_comments( $comment, $args, $depth ) {
 					?>
 				</div>
 
-				<?php comment_text() ?>
+				<div class="_p-comment__content">
+					<?php comment_text() ?>
+				</div>
 
 				<?php
 				$args = array_merge( $args, [
