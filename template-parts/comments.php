@@ -29,7 +29,7 @@ $comments_by_type = $wp_query->comments_by_type;
 
 		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 			<p class="_p-comments__nocomments">
-				<?php esc_html_e( 'Comments are closed.', 'mimizuku' ); ?><
+				<?php esc_html_e( 'Comments are closed.', 'mimizuku' ); ?>
 			</p>
 		<?php endif; ?>
 
