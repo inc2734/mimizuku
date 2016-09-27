@@ -18,11 +18,11 @@ namespace Mimizuku\Tags;
 function the_comments( $comment, $args, $depth ) {
 	?>
 	<li <?php comment_class( [ '_p-comments__item' ] ); ?> id="li-comment-<?php comment_ID() ?>">
-		<div class="_p-comment _c-media" id="comment-<?php comment_ID(); ?>">
-			<div class="_c-media__figure">
+		<div class="_p-comment" id="comment-<?php comment_ID(); ?>">
+			<div class="_p-comment__figure">
 				<?php echo get_avatar( $comment, '48' ); ?>
 			</div>
-			<div class="_p-media__body">
+			<div class="_p-comment__body">
 				<?php if ( 0 === $comment->comment_approved ) : ?>
 				<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'mimizuku' ) ?></em>
 				<?php endif; ?>

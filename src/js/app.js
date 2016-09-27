@@ -1,7 +1,12 @@
 'use strict';
 
 import BasisDrawer from '../packages/getbasis-drawer/src/js/drawer.js';
-new BasisDrawer();
+new BasisDrawer({
+  container    : '._p-drawer',
+  drawer       : '._p-drawer__body',
+  btn          : '._p-drawer__btn',
+  toggleSubmenu: '._p-drawer__toggle'
+});
 
 import BasisMenu from '../packages/getbasis-menu/src/js/menu.js';
 new BasisMenu();

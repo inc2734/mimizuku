@@ -14,24 +14,24 @@
   "dependencies": {
     "font-awesome": "^4.6.3",
     "getbasis": "^1.0.5",
-    "getbasis-drawer": "^1.0.1",
+    "getbasis-drawer": "^2.0.0",
     "getbasis-hamburger-btn": "^1.0.0",
-    "getbasis-layout": "^1.0.1",
-    "getbasis-menu": "^1.0.1"
+    "getbasis-layout": "^2.0.0",
+    "getbasis-menu": "^2.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.7",
-    "babel-preset-es2015": "^6.9.0",
+    "autoprefixer": "^6.4.1",
+    "babel-preset-es2015": "^6.14.0",
     "babelify": "^7.3.0",
-    "browser-sync": "^2.14.0",
+    "browser-sync": "^2.16.0",
     "browserify": "^13.1.0",
     "browserify-shim": "^3.8.12",
-    "cssnano": "^3.7.3",
+    "cssnano": "^3.7.5",
     "gulp": "^3.9.1",
-    "gulp-postcss": "^6.1.1",
+    "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.5.0",
-    "gulp-uglify": "^1.5.4",
+    "gulp-uglify": "^2.0.0",
     "run-sequence": "^1.2.2",
     "vinyl-source-stream": "^1.1.0"
   },

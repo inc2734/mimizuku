@@ -9,12 +9,12 @@ if ( ! has_nav_menu( 'drawer-nav' ) ) {
 	return;
 }
 ?>
-<nav class="_p-drawer__body _c-drawer__body _c-drawer__body--fixed" role="navigation" aria-expanded="false">
+<nav class="_p-drawer__body _p-drawer__body--fixed" role="navigation" aria-expanded="false">
 	<?php
 	wp_nav_menu( [
 		'theme_location' => 'drawer-nav',
 		'container'      => false,
-		'menu_class'     => '_p-drawer__menu _c-drawer__menu',
+		'menu_class'     => '_p-drawer__menu',
 		'depth'          => 0,
 	] );
 	?>
