@@ -9,8 +9,8 @@ use Mimizuku\Controller as Controller;
 
 Controller::set_layout( 'layout/wrapper/right-sidebar' );
 if ( have_posts() ) {
-	Controller::set_view( 'template-parts/archive/archive', 'search' );
+	Controller::set_view( 'views/archive/archive', 'search' );
 } else {
-	Controller::set_view( 'template-parts/content/content', 'no-match' );
+	Controller::set_view( 'views/content/content', 'no-match' );
 }
 Controller::render();
