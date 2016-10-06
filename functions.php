@@ -13,9 +13,14 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
- * Loads the view controller
+ * Loads the view controller class
  */
 include_once( get_template_directory() . '/classes/controllers/controller.php' );
+
+/**
+ * Loads the view class
+ */
+include_once( get_template_directory() . '/classes/views/view.php' );
 
 /**
  * Sets up the hooked functions

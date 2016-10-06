@@ -5,8 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Mimizuku\Controller as Controller;
-
-Controller::set_layout( 'layout/wrapper/right-sidebar' );
-Controller::set_view( 'views/content/content', get_post_type() );
-Controller::render();
+$Controller = new \Mimizuku\Controller();
+$Controller->set_layout( 'right-sidebar' );
+$Controller->set_view( 'content/content', get_post_type() );
+$Controller->render();

@@ -16,6 +16,25 @@ Minizuku is a WordPress theme to develop the child theme.
 ## Import theme unit test data
 * `bash bin/theme-unit-test.sh`
 
+## Directory structure
+
+### Directory for layout templates
+```
+/layout/wrapper
+```
+
+### Directory for view templates
+```
+/views
+```
+
+### Directory for static view templates
+```
+/views/static
+```
+
+Mimizuku tries to load the view template according to the URL. For example when URL is http://example.com/foo/bar, tries to laod from `/views/static/foo/bar.php`.
+
 ## Filter hooks
 
 ### mimizuku_layout

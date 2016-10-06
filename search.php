@@ -5,12 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Mimizuku\Controller as Controller;
-
-Controller::set_layout( 'layout/wrapper/right-sidebar' );
+$Controller = new \Mimizuku\Controller();
+$Controller->set_layout( 'right-sidebar' );
 if ( have_posts() ) {
-	Controller::set_view( 'views/archive/archive', 'search' );
+	$Controller->set_view( 'archive/archive', 'search' );
 } else {
-	Controller::set_view( 'views/content/content', 'no-match' );
+	$Controller->set_view( 'content/content', 'no-match' );
 }
-Controller::render();
+$Controller->render();
