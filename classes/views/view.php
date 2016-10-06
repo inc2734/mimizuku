@@ -35,21 +35,21 @@ class View {
 	 *
 	 * @var string
 	 */
-	protected static $layout;
+	protected $layout;
 
 	/**
 	 * The view template path
 	 *
 	 * @var string
 	 */
-	protected static $view;
+	protected $view;
 
 	/**
 	 * The view template name suffix
 	 *
 	 * @var string
 	 */
-	protected static $view_suffix;
+	protected $view_suffix;
 
 	/**
 	 * Sets the lyaout template
@@ -57,32 +57,25 @@ class View {
 	 * @param string $layout layout template path
 	 * @return void
 	 */
-	public static function set_layout( $layout ) {
-		static::$layout = $layout;
-	}
-
-	/**
-	 * Sets the view template
-	 *
-	 * @param string $view view template path
-	 * @param string $view_suffix view template suffix
-	 * @return void
-	 */
-	public static function set_view( $view, $view_suffix = '' ) {
-		static::$view        = $view;
-		static::$view_suffix = $view_suffix;
+	public function layout( $layout ) {
+		$this->layout = $layout;
 	}
 
 	/**
 	 * Rendering the page
 	 *
+	 * @param string $view view template path
+	 * @param string $view_suffix view template suffix
 	 * @return void
 	 */
-	public static function render() {
+	public function render( $view, $view_suffix = '' ) {
+		$this->view        = $view;
+		$this->view_suffix = $view_suffix;
+
 		if ( is_singular() ) {
-			static::_render_loop();
+			$this->_render_loop();
 		} else {
-			static::_render_direct();
+			$this->_render_direct();
 		}
 	}
 
@@ -91,10 +84,10 @@ class View {
 	 *
 	 * @return void
 	 */
-	protected static function _render_loop() {
+	protected function _render_loop() {
 		while ( have_posts() ) {
 			the_post();
-			static::_load_layout();
+			$this->_render();
 		}
 	}
 
@@ -103,18 +96,21 @@ class View {
 	 *
 	 * @return void
 	 */
-	protected static function _render_direct() {
-		static::_load_layout();
+	protected function _render_direct() {
+		$this->_render();
 	}
 
 	/**
-	 * Loading the layout template
+	 * Rentering the layout template
 	 *
 	 * @return void
 	 */
-	protected static function _load_layout() {
-		$layout = apply_filters( 'mimizuku_layout', static::$layout );
-		get_template_part( trailingslashit( static::LAYOUT_DIRECTORY ) . $layout );
+	protected function _render() {
+		$layout = apply_filters( 'mimizuku_layout', $this->layout );
+		$layout_template_path = get_template_directory() . '/' . self::LAYOUT_DIRECTORY . '/' . $layout . '.php';
+		if ( file_exists( $layout_template_path ) ) {
+			include( $layout_template_path );
+		}
 	}
 
 	/**
@@ -122,10 +118,10 @@ class View {
 	 *
 	 * @return void
 	 */
-	public static function load_view() {
-		$view = static::_get_view_args();
+	public function view() {
+		$view = $this->_get_view_args();
 		$view = apply_filters( 'mimizuku_view', $view );
-		get_template_part( trailingslashit( static::VIEW_DIRECTORY ) . $view['slug'], $view['name'] );
+		get_template_part( self::VIEW_DIRECTORY . '/' . $view['slug'], $view['name'] );
 	}
 
 	/**
@@ -133,22 +129,22 @@ class View {
 	 *
 	 * @return array
 	 */
-	protected static function _get_view_args() {
+	protected function _get_view_args() {
 		$view = [
-			'slug' => static::$view,
-			'name' => static::$view_suffix,
+			'slug' => $this->view,
+			'name' => $this->view_suffix,
 		];
 
 		if ( is_404() || is_front_page() || is_search() ) {
 			return $view;
 		}
 
-		$REQUEST_URI   = $_SERVER['REQUEST_URI'];
-		$REQUEST_URI   = static::_get_relative_path( $REQUEST_URI );
-		$path          = static::_remove_http_query( $REQUEST_URI );
-		$path          = static::_remove_paged_slug( $path );
+		$request_uri   = $_SERVER['REQUEST_URI'];
+		$request_uri   = $this->_get_relative_path( $request_uri );
+		$path          = $this->_remove_http_query( $request_uri );
+		$path          = $this->_remove_paged_slug( $path );
 		$path          = trim( $path, '/' );
-		$template_name = trailingslashit( static::STATIC_VIEW_DIRECTORY ) . $path;
+		$template_name = self::STATIC_VIEW_DIRECTORY . '/' . $path;
 
 		if ( ! locate_template( $template_name . '.php', false ) ) {
 			return $view;
@@ -160,17 +156,17 @@ class View {
 		];
 	}
 
-	protected static function _get_relative_path( $uri ) {
+	protected function _get_relative_path( $uri ) {
 		return str_replace( home_url(), '', $uri );
 	}
 
-	protected static function _remove_http_query( $uri ) {
-		$uri = str_replace( http_build_query( $_GET, NULL, '&' ), '', $uri );
+	protected function _remove_http_query( $uri ) {
+		$uri = str_replace( http_build_query( $_GET, null, '&' ), '', $uri );
 		$uri = rtrim( $uri, '?' );
 		return $uri;
 	}
 
-	protected static function _remove_paged_slug( $uri ) {
+	protected function _remove_paged_slug( $uri ) {
 		if ( ! is_paged() ) {
 			return $uri;
 		}

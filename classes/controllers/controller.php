@@ -9,16 +9,26 @@ namespace Mimizuku;
 
 class Controller {
 
+	/**
+	 * View object
+	 *
+	 * @var View
+	 */
+	protected $view;
+
 	public function __construct() {
+		$this->view = new View();
 	}
 
 	/**
 	 * Rendering the page
 	 *
+	 * @param string $view view template path
+	 * @param string $view_suffix view template suffix
 	 * @return void
 	 */
-	public function render() {
-		View::render();
+	public function render( $view, $view_suffix = '' ) {
+		$this->view->render( $view, $view_suffix );
 	}
 
 	/**
@@ -27,27 +37,7 @@ class Controller {
 	 * @param string $layout layout template path
 	 * @return void
 	 */
-	public function set_layout( $layout ) {
-		View::set_layout( $layout );
-	}
-
-	/**
-	 * Sets the view template
-	 *
-	 * @param string $view view template path
-	 * @param string $view_suffix view template suffix
-	 * @return void
-	 */
-	public function set_view( $view, $view_suffix = '' ) {
-		View::set_view( $view, $view_suffix );
-	}
-
-	/**
-	 * Loading the view template in layout template
-	 *
-	 * @return void
-	 */
-	public static function load_view() {
-		View::load_view();
+	public function layout( $layout ) {
+		$this->view->layout( $layout );
 	}
 }

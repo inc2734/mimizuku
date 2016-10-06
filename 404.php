@@ -5,7 +5,6 @@
  * @license GPL-2.0+
  */
 
-$Controller = new \Mimizuku\Controller();
-$Controller->set_layout( 'right-sidebar' );
-$Controller->set_view( 'content/content', '404' );
-$Controller->render();
+$controller = new \Mimizuku\Controller();
+$controller->layout( 'right-sidebar' );
+$controller->render( 'content/content', '404' );
