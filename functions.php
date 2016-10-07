@@ -23,6 +23,11 @@ include_once( get_template_directory() . '/classes/controllers/controller.php' )
 include_once( get_template_directory() . '/classes/views/view.php' );
 
 /**
+ * Loads the model classes
+ */
+include_once( get_template_directory() . '/classes/models/template-part.php' );
+
+/**
  * Sets up the hooked functions
  */
 include_once( get_template_directory() . '/functions/loader.php' );
