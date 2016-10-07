@@ -16,7 +16,7 @@ $comments_by_type = $wp_query->comments_by_type;
 			<?php
 			wp_list_comments( [
 				'type'     => 'pings',
-				'callback' => 'Mimizuku\Tags\the_pings',
+				'callback' => '\Mimizuku\Tags\the_pings',
 			] );
 			?>
 		</ol>

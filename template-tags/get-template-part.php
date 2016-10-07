@@ -8,7 +8,7 @@
 namespace Mimizuku\Tags;
 
 function get_template_part( $template, $vars = [] ) {
-	$template_part = new Mimizuku\Template_Part( $template );
+	$template_part = new \Mimizuku\Template_Part( $template );
 	$template_part->set_vars( $vars );
 	$template_part->render();
 }

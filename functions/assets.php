@@ -6,7 +6,7 @@
  */
 
 namespace Mimizuku\Functions\Assets;
-use Mimizuku\Tags as Tags;
+use \Mimizuku\Tags as Tags;
 
 /**
  * Enqueues scripts
