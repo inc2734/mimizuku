@@ -11,16 +11,30 @@ Minizuku is a WordPress theme to develop the child theme.
 2. `$ npm run gulp build`
 
 ## Start up build-in server
-* `$ bash bin/server.sh`
+```
+$ bash bin/server.sh
+```
 
 ## Import theme unit test data
-* `bash bin/theme-unit-test.sh`
+```
+bash bin/theme-unit-test.sh
+```
 
 ## Directory structure
 
 ### Directory for layout templates
 ```
 /layout/wrapper
+```
+
+### Directory for header templates
+```
+/layout/header
+```
+
+### Directory for footer templates
+```
+/layout/footer
 ```
 
 ### Directory for view templates
