@@ -25,6 +25,7 @@ include_once( get_template_directory() . '/app/views/view.php' );
 /**
  * Loads the model classes
  */
+include_once( get_template_directory() . '/app/models/config.php' );
 include_once( get_template_directory() . '/app/models/template-part.php' );
 
 /**

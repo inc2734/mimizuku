@@ -24,7 +24,8 @@ class Template_Part {
 	protected $slug;
 
 	/**
-	 * [$vars description]
+	 * Variables
+	 *
 	 * @var array
 	 */
 	protected $vars = [];

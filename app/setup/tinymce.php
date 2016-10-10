@@ -13,8 +13,6 @@ namespace Mimizuku\App\Setup\TinyMCE;
  * @param array $init An array with TinyMCE config
  * @return array
  */
-function tiny_mce_before_init(  ) {
-}
 add_filter( 'tiny_mce_before_init',  function( $init ) {
 	$init['body_class'] = '_p-entry__content';
 	return $init;

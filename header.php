@@ -6,4 +6,5 @@
  */
 
 $header = apply_filters( 'mimizuku_header', '2row' );
-get_template_part( 'layout/header/' . $header );
+$slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'header' );
+get_template_part( $slug . '/' . $header );

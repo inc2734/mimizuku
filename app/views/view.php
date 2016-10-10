@@ -10,27 +10,6 @@ namespace Mimizuku\App\Views;
 class View {
 
 	/**
-	 * The directory for layout templates
-	 *
-	 * @var string
-	 */
-	const LAYOUT_DIRECTORY = 'layout/wrapper';
-
-	/**
-	 * The directory for view templates
-	 *
-	 * @var string
-	 */
-	const VIEW_DIRECTORY = 'views';
-
-	/**
-	 * The directory for static view templates
-	 *
-	 * @var string
-	 */
-	const STATIC_VIEW_DIRECTORY = 'views/static';
-
-	/**
 	 * The layout template path
 	 *
 	 * @var string
@@ -107,7 +86,8 @@ class View {
 	 */
 	protected function _render() {
 		$layout = apply_filters( 'mimizuku_layout', $this->layout );
-		$layout_template_path = get_template_directory() . '/' . self::LAYOUT_DIRECTORY . '/' . $layout . '.php';
+		$slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'layout' );
+		$layout_template_path = get_template_directory() . '/' . $slug . '/' . $layout . '.php';
 		if ( file_exists( $layout_template_path ) ) {
 			include( $layout_template_path );
 		}
@@ -121,7 +101,8 @@ class View {
 	public function view() {
 		$view = $this->_get_view_args();
 		$view = apply_filters( 'mimizuku_view', $view );
-		get_template_part( self::VIEW_DIRECTORY . '/' . $view['slug'], $view['name'] );
+		$slug = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'views' );
+		get_template_part( $slug . '/' . $view['slug'], $view['name'] );
 	}
 
 	/**
@@ -144,7 +125,8 @@ class View {
 		$path          = $this->_remove_http_query( $request_uri );
 		$path          = $this->_remove_paged_slug( $path );
 		$path          = trim( $path, '/' );
-		$template_name = self::STATIC_VIEW_DIRECTORY . '/' . $path;
+		$slug          = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'static' );
+		$template_name = $slug . '/' . $path;
 
 		if ( ! locate_template( $template_name . '.php', false ) ) {
 			return $view;
