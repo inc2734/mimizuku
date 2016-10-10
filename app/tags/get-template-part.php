@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Tags;
+namespace Mimizuku\App\Tags;
 
 function get_template_part( $template, $vars = [] ) {
 	$template_part = new \Mimizuku\Template_Part( $template );

@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku;
+namespace Mimizuku\App\Views;
 
 class View {
 

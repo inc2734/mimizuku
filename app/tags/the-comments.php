@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Tags;
+namespace Mimizuku\App\Tags;
 
 /**
  * Callback function of the each comments

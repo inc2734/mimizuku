@@ -5,12 +5,12 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions;
+namespace Mimizuku\App\Setup\Setup;
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
-function setup() {
+add_action( 'after_setup_theme', function() {
 	/**
 	 * Make theme available for translation
 	 */
@@ -43,5 +43,4 @@ function setup() {
 	 * Use main stylesheet for visual editor
 	 */
 	add_editor_style();
-}
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );
+} );

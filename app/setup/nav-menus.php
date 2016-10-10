@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions\NavMenus;
+namespace Mimizuku\App\Setup\NavMenus;
 
 /**
  * Registers wp_nav_menu() menus
@@ -13,14 +13,13 @@ namespace Mimizuku\Functions\NavMenus;
  * @return void
  * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
  */
-function register() {
+add_action( 'after_setup_theme', function() {
 	register_nav_menus( [
 		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
 		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
 		'footer-nav' => esc_html__( 'Footer Navigation', 'mimizuku' ),
 	] );
-}
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\register' );
+} );
 
 /**
  * Sets up nav menu attributs
@@ -28,7 +27,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\register' );
  * @return void
  * @see https://developer.wordpress.org/reference/functions/wp_nav_menu/
  */
-function setup_wp_nav_menu( $nav_menu, $args ) {
+add_filter( 'wp_nav_menu', function( $nav_menu, $args ) {
 	$nav_menu = preg_replace(
 		'/menu-item-has-children(.*?)"/ms',
 		'menu-item-has-children$1" aria-expanded="false"',
@@ -54,8 +53,7 @@ function setup_wp_nav_menu( $nav_menu, $args ) {
 	}
 
 	return $nav_menu;
-}
-add_filter( 'wp_nav_menu', __NAMESPACE__ . '\\setup_wp_nav_menu', 10, 2 );
+}, 10, 2 );
 
 /**
  * Sets up menu classes
@@ -63,7 +61,7 @@ add_filter( 'wp_nav_menu', __NAMESPACE__ . '\\setup_wp_nav_menu', 10, 2 );
  * @return void
  * @see https://developer.wordpress.org/reference/classes/walker_nav_menu/
  */
-function nav_menu_css_class( $classes, $item, $args, $depth ) {
+add_filter( 'nav_menu_css_class', function( $classes, $item, $args, $depth ) {
 	if ( 'global-nav' === $args->theme_location ) {
 		if ( $depth > 0 ) {
 			$classes[] = '_c-menu__subitem';
@@ -83,5 +81,4 @@ function nav_menu_css_class( $classes, $item, $args, $depth ) {
 	}
 
 	return $classes;
-}
-add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\nav_menu_css_class', 10, 4 );
+}, 10, 4 );

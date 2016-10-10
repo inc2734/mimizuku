@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions\PostClass;
+namespace Mimizuku\App\Setup\PostClass;
 
 /**
  * Sets up CSS classes for the current post
@@ -13,12 +13,11 @@ namespace Mimizuku\Functions\PostClass;
  * @param array $classes An array of post classes
  * @return array
  */
-function setup( $classes ) {
+add_action( 'post_class', function( $classes ) {
 	if ( isset( $classes['hentry'] ) ) {
 		unset( $classes['hentry'] );
 	}
 
 	$classes['_p-entry'] = '_p-entry';
 	return $classes;
-}
-add_action( 'post_class', __NAMESPACE__ . '\\setup' );
+} );

@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions\BodyClass;
+namespace Mimizuku\App\Setup\BodyClass;
 
 /**
  * Sets up CSS classes for the body
@@ -13,10 +13,9 @@ namespace Mimizuku\Functions\BodyClass;
  * @param array $classes An array of body classes
  * @return array
  */
-function setup( $classes ) {
+add_action( 'body_class', function( $classes ) {
 	$classes = array_merge( $classes, [
 		'_l-body' => '_l-body',
 	] );
 	return $classes;
-}
-add_action( 'body_class', __NAMESPACE__ . '\\setup' );
+} );

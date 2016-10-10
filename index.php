@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$controller = new \Mimizuku\Controller();
+$controller = new \Mimizuku\App\Controllers\Controller();
 $controller->layout( 'right-sidebar' );
 if ( have_posts() ) {
 	$controller->render( 'archive/archive' );

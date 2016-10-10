@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions\PasswordForm;
+namespace Mimizuku\App\Setup\PasswordForm;
 
 /**
  * Sets up password form markup
@@ -13,7 +13,7 @@ namespace Mimizuku\Functions\PasswordForm;
  * @param string $output
  * @return string
  */
-function the_password_form( $output ) {
+add_action( 'the_password_form', function( $output ) {
 	ob_start();
 	?>
 	<form action="<?php echo esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ); ?>" class="post-password-form" method="post">
@@ -33,8 +33,7 @@ function the_password_form( $output ) {
 	$output = ob_get_clean();
 	$output = str_replace( [ "\n", "\r", "\n\r", "\t" ], '', $output );
 	return $output;
-}
-add_action( 'the_password_form', __NAMESPACE__ . '\\the_password_form' );
+} );
 
 /**
  * Remove unnecessary tags
@@ -42,7 +41,6 @@ add_action( 'the_password_form', __NAMESPACE__ . '\\the_password_form' );
  * @param string $content
  * @return string
  */
-function the_content( $content ) {
+add_action( 'the_content', function( $content ) {
 	return preg_replace( '/<p>(<input class="_c-input-group__btn")/', '$1', $content );
-}
-add_action( 'the_content', __NAMESPACE__ . '\\the_content' );
+} );

@@ -12,12 +12,12 @@ Minizuku is a WordPress theme to develop the child theme.
 
 ## Start up build-in server
 ```
-$ bash bin/server.sh
+$ bash app/bin/server.sh
 ```
 
 ## Import theme unit test data
 ```
-bash bin/theme-unit-test.sh
+bash app/bin/theme-unit-test.sh
 ```
 
 ## Directory structure

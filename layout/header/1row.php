@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<header <?php \Mimizuku\Tags\header_class(); ?> role="banner">
+<header <?php \Mimizuku\App\Tags\header_class(); ?> role="banner">
 	<div class="_c-container">
 		<div class="_c-row">
 			<div class="_c-row__col _c-row__col--auto _c-row _c-row--middle">

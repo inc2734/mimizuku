@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Tags;
+namespace Mimizuku\App\Tags;
 
 /**
  * Display the header class attribute

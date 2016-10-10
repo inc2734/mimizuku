@@ -5,15 +5,14 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions\Assets;
-use \Mimizuku\Tags as Tags;
+namespace Mimizuku\App\Setup\Assets;
 
 /**
  * Enqueues scripts
  *
  * @return void
  */
-function enqueue_scripts() {
+add_action( 'wp_enqueue_scripts', function() {
 	$url     = get_template_directory_uri();
 	$version = _get_theme_version();
 
@@ -29,7 +28,7 @@ function enqueue_scripts() {
 		true
 	);
 
-	if ( Tags\is_supported_ie9() ) {
+	if ( \Mimizuku\App\Tags\is_supported_ie9() ) {
 		wp_enqueue_script(
 			'html5shiv',
 			$url . '/assets/vendor/html5.js'
@@ -40,15 +39,14 @@ function enqueue_scripts() {
 			'lt IE 9'
 		);
 	}
-}
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_scripts' );
+} );
 
 /**
  * Enqueues styles
  *
  * @return void
  */
-function enqueue_styles() {
+add_action( 'wp_enqueue_scripts', function() {
 	$url     = get_template_directory_uri();
 	$version = _get_theme_version();
 
@@ -74,7 +72,7 @@ function enqueue_styles() {
 		$version
 	);
 
-	if ( Tags\is_supported_ie9() ) {
+	if ( \Mimizuku\App\Tags\is_supported_ie9() ) {
 		wp_enqueue_style(
 			'basis-ie9',
 			$url . '/assets/vendor/basis-ie9/basis-ie9.min.css',
@@ -86,8 +84,7 @@ function enqueue_styles() {
 			'conditional', 'lt IE 10'
 		);
 	}
-}
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles' );
+} );
 
 /**
  * Return the theme version

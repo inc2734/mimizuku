@@ -5,14 +5,14 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\Functions\Head;
+namespace Mimizuku\App\Setup\Head;
 
 /**
  * Sets up content of the head element
  *
  * @return void
  */
-function setup() {
+add_action( 'wp_head', function() {
 	?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -21,5 +21,4 @@ function setup() {
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php
-}
-add_action( 'wp_head', __NAMESPACE__ . '\\setup', 1 );
+}, 1 );

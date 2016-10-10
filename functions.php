@@ -15,24 +15,24 @@ if ( ! isset( $content_width ) ) {
 /**
  * Loads the view controller class
  */
-include_once( get_template_directory() . '/classes/controllers/controller.php' );
+include_once( get_template_directory() . '/app/controllers/controller.php' );
 
 /**
  * Loads the view class
  */
-include_once( get_template_directory() . '/classes/views/view.php' );
+include_once( get_template_directory() . '/app/views/view.php' );
 
 /**
  * Loads the model classes
  */
-include_once( get_template_directory() . '/classes/models/template-part.php' );
+include_once( get_template_directory() . '/app/models/template-part.php' );
 
 /**
  * Sets up the hooked functions
  */
-include_once( get_template_directory() . '/functions/loader.php' );
+include_once( get_template_directory() . '/app/setup/loader.php' );
 
 /**
  * Sets up the custom template tags
  */
-include_once( get_template_directory() . '/template-tags/loader.php' );
+include_once( get_template_directory() . '/app/tags/loader.php' );
