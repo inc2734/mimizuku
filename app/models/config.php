@@ -16,13 +16,18 @@ class Config {
 	 * @param string $key the key of the config
 	 * @return mixed
 	 */
-	public static function get( $slug, $key ) {
+	public static function get( $slug, $key = null ) {
 		$path = get_template_directory() . '/' . $slug . '.php';
+
 		if ( ! file_exists( $path ) ) {
 			return;
 		}
 
 		$config = include( $path );
+
+		if ( is_null( $key ) ) {
+			return $config;
+		}
 
 		if ( ! isset( $config[ $key ] ) ) {
 			return;

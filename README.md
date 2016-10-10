@@ -49,6 +49,13 @@ bash app/bin/theme-unit-test.sh
 
 Mimizuku tries to load the view template according to the URL. For example when URL is http://example.com/foo/bar, tries to laod from `/views/static/foo/bar.php`.
 
+## Using view controller
+```
+$controller = new \Mimizuku\App\Controllers\Controller();
+$controller->layout( 'right-sidebar' );
+$controller->render( 'content/content', 'news' );
+```
+
 ## Filter hooks
 
 ### mimizuku_layout
