@@ -64,15 +64,15 @@ This is a function which to pass the variables to WordPress's `get_template_part
 
 ```
 // The caller
-\Mimizuku\App\Tags\get_template_part( path/to/template-parts, [
+\Mimizuku\App\Tags\get_template_part( 'path/to/template-parts', [
 	'_foo' => 'bar',
 	'_baz' => 'qux',
 ] );
 
 // The called template. path/to/template-parts.php
 <ul>
-	<li><?php echo esc_html( $_foo ); ?></li>
-	<li><?php echo esc_html( $_baz ); ?></li>
+	<li><?php echo esc_html( $_foo ); // bar ?></li>
+	<li><?php echo esc_html( $_baz ); // qux ?></li>
 </ul>
 ```
 
