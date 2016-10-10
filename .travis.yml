@@ -38,7 +38,7 @@ before_deploy:
   - cd ../
 deploy:
   provider: script
-  script: bash ./bin/wprepository.sh
+  script: bash ./app/bin/wprepository.sh
   skip_cleanup: true
   on:
     branch: master
