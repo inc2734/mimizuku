@@ -56,6 +56,26 @@ $controller->layout( 'right-sidebar' );
 $controller->render( 'content/content', 'news' );
 ```
 
+## Template tags
+
+### \\Mimizuku\\App\\Tags\\get_template_part()
+
+This is a function which to pass the variables to WordPress's `get_template_part()`.
+
+```
+// The caller
+\Mimizuku\App\Tags\get_template_part( path/to/template-parts, [
+	'_foo' => 'bar',
+	'_baz' => 'qux',
+] );
+
+// The called template. path/to/template-parts.php
+<ul>
+	<li><?php echo esc_html( $_foo ); ?></li>
+	<li><?php echo esc_html( $_baz ); ?></li>
+</ul>
+```
+
 ## Filter hooks
 
 ### mimizuku_layout
