@@ -28,14 +28,6 @@ script:
   - ls -la style.css
   - composer test
 after_success:
-  - git clone -b wprepository --quiet https://github.com/inc2734/mimizuku.git wprepository
-  - cd wprepository
-  - ls | xargs rm -rf
-  - rm .gitignore .travis.yml
-  - ls -la
-  - npm run gulp wprepository
-  - ls -la
-  - cd ../
   - bash ./app/bin/wprepository.sh
 before_deploy:
   - rm -rf wprepository
