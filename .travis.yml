@@ -27,20 +27,22 @@ script:
   - npm run gulp build
   - ls -la style.css
   - composer test
-before_deploy:
+after_success:
   - git clone -b wprepository --quiet https://github.com/inc2734/mimizuku.git wprepository
   - cd wprepository
   - ls | xargs rm -rf
-  - rsync -a ../ ./ --exclude "/wprepository/" --exclude "/node_modules/" --exclude "/vendor/" --exclude "/.git"
-  - composer install --no-dev
-  - rm -rf app/bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml composer.json composer.lock
-  - rm -rf .gitignore .travis.yml .DS_Store
+  - rm .gitignore .travis.yml
+  - ls -la
+  - npm run gulp wprepository
   - ls -la
   - cd ../
+  - bash ./app/bin/wprepository.sh
+before_deploy:
+  - rm -rf wprepository
+  - npm run zip
 deploy:
-  provider: script
-  script: bash ./app/bin/wprepository.sh
-  skip_cleanup: true
+  provider: releases
+  file: mimizuku.zip
   on:
-    branch: master
-    php: 7
+    tags: true
+    repo: inc2734/mimizuku

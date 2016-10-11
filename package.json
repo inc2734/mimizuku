@@ -32,6 +32,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.5.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-zip": "^3.2.0",
     "run-sequence": "^1.2.2",
     "vinyl-source-stream": "^1.1.0"
   },

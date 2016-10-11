@@ -13,6 +13,7 @@ var browser_sync = require('browser-sync');
 var autoprefixer = require('autoprefixer');
 var rimraf       = require('rimraf');
 var runSequence  = require('run-sequence');
+var zip          = require('gulp-zip');
 
 var dir = {
   src: {
@@ -129,6 +130,44 @@ gulp.task('browsersync', function() {
   browser_sync.init({
     proxy: '127.0.0.1:8080'
   });
+});
+
+/**
+ * Creates directory for wprepository
+ */
+gulp.task('wprepository', ['build'], function(){
+  return gulp.src(
+      [
+        '**/*',
+        '!node_modules',
+        '!node_modules/**',
+        '!vendor',
+        '!vendor/**',
+        '!.git',
+        '!app/bin',
+        '!app/bin/**',
+        '!codesniffer.ruleset.xml',
+        '!gulpfile.js',
+        '!package.json',
+        '!phpmd.ruleset.xml',
+        '!composer.json',
+        '!composer.lock',
+        '!.gitignore',
+        '!.travis.yml',
+        '!**/.DS_Store'
+      ],
+      {base: './'}
+    )
+    .pipe(gulp.dest('wprepository'));
+});
+
+/**
+ * Creates the zip file
+ */
+gulp.task('zip', ['wprepository'], function(){
+  return gulp.src('wprepository/**/*', {base: 'wprepository'})
+    .pipe(zip('mimizuku.zip'))
+    .pipe(gulp.dest('./'));
 });
 
 /**
