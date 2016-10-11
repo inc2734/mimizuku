@@ -12,6 +12,11 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
   exit
 fi
 
+if [[ "7" != "$TRAVIS_PHP_VERSION" ]]; then
+	echo "deploy only PHP 7"
+	exit
+fi
+
 git clone -b wprepository --quiet https://github.com/inc2734/mimizuku.git wprepository
 cd wprepository
 ls | xargs rm -rf

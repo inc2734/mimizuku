@@ -31,8 +31,7 @@ script:
 after_success:
 - bash ./app/bin/wprepository.sh
 before_deploy:
-- rm -rf wprepository
-- npm run gulp zip
+- bash ./app/bin/zip.sh
 deploy:
   provider: releases
   api_key:
