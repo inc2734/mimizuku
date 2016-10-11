@@ -17,7 +17,7 @@ $ bash app/bin/server.sh
 
 ## Import theme unit test data
 ```
-bash app/bin/theme-unit-test.sh
+$ bash app/bin/theme-unit-test.sh
 ```
 
 ## Directory structure
