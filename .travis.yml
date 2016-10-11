@@ -32,7 +32,7 @@ after_success:
   - bash ./app/bin/wprepository.sh
 before_deploy:
   - rm -rf wprepository
-  - npm run zip
+  - npm run gulp zip
 deploy:
   provider: releases
   file: mimizuku.zip
