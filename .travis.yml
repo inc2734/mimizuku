@@ -1,40 +1,42 @@
 language: php
 php:
-  - 5.6
-  - 7
+- 5.6
+- 7
 sudo: false
 branches:
   only:
-    - master
-    - develop
-    - /v\d+\.\d+\.\d+?.*/
+  - master
+  - develop
+  - "/v\\d+\\.\\d+\\.\\d+?.*/"
 env:
   global:
-    - GIT_COMMITTER_NAME=travis-ci
-    - GIT_COMMITTER_EMAIL=inc@2inc.org
-    - GIT_AUTHOR_NAME=travis-ci
-    - GIT_AUTHOR_EMAIL=inc@2inc.org
-    - secure: "RoG7GNdWAzbVhOrCdRkohAKk2nT8cja3X80f9ZnCOgqn3YuHk23Y3NJ4U/uwROsrRV//M7w1a5Gg1h4kMiCZxKmU4zCyOdI4bpl68tKSbNroLgxFQL43jfEXlnv4b4O0+hU0HpzpR/wX7v0jW6T0EkekRRRwh1lHv/k0YrUXMAyRGyZehFuDkqIlI73yiz7m6UB3HD7T0nlc3MWowSroLeiBtZUUI+D+PNJkHpCG9hOeZ1aCgYI3uiYF/YpIE0tlJJfRoWmQ4mwW2ZN0SJABvzGAIPAhELoCVG7uYipq9tr3eHYmjEuKeL7dIqGkj3KitJkA40PXxLTx+ocvYYntqjrUO62sw/+AjZC34ljs41+6DeqZAGsKEC5b6zBtTuuZBXUrFuYybDqxFpYl/Jc2gzjPmcqtibq+t3nmXDZqEuxYii2XKwMuM0l/wXXrQNH54gQgzNebFit98EKrWG/Ey3GdleL1XXNJ2WkZQAzdlcp9xfQapqn6pGvTsDt/y80gVx+zd+pGU+RyHfJsXAaMZZd9LKKqabE8+iXfjoU9yipvrDHqNip3ZD21FZA8mw2jpOf6PVXfaQ9UDHQIC1Srdnr6tmB9cDzqJoddUhbugm1JC/kG23NrHnV19Zdmj/4cMajfxbIaIKQc5EPSvvt6bMyTHkF7aO66nJye9i6GXwM="
+  - GIT_COMMITTER_NAME=travis-ci
+  - GIT_COMMITTER_EMAIL=inc@2inc.org
+  - GIT_AUTHOR_NAME=travis-ci
+  - GIT_AUTHOR_EMAIL=inc@2inc.org
+  - secure: RoG7GNdWAzbVhOrCdRkohAKk2nT8cja3X80f9ZnCOgqn3YuHk23Y3NJ4U/uwROsrRV//M7w1a5Gg1h4kMiCZxKmU4zCyOdI4bpl68tKSbNroLgxFQL43jfEXlnv4b4O0+hU0HpzpR/wX7v0jW6T0EkekRRRwh1lHv/k0YrUXMAyRGyZehFuDkqIlI73yiz7m6UB3HD7T0nlc3MWowSroLeiBtZUUI+D+PNJkHpCG9hOeZ1aCgYI3uiYF/YpIE0tlJJfRoWmQ4mwW2ZN0SJABvzGAIPAhELoCVG7uYipq9tr3eHYmjEuKeL7dIqGkj3KitJkA40PXxLTx+ocvYYntqjrUO62sw/+AjZC34ljs41+6DeqZAGsKEC5b6zBtTuuZBXUrFuYybDqxFpYl/Jc2gzjPmcqtibq+t3nmXDZqEuxYii2XKwMuM0l/wXXrQNH54gQgzNebFit98EKrWG/Ey3GdleL1XXNJ2WkZQAzdlcp9xfQapqn6pGvTsDt/y80gVx+zd+pGU+RyHfJsXAaMZZd9LKKqabE8+iXfjoU9yipvrDHqNip3ZD21FZA8mw2jpOf6PVXfaQ9UDHQIC1Srdnr6tmB9cDzqJoddUhbugm1JC/kG23NrHnV19Zdmj/4cMajfxbIaIKQc5EPSvvt6bMyTHkF7aO66nJye9i6GXwM=
 cache:
   directories:
-    - node_modules
-    - vendor
-    - $HOME/.composer/cache
+  - node_modules
+  - vendor
+  - "$HOME/.composer/cache"
 install:
-  - composer install
-  - nvm install 6
-  - npm install
+- composer install
+- nvm install 6
+- npm install
 script:
-  - npm run gulp build
-  - ls -la style.css
-  - composer test
+- npm run gulp build
+- ls -la style.css
+- composer test
 after_success:
-  - bash ./app/bin/wprepository.sh
+- bash ./app/bin/wprepository.sh
 before_deploy:
-  - rm -rf wprepository
-  - npm run gulp zip
+- rm -rf wprepository
+- npm run gulp zip
 deploy:
   provider: releases
+  api_key:
+    secure: c0SMC9+92PsvtyxEtweKCaYD2W6jMKECdVe7a0Arq7A8rMEO2ZkbewauBNAVagV51+WcTaboomAVlWz4P71WkwEv12/O0bB22e2qa2UIAIx8JhlR4Apkl/8HhydPP8fmqUGTnVs4t2sWuDBeL5Nz6sGHUKJXAWrAoyVsVbBlrk1cNfTwwKqIFTVgblUanzY+g0K4OivHdM06Pb9PvTDowE8ojo6oss8yT4BH40IDofhLasVFsp60LMJ7duvCjxt+Y69e//DIiVitCvHqk+VmoTDS7aT/+B4I35MH/diAhTfjuTYH3Dl6fNFFmUjuM0Re54ZFsSErMcgpjc/BL0LwuK42fYzzXs2QBQ7sLcEdkndHovtWOX8tSOz8HH75JsgZMjBxUUUOrOMBvRgqrCTC0D1R+cdYlvvPz4FtYBRiuQDL3uhugAUM60BKIMVG3TS9BA+hVwuVbfANuIARVMEHx77p8a8fsD3qofORqnAR4TcgsUa9Mtzqw6WrOoPT1NBVvxhFXpuFSZwXhMYXrenecuLqi0T3MvKQEf4cEOLEiu9/zznjH3xgXmXtczlp11arunU+Ar1NaMDSYlgNhO/ix8QJM3oAVYrfUXkIA5/3kVR/Lou+yN2ZopQhL3MQpjHJZyCjksZpKyPfqHb77mCp1QMWe1ruJLDZRh/XgRYGNC0=
   file: mimizuku.zip
   on:
     tags: true
