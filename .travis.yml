@@ -32,7 +32,8 @@ before_deploy:
   - cd wprepository
   - ls | xargs rm -rf
   - rsync -a ../ ./ --exclude "/wprepository/" --exclude "/node_modules/" --exclude "/vendor/" --exclude "/.git"
-  - rm -rf app/bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml
+  - composer install --no-dev
+  - rm -rf app/bin codesniffer.ruleset.xml node_modules gulpfile.js package.json phpmd.ruleset.xml composer.json composer.lock
   - rm -rf .gitignore .travis.yml .DS_Store
   - ls -la
   - cd ../

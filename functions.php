@@ -13,20 +13,9 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
- * Loads the view controller class
+ * Loads the auto loader
  */
-include_once( get_template_directory() . '/app/controllers/controller.php' );
-
-/**
- * Loads the view class
- */
-include_once( get_template_directory() . '/app/views/view.php' );
-
-/**
- * Loads the model classes
- */
-include_once( get_template_directory() . '/app/models/config.php' );
-include_once( get_template_directory() . '/app/models/template-part.php' );
+include_once( get_template_directory() . '/vendor/autoload.php' );
 
 /**
  * Sets up the hooked functions
