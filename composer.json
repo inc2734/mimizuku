@@ -1,5 +1,13 @@
 {
   "name": "inc2734/mimizuku",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Takashi Kitajima",
+      "email": "inc@2inc.org",
+      "homepage": "http://2inc.org"
+    }
+  ],
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
