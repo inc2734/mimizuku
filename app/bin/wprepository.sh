@@ -17,6 +17,7 @@ cd wprepository
 ls | xargs rm -rf
 ls -la
 npm run gulp wprepository
+composer install --no-dev
 ls -la
 
 git add -A
