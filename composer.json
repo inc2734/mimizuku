@@ -14,12 +14,6 @@
     "phpmd/phpmd": "2.*"
   },
   "scripts" :{
-    "post-install-cmd": [
-      "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
-    ],
-    "post-update-cmd": [
-      "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
-    ],
     "test": [
       "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
       "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/"
