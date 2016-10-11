@@ -18,6 +18,7 @@ ls | xargs rm -rf
 ls -la
 npm run gulp wprepository
 composer install --no-dev
+rm -rf composer.json composer.lock
 ls -la
 
 git add -A
