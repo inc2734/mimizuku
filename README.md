@@ -1,7 +1,13 @@
 # Mimizuku
+
+[![Build Status](https://travis-ci.org/inc2734/mimizuku.svg?branch=master)](https://travis-ci.org/inc2734/mimizuku)
+[![Latest Stable Version](https://poser.pugx.org/inc2734/mimizuku/v/stable)](https://packagist.org/packages/inc2734/mimizuku)
+[![License](https://poser.pugx.org/inc2734/vanilla/mimizuku)](https://packagist.org/packages/inc2734/mimizuku)
+
 Minizuku is a WordPress theme to develop the child theme.
 
 * GitHub: https://github.com/inc2734/mimizuku/
+* Packagist: https://packagist.org/packages/inc2734/mimizuku
 
 ## Required
 * PHP 5.6+
