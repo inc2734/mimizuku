@@ -143,15 +143,15 @@ gulp.task('wprepository', ['build'], function(){
         '!node_modules/**',
         '!vendor',
         '!vendor/**',
-        '!.git',
         '!app/bin',
         '!app/bin/**',
+        '!wprepository',
+        '!wprepository/**',
+        '!.git',
         '!codesniffer.ruleset.xml',
         '!gulpfile.js',
         '!package.json',
         '!phpmd.ruleset.xml',
-        '!composer.json',
-        '!composer.lock',
         '!.gitignore',
         '!.travis.yml',
         '!tests',
@@ -168,7 +168,15 @@ gulp.task('wprepository', ['build'], function(){
  * Creates the zip file
  */
 gulp.task('zip', ['wprepository'], function(){
-  return gulp.src('wprepository/**/*', {base: 'wprepository'})
+  return gulp.src(
+      [
+        'wprepository/**',
+        '!wprepository/composer.json',
+        '!wprepository/composer.lock',
+        '!wprepository/.git'
+      ]
+      , {base: './wprepository'}
+    )
     .pipe(zip('mimizuku.zip'))
     .pipe(gulp.dest('./'));
 });

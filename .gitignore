@@ -11,3 +11,5 @@ editor-style.min.css
 packages/
 *.sql
 ./bin/*.xml
+wprepository/
+mimizuku.zip
