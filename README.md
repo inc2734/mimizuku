@@ -20,6 +20,21 @@ $ bash app/bin/server.sh
 $ bash app/bin/theme-unit-test.sh
 ```
 
+## Generate files needed for running PHPUnit tests.
+```
+$ bash app/bin/scoffold-tests.sh
+```
+
+## Run PHPunit tests
+```
+# Generate WordPress tests environment and run phpunit
+$ bash app/bin/wpphpunit.sh
+```
+```
+# Run phpunit only
+$ phpunit
+```
+
 ## Directory structure
 
 ### Directory for layout templates
