@@ -32,12 +32,13 @@ $ bash app/bin/scoffold-tests.sh
 ```
 
 ## Run PHPunit tests
+### Generate WordPress tests environment and run phpunit
 ```
-# Generate WordPress tests environment and run phpunit
 $ bash app/bin/wpphpunit.sh
 ```
+
+### Run phpunit only
 ```
-# Run phpunit only
 $ phpunit
 ```
 
