@@ -154,6 +154,9 @@ gulp.task('wprepository', ['build'], function(){
         '!composer.lock',
         '!.gitignore',
         '!.travis.yml',
+        '!tests',
+        '!tests/**',
+        '!phpunit.xml',
         '!**/.DS_Store'
       ],
       {base: './'}
