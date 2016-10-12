@@ -27,8 +27,7 @@ add_action( 'comment_form_default_fields', function( $fields ) {
  * @return string
  */
 add_action( 'comment_form_field_comment', function( $comment_field ) {
-	$comment_field = _add_class_attribute( $comment_field );
-	return $comment_field;
+	return _add_class_attribute( $comment_field );
 } );
 
 /**
@@ -38,8 +37,7 @@ add_action( 'comment_form_field_comment', function( $comment_field ) {
  * @return string
  */
 add_action( 'comment_form_submit_field', function( $submit_field ) {
-	$submit_field = str_replace( 'class="submit"', 'class="_c-btn"', $submit_field );
-	return $submit_field;
+	return str_replace( 'class="submit"', 'class="_c-btn"', $submit_field );
 } );
 
 /**

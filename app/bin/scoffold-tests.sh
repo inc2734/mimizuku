@@ -13,7 +13,7 @@ if [ ! -e "$dir/../../tests" ]; then
 fi
 
 cp -f "$wpdir/templates/bootstrap.mustache" "$dir/../../tests/bootstrap.mustache"
-sed -e "s/require dirname( dirname( __FILE__ ) ) \. '\/{{plugin_slug}}\.php';/switch_theme('mimizuku');/g" "$dir/../../tests/bootstrap.mustache">"$dir/../../tests/bootstrap.php"
+sed -e "s/require dirname( dirname( __FILE__ ) ) \. '\/{{plugin_slug}}\.php';/register_theme_directory( dirname( __FILE__ ) . '\/\.\.\/\.\.\/' ); switch_theme('mimizuku');/g" "$dir/../../tests/bootstrap.mustache">"$dir/../../tests/bootstrap.php"
 rm -f "$dir/../../tests/bootstrap.mustache"
 
 cp -f "$wpdir/templates/test-sample.mustache" "$dir/../../tests/test-sample.php"

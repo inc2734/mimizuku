@@ -14,8 +14,7 @@ namespace Mimizuku\App\Setup\BodyClass;
  * @return array
  */
 add_action( 'body_class', function( $classes ) {
-	$classes = array_merge( $classes, [
+	return array_merge( $classes, [
 		'_l-body' => '_l-body',
 	] );
-	return $classes;
 } );
