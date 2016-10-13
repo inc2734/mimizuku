@@ -16,6 +16,14 @@ if ( ! isset( $content_width ) ) {
  * Loads the auto loader
  */
 include_once( get_template_directory() . '/vendor/autoload.php' );
+spl_autoload_register( function ( $class ) {
+	$path = preg_replace( '/^\\Mimizuku/', '', $class );
+	$path = str_replace( '\\', '/', $path );
+	$path = str_replace( '_', '-', $path );
+	$path = strtolower( $path );
+	$path = trim( $path, '/' );
+	include_once( get_template_directory() . '/' . $path . '.php' );
+} );
 
 /**
  * Sets up the hooked functions
