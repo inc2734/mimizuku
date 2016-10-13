@@ -15,7 +15,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Loads the auto loader
  */
-include_once( get_template_directory() . '/vendor/autoload.php' );
+//include_once( get_template_directory() . '/vendor/autoload.php' );
 spl_autoload_register( function ( $class ) {
 	$slug = preg_replace( '/^\\Mimizuku/', '', $class );
 	$slug = str_replace( '\\', '/', $slug );
@@ -24,7 +24,7 @@ spl_autoload_register( function ( $class ) {
 	$slug = trim( $slug, '/' );
 	$path = get_template_directory() . '/' . $slug . '.php';
 	if ( file_exists( $path ) ) {
-		include_once( get_template_directory() . '/' . $path . '.php' );
+		include_once( $path );
 	}
 } );
 
