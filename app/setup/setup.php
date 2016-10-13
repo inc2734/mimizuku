@@ -40,6 +40,11 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
 
 	/**
+	 * Add default posts and comments RSS feed links to head.
+	 */
+	add_theme_support( 'automatic-feed-links' );
+
+	/**
 	 * Use main stylesheet for visual editor
 	 */
 	add_editor_style();
