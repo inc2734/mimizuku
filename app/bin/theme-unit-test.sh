@@ -2,9 +2,9 @@
 
 dir=`dirname $0`
 datetime=`date +%Y%m%d%H%M%S`
-wp db export "$dir/dump-$datetime.sql"
+wp db export "$dir/../../dump-$datetime.sql"
 
-if [ -e "$dir/dump-$datetime.sql" ]; then
+if [ -e "$dir/../../dump-$datetime.sql" ]; then
 	wp plugin install --activate wordpress-importer
 	wp plugin is-installed wordpress-importer
 

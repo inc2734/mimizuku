@@ -11,10 +11,12 @@ Minizuku is a WordPress theme to develop the child theme.
 
 ## Required
 * PHP 5.6+
+* WP-CLI
 
 ## How to build
 1. `$ npm install`
 2. `$ npm run gulp build`
+3. `$ composer install`
 
 ## Start up build-in server
 ```
@@ -28,7 +30,7 @@ $ bash app/bin/theme-unit-test.sh
 
 ## Generate files needed for running PHPUnit tests.
 ```
-$ bash app/bin/scoffold-tests.sh
+$ bash app/bin/scaffold-tests.sh
 ```
 
 ## Run PHPUnit tests
