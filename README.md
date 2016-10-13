@@ -31,7 +31,7 @@ $ bash app/bin/theme-unit-test.sh
 $ bash app/bin/scoffold-tests.sh
 ```
 
-## Run PHPunit tests
+## Run PHPUnit tests
 ### Generate WordPress tests environment and run phpunit
 ```
 $ bash app/bin/wpphpunit.sh
