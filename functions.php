@@ -17,12 +17,15 @@ if ( ! isset( $content_width ) ) {
  */
 include_once( get_template_directory() . '/vendor/autoload.php' );
 spl_autoload_register( function ( $class ) {
-	$path = preg_replace( '/^\\Mimizuku/', '', $class );
-	$path = str_replace( '\\', '/', $path );
-	$path = str_replace( '_', '-', $path );
-	$path = strtolower( $path );
-	$path = trim( $path, '/' );
-	include_once( get_template_directory() . '/' . $path . '.php' );
+	$slug = preg_replace( '/^\\Mimizuku/', '', $class );
+	$slug = str_replace( '\\', '/', $slug );
+	$slug = str_replace( '_', '-', $slug );
+	$slug = strtolower( $slug );
+	$slug = trim( $slug, '/' );
+	$path = get_template_directory() . '/' . $slug . '.php';
+	if ( file_exists( $path ) ) {
+		include_once( get_template_directory() . '/' . $path . '.php' );
+	}
 } );
 
 /**

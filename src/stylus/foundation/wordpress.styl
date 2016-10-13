@@ -41,12 +41,6 @@
 }
 
 /**
- * .bypostauthor
- */
-.bypostauthor {
-}
-
-/**
  * Galleries
  */
 .gallery {
@@ -113,5 +107,33 @@
 		top: 5px;
 		width: auto;
 		z-index: 100000;
+	}
+}
+
+/**
+ * .bypostauthor
+ */
+.bypostauthor {
+	> .{bs-prefix}p-comment {
+		> .{bs-prefix}p-comment__figure {
+			bs-margin(0, 0, 0, 1);
+			order: 1;
+		}
+	}
+}
+
+/**
+ * Sticky post
+ */
+.sticky {
+	.{bs-prefix}p-entry-summary {
+		&__title {
+			&::before {
+				content: 'FEATURED';
+				display: block;
+				color: bs-color-gray;
+				bs-font-size-line-height(bs-base-font-size-px - 2);
+			}
+		}
 	}
 }

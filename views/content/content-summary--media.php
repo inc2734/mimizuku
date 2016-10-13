@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<section class="_p-entry-summary _p-entry-summary--media">
+<section <?php post_class( ['_p-entry-summary', '_p-entry-summary--media'] ); ?>>
 	<?php $thumbnail_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>
 	<div class="_p-entry-summary__figure"
 		<?php if ( $thumbnail_url ) : ?>

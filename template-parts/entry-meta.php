@@ -27,7 +27,7 @@ $entry_meta['author'] = sprintf(
 	'<span class="screen-reader-text">%s</span>
 	<i class="fa fa-user"></i>
 	<a href="%s">%s</a>',
-	esc_html__( 'Author', 'habakiri' ),
+	esc_html__( 'Author', 'mimizuku' ),
 	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 	esc_html( get_the_author() )
 );

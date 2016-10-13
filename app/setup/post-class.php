@@ -18,6 +18,8 @@ add_action( 'post_class', function( $classes ) {
 		unset( $classes['hentry'] );
 	}
 
-	$classes['_p-entry'] = '_p-entry';
+	if ( is_singular() ) {
+		$classes['_p-entry'] = '_p-entry';
+	}
 	return $classes;
 } );
