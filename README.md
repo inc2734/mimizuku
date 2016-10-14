@@ -13,10 +13,29 @@ Minizuku is a WordPress theme to develop the child theme.
 * PHP 5.6+
 * WP-CLI
 
+## Get Started
+### Install
+Mimizuku is a parent theme. So you should download the Mimizuku child theme. See https://github.com/inc2734/mimizuku-child. If you build this child theme, aloso downloaded Mimizuku by composer.
+
+```
+$ cd /PATH/TO/wp-content/themes
+$ git clone https://github.com/inc2734/mimizuku-child.git
+$ cd mimizuku-child
+$ composer install
+```
+
+### update
+```
+$ cd /PATH/TO/wp-content/themes/mimizuku-child
+$ composer update mimizuku
+```
+
 ## How to build
-1. `$ npm install`
-2. `$ npm run gulp build`
-3. `$ composer install`
+```
+$ npm install
+$ npm run gulp build
+$ composer install
+```
 
 ## Start up built-in server
 ```
