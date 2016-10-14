@@ -18,7 +18,7 @@ Minizuku is a WordPress theme to develop the child theme.
 2. `$ npm run gulp build`
 3. `$ composer install`
 
-## Start up build-in server
+## Start up built-in server
 ```
 $ bash app/bin/server.sh
 ```
