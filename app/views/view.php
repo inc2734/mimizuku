@@ -89,13 +89,13 @@ class View {
 		$slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'layout' );
 
 		$template_file_name     = $slug . '/' . $layout . '.php';
-		$layout_stylesheet_path = get_stylesheet_directory() . '/' . $template_file_name;
-		$layout_template_path   = get_template_directory() . '/' . $template_file_name;
+		$layout_child_path  = get_stylesheet_directory() . '/' . $template_file_name;
+		$layout_parent_path = get_template_directory() . '/' . $template_file_name;
 
-		if ( file_exists( $layout_stylesheet_path ) ) {
-			include( $layout_stylesheet_path );
-		} elseif ( file_exists( $layout_template_path ) ) {
-			include( $layout_template_path );
+		if ( file_exists( $layout_child_path ) ) {
+			include( $layout_child_path );
+		} elseif ( file_exists( $layout_parent_path ) ) {
+			include( $layout_parent_path );
 		}
 	}
 
