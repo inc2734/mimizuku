@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "font-awesome": "^4.6.3",
-    "getbasis": "^2.0.0",
+    "getbasis": "^2.0.1",
     "getbasis-drawer": "^2.0.0",
     "getbasis-hamburger-btn": "^1.0.0",
-    "getbasis-layout": "^2.0.0",
+    "getbasis-layout": "^3.0.0",
     "getbasis-menu": "^2.0.0"
   },
   "devDependencies": {
