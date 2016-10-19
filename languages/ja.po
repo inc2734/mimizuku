@@ -1,0 +1,187 @@
+# Copyright (C) 2016 Takashi Kitajima
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mimizuku 0.1.10\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mimizuku\n"
+"POT-Creation-Date: 2016-10-20 01:56+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-20 02:04+0900\n"
+"Language-Team: Takashi Kitajima <inc@2inc.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: inc2734 <inc@2inc.org>\n"
+"Language: ja_JP\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: app/setup/nav-menus.php:18
+msgid "Global Navigation (For PC)"
+msgstr "グローバルナビゲーション（PC用）"
+
+#: app/setup/nav-menus.php:19
+msgid "Drawer Navigation (For Mobile)"
+msgstr "ドロワーナビゲーション（モバイル用）"
+
+#: app/setup/nav-menus.php:20
+msgid "Footer Navigation"
+msgstr "フッターナビゲーション"
+
+#: app/setup/password-form.php:21
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+"このコンテンツはパスワードで保護されています。閲覧する場合はパスワードを入"
+"力してください。"
+
+#: app/setup/password-form.php:25
+msgid "Password:"
+msgstr "パスワード："
+
+#: app/setup/password-form.php:29
+msgctxt "post password form"
+msgid "Enter"
+msgstr "確定"
+
+#: app/setup/widgets.php:17 app/setup/widgets.php:19
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: app/tags/the-comments.php:27
+msgid "Your comment is awaiting moderation."
+msgstr "あなたのコメントは承認待ちです。"
+
+#: app/tags/the-comments.php:35 app/tags/the-pings.php:25
+msgid "%1$s said on %2$s at %3$s"
+msgstr "%1$s said on %2$s at %3$s"
+
+#: searchform.php:9 searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr "検索："
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "検索 &hellip;"
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr "検索する"
+
+#: template-parts/comments.php:11
+msgid "Comments on this post"
+msgstr "この投稿へのコメント"
+
+#: template-parts/comments.php:32
+msgid "Comments are closed."
+msgstr "コメントは閉じられています。"
+
+#: template-parts/comments.php:39
+msgid "No comments."
+msgstr "コメントはありません。"
+
+#: template-parts/copyright.php:13
+msgid "Monkey Wrench"
+msgstr "モンキーレンチ"
+
+#: template-parts/copyright.php:18
+msgid "WordPress"
+msgstr "WordPress"
+
+#: template-parts/copyright.php:20
+msgid "Mimizuku theme by %s"
+msgstr "Mimizuku theme by %s"
+
+#: template-parts/copyright.php:21
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: template-parts/entry-meta.php:19
+msgid "Published"
+msgstr "投稿日"
+
+#: template-parts/entry-meta.php:30
+msgid "Author"
+msgstr "著者"
+
+#: template-parts/entry-meta.php:44
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: template-parts/entry-meta.php:59
+msgid "Tags"
+msgstr "タグ"
+
+#: template-parts/link-pages.php:16
+msgid "Posts navigation"
+msgstr "ナビゲーション"
+
+#: template-parts/pagination.php:17
+msgid "Previous"
+msgstr "前へ"
+
+#: template-parts/pagination.php:18
+msgid "Next"
+msgstr "次へ"
+
+#: template-parts/pings.php:11
+msgid "Trackbacks and Pingbacks on this post"
+msgstr "この投稿へのトラックバック"
+
+#: template-parts/pings.php:27
+msgid "No trackbacks."
+msgstr "トラックバックはありません。"
+
+#: template-parts/pings.php:36
+msgid "TrackBack URL"
+msgstr "トラックバック URL"
+
+#: views/content/content-404.php:9
+msgid "Woops! Page not found."
+msgstr "ページが見つかりませんでした。"
+
+#: views/content/content-404.php:10
+msgid "The page you are looking for may be moved or deleted."
+msgstr "お探しのページは移動したか削除されています。"
+
+#: views/content/content-404.php:11
+msgid "Please search this serch box."
+msgstr "この検索ボックスで検索してください。"
+
+#: views/content/content-no-match.php:9
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索"
+"してみてください。"
+
+#: views/content/content-none.php:9
+msgid "No posts."
+msgstr "投稿がありません。"
+
+#. Theme Name of the plugin/theme
+msgid "Mimizuku"
+msgstr "Mimizuku"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/inc2734/mimizuku/"
+msgstr "https://github.com/inc2734/mimizuku/"
+
+#. Description of the plugin/theme
+msgid "Minizuku is a WordPress theme to develop the child theme."
+msgstr "Mimizuku は子テーマを開発するための WordPress テーマです。"
+
+#. Author of the plugin/theme
+msgid "inc2734"
+msgstr "inc2734"
+
+#. Author URI of the plugin/theme
+msgid "http://2inc.org"
+msgstr "http://2inc.org"

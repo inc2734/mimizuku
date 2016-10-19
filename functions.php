@@ -12,6 +12,11 @@ if ( ! isset( $content_width ) ) {
 	$content_width = apply_filters( 'mimizuku_content_width', 1152 );
 }
 
+/*
+ * Make theme available for translation.
+ */
+load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
+
 /**
  * Loads the auto loader
  */
