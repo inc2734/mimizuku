@@ -14,6 +14,7 @@
   "dependencies": {
     "font-awesome": "^4.6.3",
     "getbasis": "^2.0.1",
+    "getbasis-balloon": "^1.0.0",
     "getbasis-drawer": "^2.0.0",
     "getbasis-hamburger-btn": "^1.0.0",
     "getbasis-layout": "^3.0.0",

@@ -51,10 +51,7 @@ gulp.task('remove-packages-dir', function(cb) {
 gulp.task('copy-packages', ['remove-packages-dir'], function(cb) {
   var packages = [
     dir.src.packages + '/getbasis/**',
-    dir.src.packages + '/getbasis-drawer/**',
-    dir.src.packages + '/getbasis-hamburger-btn/**',
-    dir.src.packages + '/getbasis-layout/**',
-    dir.src.packages + '/getbasis-menu/**'
+    dir.src.packages + '/getbasis-*/**'
   ];
   return gulp.src(packages, {base: 'node_modules'})
     .pipe(gulp.dest(dir.dist.packages))
