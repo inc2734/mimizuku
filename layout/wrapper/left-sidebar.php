@@ -18,7 +18,7 @@
 		<div class="_c-container">
 			<div class="_c-row _c-row--margin _c-row--reverse">
 				<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-3-4">
-					<main role="main">
+					<main class="_l-main" role="main">
 						<?php $this->view(); ?>
 					</main>
 				</div>
