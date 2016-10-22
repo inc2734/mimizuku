@@ -16,6 +16,7 @@
 
 	<div class="_l-contents" role="document">
 		<main class="_l-main" role="main">
+			<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 			<?php $this->view(); ?>
 		</main>
 	</div>

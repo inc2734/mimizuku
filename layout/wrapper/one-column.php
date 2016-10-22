@@ -19,6 +19,7 @@
 			<div class="_c-row _c-row--margin">
 				<div class="_c-row__col _c-row__col--1-1">
 					<main class="_l-main" role="main">
+						<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 						<?php $this->view(); ?>
 					</main>
 				</div>
