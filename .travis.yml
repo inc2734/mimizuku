@@ -31,7 +31,6 @@ script:
 - npm run gulp build
 - ls -la style.css index.php vendor/autoload.php
 - composer test
-- phpunit
 after_success:
 - bash ./app/bin/wprepository.sh
 before_deploy:

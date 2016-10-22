@@ -19,8 +19,14 @@
   "scripts" :{
     "test": [
       "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
-      "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/"
-    ]
+      "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
+      "bash app/bin/phpunit.sh"
+    ],
+    "server": "bash app/bin/server.sh",
+    "scaffold-tests": "bash app/bin/scaffold-tests.sh",
+    "theme-unit-test": "bash app/bin/theme-unit-test.sh",
+    "theme-unit-test-ja": "bash app/bin/theme-unit-test-ja.sh",
+    "wpphpunit": "bash bin/app/wpphpunit"
   },
   "autoload": {
     "psr-4": {
