@@ -92,6 +92,6 @@ class Breadcrumbs {
 	 * @return array
 	 */
 	public function get() {
-		return $this->breadcrumbs;
+		return apply_filters( 'mimizuku_breadcrumbs', $this->breadcrumbs );
 	}
 }
