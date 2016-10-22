@@ -8,7 +8,7 @@
 $breadcrumbs = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 $items = array_values( $breadcrumbs->get() );
 ?>
-<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<ol class="_p-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 	<?php foreach ( $items as $key => $item ) : ?>
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 		<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="<?php echo esc_url( $item['link'] ); ?>">
