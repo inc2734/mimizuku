@@ -152,6 +152,11 @@ abstract class Abstract_Breadcrumb {
 		return $day;
 	}
 
+	/**
+	 * Return breadcrumbs items
+	 *
+	 * @return array
+	 */
 	public function get() {
 		return $this->breadcrumbs;
 	}

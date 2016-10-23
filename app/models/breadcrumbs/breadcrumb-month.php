@@ -8,6 +8,12 @@
 namespace Mimizuku\App\Models\Breadcrumbs;
 
 class Breadcrumb_Month extends Abstract_Breadcrumb {
+
+	/**
+	 * Sets beradcrumbs items
+	 *
+	 * @return void
+	 */
 	protected function set_items() {
 		$year = get_query_var( 'year' );
 		if ( $year ) {

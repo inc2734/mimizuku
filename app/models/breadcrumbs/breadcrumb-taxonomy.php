@@ -8,6 +8,12 @@
 namespace Mimizuku\App\Models\Breadcrumbs;
 
 class Breadcrumb_Taxonomy extends Abstract_Breadcrumb {
+
+	/**
+	 * Sets beradcrumbs items
+	 *
+	 * @return void
+	 */
 	protected function set_items() {
 		$taxonomy         = get_query_var( 'taxonomy' );
 		$term             = get_term_by( 'slug', get_query_var( 'term' ), $taxonomy );

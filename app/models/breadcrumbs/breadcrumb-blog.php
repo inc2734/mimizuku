@@ -8,6 +8,12 @@
 namespace Mimizuku\App\Models\Breadcrumbs;
 
 class Breadcrumb_Blog extends Abstract_Breadcrumb {
+
+	/**
+	 * Sets beradcrumbs items
+	 *
+	 * @return void
+	 */
 	protected function set_items() {
 		$post_type = $this->get_post_type();
 		if ( ( is_category() || is_tag() || is_date() || is_author() ) || ( is_single() && 'post' === $post_type ) ) {

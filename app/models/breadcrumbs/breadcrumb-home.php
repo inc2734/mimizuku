@@ -8,6 +8,12 @@
 namespace Mimizuku\App\Models\Breadcrumbs;
 
 class Breadcrumb_Home extends Abstract_Breadcrumb {
+
+	/**
+	 * Sets beradcrumbs items
+	 *
+	 * @return void
+	 */
 	protected function set_items() {
 		$show_on_front  = get_option( 'show_on_front' );
 		$page_for_posts = get_option( 'page_for_posts' );

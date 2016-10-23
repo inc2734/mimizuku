@@ -8,6 +8,12 @@
 namespace Mimizuku\App\Models\Breadcrumbs;
 
 class Breadcrumb_Single extends Abstract_Breadcrumb {
+
+	/**
+	 * Sets beradcrumbs items
+	 *
+	 * @return void
+	 */
 	protected function set_items() {
 		$post_type = $this->get_post_type();
 
@@ -21,12 +27,24 @@ class Breadcrumb_Single extends Abstract_Breadcrumb {
 		$this->set( get_the_title() );
 	}
 
+	/**
+	 * Sets Breadcrumbs items of post type archive
+	 *
+	 * @param string $post_type
+	 * @return void
+	 */
 	protected function set_post_type_archive( $post_type ) {
 		$post_type_object = get_post_type_object( $post_type );
 		$label = $post_type_object->labels->singular_name;
 		$this->set( $label, $this->get_post_type_archive_link( $post_type ) );
 	}
 
+	/**
+	 * Sets Breadcrumbs items of terms
+	 *
+	 * @param string $post_type
+	 * @return void
+	 */
 	protected function set_terms( $post_type ) {
 		$post_type_object = get_post_type_object( $post_type );
 		$taxonomies = $post_type_object->taxonomies;
@@ -46,6 +64,11 @@ class Breadcrumb_Single extends Abstract_Breadcrumb {
 		$this->set( $term->name, get_term_link( $term ) );
 	}
 
+	/**
+	 * Sets Breadcrumbs items of categories
+	 *
+	 * @return void
+	 */
 	protected function set_categories() {
 		$categories = get_the_category( get_the_ID() );
 		if ( $categories ) {
