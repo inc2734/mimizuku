@@ -16,7 +16,7 @@ abstract class Abstract_Breadcrumb {
 	 * Store each item of breadcrumbs in ascending order
 	 * @var array
 	 */
-	protected $breadcrumbs = array();
+	protected $breadcrumbs = [];
 
 	public function __construct() {
 		$this->set_items();
@@ -36,10 +36,10 @@ abstract class Abstract_Breadcrumb {
 	 * @param string $link
 	 */
 	protected function set( $title, $link = '' ) {
-		$this->breadcrumbs[] = array(
+		$this->breadcrumbs[] = [
 			'title' => $title,
 			'link'  => $link,
-		);
+		];
 	}
 
 	/**
@@ -120,7 +120,7 @@ abstract class Abstract_Breadcrumb {
 		if ( 'ja' === get_locale() ) {
 			$month .= '月';
 		} else {
-			$monthes = array(
+			$monthes = [
 				1  => 'January',
 				2  => 'February',
 				3  => 'March',
@@ -133,7 +133,7 @@ abstract class Abstract_Breadcrumb {
 				10 => 'October',
 				11 => 'November',
 				12 => 'December',
-			);
+			];
 			$month = $monthes[ $month ];
 		}
 		return $month;

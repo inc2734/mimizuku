@@ -16,7 +16,7 @@ class Breadcrumbs {
 	 * Store each item of breadcrumbs in ascending order
 	 * @var array
 	 */
-	protected $breadcrumbs = array();
+	protected $breadcrumbs = [];
 
 	/**
 	 * @SuppressWarnings(PHPMD.CyclomaticComplexity)
@@ -80,10 +80,10 @@ class Breadcrumbs {
 	 * @param string $link
 	 */
 	protected function set( $title, $link = '' ) {
-		$this->breadcrumbs[] = array(
+		$this->breadcrumbs[] = [
 			'title' => $title,
 			'link'  => $link,
-		);
+		];
 	}
 
 	/**
