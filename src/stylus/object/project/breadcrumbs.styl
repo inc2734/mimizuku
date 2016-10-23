@@ -1,0 +1,32 @@
+.{bs-prefix}p-breadcrumbs {
+	list-style: none;
+	margin: 0;
+	bs-font-size-line-height(bs-base-font-size-px - 2);
+	padding: 0;
+
+	&, a {
+		color: bs-color-gray;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	&__item {
+		margin: 0;
+		display: inline;
+		padding: 0;
+
+		&::after {
+			bs-margin(0, .125);
+		}
+
+		&:nth-child(n + 2) {
+			mimizuku-fa("\f105");
+
+			&::before {
+				bs-margin(0, .125);
+			}
+		}
+	}
+}

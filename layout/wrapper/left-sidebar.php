@@ -16,10 +16,11 @@
 
 	<div class="_l-contents" role="document">
 		<div class="_c-container">
+			<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+
 			<div class="_c-row _c-row--margin _c-row--reverse">
 				<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-3-4">
 					<main class="_l-main" role="main">
-						<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 						<?php $this->view(); ?>
 					</main>
 				</div>
