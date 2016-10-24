@@ -33,10 +33,10 @@ Mimizuku is a parent theme. So you should download the Mimizuku child theme. See
 ## Third-party resources
 
 ### Font Awesome (Web fonts)
-Font License: SIL OFL 1.1
-Code License: MIT License
-Source: https://fortawesome.github.io/Font-Awesome/
+* Font License: SIL OFL 1.1
+* Code License: MIT License
+* Source: https://fortawesome.github.io/Font-Awesome/
 
 ### Basis (Stylus/CSS framework)
-License: MIT License
-Source: https://getbasis.github.io/
+* License: MIT License
+* Source: https://getbasis.github.io/
