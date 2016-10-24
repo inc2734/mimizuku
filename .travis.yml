@@ -25,7 +25,7 @@ install:
 - composer install
 - nvm install 6
 - npm install
-- rvm use 2.0.0 --install --binary --fuzzy
+- rvm use 2 --install --binary --fuzzy
 before_script:
 - bash app/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 script:
