@@ -23,7 +23,7 @@ class Breadcrumb_Taxonomy extends Abstract_Breadcrumb {
 
 		if ( $post_type ) {
 			$post_type_object = get_post_type_object( $post_type );
-			$label = $post_type_object->labels->singular_name;
+			$label = $post_type_object->label;
 			$this->set( $label, $this->get_post_type_archive_link( $post_type ) );
 		}
 

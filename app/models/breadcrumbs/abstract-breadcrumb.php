@@ -103,7 +103,7 @@ abstract class Abstract_Breadcrumb {
 	 * @param string $year
 	 * @return string
 	 */
-	protected function year( $year ) {
+	public function year( $year ) {
 		if ( 'ja' === get_locale() ) {
 			$year .= '年';
 		}
@@ -116,7 +116,7 @@ abstract class Abstract_Breadcrumb {
 	 * @param string $month
 	 * @return string
 	 */
-	protected function month( $month ) {
+	public function month( $month ) {
 		if ( 'ja' === get_locale() ) {
 			$month .= '月';
 		} else {
@@ -145,7 +145,7 @@ abstract class Abstract_Breadcrumb {
 	 * @param string $day
 	 * @return string
 	 */
-	protected function day( $day ) {
+	public function day( $day ) {
 		if ( 'ja' === get_locale() ) {
 			$day .= '日';
 		}
