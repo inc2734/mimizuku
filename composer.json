@@ -25,7 +25,8 @@
     "scaffold-tests": "bash app/bin/scaffold-tests.sh",
     "theme-unit-test": "bash app/bin/theme-unit-test.sh",
     "theme-unit-test-ja": "bash app/bin/theme-unit-test-ja.sh",
-    "wpphpunit": "bash bin/app/wpphpunit"
+    "wpphpunit": "bash app/bin/wpphpunit.sh",
+    "phpunit": "bash app/bin/phpunit.sh"
   },
   "autoload": {
     "psr-4": {

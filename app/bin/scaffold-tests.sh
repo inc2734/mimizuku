@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e;
+
 themedir=$(wp theme path $(wp theme list --field=name --status=active) --dir)
 phar extract -f $(which wp) "$themedir/app/bin/wp.phar">/dev/null 2>&1
 wpclidir="$themedir/app/bin/wp.phar$(which wp)"
