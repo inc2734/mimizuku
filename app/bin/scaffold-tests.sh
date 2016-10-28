@@ -2,7 +2,9 @@
 
 set -e;
 
-themedir=$(wp theme path $(wp theme list --field=name --status=active) --dir)
+theme=$(wp theme list --field=name --status=active)
+themedir=$(wp theme path $theme --dir)
+
 phar extract -f $(which wp) "$themedir/app/bin/wp.phar">/dev/null 2>&1
 wpclidir="$themedir/app/bin/wp.phar$(which wp)"
 
@@ -19,7 +21,7 @@ if [ ! -e "$themedir/tests" ]; then
 fi
 
 cp -f "$wpclidir/templates/bootstrap.mustache" "$themedir/tests/bootstrap.mustache"
-sed -e "s/require dirname( dirname( __FILE__ ) ) \. '\/{{plugin_slug}}\.php';/register_theme_directory( dirname( __FILE__ ) . '\/\.\.\/\.\.\/' ); switch_theme('mimizuku');/g" "$themedir/tests/bootstrap.mustache">"$themedir/tests/bootstrap.php"
+sed -e "s/require dirname( dirname( __FILE__ ) ) \. '\/{{plugin_slug}}\.php';/register_theme_directory( dirname( __FILE__ ) . '\/\.\.\/\.\.\/' ); switch_theme('$theme');/g" "$themedir/tests/bootstrap.mustache">"$themedir/tests/bootstrap.php"
 rm -f "$themedir/tests/bootstrap.mustache"
 
 cp -f "$wpclidir/templates/test-sample.mustache" "$themedir/tests/test-sample.php"
