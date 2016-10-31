@@ -2,12 +2,11 @@
 
 set -e;
 
-if [[ $(pwd) =~ ^.+/wp-content/themes/([^/]+) ]]; then
-  themedir=${BASH_REMATCH[0]}
-else
+themedir=$(pwd)
+if [ ! -e style.css ]; then
   echo 'Current directory is not a theme.'
-	echo $(pwd)
-  exit 1;
+  echo $(pwd)
+  exit 1
 fi
 
 datetime=`date +%Y%m%d%H%M%S`

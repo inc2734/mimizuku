@@ -2,6 +2,14 @@
 
 set -e;
 
+themedir=$(pwd)
+theme=$(basename $themedir)
+if [ ! -e style.css ]; then
+  echo 'Current directory is not a theme.'
+  echo $(pwd)
+  exit 1
+fi
+
 if [[ $(pwd) =~ ^.+/wp-content/themes/([^/]+) ]]; then
   themedir=${BASH_REMATCH[0]}
 	theme=${BASH_REMATCH[1]}

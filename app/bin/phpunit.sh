@@ -2,12 +2,11 @@
 
 if [ -e /tmp/wordpress-tests-lib ]; then
 
-  if [[ $(pwd) =~ ^.+/wp-content/themes/([^/]+) ]]; then
-    themedir=${BASH_REMATCH[0]}
-  else
+  themedir=$(pwd)
+  if [ ! -e style.css ]; then
     echo 'Current directory is not a theme.'
     echo $(pwd)
-    exit 1;
+    exit 1
   fi
 
   cd $themedir;
