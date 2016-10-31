@@ -6,6 +6,7 @@ if [ -e /tmp/wordpress-tests-lib ]; then
     themedir=${BASH_REMATCH[0]}
   else
     echo 'Current directory is not a theme.'
+    echo $(pwd)
     exit 1;
   fi
 

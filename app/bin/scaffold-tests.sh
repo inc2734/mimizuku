@@ -7,6 +7,7 @@ if [[ $(pwd) =~ ^.+/wp-content/themes/([^/]+) ]]; then
 	theme=${BASH_REMATCH[1]}
 else
   echo 'Current directory is not a theme.'
+	echo $(pwd)
   exit 1;
 fi
 
