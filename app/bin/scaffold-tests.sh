@@ -2,8 +2,13 @@
 
 set -e;
 
-theme=$(wp theme list --field=name --status=active)
-themedir=$(wp theme path $theme --dir)
+if [[ $(pwd) =~ ^.+/wp-content/themes/([^/]+) ]]; then
+  themedir=${BASH_REMATCH[0]}
+	theme=${BASH_REMATCH[1]}
+else
+  echo 'Current directory is not a theme.'
+  exit 1;
+fi
 
 phar extract -f $(which wp) "$themedir/app/bin/wp.phar">/dev/null 2>&1
 wpclidir="$themedir/app/bin/wp.phar$(which wp)"

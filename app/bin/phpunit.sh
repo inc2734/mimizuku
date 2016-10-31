@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 if [ -e /tmp/wordpress-tests-lib ]; then
-  themedir=$(wp theme path $(wp theme list --field=name --status=active) --dir)
+
+  if [[ $(pwd) =~ ^.+/wp-content/themes/([^/]+) ]]; then
+    themedir=${BASH_REMATCH[0]}
+  else
+    echo 'Current directory is not a theme.'
+    exit 1;
+  fi
+
   cd $themedir;
   phpunit
   exit 0
