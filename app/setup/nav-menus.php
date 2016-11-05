@@ -14,8 +14,8 @@ class Nav_Menus {
 		add_filter( 'wp_nav_menu', [ $this, 'common' ], 10, 2 );
 		add_filter( 'wp_nav_menu', [ $this, 'global_nav' ], 10, 2 );
 		add_filter( 'wp_nav_menu', [ $this, 'drawer_nav' ], 10, 2 );
-		add_filter( 'nav_menu_css_class', [ $this, 'global_nav_classes'], 10, 4 );
-		add_filter( 'nav_menu_css_class', [ $this, 'drawer_nav_classes'], 10, 4 );
+		add_filter( 'nav_menu_css_class', [ $this, 'global_nav_classes' ], 10, 4 );
+		add_filter( 'nav_menu_css_class', [ $this, 'drawer_nav_classes' ], 10, 4 );
 	}
 
 	/**
