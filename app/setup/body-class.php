@@ -5,16 +5,22 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Setup\BodyClass;
+namespace Mimizuku\App\Setup;
 
-/**
- * Sets up CSS classes for the body
- *
- * @param array $classes An array of body classes
- * @return array
- */
-add_action( 'body_class', function( $classes ) {
-	return array_merge( $classes, [
-		'_l-body' => '_l-body',
-	] );
-} );
+class Body_Class {
+
+	public function __construct() {
+
+		/**
+		 * Sets up CSS classes for the body
+		 *
+		 * @param array $classes An array of body classes
+		 * @return array
+		 */
+		add_action( 'body_class', function( $classes ) {
+			return array_merge( $classes, [
+				'_l-body' => '_l-body',
+			] );
+		} );
+	}
+}
