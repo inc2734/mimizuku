@@ -13,5 +13,6 @@ new \Mimizuku\App\Setup\Post_Class();
 new \Mimizuku\App\Setup\Tinymce();
 new \Mimizuku\App\Setup\Comment_Form();
 new \Mimizuku\App\Setup\Password_Form();
-new \Mimizuku\App\Setup\Assets();
+new \Mimizuku\App\Setup\Styles();
+new \Mimizuku\App\Setup\Scripts();
 new \Mimizuku\App\Setup\Head();
