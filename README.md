@@ -6,7 +6,7 @@
 
 Minizuku is a WordPress theme to develop the child theme.
 
-<img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/images/mimizuku.svg" alt="Mimizuku" style="max-width: 96px">
+<img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/images/mimizuku.svg" alt="Mimizuku" width="96px">
 
 * GitHub: https://github.com/inc2734/mimizuku/
 * Packagist: https://packagist.org/packages/inc2734/mimizuku
