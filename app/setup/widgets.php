@@ -26,8 +26,8 @@ class Widgets {
 			'description'   => __( 'Sidebar', 'mimizuku' ),
 			'before_widget' => '<section id="%1$s" class="_p-widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h1 class="_p-widget__title">',
-			'after_title'   => '</h1>',
+			'before_title'  => '<h2 class="_p-widget__title">',
+			'after_title'   => '</h2>',
 		] );
 	}
 

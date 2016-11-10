@@ -8,7 +8,7 @@
 $comments_by_type = $wp_query->comments_by_type;
 ?>
 <section class="_p-comments">
-	<h1 class="_p-comments__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h1>
+	<h2 class="_p-comments__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h2>
 
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
 
