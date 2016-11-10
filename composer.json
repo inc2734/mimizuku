@@ -3,7 +3,7 @@
   "description": "Minizuku is a WordPress theme to develop the child theme.",
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "authors": [
     {
       "name": "Takashi Kitajima",
