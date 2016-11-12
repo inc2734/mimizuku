@@ -6,7 +6,7 @@
  */
 
 get_template_part( 'app/tags/get-template-part' );
-get_template_part( 'app/tags/header-class' );
+get_template_part( 'app/tags/header-attributes' );
 get_template_part( 'app/tags/is-supported-ie9' );
 get_template_part( 'app/tags/the-comments' );
 get_template_part( 'app/tags/the-pings' );

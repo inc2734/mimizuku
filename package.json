@@ -17,7 +17,7 @@
     "getbasis-balloon": "^1.0.0",
     "getbasis-drawer": "^2.0.1",
     "getbasis-hamburger-btn": "^1.0.0",
-    "getbasis-layout": "^3.0.1",
+    "getbasis-layout": "^4.0.0",
     "getbasis-menu": "^2.0.0"
   },
   "devDependencies": {
