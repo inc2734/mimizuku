@@ -5,9 +5,9 @@ import $ from 'jquery';
 export default class FixAdminBar {
 	constructor() {
 		this.min       = 599;
-		this.container = $('._l-container--sticky-footer');
-		this.header    = $('._l-header');
-		this.contents  = $('._l-contents');
+		this.container = $('[data-bs-container-layout="sticky-footer"]');
+		this.header    = $('[data-bs-layout="header"]');
+		this.contents  = $('[data-bs-layout="contents"]');
 
 		$(() => {
 			this.adminBar  = $('#wpadminbar');
@@ -32,18 +32,20 @@ export default class FixAdminBar {
 	}
 
 	fixHeaderPosition() {
-		const scroll = $(window).scrollTop();
+		if (-1 !== $.inArray(this.header.attr('data-bs-header-layout'), ['sticky', 'overlay'])) {
+			const scroll = $(window).scrollTop();
 
-		if ($(window).outerWidth() < this.min) {
-			if (this.adminBar.outerHeight() <= scroll) {
-				this.header.css('top', 0);
+			if (this.min > $(window).outerWidth()) {
+				if (scroll >= this.adminBar.outerHeight()) {
+					this.header.css('top', 0);
+				} else {
+					this.header.css('top', '');
+					this.header.attr('data-bs-header-scrolled', false);
+					this.contents.css('padding-top', 0);
+				}
 			} else {
-				this.header.removeClass('_l-header--overlay');
 				this.header.css('top', '');
-				this.header.next().css('padding-top', 0);
 			}
-		} else {
-			this.header.css('top', '');
 		}
 	}
 

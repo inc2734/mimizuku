@@ -10,11 +10,11 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
-<div class="_l-container _l-container--sticky-footer _p-drawer">
+<div class="_l-container _p-drawer" data-bs-layout="container" data-bs-container-layout="sticky-footer">
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<?php get_header(); ?>
 
-	<div class="_l-contents" role="document">
+	<div class="_l-contents" role="document" data-bs-layout="contents">
 		<div class="_c-container">
 			<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 

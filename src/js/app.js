@@ -11,8 +11,8 @@ new BasisDrawer({
 import BasisMenu from '../packages/getbasis-menu/src/js/menu.js';
 new BasisMenu();
 
-import BasisOverlayHeader from '../packages/getbasis-layout/src/js/overlay-header.js';
-new BasisOverlayHeader();
+import BasisStickyHeader from '../packages/getbasis-layout/src/js/sticky-header.js';
+new BasisStickyHeader();
 
 import FixAdminBar from './fix-adminbar.js';
 new FixAdminBar();
