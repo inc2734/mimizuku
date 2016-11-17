@@ -10,7 +10,7 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
-<div class="_l-container _p-drawer" data-bs-layout="container" data-bs-container-layout="sticky-footer">
+<div class="_l-container _p-drawer" data-bs-layout="container" data-bs-container-layout="sticky-footer" data-bs-component="drawer">
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<?php get_header(); ?>
 

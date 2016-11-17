@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<div class="_p-drawer__btn _c-hamburger-btn">
+<div class="_c-hamburger-btn" data-bs-component="drawer-btn" aria-expanded="false" aria-controls="#drawer-nav">
 	<div class="_c-hamburger-btn__bar"></div>
 	<div class="_c-hamburger-btn__bar"></div>
 	<div class="_c-hamburger-btn__bar"></div>

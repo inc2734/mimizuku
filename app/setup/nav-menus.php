@@ -11,7 +11,6 @@ class Nav_Menus {
 
 	public function __construct() {
 		add_action( 'after_setup_theme', [ $this, 'register_nav_menus' ] );
-		add_filter( 'wp_nav_menu', [ $this, 'common' ], 10, 2 );
 		add_filter( 'wp_nav_menu', [ $this, 'global_nav' ], 10, 2 );
 		add_filter( 'wp_nav_menu', [ $this, 'drawer_nav' ], 10, 2 );
 		add_filter( 'nav_menu_css_class', [ $this, 'global_nav_classes' ], 10, 4 );
@@ -33,20 +32,6 @@ class Nav_Menus {
 	}
 
 	/**
-	 * Sets up nav menu attributs
-	 *
-	 * @return void
-	 * @see https://developer.wordpress.org/reference/functions/wp_nav_menu/
-	 */
-	public function common( $nav_menu, $args ) {
-		return preg_replace(
-			'/menu-item-has-children(.*?)"/ms',
-			'menu-item-has-children$1" aria-expanded="false"',
-			$nav_menu
-		);
-	}
-
-	/**
 	 * Sets up global navigation attributs
 	 *
 	 * @return void
@@ -56,6 +41,12 @@ class Nav_Menus {
 		if ( 'global-nav' !== $args->theme_location ) {
 			return $nav_menu;
 		}
+
+		$nav_menu = preg_replace(
+			'/menu-item-has-children(.*?)"/ms',
+			'menu-item-has-children$1" aria-expanded="false"',
+			$nav_menu
+		);
 
 		return preg_replace(
 			'/<ul class="sub-menu">/ms',
@@ -75,11 +66,25 @@ class Nav_Menus {
 			return $nav_menu;
 		}
 
-		return preg_replace(
+		$nav_menu = preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<div class="_p-drawer__toggle"><i class="fa fa-angle-right"></i></div><ul class="_p-drawer__submenu">',
+			'<div class="_p-drawer__toggle" data-bs-component="drawer__toggle" aria-expanded="false"><i class="fa fa-angle-right"></i></div><ul class="_p-drawer__submenu" data-bs-component="drawer__submenu" aria-hidden="true">',
 			$nav_menu
 		);
+
+		$nav_menu = preg_replace(
+			'/(_p-drawer__item")>/ms',
+			'$1 data-bs-component="drawer__item">',
+			$nav_menu
+		);
+
+		$nav_menu = preg_replace(
+			'/(_p-drawer__subitem")>/ms',
+			'$1 data-bs-component="drawer__subitem">',
+			$nav_menu
+		);
+
+		return $nav_menu;
 	}
 
 	/**

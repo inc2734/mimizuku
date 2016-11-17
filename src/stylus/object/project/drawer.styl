@@ -1,8 +1,10 @@
 .{bs-prefix}p-drawer {
-	@extend .{bs-prefix}c-drawer;
-
 	&__body {
 		z-index: 100000;
+
+		&--fixed {
+			position: fixed;
+		}
 	}
 
 	&__btn {
@@ -60,10 +62,8 @@
 			color: #fff;
 			transition: transform bs-transition-duration bs-transition-function-timing;
 		}
-	}
 
-	[aria-expanded="true"] {
-		> .{bs-prefix}c-drawer__toggle {
+		&[aria-expanded="true"] {
 			> .fa {
 				transform: rotate(90deg);
 			}
