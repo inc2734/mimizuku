@@ -7,6 +7,8 @@
 
 new \Mimizuku\App\Setup\Init();
 new \Mimizuku\App\Setup\Nav_Menus();
+new \Mimizuku\App\Setup\Drawer_Nav();
+new \Mimizuku\App\Setup\Global_Nav();
 new \Mimizuku\App\Setup\Widgets();
 new \Mimizuku\App\Setup\Body_Class();
 new \Mimizuku\App\Setup\Post_Class();
