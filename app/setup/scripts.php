@@ -24,6 +24,7 @@ class Scripts {
 	protected $version;
 
 	public function __construct() {
+		$this->theme     = get_stylesheet();
 		$this->theme_uri = get_template_directory_uri();
 		$this->version   = $this->_get_theme_version();
 
@@ -45,9 +46,15 @@ class Scripts {
 	 * @return void
 	 */
 	public function enqueue_main() {
+		if ( is_child_theme() ) {
+			$src = get_stylesheet_directory_uri() . '/assets/js/app.min.js';
+		} else {
+			$src = $this->theme_uri . '/assets/js/app.min.js';
+		}
+
 		wp_enqueue_script(
-			get_template(),
-			$this->theme_uri . '/assets/js/app.min.js',
+			$this->theme,
+			$src,
 			[ 'jquery' ],
 			$this->version,
 			true
