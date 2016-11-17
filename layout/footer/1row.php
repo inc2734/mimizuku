@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<footer class="_l-footer" role="content-info" data-bs-layout="footer">
+<footer class="_l-footer" role="content-info" data-l="footer">
 	<div class="_c-container">
 		<div class="_c-row">
 			<div class="_c-row__col _c-row__col--1-1 _c-row__col--md-auto">

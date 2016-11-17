@@ -5,9 +5,9 @@ import $ from 'jquery';
 export default class FixAdminBar {
 	constructor() {
 		this.min       = 599;
-		this.container = $('[data-bs-container-layout="sticky-footer"]');
-		this.header    = $('[data-bs-layout="header"]');
-		this.contents  = $('[data-bs-layout="contents"]');
+		this.container = $('[data-l="container"]');
+		this.header    = $('[data-l="header"]');
+		this.contents  = $('[data-l="contents"]');
 
 		$(() => {
 			this.adminBar  = $('#wpadminbar');
@@ -15,6 +15,7 @@ export default class FixAdminBar {
 			if (this.adminBar.length) {
 				this.fixHeaderPosition();
 				this.fixStickyFooter();
+				this.fixDisableWindowScroll();
 				this.setListener();
 			}
 		});
@@ -24,6 +25,7 @@ export default class FixAdminBar {
 		$(window).resize(() => {
 			this.fixHeaderPosition();
 			this.fixStickyFooter();
+			this.fixDisableWindowScroll();
 		});
 
 		$(window).scroll(() => {
@@ -32,7 +34,7 @@ export default class FixAdminBar {
 	}
 
 	fixHeaderPosition() {
-		if (-1 !== $.inArray(this.header.attr('data-bs-header-layout'), ['sticky', 'overlay'])) {
+		if (-1 !== $.inArray(this.header.attr('data-l-header-type'), ['sticky', 'overlay'])) {
 			const scroll = $(window).scrollTop();
 
 			if (this.min > $(window).outerWidth()) {
@@ -40,7 +42,7 @@ export default class FixAdminBar {
 					this.header.css('top', 0);
 				} else {
 					this.header.css('top', '');
-					this.header.attr('data-bs-header-scrolled', false);
+					$('html').attr('data-scrolled', false);
 					this.contents.css('padding-top', 0);
 				}
 			} else {
@@ -50,7 +52,17 @@ export default class FixAdminBar {
 	}
 
 	fixStickyFooter() {
-		const adminbar_height = parseInt( this.adminBar.outerHeight() ) + 'px';
-		this.container.css('min-height', 'calc(100vh - ' + adminbar_height + ')');
+		if ('true' == $('html').attr('data-sticky-footer')) {
+			console.log(1);
+			const adminbar_height = parseInt(this.adminBar.outerHeight());
+			this.container.css('min-height', `calc(100vh - ${adminbar_height}px)`);
+		}
+	}
+
+	fixDisableWindowScroll() {
+		if ('false' == $('html').attr('data-window-scroll')) {
+			const adminbar_height = parseInt(this.adminBar.outerHeight());
+			this.container.css('max-height', `calc(100vh - ${adminbar_height}px)`);
+		}
 	}
 }

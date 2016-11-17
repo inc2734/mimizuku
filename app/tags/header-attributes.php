@@ -15,6 +15,6 @@ namespace Mimizuku\App\Tags;
 function header_attributes() {
 	$bs_header_layout = apply_filters( 'mimizuku_bs_header_layout', null );
 	if ( $bs_header_layout ) {
-		printf( 'data-bs-header-layout="%1$s"', esc_attr( $bs_header_layout ) );
+		printf( 'data-l-header-type="%1$s"', esc_attr( $bs_header_layout ) );
 	}
 }

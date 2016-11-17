@@ -44,15 +44,17 @@ class Nav_Menus {
 
 		$nav_menu = preg_replace(
 			'/menu-item-has-children(.*?)"/ms',
-			'menu-item-has-children$1" aria-expanded="false"',
+			'menu-item-has-children$1" aria-haspopup="true"',
 			$nav_menu
 		);
 
-		return preg_replace(
+		$nav_menu = preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<ul class="_c-menu__submenu">',
+			'<ul class="_c-menu__submenu" data-c="menu__submenu" aria-hidden="true">',
 			$nav_menu
 		);
+
+		return $nav_menu;
 	}
 
 	/**
@@ -66,25 +68,11 @@ class Nav_Menus {
 			return $nav_menu;
 		}
 
-		$nav_menu = preg_replace(
+		return preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<div class="_p-drawer__toggle" data-bs-component="drawer__toggle" aria-expanded="false"><i class="fa fa-angle-right"></i></div><ul class="_p-drawer__submenu" data-bs-component="drawer__submenu" aria-hidden="true">',
+			'<div class="_p-drawer__toggle" data-c="drawer__toggle" aria-expanded="false"><i class="fa fa-angle-right"></i></div><ul class="_p-drawer__submenu" data-c="drawer__submenu" aria-hidden="true">',
 			$nav_menu
 		);
-
-		$nav_menu = preg_replace(
-			'/(_p-drawer__item")>/ms',
-			'$1 data-bs-component="drawer__item">',
-			$nav_menu
-		);
-
-		$nav_menu = preg_replace(
-			'/(_p-drawer__subitem")>/ms',
-			'$1 data-bs-component="drawer__subitem">',
-			$nav_menu
-		);
-
-		return $nav_menu;
 	}
 
 	/**

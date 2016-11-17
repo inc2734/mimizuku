@@ -6,21 +6,23 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> data-sticky-footer="true">
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
-<div class="_l-container _p-drawer" data-bs-layout="container" data-bs-container-layout="sticky-footer" data-bs-component="drawer">
+<div class="_p-drawer" data-c="drawer">
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
-	<?php get_header(); ?>
+	<div class="_l-container" data-l="container">
+		<?php get_header(); ?>
 
-	<div class="_l-contents" role="document" data-bs-layout="contents">
-		<main class="_l-main" role="main">
-			<?php $this->view(); ?>
-		</main>
+		<div class="_l-contents" role="document" data-l="contents">
+			<main class="_l-main" role="main">
+				<?php $this->view(); ?>
+			</main>
+		</div>
+
+		<?php get_footer(); ?>
 	</div>
-
-	<?php get_footer(); ?>
 </div>
 
 <?php wp_footer(); ?>

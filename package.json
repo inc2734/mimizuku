@@ -15,16 +15,16 @@
     "font-awesome": "^4.7.0",
     "getbasis": "^2.0.1",
     "getbasis-balloon": "^1.0.0",
-    "getbasis-drawer": "^3.0.0",
-    "getbasis-hamburger-btn": "^1.0.0",
-    "getbasis-layout": "^5.0.0",
-    "getbasis-menu": "^2.0.0"
+    "getbasis-drawer": "^4.0.0",
+    "getbasis-hamburger-btn": "^2.0.0",
+    "getbasis-layout": "^6.0.1",
+    "getbasis-menu": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
-    "browser-sync": "^2.17.5",
+    "browser-sync": "^2.18.1",
     "browserify": "^13.1.1",
     "browserify-shim": "^3.8.12",
     "cssnano": "^3.8.0",
