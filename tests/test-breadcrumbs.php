@@ -2,7 +2,11 @@
 class BreadcrumbsTest extends WP_UnitTestCase {
 
 	public function setup() {
+		global $wp_rewrite;
 		parent::setup();
+
+		$wp_rewrite->init();
+		$wp_rewrite->set_permalink_structure( '/%year%/%monthnum%/%day%/%postname%/' );
 
 		$this->author_id     = $this->factory->user->create();
 		$this->post_ids      = $this->factory->post->create_many( 20, [ 'post_author' => $this->author_id ] );
@@ -33,8 +37,8 @@ class BreadcrumbsTest extends WP_UnitTestCase {
 			wp_set_object_terms( $post_id, get_term( $this->tag_id, 'post_tag' )->slug, 'post_tag' );
 		}
 
-		global $wp_rewrite;
-		$wp_rewrite->set_permalink_structure( '/%year%/%monthnum%/%day%/%postname%/' );
+		create_initial_taxonomies();
+		$wp_rewrite->flush_rules();
 	}
 
 	public function tearDown() {
@@ -202,7 +206,6 @@ class BreadcrumbsTest extends WP_UnitTestCase {
 		$this->assertFalse( get_post_type() );
 		$breadcrumbs = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 		$post_type_object = get_post_type_object( $this->post_type );
-		$this->assertFalse( get_post_type() );
 		$this->assertEquals(
 			[
 				[ 'title' => 'Home', 'link' => 'http://example.org' ],
@@ -214,9 +217,9 @@ class BreadcrumbsTest extends WP_UnitTestCase {
 		// Has posts
 		$custom_post_type_id = $this->factory->post->create( [ 'post_type' => $this->post_type ] );
 		$this->go_to( get_post_type_archive_link( $this->post_type ) );
+		$this->assertNotFalse( get_post_type() );
 		$breadcrumbs = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 		$post_type_object = get_post_type_object( $this->post_type );
-		$this->assertNotFalse( get_post_type() );
 		$this->assertEquals(
 			[
 				[ 'title' => 'Home', 'link' => 'http://example.org' ],

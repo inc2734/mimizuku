@@ -107,8 +107,7 @@ class View {
 	public function view() {
 		$view = $this->_get_view_args();
 		$view = apply_filters( 'mimizuku_view', $view );
-		$slug = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'views' );
-		get_template_part( $slug . '/' . $view['slug'], $view['name'] );
+		get_template_part( $view['slug'], $view['name'] );
 	}
 
 	/**
@@ -117,8 +116,9 @@ class View {
 	 * @return array
 	 */
 	protected function _get_view_args() {
+		$slug = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'views' );
 		$view = [
-			'slug' => $this->view,
+			'slug' => $slug . '/' . $this->view,
 			'name' => $this->view_suffix,
 		];
 
@@ -126,22 +126,31 @@ class View {
 			return $view;
 		}
 
-		$request_uri   = $_SERVER['REQUEST_URI'];
-		$request_uri   = $this->_get_relative_path( $request_uri );
-		$path          = $this->_remove_http_query( $request_uri );
-		$path          = $this->_remove_paged_slug( $path );
-		$path          = trim( $path, '/' );
-		$slug          = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'static' );
-		$template_name = $slug . '/' . $path;
+		$template_name = $this->get_static_view_template_name();
 
 		if ( ! locate_template( $template_name . '.php', false ) ) {
 			return $view;
 		}
 
 		return [
-			'slug' => $path,
+			'slug' => $template_name,
 			'name' => '',
 		];
+	}
+
+	/**
+	 * Returns static view template name
+	 *
+	 * @return string
+	 */
+	public function get_static_view_template_name() {
+		$request_uri = $_SERVER['REQUEST_URI'];
+		$request_uri = $this->_get_relative_path( $request_uri );
+		$path        = $this->_remove_http_query( $request_uri );
+		$path        = $this->_remove_paged_slug( $path );
+		$path        = trim( $path, '/' );
+		$slug        = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'static' );
+		return $slug . '/' . $path;
 	}
 
 	protected function _get_relative_path( $uri ) {
