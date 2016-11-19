@@ -39,7 +39,7 @@ class Comment_Form {
 	}
 
 	/**
-	 * Sets up submtit button
+	 * Sets up submit button
 	 *
 	 * @param string $submit_field HTML markup for the submit field
 	 * @return string

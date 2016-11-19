@@ -34,7 +34,7 @@ class Widgets {
 	/**
 	 * Registers wp_nav_menu() menus
 	 *
-	 * @param $args array Argments of wp_tag_cloud
+	 * @param $args array Arguments of wp_tag_cloud
 	 * @return array
 	 * @see https://developer.wordpress.org/reference/classes/wp_widget_tag_cloud/widget/
 	 */
