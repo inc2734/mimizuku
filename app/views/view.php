@@ -31,7 +31,7 @@ class View {
 	protected $view_suffix;
 
 	/**
-	 * Sets the lyaout template
+	 * Sets the layout template
 	 *
 	 * @param string $layout layout template path
 	 * @return void
@@ -80,7 +80,7 @@ class View {
 	}
 
 	/**
-	 * Rentering the layout template
+	 * Rendering the layout template
 	 *
 	 * @return void
 	 */

@@ -10,7 +10,7 @@ namespace Mimizuku\App\Models\Breadcrumbs;
 class Breadcrumb_Year extends Abstract_Breadcrumb {
 
 	/**
-	 * Sets beradcrumbs items
+	 * Sets breadcrumbs items
 	 *
 	 * @return void
 	 */
