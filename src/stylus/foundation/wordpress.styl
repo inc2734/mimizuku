@@ -2,7 +2,7 @@
  * .wp-caption
  */
 .wp-caption {
-	bs-margin(0, 0, 1);
+	_margin(0, 0, 1);
 	border: none;
 	text-align: left;
 	background-color: transparent;
@@ -11,9 +11,9 @@
 	max-width: 100%;
 
 	&-text {
-		color: bs-color-gray;
+		color: _color-gray;
 		margin-top: 5px;
-		bs-font-size-line-height(12px);
+		_font-size-line-height(_base-font-size-px - 2);
 		line-height: 1.4;
 	}
 }
@@ -44,8 +44,7 @@
  * Galleries
  */
 .gallery {
-	margin: 0;
-	bs-margin(0, 0, 1);
+	_margin(0, 0, 1);
 
 	&-item {
 		display: inline-block;
@@ -114,9 +113,9 @@
  * .bypostauthor
  */
 .bypostauthor {
-	> .{bs-prefix}p-comment {
-		> .{bs-prefix}p-comment__figure {
-			bs-margin(0, 0, 0, 1);
+	> .{_prefix}p-comment {
+		> .{_prefix}p-comment__figure {
+			_margin(0, 0, 0, 1);
 			order: 1;
 		}
 	}
@@ -126,13 +125,13 @@
  * Sticky post
  */
 .sticky {
-	.{bs-prefix}p-entry-summary {
+	.{_prefix}p-entry-summary {
 		&__title {
 			&::before {
 				content: 'FEATURED';
 				display: block;
-				color: bs-color-gray;
-				bs-font-size-line-height(bs-base-font-size-px - 2);
+				color: _color-gray;
+				_font-size-line-height(_base-font-size-px - 2);
 			}
 		}
 	}

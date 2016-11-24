@@ -1,4 +1,4 @@
-.{bs-prefix}p-drawer {
+.{_prefix}p-drawer {
 	&__body {
 		z-index: 100000;
 
@@ -7,20 +7,15 @@
 		}
 	}
 
-	&__btn {
-		z-index: 1;
-	}
-
 	&__menu {
 		list-style: none;
 		margin: 0;
-		padding: (bs-base-line-height / 4) 0 0;
+		_padding(.25, 0, 0);
 	}
 
 	&__submenu {
 		list-style: none;
-		margin: 0;
-		margin-right: bs-base-line-height * -1;
+		_margin(0, -1, 0, 0);
 		padding-left: 1em;
 	}
 
@@ -28,39 +23,35 @@
 		position: relative;
 
 		> a {
-			transition: background-color bs-transition-duration bs-transition-function-timing;
 			color: #fff;
-			bs-font-size-line-height(14px);
+			_font-size-line-height(14px);
 			text-decoration: none;
+			transition: background-color _transition-duration _transition-function-timing;
 
-			+bs-hover() {
+			+_hover() {
 				color: #ccc;
 			}
 		}
 	}
 
 	&__item {
-		padding: (bs-base-line-height / 2) bs-base-line-height 0;
+		_padding(.5, 1, 0);
 	}
 
 	&__subitem {
-		padding: (bs-base-line-height / 2) bs-base-line-height 0 0;
+		_padding(.5, 1, 0, 0);
 	}
 
 	&__toggle {
-		position: absolute;
-		top: (bs-base-line-height / 2);
-		right: 5px;
-		bottom: 0;
-		height: bs-base-line-height;
-		width: bs-base-line-height;
+		_position(absolute, _space(.5), 5px, 0);
+		_square(_base-line-height)
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
 		> .fa {
 			color: #fff;
-			transition: transform bs-transition-duration bs-transition-function-timing;
+			transition: transform _transition-duration _transition-function-timing;
 		}
 
 		&[aria-expanded="true"] {

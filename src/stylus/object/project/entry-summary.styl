@@ -1,9 +1,9 @@
-.{bs-prefix}p-entry-summary {
-	@extend .{bs-prefix}c-flex-media;
+.{_prefix}p-entry-summary {
+	@extend .{_prefix}c-flex-media;
 
 	&__title {
-		bs-margin(0, 0, .25);
-		bs-font-size-line-height(bs-base-font-size * 1.5);
+		_margin(0, 0, .25);
+		_font-size-line-height(_base-font-size * 1.5);
 
 		> a {
 			text-decoration: none;
@@ -11,27 +11,27 @@
 	}
 
 	&__content {
-		bs-margin-top(.25);
+		_margin-top(.25);
 
 		> p {
 			margin: 0;
 		}
 
-		+bs-bp-md-min() {
+		+_media-min(md) {
 			display: block;
 		}
 	}
 
 	&--media {
-		.{bs-prefix}p-entry-summary__figure {
-			background-color: bs-lighter(bs-color-gray);
+		.{_prefix}p-entry-summary__figure {
+			background-color: _lighter(_color-gray);
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			background-size: cover;
 			align-self: flex-start;
 			flex-basis: 33%;
 
-			+bs-bp-md-min() {
+			+_media-min(md) {
 				flex-basis: 25%;
 			}
 

@@ -1,19 +1,19 @@
-.{bs-prefix}p-entries {
+.{_prefix}p-entries {
 	list-style: none;
-	bs-margin(0, 0, -1.5);
+	_margin(0, 0, -1.5);
 	padding: 0;
 
 	&__item {
-		bs-margin(0, 0, 1.5);
+		_margin(0, 0, 1.5);
 		padding: 0;
 
 		> a {
 			display: block;
-			color: bs-color-text;
+			color: _color-text;
 			text-decoration: none;
-			bs-transition-all();
+			_transition-opacity();
 
-			+bs-hover() {
+			+_hover() {
 				opacity: .8;
 			}
 		}

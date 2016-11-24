@@ -1,11 +1,11 @@
-.{bs-prefix}p-breadcrumbs {
+.{_prefix}p-breadcrumbs {
 	list-style: none;
 	margin: 0;
-	bs-font-size-line-height(bs-base-font-size-px - 2);
+	_font-size-line-height(_base-font-size-px - 2);
 	padding: 0;
 
 	&, a {
-		color: bs-color-gray;
+		color: _color-gray;
 	}
 
 	a {
@@ -18,14 +18,14 @@
 		padding: 0;
 
 		&::after {
-			bs-margin(0, .125);
+			_margin(0, .125);
 		}
 
 		&:nth-child(n + 2) {
 			mimizuku-fa("\f105");
 
 			&::before {
-				bs-margin(0, .125);
+				_margin(0, .125);
 			}
 		}
 	}

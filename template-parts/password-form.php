@@ -14,7 +14,7 @@
 			<?php esc_html_e( 'Password:', 'mimizuku' ); ?>
 		</div>
 		<div class="_c-input-group__field">
-			<input class="_c-input-group__control" name="post_password" type="password" size="20" />
+			<input name="post_password" type="password" size="20" />
 		</div><input class="_c-input-group__btn" type="submit" name="Submit" value="<?php echo esc_attr_x( 'Enter', 'post password form', 'mimizuku' ); ?>" />
 	</div>
 </form>

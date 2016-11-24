@@ -1,7 +1,7 @@
-.{bs-prefix}p-comments {
+.{_prefix}p-comments {
 	&__title {
-		bs-margin(0, 0, 1);
-		bs-font-size-line-height(bs-base-font-size-px * bs-h3-font-size-scale);
+		_margin(0, 0, 1);
+		_font-size-line-height(_base-font-size-px * _h3-font-size-scale);
 		font-weight: bold;
 	}
 
@@ -13,12 +13,12 @@
 
 	.children {
 		list-style: none;
-		bs-margin(1, 0, 0);
-		bs-padding(0, 0, 0, 1);
+		_margin(1, 0, 0);
+		_padding(0, 0, 0, 1);
 	}
 
 	&__item {
-		bs-margin(1, 0, 0);
+		_margin(1, 0, 0);
 
 		&:first-child {
 			margin-top: 0;
@@ -27,7 +27,7 @@
 
 	&__form {
 		.required {
-			color: bs-color-red;
+			color: _color-red;
 		}
 
 		label {
@@ -35,7 +35,7 @@
 			margin-bottom: 4px;
 		}
 
-		.{bs-prefix}c-form-control {
+		.{_prefix}c-form-control {
 			display: block;
 			width: 100%;
 		}

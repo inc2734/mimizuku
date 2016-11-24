@@ -1,31 +1,31 @@
-.{bs-prefix}p-pagination {
+.{_prefix}p-pagination {
 	text-align: center;
 
 	.page-numbers {
 		display: inline-block;
-		bs-font-size(12px);
+		_font-size(_base-font-size-px - 2);
 		line-height: 1;
 		padding: 8px 10px;
 		text-decoration: none;
 	}
 
 	.current {
-		background-color: bs-light(bs-color-text);
+		background-color: _light(_color-text);
 		color: #fff;
 	}
 
 	a.page-numbers, .dots {
-		bs-transition-all();
-		background-color: bs-lighter(bs-color-gray);
-		color: bs-color-gray;
+		background-color: _lighter(_color-gray);
+		color: _color-gray;
+		_transition-all();
 
-		+bs-hover() {
-			background-color: bs-light(bs-color-text);
+		+_hover() {
+			background-color: _light(_color-text);
 			color: #fff;
 		}
 	}
 
 	* + & {
-		bs-padding-top(2);
+		_padding-top(2);
 	}
 }

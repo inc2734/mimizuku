@@ -1,7 +1,7 @@
-.{bs-prefix}p-widget {
+.{_prefix}p-widget {
 	&__title {
-		bs-margin(0, 0, .25, 0);
-		bs-font-size-line-height(bs-base-font-size * 1.25);
+		_margin(0, 0, .25, 0);
+		_font-size-line-height(_base-font-size * 1.25);
 	}
 
 	&.widget_recent_entries,
@@ -39,8 +39,8 @@
 	&.widget_recent_entries {
 		.post-date {
 			display: block;
-			color: bs-color-gray;
-			bs-font-size-line-height(bs-base-font-size-px - 2);
+			color: _color-gray;
+			_font-size-line-height(_base-font-size-px - 2);
 		}
 	}
 
@@ -49,15 +49,15 @@
 			width: 100%;
 
 			caption {
-				bs-font-size-line-height(14px);
+				_font-size-line-height(14px);
 				font-weight: bold;
-				bs-padding(0, 0, .5);
+				_padding(0, 0, .5);
 				letter-spacing: .2em;
 			}
 
 			th, td {
-				bs-font-size-line-height(12px);
-				bs-padding(.25, .5);
+				_font-size-line-height(12px);
+				_padding(.25, .5);
 			}
 
 			thead th, tbody td {
@@ -65,16 +65,16 @@
 
 				> a {
 					display: inline-block;
-					background-color: bs-lighter(bs-color-gray);
+					background-color: _lighter(_color-gray);
 					border-radius: 2px;
-					color: bs-color-text;
+					color: _color-text;
 					width: 24px;
 					margin: -2px -5px;
 					padding: 2px 0;
 					text-decoration: none;
-					bs-transition-all();
+					_transition-all();
 
-					+bs-hover() {
+					+_hover() {
 						opacity: .8;
 					}
 				}
@@ -90,7 +90,7 @@
 				}
 
 				a {
-					color: bs-color-text;
+					color: _color-text;
 				}
 			}
 		}
@@ -103,17 +103,17 @@
 	&.widget_tag_cloud {
 		a {
 			mimizuku-fa("\f02b");
-			background-color: bs-lightest(bs-color-gray);
-			border: 1px solid bs-lighter(bs-color-gray);
+			background-color: _lightest(_color-gray);
+			border: 1px solid _lighter(_color-gray);
 			border-radius: 3px;
-			color: bs-color-gray;
-			bs-font-size-line-height(12px);
+			color: _color-gray;
+			_font-size-line-height(12px);
 			margin: 4px 0 0;
 			padding: 1px 6px;
 			text-decoration: none;
-			bs-transition-all();
+			_transition-all();
 
-			+bs-hover() {
+			+_hover() {
 				opacity: .8;
 			}
 
