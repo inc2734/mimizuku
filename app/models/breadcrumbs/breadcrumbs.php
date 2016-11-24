@@ -62,7 +62,7 @@ class Breadcrumbs {
 	}
 
 	/**
-	 * Sets beradcrumbs items
+	 * Sets breadcrumbs items
 	 *
 	 * @param array $items
 	 * @return void

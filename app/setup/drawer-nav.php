@@ -15,7 +15,7 @@ class Drawer_Nav {
 	}
 
 	/**
-	 * Sets up attributs
+	 * Sets up attributes
 	 *
 	 * @return void
 	 * @see https://developer.wordpress.org/reference/functions/wp_nav_menu/

@@ -32,7 +32,7 @@ class Controller {
 	}
 
 	/**
-	 * Sets the lyaout template
+	 * Sets the layout template
 	 *
 	 * @param string $layout layout template path
 	 * @return void
