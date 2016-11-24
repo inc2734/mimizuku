@@ -186,7 +186,7 @@ gulp.task('wprepository', ['build'], function(){
 /**
  * Creates the zip file
  */
-gulp.task('zip', ['wprepository'], function(){
+gulp.task('zip', function(){
   return gulp.src(
       [
         'wprepository/**',
