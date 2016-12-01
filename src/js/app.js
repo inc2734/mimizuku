@@ -1,6 +1,6 @@
 'use strict';
 
-import BasisDrawer from '../packages/getbasis-drawer/src/js/drawer.js';
+import BasisDrawer from '../packages/getbasis/src/js/drawer.js';
 new BasisDrawer();
 
 import BasisMenu from '../packages/getbasis-menu/src/js/menu.js';

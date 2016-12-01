@@ -13,10 +13,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "getbasis": "^3.0.0",
-    "getbasis-balloon": "^1.0.0",
-    "getbasis-drawer": "^4.0.0",
-    "getbasis-hamburger-btn": "^2.0.0",
+    "getbasis": "^4.0.0",
     "getbasis-layout": "^6.0.1",
     "getbasis-menu": "^3.0.0"
   },
@@ -27,7 +24,7 @@
     "browser-sync": "^2.18.2",
     "browserify": "^13.1.1",
     "browserify-shim": "^3.8.12",
-    "cssnano": "^3.8.0",
+    "cssnano": "^3.8.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",

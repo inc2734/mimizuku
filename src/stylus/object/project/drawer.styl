@@ -1,32 +1,13 @@
 .{_prefix}p-drawer {
+	@extend .{_prefix}c-drawer;
+
 	&__body {
 		z-index: 100000;
-
-		&--fixed {
-			position: fixed;
-		}
-	}
-
-	&__menu {
-		list-style: none;
-		margin: 0;
-		_padding(.25, 0, 0);
-	}
-
-	&__submenu {
-		list-style: none;
-		_margin(0, -1, 0, 0);
-		padding-left: 1em;
 	}
 
 	&__item, &__subitem {
-		position: relative;
-
 		> a {
 			color: #fff;
-			_font-size-line-height(14px);
-			text-decoration: none;
-			transition: background-color _transition-duration _transition-function-timing;
 
 			+_hover() {
 				color: #ccc;
@@ -34,21 +15,7 @@
 		}
 	}
 
-	&__item {
-		_padding(.5, 1, 0);
-	}
-
-	&__subitem {
-		_padding(.5, 1, 0, 0);
-	}
-
 	&__toggle {
-		_position(absolute, _space(.5), 5px, 0);
-		_square(_base-line-height)
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
 		> .fa {
 			color: #fff;
 			transition: transform _transition-duration _transition-function-timing;
