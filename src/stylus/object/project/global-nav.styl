@@ -1,17 +1,26 @@
 .{_prefix}p-global-nav {
-	.{_prefix}c-menu__submenu {
-		background-color: rgba(_color-black, .9);
-	}
-
-	.{_prefix}c-menu__subitem {
-		_font-size-line-height(_base-font-size-px - 2);
-
-		+_hover() {
-			background-color: rgba(#fff, .05);
+	.{_prefix}c-navbar {
+		&__submenu {
+			background-color: rgba(_color-black, .9);
 		}
 
-		> a {
-			color: #fff;
+		&__item {
+			> a {
+				_padding(.25, .5);
+			}
+		}
+
+		&__subitem {
+			_font-size-line-height(_base-font-size-px - 2);
+
+			+_hover() {
+				background-color: rgba(#fff, .05);
+			}
+
+			> a {
+				color: #fff;
+				_padding(.25, .5);
+			}
 		}
 	}
 }

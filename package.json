@@ -13,9 +13,8 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "getbasis": "^4.0.0",
-    "getbasis-layout": "^6.0.1",
-    "getbasis-menu": "^3.0.0"
+    "getbasis": "^4.1.0",
+    "getbasis-layout": "^6.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

@@ -15,7 +15,7 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 		'theme_location' => 'global-nav',
 		'container'      => false,
 		'items_wrap'     => '<ul id="%1$s" class="%2$s" data-c="menu">%3$s</ul>',
-		'menu_class'     => '_c-menu _c-menu--bar _c-menu--auto',
+		'menu_class'     => '_c-navbar _c-navbar--auto',
 		'depth'          => 0,
 	] );
 	?>

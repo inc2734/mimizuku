@@ -32,8 +32,20 @@ class Global_Nav {
 		);
 
 		$nav_menu = preg_replace(
+			'/(_c-navbar__item.*?)"/ms',
+			'$1" data-c="navbar__item"',
+			$nav_menu
+		);
+
+		$nav_menu = preg_replace(
+			'/(_c-navbar__subitem.*?)"/ms',
+			'$1" data-c="navbar__subitem"',
+			$nav_menu
+		);
+
+		$nav_menu = preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<ul class="_c-menu__submenu" data-c="menu__submenu" aria-hidden="true">',
+			'<ul class="_c-navbar__submenu" data-c="navbar__submenu" aria-hidden="true">',
 			$nav_menu
 		);
 
@@ -52,9 +64,9 @@ class Global_Nav {
 		}
 
 		if ( $depth > 0 ) {
-			$classes[] = '_c-menu__subitem';
+			$classes[] = '_c-navbar__subitem';
 		} else {
-			$classes[] = '_c-menu__item';
+			$classes[] = '_c-navbar__item';
 		}
 		return $classes;
 	}

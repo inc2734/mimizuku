@@ -28,7 +28,7 @@
 				$args = array_merge( $args, [
 					'container'       => 'div',
 					'container_class' => '_c-container',
-					'menu_class'      => '_c-menu',
+					'menu_class'      => '_c-navbar',
 				] );
 			}
 			return $args;
