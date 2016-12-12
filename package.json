@@ -30,6 +30,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-zip": "^3.2.0",
+    "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2",
     "vinyl-source-stream": "^1.1.0"
   },
