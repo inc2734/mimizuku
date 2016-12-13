@@ -6,14 +6,16 @@ var postcss      = require('gulp-postcss');
 var cssnano      = require('cssnano');
 var rename       = require('gulp-rename');
 var uglify       = require('gulp-uglify');
-var browserify   = require('browserify');
-var babelify     = require('babelify');
 var source       = require('vinyl-source-stream');
 var browser_sync = require('browser-sync');
 var autoprefixer = require('autoprefixer');
 var rimraf       = require('rimraf');
 var runSequence  = require('run-sequence');
 var zip          = require('gulp-zip');
+var rollup       = require('gulp-rollup');
+var nodeResolve  = require('rollup-plugin-node-resolve');
+var commonjs     = require('rollup-plugin-commonjs');
+var babel        = require('rollup-plugin-babel');
 
 var dir = {
   src: {
@@ -116,11 +118,24 @@ function stylusCompile(src, dest) {
  * Build javascript
  */
 gulp.task('js', function() {
-  return browserify(dir.src.js + '/app.js')
-    .transform('babelify', {presets: ['es2015']})
-    .transform('browserify-shim')
-    .bundle()
-    .pipe(source('app.js'))
+  gulp.src(dir.src.js + '/**/*.js')
+    .pipe(rollup({
+      allowRealFiles: true,
+      entry: dir.src.js + '/app.js',
+      format: 'iife',
+      external: ['jquery', '_', 'Backbone'],
+      globals: {
+        jquery: "jQuery"
+      },
+      plugins: [
+        nodeResolve({ jsnext: true }),
+        commonjs(),
+        babel({
+          presets: ['es2015-rollup'],
+          babelrc: false
+        })
+      ]
+    }))
     .pipe(gulp.dest(dir.dist.js))
     .on('end', function() {
       gulp.src([dir.dist.js + '/app.js'])
