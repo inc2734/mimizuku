@@ -53,7 +53,6 @@ export default class FixAdminBar {
 
 	fixStickyFooter() {
 		if ('true' == $('html').attr('data-sticky-footer')) {
-			console.log(1);
 			const adminbar_height = parseInt(this.adminBar.outerHeight());
 			this.container.css('min-height', `calc(100vh - ${adminbar_height}px)`);
 		}
