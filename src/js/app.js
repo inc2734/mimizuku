@@ -1,10 +1,6 @@
 'use strict';
 
-import BasisDrawer from '../packages/getbasis/src/js/drawer.js';
-new BasisDrawer();
-
-import BasisNavbar from '../packages/getbasis/src/js/navbar.js';
-new BasisNavbar();
+import '../packages/getbasis/src/js/basis.js';
 
 import BasisStickyHeader from '../packages/getbasis-layout/src/js/sticky-header.js';
 new BasisStickyHeader();
