@@ -6,7 +6,6 @@ var postcss      = require('gulp-postcss');
 var cssnano      = require('cssnano');
 var rename       = require('gulp-rename');
 var uglify       = require('gulp-uglify');
-var source       = require('vinyl-source-stream');
 var browser_sync = require('browser-sync');
 var autoprefixer = require('autoprefixer');
 var rimraf       = require('rimraf');
