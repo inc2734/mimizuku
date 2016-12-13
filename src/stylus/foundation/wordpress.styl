@@ -2,7 +2,7 @@
  * .wp-caption
  */
 .wp-caption {
-	_margin(0, 0, 1);
+	margin: 0;
 	border: none;
 	text-align: left;
 	background-color: transparent;
@@ -22,30 +22,27 @@
  * alignment
  */
 .alignleft {
+	_margin(0, 1, 0, 0);
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
 }
 
 .alignright {
+	_margin(0, 0, 0, 1);
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
 }
 
 .aligncenter {
+	margin: 0 auto;
 	clear: both;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 /**
  * Galleries
  */
 .gallery {
-	_margin(0, 0, 1);
-
 	&-item {
 		display: inline-block;
 		padding: 1.79104477%;

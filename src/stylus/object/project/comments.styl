@@ -7,6 +7,7 @@
 
 	&__list {
 		_list-unstyled();
+		_margin(0, 0, 1);
 	}
 
 	.children {
@@ -36,6 +37,10 @@
 		.{_prefix}c-form-control {
 			display: block;
 			width: 100%;
+		}
+
+		.comment-form {
+			_margin-between-children();
 		}
 	}
 }

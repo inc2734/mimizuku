@@ -14,7 +14,8 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "getbasis": "^4.1.1",
-    "getbasis-layout": "^6.0.1"
+    "getbasis-layout": "^6.0.1",
+    "getbasis-margin-between-children": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

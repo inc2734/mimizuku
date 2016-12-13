@@ -1,20 +1,12 @@
 .{_prefix}p-entries {
 	_list-unstyled();
-	_margin(0, 0, -1.5);
+	_margin-between-children();
 
 	&__item {
-		_margin(0, 0, 1.5);
-		padding: 0;
-
 		> a {
 			display: block;
 			color: _color-text;
 			text-decoration: none;
-			_transition-opacity();
-
-			+_hover() {
-				opacity: .8;
-			}
 		}
 	}
 }
