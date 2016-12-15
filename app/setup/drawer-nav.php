@@ -27,7 +27,7 @@ class Drawer_Nav {
 
 		return preg_replace(
 			'/<ul class="sub-menu">/ms',
-			'<div class="_p-drawer__toggle" data-c="drawer__toggle" aria-expanded="false"><i class="fa fa-angle-right"></i></div><ul class="_p-drawer__submenu" data-c="drawer__submenu" aria-hidden="true">',
+			'<div class="_c-drawer__toggle" data-c="drawer__toggle" aria-expanded="false"><i class="fa fa-angle-right"></i></div><ul class="_c-drawer__submenu" data-c="drawer__submenu" aria-hidden="true">',
 			$nav_menu
 		);
 	}
@@ -44,9 +44,9 @@ class Drawer_Nav {
 		}
 
 		if ( $depth > 0 ) {
-			$classes[] = '_p-drawer__subitem';
+			$classes[] = '_c-drawer__subitem';
 		} else {
-			$classes[] = '_p-drawer__item';
+			$classes[] = '_c-drawer__item';
 		}
 		return $classes;
 	}

@@ -20,7 +20,7 @@ class Tinymce {
 	 * @return array
 	 */
 	public function body_class( $init ) {
-		$init['body_class'] = '_p-entry__content';
+		$init['body_class'] = '_c-entry__content';
 		return $init;
 	}
 }

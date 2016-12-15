@@ -8,9 +8,9 @@
 $breadcrumbs = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 $items = array_values( $breadcrumbs->get() );
 ?>
-<ol class="_p-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+<ol class="_c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 	<?php foreach ( $items as $key => $item ) : ?>
-	<li class="_p-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+	<li class="_c-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 		<?php if ( empty( $item['link'] ) ) : ?>
 		<span itemscope itemtype="http://schema.org/Thing" itemprop="item">
 			<span itemprop="name"><?php echo esc_html( $item['title'] ); ?></span>

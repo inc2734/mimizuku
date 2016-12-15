@@ -8,9 +8,9 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "getbasis": "^4.2.0",
+    "getbasis": "^4.3.0",
     "getbasis-layout": "^6.0.1",
-    "getbasis-margin-between-children": "^1.0.0"
+    "getbasis-margin-between-children": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

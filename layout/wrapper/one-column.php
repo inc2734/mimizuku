@@ -10,7 +10,7 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
-<div class="_p-drawer" data-c="drawer">
+<div class="_c-drawer" data-c="drawer">
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<div class="_l-container" data-l="container">
 		<?php get_header(); ?>

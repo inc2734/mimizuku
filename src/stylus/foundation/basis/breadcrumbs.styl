@@ -1,0 +1,17 @@
+.{_prefix}c-breadcrumbs {
+  _font-size-line-height(_base-font-size-px - 2);
+
+  &, a {
+    color: _color-gray;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  &__item {
+    &:nth-child(n + 2) {
+      mimizuku-fa("\f105");
+    }
+  }
+}

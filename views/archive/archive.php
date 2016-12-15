@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 ?>
-<ul class="_p-entries">
+<ul class="_c-entries">
 	<?php while ( have_posts() ) : the_post(); ?>
-	<li class="_p-entries__item">
+	<li class="_c-entries__item">
 		<?php get_template_part( 'views/content/content', 'summary' ); ?>
 	</li>
 	<?php endwhile; ?>

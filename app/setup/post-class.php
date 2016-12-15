@@ -28,14 +28,14 @@ class Post_Class {
 	}
 
 	/**
-	 * Added ._p-entry
+	 * Added ._c-entry
 	 *
 	 * @param array $classes An array of post classes
 	 * @return array
 	 */
 	public function post_class( $classes ) {
 		if ( is_singular() ) {
-			$classes['_p-entry'] = '_p-entry';
+			$classes['_c-entry'] = '_c-entry';
 		}
 		return $classes;
 	}
