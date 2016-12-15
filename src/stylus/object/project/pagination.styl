@@ -1,31 +1,31 @@
 .{_prefix}p-pagination {
-	text-align: center;
+  text-align: center;
 
-	.page-numbers {
-		display: inline-block;
-		_font-size(_base-font-size-px - 2);
-		line-height: 1;
-		padding: 8px 10px;
-		text-decoration: none;
-	}
+  .page-numbers {
+    display: inline-block;
+    _font-size(_base-font-size-px - 2);
+    line-height: 1;
+    padding: 8px 10px;
+    text-decoration: none;
+  }
 
-	.current {
-		background-color: _light(_color-text);
-		color: #fff;
-	}
+  .current {
+    background-color: _light(_color-text);
+    color: #fff;
+  }
 
-	a.page-numbers, .dots {
-		background-color: _lighter(_color-gray);
-		color: _color-gray;
-		_transition-all();
+  a.page-numbers, .dots {
+    background-color: _lighter(_color-gray);
+    color: _color-gray;
+    _transition-all();
 
-		+_hover() {
-			background-color: _light(_color-text);
-			color: #fff;
-		}
-	}
+    +_hover() {
+      background-color: _light(_color-text);
+      color: #fff;
+    }
+  }
 
-	* + & {
-		_padding-top(2);
-	}
+  * + & {
+    _padding-top(2);
+  }
 }
