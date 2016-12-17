@@ -8,14 +8,14 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "getbasis": "^4.3.0",
+    "getbasis": "^4.3.1",
     "getbasis-layout": "^6.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
+    "autoprefixer": "^6.5.4",
     "babel-preset-es2015-rollup": "^3.0.0",
     "browser-sync": "^2.18.5",
-    "cssnano": "^3.8.2",
+    "cssnano": "^3.9.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
@@ -24,8 +24,8 @@
     "gulp-uglify": "^2.0.0",
     "gulp-zip": "^3.2.0",
     "rimraf": "^2.5.4",
-    "rollup-plugin-babel": "^2.7.0",
-    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^6.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "run-sequence": "^1.2.2"
   },
