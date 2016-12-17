@@ -34,9 +34,7 @@ class Post_Class {
 	 * @return array
 	 */
 	public function post_class( $classes ) {
-		if ( is_singular() ) {
-			$classes['_c-entry'] = '_c-entry';
-		}
+		$classes['_c-entry'] = '_c-entry';
 		return $classes;
 	}
 }

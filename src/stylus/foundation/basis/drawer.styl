@@ -3,20 +3,10 @@
     z-index: 100000;
   }
 
-  &__item, &__subitem {
-    > a {
-      color: #fff;
-
-      +_hover() {
-        color: #ccc;
-      }
-    }
-  }
-
   &__toggle {
     > .fa {
       color: #fff;
-      transition: transform _transition-duration _transition-function-timing;
+      _transition(transform);
     }
 
     &[aria-expanded="true"] {
