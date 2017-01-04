@@ -175,7 +175,7 @@ msgid "https://github.com/inc2734/mimizuku/"
 msgstr "https://github.com/inc2734/mimizuku/"
 
 #. Description of the plugin/theme
-msgid "Minizuku is a WordPress theme to develop the child theme."
+msgid "Mimizuku is a WordPress theme to develop the child theme."
 msgstr "Mimizuku は子テーマを開発するための WordPress テーマです。"
 
 #. Author of the plugin/theme
