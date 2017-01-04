@@ -151,7 +151,7 @@ msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
 #: views/content/content-404.php:11
-msgid "Please search this serch box."
+msgid "Please search this search box."
 msgstr "この検索ボックスで検索してください。"
 
 #: views/content/content-no-match.php:9
