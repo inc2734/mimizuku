@@ -1,4 +1,4 @@
-.{_prefix}c-drawer {
+.#{$_prefix}c-drawer {
   &__body {
     z-index: 100000;
   }
@@ -6,7 +6,7 @@
   &__toggle {
     > .fa {
       color: #fff;
-      _transition(transform);
+      @include _transition(transform);
     }
 
     &[aria-expanded="true"] {

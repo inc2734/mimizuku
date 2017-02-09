@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "getbasis": "^4.3.2",
-    "getbasis-layout": "^6.0.1"
+    "sass-basis": "^6.0.0",
+    "sass-basis-layout": "^7.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.4",
@@ -21,7 +21,7 @@
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.5.1",
-    "gulp-stylus": "^2.6.0",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.0",
     "gulp-zip": "^3.2.0",
     "rimraf": "^2.5.4",

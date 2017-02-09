@@ -1,0 +1,33 @@
+.#{$_prefix}c-entries {
+  @include _list-unstyled();
+
+  &__item {
+    > a {
+      display: block;
+      color: $_color-text;
+      text-decoration: none;
+    }
+  }
+
+  .#{$_prefix}c-entry {
+    &__header {
+      @include _margin-bottom(0);
+    }
+
+    > .#{$_prefix}c-flex-media {
+      > .#{$_prefix}c-flex-media__figure {
+        background-color: _lighter($_color-gray);
+
+        &::before {
+          content: '';
+          display: block;
+          padding-top: 75%;
+        }
+
+        @include _media-min(md) {
+          flex-basis: 25%;
+        }
+      }
+    }
+  }
+}

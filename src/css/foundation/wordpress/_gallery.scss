@@ -1,5 +1,5 @@
 .gallery {
-  _clearfix();
+  @include _clearfix();
   margin-right: _space(-.5);
   margin-bottom: _space(-1);
   margin-left: _space(-.5);
@@ -11,11 +11,11 @@
     padding-right: _space(.5);
     padding-left: _space(.5);
 
-    for i in 2..9 {
-      .gallery-columns-{i} & {
-        width: percentage(1 / i);
+    @for $i from 2 through 9 {
+      .gallery-columns-#{$i} & {
+        width: percentage(1 / $i);
 
-        &:nth-child({i}n + 1) {
+        &:nth-child(#{$i}n + 1) {
           clear: both;
         }
       }

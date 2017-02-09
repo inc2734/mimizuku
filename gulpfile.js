@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp         = require('gulp');
-var stylus       = require('gulp-stylus');
+var sass         = require('gulp-sass');
 var postcss      = require('gulp-postcss');
 var cssnano      = require('cssnano');
 var rename       = require('gulp-rename');
@@ -54,14 +54,14 @@ gulp.task('remove-packages-dir', function(cb) {
  */
 gulp.task('copy-packages', ['remove-packages-dir'], function(cb) {
   var packages = [
-    dir.src.packages + '/getbasis/**',
-    dir.src.packages + '/getbasis-*/**'
+    dir.src.packages + '/sass-basis/**',
+    dir.src.packages + '/sass-basis-*/**'
   ];
   return gulp.src(packages, {base: 'node_modules'})
     .pipe(gulp.dest(dir.dist.packages))
     .on('end', function() {
       var files = [
-        dir.src.packages + '/getbasis/vendor/html5.js'
+        dir.src.packages + '/sass-basis/vendor/html5.js'
       ];
       return gulp.src(files)
         .pipe(gulp.dest(dir.dist.vendor));
@@ -87,17 +87,17 @@ gulp.task('copy-images',['remove-images'], function() {
  * Build CSS
  */
 gulp.task('css', function() {
-  return stylusCompile(dir.src.css + '/*.styl', dir.dist.css)
+  return sassCompile(dir.src.css + '/*.scss', dir.dist.css)
     .on('end', function() {
-      return stylusCompile(dir.src.vendor + '/**/*.styl', dir.dist.vendor);
+      return sassCompile(dir.src.vendor + '/**/*.scss', dir.dist.vendor);
     });
 });
 
-function stylusCompile(src, dest) {
+function sassCompile(src, dest) {
   return gulp.src(src)
     .pipe(plumber())
-    .pipe(stylus({
-      'resolve url nocheck': true
+    .pipe(sass({
+      includePaths: require('node-normalize-scss').includePaths
     }))
     .pipe(postcss([
       autoprefixer({

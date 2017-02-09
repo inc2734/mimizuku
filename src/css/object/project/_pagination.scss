@@ -1,0 +1,31 @@
+.#{$_prefix}p-pagination {
+  text-align: center;
+
+  .page-numbers {
+    display: inline-block;
+    @include _font-size($_base-font-size-px - 2);
+    line-height: 1;
+    padding: 8px 10px;
+    text-decoration: none;
+  }
+
+  .current {
+    background-color: _light($_color-text);
+    color: #fff;
+  }
+
+  a.page-numbers, .dots {
+    background-color: _lighter($_color-gray);
+    color: $_color-gray;
+    @include _transition-all();
+
+    @include _hover() {
+      background-color: _light($_color-text);
+      color: #fff;
+    }
+  }
+
+  * + & {
+    @include _margin-top(1);
+  }
+}

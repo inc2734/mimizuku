@@ -1,6 +1,6 @@
-.{_prefix}p-footer-nav {
+.#{$_prefix}p-footer-nav {
   .menu {
-    _list-unstyled();
+    @include _list-unstyled();
   }
 
   .menu-item {
@@ -8,15 +8,15 @@
 
     > a {
       display: block;
-      _padding(.5);
+      @include _padding(.5);
       text-align: center;
       text-decoration: none;
     }
 
-    +_media-min(md) {
+    @include _media-min(md) {
       display: inline-block;
 
-      _margin(0, .5, 0, 0);
+      @include _margin(0, .5, 0, 0);
       padding: 0;
 
       > a {

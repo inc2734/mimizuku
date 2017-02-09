@@ -1,7 +1,7 @@
-.{_prefix}p-widget {
+.#{$_prefix}p-widget {
   &__title {
-    _margin(0, 0, .25, 0);
-    _font-size-line-height(_base-font-size * 1.25);
+    @include _margin(0, 0, .25, 0);
+    @include _font-size-line-height($_base-font-size * 1.25);
   }
 
   &.widget_recent_entries,
@@ -12,7 +12,7 @@
   &.widget_pages,
   &.widget_nav_menu {
     ul {
-      _list-unstyled();
+      @include _list-unstyled();
 
       > li {
         li { padding-left: 1em; }
@@ -34,8 +34,8 @@
   &.widget_recent_entries {
     .post-date {
       display: block;
-      color: _color-gray;
-      _font-size-line-height(_base-font-size-px - 2);
+      color: $_color-gray;
+      @include _font-size-line-height($_base-font-size-px - 2);
     }
   }
 
@@ -44,15 +44,15 @@
       width: 100%;
 
       caption {
-        _font-size-line-height(14px);
+        @include _font-size-line-height(14px);
         font-weight: bold;
-        _padding(0, 0, .5);
+        @include _padding(0, 0, .5);
         letter-spacing: .2em;
       }
 
       th, td {
-        _font-size-line-height(12px);
-        _padding(.25, .5);
+        @include _font-size-line-height(12px);
+        @include _padding(.25, .5);
       }
 
       thead th, tbody td {
@@ -60,16 +60,16 @@
 
         > a {
           display: inline-block;
-          background-color: _lighter(_color-gray);
+          background-color: _lighter($_color-gray);
           border-radius: 2px;
-          color: _color-text;
+          color: $_color-text;
           width: 24px;
           margin: -2px -5px;
           padding: 2px 0;
           text-decoration: none;
-          _transition-all();
+          @include _transition-all();
 
-          +_hover() {
+          @include _hover() {
             opacity: .8;
           }
         }
@@ -85,7 +85,7 @@
         }
 
         a {
-          color: _color-text;
+          color: $_color-text;
         }
       }
     }
@@ -97,18 +97,18 @@
 
   &.widget_tag_cloud {
     a {
-      mimizuku-fa("\f02b");
-      background-color: _lightest(_color-gray);
-      border: 1px solid _lighter(_color-gray);
+      @include mimizuku-fa("\f02b");
+      background-color: _lightest($_color-gray);
+      border: 1px solid _lighter($_color-gray);
       border-radius: 3px;
-      color: _color-gray;
-      _font-size-line-height(12px);
+      color: $_color-gray;
+      @include _font-size-line-height(12px);
       margin: 4px 0 0;
       padding: 1px 6px;
       text-decoration: none;
-      _transition-all();
+      @include _transition-all();
 
-      +_hover() {
+      @include _hover() {
         opacity: .8;
       }
 

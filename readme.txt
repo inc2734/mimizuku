@@ -28,7 +28,7 @@ Minizuku is a WordPress theme to develop the child theme.
 
 Basis
 License: MIT License
-Source : https://getbasis.github.io/
+Source : https://sass-basis.github.io/
 
 Font Awesome
 Font License: SIL OFL 1.1

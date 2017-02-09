@@ -1,0 +1,7 @@
+.#{$_prefix}c-breadcrumbs {
+  &__item {
+    &:nth-child(n + 2) {
+      @include mimizuku-fa("\f105");
+    }
+  }
+}

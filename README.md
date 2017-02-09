@@ -39,6 +39,6 @@ Minizuku is a WordPress theme to develop the child theme.
 * Code License: MIT License
 * Source: https://fortawesome.github.io/Font-Awesome/
 
-### Basis (Stylus/CSS framework)
+### Basis (Sass/CSS framework)
 * License: MIT License
-* Source: https://getbasis.github.io/
+* Source: https://sass-basis.github.io/

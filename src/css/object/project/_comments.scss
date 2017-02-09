@@ -1,0 +1,42 @@
+.#{$_prefix}p-comments {
+  &__title {
+    @include _margin(0, 0, 1);
+    @include _font-size-line-height($_base-font-size-px * $_h3-font-size-scale);
+    font-weight: bold;
+  }
+
+  &__list {
+    @include _list-unstyled();
+    @include _margin(0, 0, 1);
+  }
+
+  .children {
+    @include _list-unstyled();
+    @include _margin(1, 0, 0);
+    @include _padding(0, 0, 0, 1);
+  }
+
+  &__item {
+    @include _margin(1, 0, 0);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__form {
+    .required {
+      color: $_color-red;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .#{$_prefix}c-form-control {
+      display: block;
+      width: 100%;
+    }
+  }
+}
