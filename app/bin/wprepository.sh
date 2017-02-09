@@ -21,7 +21,8 @@ git clone -b wprepository --quiet https://github.com/inc2734/mimizuku.git wprepo
 cd wprepository
 ls | xargs rm -rf
 ls -la
-npm run gulp wprepository
+yarn install
+yarn run gulp wprepository
 composer install --no-dev
 rm -rf composer.json composer.lock
 ls -la

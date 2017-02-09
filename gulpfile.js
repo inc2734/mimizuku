@@ -209,6 +209,7 @@ gulp.task('zip', function(){
         'wprepository/**',
         '!wprepository/composer.json',
         '!wprepository/composer.lock',
+        '!wprepository/yarn.lock',
         '!wprepository/.git'
       ]
       , {base: './wprepository'}

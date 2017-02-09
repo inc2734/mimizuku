@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-npm run gulp wprepository
+yarn run gulp wprepository
 cd wprepository
 composer install --no-dev
-npm run gulp zip
+yarn run gulp zip
