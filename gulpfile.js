@@ -19,7 +19,7 @@ var plumber      = require('gulp-plumber');
 
 var dir = {
   src: {
-    css     : 'src/stylus',
+    css     : 'src/css',
     js      : 'src/js',
     images  : 'src/images',
     packages: 'node_modules',
