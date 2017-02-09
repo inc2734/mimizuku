@@ -45,9 +45,9 @@ class Styles {
 	 */
 	public function enqueue_main() {
 		if ( is_child_theme() ) {
-			$src = get_stylesheet_uri();
+			$src = get_stylesheet_directory_uri() . '/assets/css/style.min.css';
 		} else {
-			$src = $this->theme_uri . '/style.min.css';
+			$src = $this->theme_uri . '/assets/css/style.min.css';
 		}
 
 		wp_enqueue_style(

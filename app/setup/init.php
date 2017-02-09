@@ -74,6 +74,8 @@ class Init {
 	 * @return void
 	 */
 	public function activate_editor_style() {
-		add_editor_style();
+		add_editor_style( [
+			'assets/css/editor-style.min.css',
+		] );
 	}
 }

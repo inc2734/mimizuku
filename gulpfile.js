@@ -26,7 +26,7 @@ var dir = {
     vendor  : 'src/vendor'
   },
   dist: {
-    css     : './',
+    css     : 'assets/css',
     js      : 'assets/js',
     images  : 'assets/images',
     packages: 'src/packages',
