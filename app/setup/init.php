@@ -15,6 +15,7 @@ class Init {
 		add_action( 'after_setup_theme', [ $this, 'activate_post_thumbnails' ] );
 		add_action( 'after_setup_theme', [ $this, 'activate_html5' ] );
 		add_action( 'after_setup_theme', [ $this, 'activate_feed' ] );
+		add_action( 'after_setup_theme', [ $this, 'activate_selective_refresh_widgets' ] );
 		add_action( 'after_setup_theme', [ $this, 'activate_editor_style' ] );
 	}
 
@@ -66,6 +67,15 @@ class Init {
 	 */
 	public function activate_feed() {
 		add_theme_support( 'automatic-feed-links' );
+	}
+
+	/**
+	 * Add theme support for selective refresh for widgets.
+	 *
+	 * @return void
+	 */
+	public function activate_selective_refresh_widgets() {
+		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
 
 	/**
