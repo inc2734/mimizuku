@@ -11,10 +11,12 @@
       "homepage": "http://2inc.org"
     }
   ],
+  "minimum-stability": "dev",
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
-    "phpmd/phpmd": "2.*"
+    "phpmd/phpmd": "2.*",
+    "phpunit/phpunit": "^5.7"
   },
   "config": {
     "process-timeout": 0
@@ -39,6 +41,6 @@
     }
   },
   "require": {
-    "phpunit/phpunit": "^5.7"
+    "inc2734/wp-breadcrumbs": "dev-master"
   }
 }
