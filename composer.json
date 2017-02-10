@@ -37,5 +37,8 @@
     "psr-4": {
       "Mimizuku\\": ""
     }
+  },
+  "require": {
+    "phpunit/phpunit": "^5.7"
   }
 }

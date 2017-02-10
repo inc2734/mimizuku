@@ -10,7 +10,7 @@ if [ -e /tmp/wordpress-tests-lib ]; then
   fi
 
   cd $themedir;
-  phpunit
+  vendor/bin/phpunit
   exit 0
 fi
 
