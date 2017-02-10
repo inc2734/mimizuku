@@ -163,7 +163,7 @@ gulp.task('browsersync', function() {
 		files: [
       '**/*.php',
       dir.dist.js + '/app.min.js',
-      dir.dist.css + 'style.min.css'
+      dir.dist.css + '/style.min.css'
 		]
   });
 });
@@ -186,13 +186,13 @@ gulp.task('wprepository', ['build'], function(){
         '!.git',
         '!codesniffer.ruleset.xml',
         '!gulpfile.js',
-        '!package.json',
         '!phpmd.ruleset.xml',
         '!.gitignore',
         '!.travis.yml',
         '!tests',
         '!tests/**',
         '!phpunit.xml',
+        '!mimizuku.zip',
         '!**/.DS_Store'
       ],
       {base: './'}
@@ -207,6 +207,7 @@ gulp.task('zip', function(){
   return gulp.src(
       [
         'wprepository/**',
+        '!wprepository/package.json',
         '!wprepository/composer.json',
         '!wprepository/composer.lock',
         '!wprepository/yarn.lock',
