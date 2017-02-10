@@ -175,6 +175,7 @@ gulp.task('wprepository', ['build'], function(){
   return gulp.src(
       [
         '**/*',
+        '!package.json',
         '!node_modules',
         '!node_modules/**',
         '!vendor',
@@ -207,7 +208,6 @@ gulp.task('zip', function(){
   return gulp.src(
       [
         'wprepository/**',
-        '!wprepository/package.json',
         '!wprepository/composer.json',
         '!wprepository/composer.lock',
         '!wprepository/yarn.lock',
