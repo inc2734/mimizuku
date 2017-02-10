@@ -34,11 +34,11 @@ if [ ! -e "$themedir/tests" ]; then
 	mkdir "$themedir/tests"
 fi
 
-cp -f "$wpclidir/templates/bootstrap.mustache" "$themedir/tests/bootstrap.mustache"
-sed -e "s/require dirname( dirname( __FILE__ ) ) \. '\/{{plugin_slug}}\.php';/register_theme_directory( dirname( __FILE__ ) . '\/\.\.\/\.\.\/' ); switch_theme('$theme');/g" "$themedir/tests/bootstrap.mustache">"$themedir/tests/bootstrap.php"
-rm -f "$themedir/tests/bootstrap.mustache"
+cp -f "$wpclidir/templates/plugin-bootstrap.mustache" "$themedir/tests/plugin-bootstrap.mustache"
+sed -e "s/require dirname( dirname( __FILE__ ) ) \. '\/{{plugin_slug}}\.php';/register_theme_directory( dirname( __FILE__ ) . '\/\.\.\/\.\.\/' ); switch_theme('$theme'); search_theme_directories();/g" "$themedir/tests/plugin-bootstrap.mustache">"$themedir/tests/bootstrap.php"
+rm -f "$themedir/tests/plugin-bootstrap.mustache"
 
-cp -f "$wpclidir/templates/test-sample.mustache" "$themedir/tests/test-sample.php"
+cp -f "$wpclidir/templates/plugin-test-sample.mustache" "$themedir/tests/test-sample.php"
 
 rm -rf "$themedir/app/bin/wp.phar"
 echo "done!"

@@ -122,7 +122,7 @@ class BreadcrumbsTest extends WP_UnitTestCase {
 	public function test_month() {
 		$newest_post = get_post( $this->post_ids[0] );
 		$year  = date( 'Y', strtotime( $newest_post->post_date ) );
-		$month = date( 'm', strtotime( $newest_post->post_date ) );
+		$month = date( 'n', strtotime( $newest_post->post_date ) );
 		$this->go_to( get_month_link( $year, $month ) );
 		$breadcrumbs      = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 		$breadcrumb_month = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumb_Month();
@@ -139,8 +139,8 @@ class BreadcrumbsTest extends WP_UnitTestCase {
 	public function test_day() {
 		$newest_post = get_post( $this->post_ids[0] );
 		$year  = date( 'Y', strtotime( $newest_post->post_date ) );
-		$month = date( 'm', strtotime( $newest_post->post_date ) );
-		$day   = date( 'd', strtotime( $newest_post->post_date ) );
+		$month = date( 'n', strtotime( $newest_post->post_date ) );
+		$day   = date( 'j', strtotime( $newest_post->post_date ) );
 		$this->go_to( get_day_link( $year, $month, $day ) );
 		$breadcrumbs    = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 		$breadcrumb_day = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumb_Day();
@@ -148,7 +148,7 @@ class BreadcrumbsTest extends WP_UnitTestCase {
 			[
 				[ 'title' => 'Home', 'link' => 'http://example.org' ],
 				[ 'title' => $breadcrumb_day->year( $year ), 'link' => "http://example.org/$year/" ],
-				[ 'title' => $breadcrumb_day->month( $month ), 'link' => "http://example.org/$year/$month/" ],
+				[ 'title' => $breadcrumb_day->month( $month ), 'link' => "http://example.org/$year/" . sprintf( '%02d', $month ) . "/" ],
 				[ 'title' => $breadcrumb_day->day( $day ), 'link' => '' ]
 			],
 			$breadcrumbs->get()
