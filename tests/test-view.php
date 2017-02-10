@@ -145,7 +145,6 @@ class ViewTest extends WP_UnitTestCase {
 		// Has posts
 		$custom_post_type_id = $this->factory->post->create( [ 'post_type' => $this->post_type ] );
 		$this->go_to( get_post_type_archive_link( $this->post_type ) );
-		$breadcrumbs = new \Mimizuku\App\Models\Breadcrumbs\Breadcrumbs();
 		$post_type_object = get_post_type_object( $this->post_type );
 		$this->assertNotFalse( get_post_type() );
 		$this->assertEquals(
