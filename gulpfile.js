@@ -174,8 +174,9 @@ gulp.task('browsersync', function() {
 gulp.task('wprepository', ['build'], function(){
   return gulp.src(
       [
-        '**/*',
+        '**',
         '!package.json',
+        '!yarn.lock',
         '!node_modules',
         '!node_modules/**',
         '!vendor',
@@ -184,17 +185,13 @@ gulp.task('wprepository', ['build'], function(){
         '!app/bin/**',
         '!wprepository',
         '!wprepository/**',
-        '!.git',
         '!codesniffer.ruleset.xml',
         '!gulpfile.js',
         '!phpmd.ruleset.xml',
-        '!.gitignore',
-        '!.travis.yml',
         '!tests',
         '!tests/**',
         '!phpunit.xml',
-        '!mimizuku.zip',
-        '!**/.DS_Store'
+        '!mimizuku.zip'
       ],
       {base: './'}
     )
@@ -204,14 +201,12 @@ gulp.task('wprepository', ['build'], function(){
 /**
  * Creates the zip file
  */
-gulp.task('zip', function(){
+gulp.task('zip', ['wprepository'], function(){
   return gulp.src(
       [
         'wprepository/**',
         '!wprepository/composer.json',
-        '!wprepository/composer.lock',
-        '!wprepository/yarn.lock',
-        '!wprepository/.git'
+        '!wprepository/composer.lock'
       ]
       , {base: './wprepository'}
     )
