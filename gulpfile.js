@@ -175,8 +175,15 @@ gulp.task('wprepository', ['build'], function(){
   return gulp.src(
       [
         '**',
+        '!README.md',
         '!package.json',
         '!yarn.lock',
+        '!gulpfile.js',
+        '!codesniffer.ruleset.xml',
+        '!phpmd.ruleset.xml',
+        '!phpunit.xml',
+        '!tests',
+        '!tests/**',
         '!node_modules',
         '!node_modules/**',
         '!vendor',
@@ -185,12 +192,6 @@ gulp.task('wprepository', ['build'], function(){
         '!app/bin/**',
         '!wprepository',
         '!wprepository/**',
-        '!codesniffer.ruleset.xml',
-        '!gulpfile.js',
-        '!phpmd.ruleset.xml',
-        '!tests',
-        '!tests/**',
-        '!phpunit.xml',
         '!mimizuku.zip'
       ],
       {base: './'}
