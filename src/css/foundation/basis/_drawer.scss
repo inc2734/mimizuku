@@ -4,15 +4,10 @@
   }
 
   &__toggle {
-    > .fa {
-      color: #fff;
-      @include _transition(transform);
-    }
+    @include _transition(transform);
 
     &[aria-expanded="true"] {
-      > .fa {
-        transform: rotate(90deg);
-      }
+      transform: rotate(90deg);
     }
   }
 }

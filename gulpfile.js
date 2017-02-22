@@ -219,7 +219,7 @@ gulp.task('zip', ['wprepository'], function(){
  * Auto build and browsersync
  */
 gulp.task('default', ['build', 'browsersync'], function() {
-  gulp.watch([dir.src.css + '/**/*.styl'], ['css']);
+  gulp.watch([dir.src.css + '/**/*.scss'], ['css']);
   gulp.watch([dir.src.js + '/**/*.js'] , ['js']);
-  gulp.watch([dir.src.images + '/**/*'] , ['copy-images']);
+  gulp.watch([dir.src.images + '/**'] , ['copy-images']);
 });

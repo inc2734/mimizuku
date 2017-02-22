@@ -1,12 +1,13 @@
 @charset 'utf-8';
 
+$_font-path: '../../src/packages/sass-basis/src/font' !default;
+
 @import '../packages/sass-basis/src/css/basis';
 
 @import 'core/mixin/fa';
 
 @import 'foundation/foundation';
 
-@import 'foundation/basis/breadcrumbs';
 @import 'foundation/basis/drawer';
 @import 'foundation/basis/entries';
 @import 'foundation/basis/entry';
