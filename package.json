@@ -17,7 +17,6 @@
     "browser-sync": "^2.18.8",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
-    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.11.0",

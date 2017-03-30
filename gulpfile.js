@@ -15,7 +15,6 @@ var rollup       = require('gulp-rollup');
 var nodeResolve  = require('rollup-plugin-node-resolve');
 var commonjs     = require('rollup-plugin-commonjs');
 var babel        = require('rollup-plugin-babel');
-var plumber      = require('gulp-plumber');
 
 var dir = {
   src: {
@@ -91,7 +90,6 @@ gulp.task('css', function() {
 
 function sassCompile(src, dest) {
   return gulp.src(src)
-    .pipe(plumber())
     .pipe(sass({
       includePaths: require('node-normalize-scss').includePaths
     }))
@@ -116,7 +114,6 @@ function sassCompile(src, dest) {
  */
 gulp.task('js', function() {
   gulp.src(dir.src.js + '/**/*.js')
-    .pipe(plumber())
     .pipe(rollup({
       allowRealFiles: true,
       entry: dir.src.js + '/app.js',
