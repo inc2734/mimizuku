@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://poser.pugx.org/inc2734/mimizuku/v/stable)](https://packagist.org/packages/inc2734/mimizuku)
 [![License](https://poser.pugx.org/inc2734/mimizuku/license)](https://packagist.org/packages/inc2734/mimizuku)
 
-Minizuku is a WordPress theme to develop the child theme.
+Minizuku is a WordPress theme framework for child themes development.
 
 <img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/images/mimizuku.svg" alt="Mimizuku" width="96px">
 
@@ -42,3 +42,6 @@ Minizuku is a WordPress theme to develop the child theme.
 ### Basis (Sass/CSS framework)
 * License: MIT License
 * Source: https://sass-basis.github.io/
+
+## Official goods store
+https://suzuri.jp/inc2734/products

@@ -4,12 +4,12 @@ Donate link: http://www.amazon.co.jp/registry/wishlist/39ANKRNSTNW40
 Tags: editor-style, featured-images
 Requires at least: 4.6.0
 Tested up to: 4.7.2
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: license.txt
 
 == Description ==
-Minizuku is a WordPress theme to develop the child theme.
+Minizuku is a WordPress theme framework for child themes development.
 
 == Installation ==
 
