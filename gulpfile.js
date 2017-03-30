@@ -22,8 +22,7 @@ var dir = {
     css     : 'src/css',
     js      : 'src/js',
     images  : 'src/images',
-    packages: 'node_modules',
-    vendor  : 'src/vendor'
+    packages: 'node_modules'
   },
   dist: {
     css     : 'assets/css',
@@ -87,10 +86,7 @@ gulp.task('copy-images',['remove-images'], function() {
  * Build CSS
  */
 gulp.task('css', function() {
-  return sassCompile(dir.src.css + '/*.scss', dir.dist.css)
-    .on('end', function() {
-      return sassCompile(dir.src.vendor + '/**/*.scss', dir.dist.vendor);
-    });
+  return sassCompile(dir.src.css + '/*.scss', dir.dist.css);
 });
 
 function sassCompile(src, dest) {

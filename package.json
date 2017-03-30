@@ -32,6 +32,8 @@
   },
   "scripts": {
     "gulp": "gulp",
+    "start": "gulp",
+    "build": "gulp build",
     "test": "composer test"
   }
 }
