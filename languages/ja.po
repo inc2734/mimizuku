@@ -2,215 +2,237 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mimizuku 0.7.1\n"
+"Project-Id-Version: Mimizuku 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mimizuku\n"
-"POT-Creation-Date: 2017-01-16 21:21+0900\n"
+"POT-Creation-Date: 2017-03-30 21:59+0900\n"
+"PO-Revision-Date: 2017-03-30 22:01+0900\n"
+"Last-Translator: inc2734 <inc@2inc.org>\n"
+"Language-Team: \n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-01-16 21:21+0900\n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.4\n"
-"Last-Translator: inc2734 <inc@2inc.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ja_JP\n"
 
-#: app/models/breadcrumbs/breadcrumb-404.php:18
-#: wprepository/app/models/breadcrumbs/breadcrumb-404.php:18
-msgid "Page not found"
-msgstr ""
-
-#: app/models/breadcrumbs/breadcrumb-front-page.php:34
-#: wprepository/app/models/breadcrumbs/breadcrumb-front-page.php:34
-msgid "Home"
-msgstr ""
-
-#: app/models/breadcrumbs/breadcrumb-search.php:20
-#: wprepository/app/models/breadcrumbs/breadcrumb-search.php:20
-msgid "Search Results for: %s"
-msgstr ""
-
-#: app/setup/nav-menus.php:24 wprepository/app/setup/nav-menus.php:24
+#: app/setup/nav-menus.php:24
+#, fuzzy
 msgid "Global Navigation (For PC)"
-msgstr ""
+msgstr "グローバルナビゲーション（PC用）"
 
-#: app/setup/nav-menus.php:25 wprepository/app/setup/nav-menus.php:25
+#: app/setup/nav-menus.php:25
+#, fuzzy
 msgid "Drawer Navigation (For Mobile)"
-msgstr ""
+msgstr "ドロワーナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:26 wprepository/app/setup/nav-menus.php:26
+#: app/setup/nav-menus.php:26
 msgid "Footer Navigation"
-msgstr ""
+msgstr "フッターナビゲーション"
 
 #: app/setup/widgets.php:24 app/setup/widgets.php:26
-#: wprepository/app/setup/widgets.php:24 wprepository/app/setup/widgets.php:26
+#, fuzzy
 msgid "Sidebar"
-msgstr ""
+msgstr "サイドバー"
 
-#: searchform.php:9 searchform.php:12 wprepository/searchform.php:9
-#: wprepository/searchform.php:12
+#: searchform.php:9 searchform.php:12
+#, fuzzy
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "検索："
 
-#: searchform.php:12 wprepository/searchform.php:12
+#: searchform.php:12
+#, fuzzy
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "検索 &hellip;"
 
-#: searchform.php:14 wprepository/searchform.php:14
+#: searchform.php:14
+#, fuzzy
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "検索する"
 
-#: template-parts/comment.php:14 wprepository/template-parts/comment.php:14
+#: template-parts/comment.php:14
+#, fuzzy
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "あなたのコメントは承認待ちです。"
 
 #: template-parts/comment.php:22 template-parts/trackback.php:15
-#: wprepository/template-parts/comment.php:22
-#: wprepository/template-parts/trackback.php:15
+#, fuzzy
 msgid "%1$s said on %2$s at %3$s"
-msgstr ""
+msgstr "%1$s said on %2$s at %3$s"
 
-#: template-parts/comments.php:11 wprepository/template-parts/comments.php:11
+#: template-parts/comments.php:11
+#, fuzzy
 msgid "Comments on this post"
-msgstr ""
+msgstr "この投稿へのコメント"
 
-#: template-parts/comments.php:32 wprepository/template-parts/comments.php:32
+#: template-parts/comments.php:32
+#, fuzzy
 msgid "Comments are closed."
-msgstr ""
+msgstr "コメントは閉じられています。"
 
-#: template-parts/comments.php:39 wprepository/template-parts/comments.php:39
+#: template-parts/comments.php:39
+#, fuzzy
 msgid "No comments."
-msgstr ""
+msgstr "コメントはありません。"
 
-#: template-parts/copyright.php:13 wprepository/template-parts/copyright.php:13
+#: template-parts/copyright.php:13
+#, fuzzy
 msgid "Monkey Wrench"
-msgstr ""
+msgstr "モンキーレンチ"
 
-#: template-parts/copyright.php:18 wprepository/template-parts/copyright.php:18
+#: template-parts/copyright.php:18
+#, fuzzy
 msgid "WordPress"
-msgstr ""
+msgstr "WordPress"
 
-#: template-parts/copyright.php:20 wprepository/template-parts/copyright.php:20
+#: template-parts/copyright.php:20
+#, fuzzy
 msgid "Mimizuku theme by %s"
-msgstr ""
+msgstr "Mimizuku theme by %s"
 
-#: template-parts/copyright.php:21 wprepository/template-parts/copyright.php:21
+#: template-parts/copyright.php:21
+#, fuzzy
 msgid "Powered by %s"
-msgstr ""
+msgstr "Powered by %s"
 
 #: template-parts/entry-meta.php:19
-#: wprepository/template-parts/entry-meta.php:19
+#, fuzzy
 msgid "Published"
-msgstr ""
+msgstr "投稿日"
 
 #: template-parts/entry-meta.php:30
-#: wprepository/template-parts/entry-meta.php:30
+#, fuzzy
 msgid "Author"
-msgstr ""
+msgstr "著者"
 
 #: template-parts/entry-meta.php:44
-#: wprepository/template-parts/entry-meta.php:44
+#, fuzzy
 msgid "Categories"
-msgstr ""
+msgstr "カテゴリー"
 
 #: template-parts/entry-meta.php:59
-#: wprepository/template-parts/entry-meta.php:59
+#, fuzzy
 msgid "Tags"
-msgstr ""
+msgstr "タグ"
 
-#: template-parts/link-pages.php:16
-#: wprepository/template-parts/link-pages.php:16
+#: template-parts/link-pages.php:26
+#, fuzzy
 msgid "Posts navigation"
-msgstr ""
+msgstr "ナビゲーション"
 
 #: template-parts/pagination.php:17
-#: wprepository/template-parts/pagination.php:17
+#, fuzzy
 msgid "Previous"
-msgstr ""
+msgstr "前へ"
 
 #: template-parts/pagination.php:18
-#: wprepository/template-parts/pagination.php:18
+#, fuzzy
 msgid "Next"
-msgstr ""
+msgstr "次へ"
 
 #: template-parts/password-form.php:10
-#: wprepository/template-parts/password-form.php:10
+#, fuzzy
 msgid ""
 "This content is password protected. To view it please enter your password "
 "below:"
 msgstr ""
+"このコンテンツはパスワードで保護されています。閲覧する場合はパスワードを入"
+"力してください。"
 
 #: template-parts/password-form.php:14
-#: wprepository/template-parts/password-form.php:14
+#, fuzzy
 msgid "Password:"
-msgstr ""
+msgstr "パスワード："
 
 #: template-parts/password-form.php:18
-#: wprepository/template-parts/password-form.php:18
+#, fuzzy
 msgctxt "post password form"
 msgid "Enter"
-msgstr ""
+msgstr "確定"
 
-#: template-parts/pings.php:11 wprepository/template-parts/pings.php:11
+#: template-parts/pings.php:11
+#, fuzzy
 msgid "Trackbacks and Pingbacks on this post"
-msgstr ""
+msgstr "この投稿へのトラックバック"
 
-#: template-parts/pings.php:27 wprepository/template-parts/pings.php:27
+#: template-parts/pings.php:27
+#, fuzzy
 msgid "No trackbacks."
-msgstr ""
+msgstr "トラックバックはありません。"
 
-#: template-parts/pings.php:36 wprepository/template-parts/pings.php:36
+#: template-parts/pings.php:36
+#, fuzzy
 msgid "TrackBack URL"
-msgstr ""
+msgstr "トラックバック URL"
 
-#: views/content/content-404.php:9 wprepository/views/content/content-404.php:9
+#: vendor/inc2734/wp-breadcrumbs/src/FrontPage.php:29
+msgid "ホーム"
+msgstr "ホーム"
+
+#: vendor/inc2734/wp-breadcrumbs/src/FrontPage.php:31
+#, fuzzy
+msgid "Home"
+msgstr "ホーム"
+
+#: vendor/inc2734/wp-breadcrumbs/src/NotFound.php:12
+msgid "ページが見つかりませんでした"
+msgstr "ページが見つかりませんでした"
+
+#: vendor/inc2734/wp-breadcrumbs/src/Search.php:14
+msgid "「%s」の検索結果"
+msgstr "「%s」の検索結果"
+
+#: views/content/content-404.php:9
+#, fuzzy
 msgid "Woops! Page not found."
-msgstr ""
+msgstr "ページが見つかりませんでした。"
 
 #: views/content/content-404.php:10
-#: wprepository/views/content/content-404.php:10
+#, fuzzy
 msgid "The page you are looking for may be moved or deleted."
-msgstr ""
+msgstr "お探しのページは移動したか削除されています。"
 
 #: views/content/content-404.php:11
 msgid "Please search this search box."
-msgstr ""
+msgstr "この検索ボックスから検索してください。"
 
 #: views/content/content-no-match.php:9
-#: wprepository/views/content/content-no-match.php:9
+#, fuzzy
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索"
+"してみてください。"
 
 #: views/content/content-none.php:9
-#: wprepository/views/content/content-none.php:9
+#, fuzzy
 msgid "No posts."
-msgstr ""
-
-#: wprepository/views/content/content-404.php:11
-msgid "Please search this serch box."
-msgstr ""
+msgstr "投稿がありません。"
 
 #. Theme Name of the plugin/theme
+#, fuzzy
 msgid "Mimizuku"
-msgstr ""
+msgstr "Mimizuku"
 
 #. Theme URI of the plugin/theme
+#, fuzzy
 msgid "https://github.com/inc2734/mimizuku/"
-msgstr ""
+msgstr "https://github.com/inc2734/mimizuku/"
 
 #. Description of the plugin/theme
-msgid "Minizuku is a WordPress theme to develop the child theme."
+msgid "Minizuku is a WordPress theme framework for child themes development."
 msgstr ""
+"Minizuku は子テーマの開発のための WordPress テーマフレームワークです。"
 
 #. Author of the plugin/theme
+#, fuzzy
 msgid "inc2734"
-msgstr ""
+msgstr "inc2734"
 
 #. Author URI of the plugin/theme
+#, fuzzy
 msgid "http://2inc.org"
-msgstr ""
+msgstr "http://2inc.org"
