@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-$footer = apply_filters( 'mimizuku_footer', '2row' );
+$footer = apply_filters( 'mimizuku_footer', 'footer' );
 $slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'footer' );
 get_template_part( $slug . '/' . $footer );

@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-$header = apply_filters( 'mimizuku_header', '2row' );
+$header = apply_filters( 'mimizuku_header', 'header' );
 $slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'header' );
 get_template_part( $slug . '/' . $header );
