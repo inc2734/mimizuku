@@ -19,9 +19,9 @@ class Embed {
 	 * @param mixed $cache
 	 * @param string $url
 	 * @param array $attr
-	 * @param int $post_ID
+	 * @param int $post_id
 	 */
-	public function embed_oembed_html( $cache, $url, $attr, $post_ID ) {
+	public function embed_oembed_html( $cache, $url, $attr, $post_id ) {
 		if ( preg_match( '/^https?:\/\/www\.youtube\.com/', $url ) ) {
 			$cache = '<div class="_c-responsive-container-16-9">' . $cache . '</div>';
 		}
