@@ -3,12 +3,12 @@
   "description": "Minizuku is a WordPress theme framework for child themes development.",
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "authors": [
     {
       "name": "Takashi Kitajima",
       "email": "inc@2inc.org",
-      "homepage": "http://2inc.org"
+      "homepage": "https://2inc.org"
     }
   ],
   "require-dev": {

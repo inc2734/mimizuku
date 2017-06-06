@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 
-$theme_url     = 'http://2inc.org';
-$wordpress_url = 'http://wordpress.org/';
+$theme_url     = 'https://2inc.org';
+$wordpress_url = 'https://wordpress.org/';
 $theme_link = sprintf(
 	'<a href="%s" target="_blank">%s</a>',
 	esc_url( $theme_url ),
