@@ -74,7 +74,7 @@ class Styles {
 	 * @return void
 	 */
 	public function enqueue_for_old_browsers() {
-		if ( \Mimizuku\App\Tags\is_supported_ie9() ) {
+		if ( mimizuku_is_supported_ie9() ) {
 			wp_enqueue_style(
 				'basis-ie9',
 				$this->theme_uri . '/assets/css/basis-ie9.min.css',

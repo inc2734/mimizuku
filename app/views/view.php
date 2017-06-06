@@ -86,7 +86,7 @@ class View {
 	 */
 	protected function _render() {
 		$layout = apply_filters( 'mimizuku_layout', $this->layout );
-		$slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'layout' );
+		$slug   = mimizuku_config( 'app/config/directory', 'layout' );
 
 		$template_file_name     = $slug . '/' . $layout . '.php';
 		$layout_child_path  = get_stylesheet_directory() . '/' . $template_file_name;
@@ -116,7 +116,7 @@ class View {
 	 * @return array
 	 */
 	protected function _get_view_args() {
-		$slug = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'views' );
+		$slug = mimizuku_config( 'app/config/directory', 'views' );
 		$view = [
 			'slug' => $slug . '/' . $this->view,
 			'name' => $this->view_suffix,
@@ -149,7 +149,7 @@ class View {
 		$path        = $this->_remove_http_query( $request_uri );
 		$path        = $this->_remove_paged_slug( $path );
 		$path        = trim( $path, '/' );
-		$slug        = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'static' );
+		$slug        = mimizuku_config( 'app/config/directory', 'static' );
 		return $slug . '/' . $path;
 	}
 

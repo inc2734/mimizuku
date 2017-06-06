@@ -5,5 +5,5 @@
  * @license GPL-2.0+
  */
 
-$slug = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'sidebar' );
+$slug = mimizuku_config( 'app/config/directory', 'sidebar' );
 get_template_part( $slug . '/simple' );

@@ -5,5 +5,5 @@
  * @license GPL-2.0+
  */
 
-$slug = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'footer' );
+$slug = mimizuku_config( 'app/config/directory', 'footer' );
 get_template_part( $slug . '/2row' );

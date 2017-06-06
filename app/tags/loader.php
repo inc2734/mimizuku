@@ -5,8 +5,10 @@
  * @license GPL-2.0+
  */
 
+get_template_part( 'app/tags/backward-compatibility' );
 get_template_part( 'app/tags/get-template-part' );
 get_template_part( 'app/tags/header-attributes' );
 get_template_part( 'app/tags/is-supported-ie9' );
 get_template_part( 'app/tags/the-comments' );
 get_template_part( 'app/tags/the-pings' );
+get_template_part( 'app/tags/config' );

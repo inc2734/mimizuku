@@ -21,7 +21,7 @@ class Pagination {
 			'next_text' => '<i class="fa fa-angle-right" aria-hidden="true"></i><span class="screen-reader-text">' . esc_html__( 'Next', 'mimizuku' ) . '</span>',
 		] );
 
-		echo static::sanitize( static::pagination( ob_get_clean() ) );
+		static::sanitize_e( static::pagination( ob_get_clean() ) );
 	}
 
 	public static function wp_link_pages() {
@@ -38,11 +38,11 @@ class Pagination {
 			'pagelink'         => '%',
 		] );
 
-		echo static::sanitize( ob_get_clean() );
+		static::sanitize_e( ob_get_clean() );
 	}
 
-	protected static function sanitize( $pagination ) {
-		return wp_kses(
+	protected static function sanitize_e( $pagination ) {
+		echo wp_kses(
 			$pagination,
 			[
 				'h2' => [
@@ -114,7 +114,7 @@ class Pagination {
 			'<a class="page-numbers" $1>$2</a>',
 			$pagination
 		);
-		$pagination = \Mimizuku\App\Models\Pagination::replace_basis_pager_structure( $pagination );
+		$pagination = static::pagination( $pagination );
 		$pagination .= "\n";
 
 		return $pagination;

@@ -6,5 +6,5 @@
  */
 
 $sidebar = apply_filters( 'mimizuku_sidebar', 'sidebar' );
-$slug   = \Mimizuku\App\Models\Config::get( 'app/config/directory', 'sidebar' );
+$slug   = mimizuku_config( 'app/config/directory', 'sidebar' );
 get_template_part( $slug . '/' . $sidebar );

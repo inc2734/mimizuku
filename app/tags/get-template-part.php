@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Tags;
-
 /**
  * A template tag that is get_template_part() using variables
  *
@@ -14,7 +12,7 @@ namespace Mimizuku\App\Tags;
  * @param array $vars
  * @return void
  */
-function get_template_part( $template, $vars = [] ) {
+function mimizuku_get_template_part( $template, $vars = [] ) {
 	$template_part = new \Mimizuku\App\Models\Template_Part( $template );
 	$template_part->set_vars( $vars );
 	$template_part->render();
