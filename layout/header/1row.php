@@ -8,7 +8,7 @@
 <header class="_l-header" role="banner" data-l="header">
 	<div class="_c-container">
 		<div class="_c-row _c-row--middle">
-			<div class="_c-row__col _c-row__col--auto _c-row _c-row--middle">
+			<div class="_c-row__col _c-row__col--auto">
 				<?php get_template_part( 'template-parts/site-branding' ); ?>
 			</div>
 
