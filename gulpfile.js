@@ -15,15 +15,13 @@ var rollup       = require('gulp-rollup');
 var nodeResolve  = require('rollup-plugin-node-resolve');
 var commonjs     = require('rollup-plugin-commonjs');
 var babel        = require('rollup-plugin-babel');
-var plumber      = require('gulp-plumber');
 
 var dir = {
   src: {
     css     : 'src/css',
     js      : 'src/js',
     images  : 'src/images',
-    packages: 'node_modules',
-    vendor  : 'src/vendor'
+    packages: 'node_modules'
   },
   dist: {
     css     : 'assets/css',
@@ -87,15 +85,11 @@ gulp.task('copy-images',['remove-images'], function() {
  * Build CSS
  */
 gulp.task('css', function() {
-  return sassCompile(dir.src.css + '/*.scss', dir.dist.css)
-    .on('end', function() {
-      return sassCompile(dir.src.vendor + '/**/*.scss', dir.dist.vendor);
-    });
+  return sassCompile(dir.src.css + '/*.scss', dir.dist.css);
 });
 
 function sassCompile(src, dest) {
   return gulp.src(src)
-    .pipe(plumber())
     .pipe(sass({
       includePaths: require('node-normalize-scss').includePaths
     }))
@@ -120,7 +114,6 @@ function sassCompile(src, dest) {
  */
 gulp.task('js', function() {
   gulp.src(dir.src.js + '/**/*.js')
-    .pipe(plumber())
     .pipe(rollup({
       allowRealFiles: true,
       entry: dir.src.js + '/app.js',

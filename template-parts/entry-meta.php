@@ -25,7 +25,7 @@ $entry_meta['published'] = sprintf(
  */
 $entry_meta['author'] = sprintf(
 	'<span class="screen-reader-text">%s</span>
-	<i class="fa fa-user"></i>
+	<i class="fa fa-user" aria-hidden="true"></i>
 	<a href="%s">%s</a>',
 	esc_html__( 'Author', 'mimizuku' ),
 	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
@@ -39,7 +39,7 @@ $categories = get_the_terms( get_the_ID(), 'category' );
 if ( $categories ) {
 	$entry_meta['categories'] = sprintf(
 		'<span class="screen-reader-text">%s</span>
-		<i class="fa fa-folder"></i>
+		<i class="fa fa-folder" aria-hidden="true"></i>
 		<a href="%s">%s</a>',
 		esc_html__( 'Categories', 'mimizuku' ),
 		esc_url( get_term_link( $categories[0] ) ),
@@ -54,7 +54,7 @@ $tags = get_the_tag_list( '', ', ' );
 if ( $tags ) {
 	$entry_meta['tags'] = sprintf(
 		'<span class="screen-reader-text">%s</span>
-		<i class="fa fa-tags"></i>
+		<i class="fa fa-tags" aria-hidden="true"></i>
 		%s',
 		esc_html__( 'Tags', 'mimizuku' ),
 		get_the_tag_list( '', ', ' )
@@ -63,7 +63,7 @@ if ( $tags ) {
 
 $entry_meta = apply_filters( 'mimizuku_entry_meta_items', $entry_meta );
 ?>
-<div class="_p-entry-meta">
+<div class="_c-entry__meta">
 	<ul class="_c-meta">
 		<?php foreach ( $entry_meta as $key => $item ) : ?>
 		<li class="_c-meta__item _c-meta__item--<?php echo esc_attr( $key ); ?>">
