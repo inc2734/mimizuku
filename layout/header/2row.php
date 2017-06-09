@@ -24,7 +24,7 @@
 	<div class="_u-hidden-sm _u-hidden-md">
 		<?php
 		add_filter( 'wp_nav_menu_args', function( $args ) {
-			if ( 'global-nav' == $args['theme_location']  ) {
+			if ( 'global-nav' == $args['theme_location'] ) {
 				$args = array_merge( $args, [
 					'container'       => 'div',
 					'container_class' => '_c-container',

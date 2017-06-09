@@ -2,4 +2,8 @@
   &__title {
     @include _margin-top(0);
   }
+
+  &__content {
+    @include _content();
+  }
 }

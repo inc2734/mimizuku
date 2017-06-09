@@ -10,7 +10,7 @@
 		<div class="_c-row__col _c-row__col--1-1">
 			<?php
 			add_filter( 'wp_nav_menu_args', function( $args ) {
-				if ( 'footer-nav' == $args['theme_location']  ) {
+				if ( 'footer-nav' == $args['theme_location'] ) {
 					$args = array_merge( $args, [
 						'container'       => 'div',
 						'container_class' => '_c-container',
