@@ -44,7 +44,7 @@ class Global_Nav {
 		);
 
 		$nav_menu = preg_replace(
-			'/<ul class="sub-menu">/ms',
+			'/<ul +class="sub-menu">/ms',
 			'<ul class="_c-navbar__submenu" data-c="navbar__submenu" aria-hidden="true">',
 			$nav_menu
 		);

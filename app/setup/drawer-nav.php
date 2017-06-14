@@ -26,7 +26,7 @@ class Drawer_Nav {
 		}
 
 		return preg_replace(
-			'/<ul class="sub-menu">/ms',
+			'/<ul +class="sub-menu">/ms',
 			'<div class="_c-drawer__toggle" data-c="drawer__toggle" aria-expanded="false"><span class="_ic-angle-right" aria-hidden="true"></span></div><ul class="_c-drawer__submenu" data-c="drawer__submenu" aria-hidden="true">',
 			$nav_menu
 		);
