@@ -4,7 +4,9 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+?>
 
+<?php
 include_once( get_stylesheet_directory() . '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' );
 $breadcrumbs = new Inc2734_WP_Breadcrumbs();
 $items = apply_filters( 'mimizuku_breadcrumbs', $breadcrumbs->get() );

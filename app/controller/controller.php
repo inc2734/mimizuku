@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+/**
+ * View controller class
+ */
 class Mimizuku_Controller {
 
 	/**

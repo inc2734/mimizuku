@@ -5,6 +5,10 @@
  * @license GPL-2.0+
  */
 
+/**
+ * This class make function that like get_template_part().
+ * In addition to calling templates, you can pass variables.
+ */
 class Mimizuku_Template_Part {
 
 	/**

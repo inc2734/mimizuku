@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Config loader
+ */
 class Mimizuku_Config {
 
 	/**

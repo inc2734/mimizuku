@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+/**
+ * View class
+ */
 class Mimizuku_View {
 
 	/**
