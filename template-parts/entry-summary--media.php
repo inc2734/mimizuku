@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<section <?php post_class(); ?>>
+<section class="_c-entry-summary">
 	<div class="_c-flex-media">
 		<?php $thumbnail_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>
 		<div class="_c-flex-media__figure"
@@ -14,11 +14,13 @@
 			<?php endif; ?>
 		></div>
 		<div class="_c-flex-media__body">
-			<header class="_c-entry__header">
-				<h2 class="_c-entry__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<?php get_template_part( 'template-parts/entry-meta' ); ?>
+			<header class="_c-entry-summary__header">
+				<h2 class="_c-entry-summary__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<div class="_c-entry-summary__meta">
+					<?php get_template_part( 'template-parts/entry-meta' ); ?>
+				</div>
 			</header>
-			<div class="_c-entry__content">
+			<div class="_c-entry-summary__content">
 				<?php the_excerpt(); ?>
 			</div>
 		</div>

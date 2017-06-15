@@ -63,12 +63,10 @@ if ( $tags ) {
 
 $entry_meta = apply_filters( 'mimizuku_entry_meta_items', $entry_meta );
 ?>
-<div class="_c-entry__meta">
-	<ul class="_c-meta">
-		<?php foreach ( $entry_meta as $key => $item ) : ?>
-		<li class="_c-meta__item _c-meta__item--<?php echo esc_attr( $key ); ?>">
-			<?php echo wp_kses_post( $item ); ?>
-		</li>
-		<?php endforeach; ?>
-	</ul>
-</div>
+<ul class="_c-meta">
+	<?php foreach ( $entry_meta as $key => $item ) : ?>
+	<li class="_c-meta__item _c-meta__item--<?php echo esc_attr( $key ); ?>">
+		<?php echo wp_kses_post( $item ); ?>
+	</li>
+	<?php endforeach; ?>
+</ul>

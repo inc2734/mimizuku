@@ -8,7 +8,9 @@
 <article <?php post_class(); ?>>
 	<header class="_c-entry__header">
 		<h1 class="_c-entry__title"><?php the_title(); ?></h1>
-		<?php get_template_part( 'template-parts/entry-meta' ); ?>
+		<div class="_c-entry__meta">
+			<?php get_template_part( 'template-parts/entry-meta' ); ?>
+		</div>
 	</header>
 
 	<div class="_c-entry__content">
