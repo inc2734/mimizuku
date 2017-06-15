@@ -20,14 +20,14 @@ if [ -e "$themedir/../../dump-$datetime.sql" ]; then
   fi
 
   if [ $? -eq 0 ]; then
-    wp menu list --format=ids
-    if [ $? -ne 0 ]; then
-      wp menu delete $?
+    menu_ids=$(wp menu list --format=ids)
+    if [ -n "${menu_ids}" ]; then
+      wp menu delete ${menu_ids}
     fi
 
-    wp post list --post_type=page,post --posts_per_page=-1 --format=ids
-    if [ $? -ne 0 ]; then
-      wp post delete $?
+    post_ids=$(wp post list --post_type=page,post,revision --posts_per_page=-1 --format=ids)
+    if [ -n "${post_ids}" ]; then
+      wp post delete ${post_ids} --force --defer-term-counting
     fi
 
     wget https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml -P $themedir
