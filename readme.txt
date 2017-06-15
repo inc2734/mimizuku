@@ -2,9 +2,9 @@
 Contributors: inc2734
 Donate link: http://www.amazon.co.jp/registry/wishlist/39ANKRNSTNW40
 Tags: editor-style, featured-images
-Requires at least: 4.6.0
+Requires at least: 4.7.0
 Tested up to: 4.7.5
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: license.txt
 
