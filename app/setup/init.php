@@ -5,87 +5,72 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Setup;
+/**
+ * Make theme available for translation
+ *
+ * @return void
+ */
+add_action( 'after_setup_theme', function() {
+	load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
+} );
 
-class Init {
+/**
+ * Enable plugins to manage the document title
+ *
+ * @return void
+ * @see http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+ */
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'title-tag' );
+} );
 
-	public function __construct() {
-		add_action( 'after_setup_theme', [ $this, 'load_theme_textdomain' ] );
-		add_action( 'after_setup_theme', [ $this, 'activate_title_tag' ] );
-		add_action( 'after_setup_theme', [ $this, 'activate_post_thumbnails' ] );
-		add_action( 'after_setup_theme', [ $this, 'activate_html5' ] );
-		add_action( 'after_setup_theme', [ $this, 'activate_feed' ] );
-		add_action( 'after_setup_theme', [ $this, 'activate_selective_refresh_widgets' ] );
-		add_action( 'after_setup_theme', [ $this, 'activate_editor_style' ] );
-	}
+/**
+ * Enable post thumbnails
+ *
+ * @return void
+ * @see http://codex.wordpress.org/Post_Thumbnails
+ * @see http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
+ * @see http://codex.wordpress.org/Function_Reference/add_image_size
+ */
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'post-thumbnails' );
+} );
 
-	/**
-	 * Make theme available for translation
-	 *
-	 * @return void
-	 */
-	public function load_theme_textdomain() {
-		load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
-	}
+/**
+ * Enable HTML5 markup support
+ *
+ * @return void
+ * @see http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+ */
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
+} );
 
-	/**
-	 * Enable plugins to manage the document title
-	 *
-	 * @return void
-	 * @see http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-	 */
-	public function activate_title_tag() {
-		add_theme_support( 'title-tag' );
-	}
+/**
+ * Add default posts and comments RSS feed links to head.
+ *
+ * @return void
+ */
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'automatic-feed-links' );
+} );
 
-	/**
-	 * Enable post thumbnails
-	 *
-	 * @return void
-	 * @see http://codex.wordpress.org/Post_Thumbnails
-	 * @see http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
-	 * @see http://codex.wordpress.org/Function_Reference/add_image_size
-	 */
-	public function activate_post_thumbnails() {
-		add_theme_support( 'post-thumbnails' );
-	}
+/**
+ * Add theme support for selective refresh for widgets.
+ *
+ * @return void
+ */
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'customize-selective-refresh-widgets' );
+} );
 
-	/**
-	 * Enable HTML5 markup support
-	 *
-	 * @return void
-	 * @see http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
-	 */
-	public function activate_html5() {
-		add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
-	}
-
-	/**
-	 * Add default posts and comments RSS feed links to head.
-	 *
-	 * @return void
-	 */
-	public function activate_feed() {
-		add_theme_support( 'automatic-feed-links' );
-	}
-
-	/**
-	 * Add theme support for selective refresh for widgets.
-	 *
-	 * @return void
-	 */
-	public function activate_selective_refresh_widgets() {
-		add_theme_support( 'customize-selective-refresh-widgets' );
-	}
-
-	/**
-	 * Use main stylesheet for visual editor
-	 *
-	 * @return void
-	 */
-	public function activate_editor_style() {
-		add_editor_style( [
-			'assets/css/editor-style.min.css',
-		] );
-	}
-}
+/**
+ * Use main stylesheet for visual editor
+ *
+ * @return void
+ */
+add_action( 'after_setup_theme', function() {
+	add_editor_style( [
+		'assets/css/editor-style.min.css',
+	] );
+} );

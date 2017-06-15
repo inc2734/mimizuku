@@ -5,9 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Models;
-
-class Template_Part {
+class Mimizuku_Template_Part {
 
 	/**
 	 * The template path like get_template_part()

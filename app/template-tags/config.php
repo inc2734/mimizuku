@@ -13,5 +13,5 @@
  * @return mixed
  */
 function mimizuku_config( $slug, $key = null ) {
-	return \Mimizuku\App\Models\Config::get( $slug, $key );
+	return Mimizuku_Config::get( $slug, $key );
 }

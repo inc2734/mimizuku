@@ -6,10 +6,10 @@
  */
 
 return [
-	'layout'  => 'layout/wrapper',
-	'header'  => 'layout/header',
-	'sidebar' => 'layout/sidebar',
-	'footer'  => 'layout/footer',
-	'views'   => 'views',
-	'static'  => 'views/static',
+	'layout'  => 'templates/layout/wrapper',
+	'header'  => 'templates/layout/header',
+	'sidebar' => 'templates/layout/sidebar',
+	'footer'  => 'templates/layout/footer',
+	'view'    => 'templates/view',
+	'static'  => 'templates/view/static',
 ];

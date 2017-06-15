@@ -8,7 +8,7 @@
 <ul class="_c-entries">
 	<?php while ( have_posts() ) : the_post(); ?>
 	<li class="_c-entries__item">
-		<?php get_template_part( 'views/content/content', 'summary' ); ?>
+		<?php get_template_part( 'templates/view/summary', get_post_type() ); ?>
 	</li>
 	<?php endwhile; ?>
 </ul>

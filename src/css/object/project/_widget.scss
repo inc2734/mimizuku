@@ -97,7 +97,7 @@
 
   &.widget_tag_cloud {
     a {
-      @include _fa("\f02b");
+      @include fa-icon();
       background-color: _lightest($_color-gray);
       border: 1px solid _lighter($_color-gray);
       border-radius: 3px;
@@ -113,6 +113,7 @@
       }
 
       &::before {
+        content: "\f02b";
         margin-right: 3px;
       }
     }

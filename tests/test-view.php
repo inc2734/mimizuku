@@ -8,7 +8,7 @@ class ViewTest extends WP_UnitTestCase {
 		$wp_rewrite->init();
 		$wp_rewrite->set_permalink_structure( '/%post_id%/' );
 
-		$this->view = new \Mimizuku\App\Views\View();
+		$this->view = new Mimizuku_View();
 
 		$this->author_id     = $this->factory->user->create();
 		$this->post_ids      = $this->factory->post->create_many( 20, [ 'post_author' => $this->author_id ] );
@@ -54,7 +54,7 @@ class ViewTest extends WP_UnitTestCase {
 		$category = get_terms( 'post_tag' )[0];
 		$this->go_to( get_term_link( $category ) );
 		$this->assertEquals(
-			'views/static/tag/' . $category->slug,
+			'view/static/tag/' . $category->slug,
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -63,7 +63,7 @@ class ViewTest extends WP_UnitTestCase {
 		$post_tag = get_terms( 'post_tag' )[0];
 		$this->go_to( get_term_link( $post_tag ) );
 		$this->assertEquals(
-			'views/static/tag/' . $post_tag->slug,
+			'view/static/tag/' . $post_tag->slug,
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -73,7 +73,7 @@ class ViewTest extends WP_UnitTestCase {
 		$year = date( 'Y', strtotime( $newest_post->post_date ) );
 		$this->go_to( get_year_link( $year ) );
 		$this->assertEquals(
-			'views/static/date/' . $year,
+			'view/static/date/' . $year,
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -84,7 +84,7 @@ class ViewTest extends WP_UnitTestCase {
 		$month = date( 'm', strtotime( $newest_post->post_date ) );
 		$this->go_to( get_month_link( $year, $month ) );
 		$this->assertEquals(
-			'views/static/date/' . $year . '/' . $month,
+			'view/static/date/' . $year . '/' . $month,
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -96,7 +96,7 @@ class ViewTest extends WP_UnitTestCase {
 		$day   = date( 'd', strtotime( $newest_post->post_date ) );
 		$this->go_to( get_day_link( $year, $month, $day ) );
 		$this->assertEquals(
-			'views/static/date/' . $year . '/' . $month . '/' . $day,
+			'view/static/date/' . $year . '/' . $month . '/' . $day,
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -106,7 +106,7 @@ class ViewTest extends WP_UnitTestCase {
 		$author = $newest_post->post_author;
 		$this->go_to( get_author_posts_url( $author ) );
 		$this->assertEquals(
-			'views/static/author/' . get_the_author_meta( 'user_nicename', $author ),
+			'view/static/author/' . get_the_author_meta( 'user_nicename', $author ),
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -117,7 +117,7 @@ class ViewTest extends WP_UnitTestCase {
 		$categories = get_the_category( $newest_post );
 		$this->go_to( get_permalink( $newest_post ) );
 		$this->assertEquals(
-			'views/static/' . $this->post_ids[0],
+			'view/static/' . $this->post_ids[0],
 			$this->view->get_static_view_template_name()
 		);
 
@@ -127,7 +127,7 @@ class ViewTest extends WP_UnitTestCase {
 		$this->go_to( get_permalink( $custom_post_type_id ) );
 		$post_type_object = get_post_type_object( $custom_post->post_type );
 		$this->assertEquals(
-			'views/static/' . $post_type_object->name . '/' . $custom_post->post_name,
+			'view/static/' . $post_type_object->name . '/' . $custom_post->post_name,
 			$this->view->get_static_view_template_name()
 		);
 	}
@@ -138,7 +138,7 @@ class ViewTest extends WP_UnitTestCase {
 		$this->assertFalse( get_post_type() );
 		$post_type_object = get_post_type_object( $this->post_type );
 		$this->assertEquals(
-			'views/static/' . $post_type_object->name,
+			'view/static/' . $post_type_object->name,
 			$this->view->get_static_view_template_name()
 		);
 
@@ -148,7 +148,7 @@ class ViewTest extends WP_UnitTestCase {
 		$post_type_object = get_post_type_object( $this->post_type );
 		$this->assertNotFalse( get_post_type() );
 		$this->assertEquals(
-			'views/static/' . $post_type_object->name,
+			'view/static/' . $post_type_object->name,
 			$this->view->get_static_view_template_name()
 		);
 	}

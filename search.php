@@ -5,10 +5,10 @@
  * @license GPL-2.0+
  */
 
-$controller = new \Mimizuku\App\Controllers\Controller();
-$controller->layout( 'right-sidebar' );
+$controller = new Mimizuku_Controller();
+$controller->layout( 'wrapper' );
 if ( have_posts() ) {
-	$controller->render( 'archive/archive', 'search' );
+	$controller->render( 'archive', 'search' );
 } else {
-	$controller->render( 'content/content', 'no-match' );
+	$controller->render( 'no-match' );
 }

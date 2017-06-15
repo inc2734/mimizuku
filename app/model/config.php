@@ -5,9 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Models;
-
-class Config {
+class Mimizuku_Config {
 
 	/**
 	 * Getting config value
@@ -17,7 +15,7 @@ class Config {
 	 * @return mixed
 	 */
 	public static function get( $slug, $key = null ) {
-		$path = get_template_directory() . '/' . $slug . '.php';
+		$path = get_stylesheet_directory() . '/app/config/' . $slug . '.php';
 
 		if ( ! file_exists( $path ) ) {
 			return;

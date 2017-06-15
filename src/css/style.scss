@@ -1,20 +1,26 @@
 @charset 'utf-8';
 
-$_font-path: '../../src/packages/sass-basis/src/font' !default;
+/**
+ * Import WP oEmbed Blog Card
+ */
+@import '../../vendor/inc2734/wp-oembed-blog-card/src/assets/scss/wp-oembed-blog-card';
 
-@import '../packages/sass-basis/src/css/basis';
+/**
+ * Import FontAwesome
+ */
+$fa-font-path: '../../assets/packages/font-awesome/fonts' !default;
+@import '../../assets/packages/font-awesome/scss/font-awesome';
 
-@import 'core/mixin/fa';
+/**
+ * Import Basis
+ */
+$_font-path: '../../assets/packages/sass-basis/src/font' !default;
+@import '../../assets/packages/sass-basis/src/css/basis';
 
+/**
+ * Foundation
+ */
 @import 'foundation/foundation';
-
-@import 'foundation/basis/drawer';
-@import 'foundation/basis/entries';
-@import 'foundation/basis/entry';
-@import 'foundation/basis/meta';
-@import 'foundation/basis/site-branding';
-@import 'foundation/basis/responsive-container';
-
 @import 'foundation/wordpress/align';
 @import 'foundation/wordpress/bypostauthor';
 @import 'foundation/wordpress/gallery';
@@ -22,12 +28,28 @@ $_font-path: '../../src/packages/sass-basis/src/font' !default;
 @import 'foundation/wordpress/sticky';
 @import 'foundation/wordpress/wp-caption';
 
+/**
+ * Layout
+ */
 @import 'layout/container';
 @import 'layout/contents';
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/main';
 
+/**
+ * Object - Component
+ */
+@import 'object/component/drawer';
+@import 'object/component/entries';
+@import 'object/component/entry';
+@import 'object/component/meta';
+@import 'object/component/site-branding';
+@import 'object/component/responsive-container';
+
+/**
+ * Object - Project
+ */
 @import 'object/project/comment';
 @import 'object/project/comments';
 @import 'object/project/footer-nav';

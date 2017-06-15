@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-$controller = new \Mimizuku\App\Controllers\Controller();
-$controller->layout( 'right-sidebar' );
-$controller->render( 'content/content', get_post_type() );
+$controller = new Mimizuku_Controller();
+$controller->layout( 'wrapper' );
+$controller->render( 'content', get_post_type() );

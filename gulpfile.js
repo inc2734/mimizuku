@@ -10,7 +10,6 @@ var browser_sync = require('browser-sync');
 var autoprefixer = require('autoprefixer');
 var rimraf       = require('rimraf');
 var runSequence  = require('run-sequence');
-var zip          = require('gulp-zip');
 var rollup       = require('gulp-rollup');
 var nodeResolve  = require('rollup-plugin-node-resolve');
 var commonjs     = require('rollup-plugin-commonjs');
@@ -27,18 +26,9 @@ var dir = {
     css     : 'assets/css',
     js      : 'assets/js',
     images  : 'assets/images',
-    packages: 'src/packages',
-    vendor  : 'assets/vendor'
+    packages: 'assets/packages'
   }
 }
-
-/**
- * The font-awesome moved to assets directory
- */
-gulp.task('font-awesome', function() {
-  return gulp.src(dir.src.packages + '/font-awesome/**', {base: 'node_modules'})
-    .pipe(gulp.dest(dir.dist.vendor));
-});
 
 /**
  * Remove directory for copied node modules
@@ -50,20 +40,14 @@ gulp.task('remove-packages-dir', function(cb) {
 /**
  * Copy dependencies node modules to src directory
  */
-gulp.task('copy-packages', ['remove-packages-dir'], function(cb) {
+gulp.task('packages', ['remove-packages-dir'], function(cb) {
   var packages = [
+    dir.src.packages + '/font-awesome/**',
     dir.src.packages + '/sass-basis/**',
     dir.src.packages + '/sass-basis-*/**'
   ];
   return gulp.src(packages, {base: 'node_modules'})
-    .pipe(gulp.dest(dir.dist.packages))
-    .on('end', function() {
-      var files = [
-        dir.src.packages + '/sass-basis/vendor/html5.js'
-      ];
-      return gulp.src(files)
-        .pipe(gulp.dest(dir.dist.vendor));
-    });
+    .pipe(gulp.dest(dir.dist.packages));
 });
 
 /**
@@ -76,7 +60,7 @@ gulp.task('remove-images', function(cb) {
 /**
  * Copy images to assets directory
  */
-gulp.task('copy-images',['remove-images'], function() {
+gulp.task('images',['remove-images'], function() {
   return gulp.src(dir.src.images + '/**/*')
     .pipe(gulp.dest(dir.dist.images));
 });
@@ -141,9 +125,9 @@ gulp.task('js', function() {
 });
 
 /**
- * Build Mimizuku
+ * Build
  */
-gulp.task('build', ['copy-packages', 'copy-images', 'font-awesome'], function() {
+gulp.task('build', ['packages', 'images'], function() {
   return runSequence('css', 'js');
 });
 
@@ -162,57 +146,10 @@ gulp.task('browsersync', function() {
 });
 
 /**
- * Creates directory for wprepository
- */
-gulp.task('wprepository', ['build'], function(){
-  return gulp.src(
-      [
-        '**',
-        '!README.md',
-        '!package.json',
-        '!yarn.lock',
-        '!gulpfile.js',
-        '!codesniffer.ruleset.xml',
-        '!phpmd.ruleset.xml',
-        '!phpunit.xml',
-        '!tests',
-        '!tests/**',
-        '!node_modules',
-        '!node_modules/**',
-        '!vendor',
-        '!vendor/**',
-        '!app/bin',
-        '!app/bin/**',
-        '!wprepository',
-        '!wprepository/**',
-        '!mimizuku.zip'
-      ],
-      {base: './'}
-    )
-    .pipe(gulp.dest('wprepository'));
-});
-
-/**
- * Creates the zip file
- */
-gulp.task('zip', ['wprepository'], function(){
-  return gulp.src(
-      [
-        'wprepository/**',
-        '!wprepository/composer.json',
-        '!wprepository/composer.lock'
-      ]
-      , {base: './wprepository'}
-    )
-    .pipe(zip('mimizuku.zip'))
-    .pipe(gulp.dest('./'));
-});
-
-/**
  * Auto build and browsersync
  */
 gulp.task('default', ['build', 'browsersync'], function() {
   gulp.watch([dir.src.css + '/**/*.scss'], ['css']);
   gulp.watch([dir.src.js + '/**/*.js'] , ['js']);
-  gulp.watch([dir.src.images + '/**'] , ['copy-images']);
+  gulp.watch([dir.src.images + '/**'] , ['images']);
 });

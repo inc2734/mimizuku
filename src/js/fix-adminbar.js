@@ -36,17 +36,25 @@ export default class FixAdminBar {
   fixHeaderPosition() {
     if (-1 !== $.inArray(this.header.attr('data-l-header-type'), ['sticky', 'overlay'])) {
       const scroll = $(window).scrollTop();
+      const adminbar_height = parseInt(this.adminBar.outerHeight());
 
       if (this.min > $(window).outerWidth()) {
         if (scroll >= this.adminBar.outerHeight()) {
           this.header.css('top', 0);
+          this.header.css('position', '');
         } else {
-          this.header.css('top', '');
+          if ('sticky' === this.header.attr('data-l-header-type')) {
+            this.header.css('position', 'relative');
+            this.header.css('top', '');
+          } else {
+            this.header.css('top', adminbar_height + scroll * -1);
+          }
           $('html').attr('data-scrolled', false);
-          this.contents.css('padding-top', 0);
+          this.contents.css('margin-top', 0);
         }
       } else {
         this.header.css('top', '');
+        this.header.css('position', '');
       }
     }
   }

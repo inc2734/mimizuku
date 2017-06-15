@@ -13,7 +13,7 @@
  * @return void
  */
 function mimizuku_get_template_part( $template, $vars = [] ) {
-	$template_part = new \Mimizuku\App\Models\Template_Part( $template );
+	$template_part = new Mimizuku_Template_Part( $template );
 	$template_part->set_vars( $vars );
 	$template_part->render();
 }

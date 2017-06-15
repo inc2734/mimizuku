@@ -5,9 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Views;
-
-class View {
+class Mimizuku_View {
 
 	/**
 	 * The layout template path
@@ -86,7 +84,7 @@ class View {
 	 */
 	protected function _render() {
 		$layout = apply_filters( 'mimizuku_layout', $this->layout );
-		$slug   = mimizuku_config( 'app/config/directory', 'layout' );
+		$slug   = mimizuku_config( 'directory', 'layout' );
 
 		$template_file_name     = $slug . '/' . $layout . '.php';
 		$layout_child_path  = get_stylesheet_directory() . '/' . $template_file_name;
@@ -116,7 +114,7 @@ class View {
 	 * @return array
 	 */
 	protected function _get_view_args() {
-		$slug = mimizuku_config( 'app/config/directory', 'views' );
+		$slug = mimizuku_config( 'directory', 'view' );
 		$view = [
 			'slug' => $slug . '/' . $this->view,
 			'name' => $this->view_suffix,
@@ -149,7 +147,7 @@ class View {
 		$path        = $this->_remove_http_query( $request_uri );
 		$path        = $this->_remove_paged_slug( $path );
 		$path        = trim( $path, '/' );
-		$slug        = mimizuku_config( 'app/config/directory', 'static' );
+		$slug        = mimizuku_config( 'directory', 'static' );
 		return $slug . '/' . $path;
 	}
 

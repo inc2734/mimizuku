@@ -6,5 +6,5 @@
  */
 
 $header = apply_filters( 'mimizuku_header', 'header' );
-$slug   = mimizuku_config( 'app/config/directory', 'header' );
+$slug   = mimizuku_config( 'directory', 'header' );
 get_template_part( $slug . '/' . $header );

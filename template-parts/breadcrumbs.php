@@ -5,7 +5,8 @@
  * @license GPL-2.0+
  */
 
-$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Breadcrumbs();
+include_once( get_stylesheet_directory() . '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' );
+$breadcrumbs = new Inc2734_WP_Breadcrumbs();
 $items = apply_filters( 'mimizuku_breadcrumbs', $breadcrumbs->get() );
 ?>
 <ol class="_c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">

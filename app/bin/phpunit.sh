@@ -9,10 +9,10 @@ if [ -e /tmp/wordpress-tests-lib ]; then
     exit 1
   fi
 
-  cd $themedir;
-  vendor/bin/phpunit
+  cd ${themedir};
+  vendor/bin/phpunit --configuration= ${themedir}/tests/phpunit.xml
   exit 0
 fi
 
 dir=$(cd $(dirname $0) && pwd)
-bash "$dir/wpphpunit.sh"
+bash "${dir}/wpphpunit.sh"

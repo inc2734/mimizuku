@@ -5,9 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Controllers;
-
-class Controller {
+class Mimizuku_Controller {
 
 	/**
 	 * View object
@@ -17,7 +15,7 @@ class Controller {
 	protected $view;
 
 	public function __construct() {
-		$this->view = new \Mimizuku\App\Views\View();
+		$this->view = new Mimizuku_View();
 	}
 
 	/**

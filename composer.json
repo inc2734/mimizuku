@@ -1,9 +1,7 @@
 {
-  "name": "inc2734/mimizuku",
-  "description": "Minizuku is a WordPress theme framework for child themes development.",
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "authors": [
     {
       "name": "Takashi Kitajima",
@@ -23,8 +21,8 @@
   "scripts" :{
     "test": [
       "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
-      "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
-      "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
+      "php vendor/bin/phpcs -p -s -v -n . --standard=./tests/codesniffer.ruleset.xml --extensions=php",
+      "vendor/bin/phpmd ./ text tests/phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
       "bash app/bin/phpunit.sh"
     ],
     "server": "bash app/bin/server.sh",
@@ -40,6 +38,8 @@
     }
   },
   "require": {
-    "inc2734/wp-breadcrumbs": "*"
+    "inc2734/wp-breadcrumbs": "*",
+    "inc2734/wp-ogp": "*",
+    "inc2734/wp-oembed-blog-card": "*"
   }
 }

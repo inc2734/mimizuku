@@ -13,27 +13,19 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
- * Loads the auto loader
+ * - Sets up the hooked functions
+ * - Sets up the custom template tags
  */
-include_once( get_template_directory() . '/vendor/autoload.php' );
-spl_autoload_register( function ( $class ) {
-	$slug = preg_replace( '/^\\Mimizuku/', '', $class );
-	$slug = str_replace( '\\', '/', $slug );
-	$slug = str_replace( '_', '-', $slug );
-	$slug = strtolower( $slug );
-	$slug = trim( $slug, '/' );
-	$path = get_template_directory() . '/' . $slug . '.php';
-	if ( file_exists( $path ) ) {
-		include_once( $path );
+$includes = array(
+	'/app/config',
+	'/app/controller',
+	'/app/model',
+	'/app/view',
+	'/app/setup',
+	'/app/template-tags',
+);
+foreach ( $includes as $include ) {
+	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
+		require_once( $file );
 	}
-} );
-
-/**
- * Sets up the hooked functions
- */
-include_once( get_template_directory() . '/app/setup/loader.php' );
-
-/**
- * Sets up the custom template tags
- */
-include_once( get_template_directory() . '/app/tags/loader.php' );
+}

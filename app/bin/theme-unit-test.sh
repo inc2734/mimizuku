@@ -13,10 +13,10 @@ datetime=`date +%Y%m%d%H%M%S`
 wp db export "$themedir/../../dump-$datetime.sql"
 
 if [ -e "$themedir/../../dump-$datetime.sql" ]; then
-  wp plugin is-installed wordpress-importer &&:
+  wp plugin is-installed wordpress-importer
 
   if [ $? -ne 0 ]; then
-    wp plugin install --activate wordpress-importer
+    wp plugin install --activate wordpress-importer &&:
   fi
 
   if [ $? -eq 0 ]; then

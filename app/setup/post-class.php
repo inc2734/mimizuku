@@ -5,36 +5,26 @@
  * @license GPL-2.0+
  */
 
-namespace Mimizuku\App\Setup;
-
-class Post_Class {
-
-	public function __construct() {
-		add_filter( 'post_class', [ $this, 'remove_hentry' ] );
-		add_filter( 'post_class', [ $this, 'post_class' ] );
+/**
+ * Remove .hentry
+ *
+ * @param array $classes An array of post classes
+ * @return array
+ */
+add_filter( 'post_class', function( $classes ) {
+	if ( in_array( 'hentry', $classes ) ) {
+		unset( $classes[ array_search( 'hentry', $classes ) ] );
 	}
+	return $classes;
+} );
 
-	/**
-	 * Remove .hentry
-	 *
-	 * @param array $classes An array of post classes
-	 * @return array
-	 */
-	public function remove_hentry( $classes ) {
-		if ( in_array( 'hentry', $classes ) ) {
-			unset( $classes[ array_search( 'hentry', $classes ) ] );
-		}
-		return $classes;
-	}
-
-	/**
-	 * Added ._c-entry
-	 *
-	 * @param array $classes An array of post classes
-	 * @return array
-	 */
-	public function post_class( $classes ) {
-		$classes['_c-entry'] = '_c-entry';
-		return $classes;
-	}
-}
+/**
+ * Added ._c-entry
+ *
+ * @param array $classes An array of post classes
+ * @return array
+ */
+add_filter( 'post_class', function( $classes ) {
+	$classes['_c-entry'] = '_c-entry';
+	return $classes;
+} );
