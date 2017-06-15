@@ -2,9 +2,9 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mimizuku 1.1.0\n"
+"Project-Id-Version: mimizuku 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mimizuku\n"
-"POT-Creation-Date: 2017-03-30 12:58:25+00:00\n"
+"POT-Creation-Date: 2017-06-15 06:40:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,171 +12,182 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: app/setup/nav-menus.php:24
+#: app/setup/nav-menus.php:16 wprepository/app/setup/nav-menus.php:16
 msgid "Global Navigation (For PC)"
 msgstr ""
 
-#: app/setup/nav-menus.php:25
+#: app/setup/nav-menus.php:17 wprepository/app/setup/nav-menus.php:17
 msgid "Drawer Navigation (For Mobile)"
 msgstr ""
 
-#: app/setup/nav-menus.php:26
+#: app/setup/nav-menus.php:18 wprepository/app/setup/nav-menus.php:18
 msgid "Footer Navigation"
 msgstr ""
 
-#: app/setup/widgets.php:24 app/setup/widgets.php:26
+#: app/setup/widgets.php:15 app/setup/widgets.php:17
+#: wprepository/app/setup/widgets.php:15 wprepository/app/setup/widgets.php:17
 msgid "Sidebar"
 msgstr ""
 
-#: searchform.php:9 searchform.php:12
+#: searchform.php:9 searchform.php:12 wprepository/searchform.php:9
+#: wprepository/searchform.php:12
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: searchform.php:12
+#: searchform.php:12 wprepository/searchform.php:12
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: searchform.php:14
+#: searchform.php:14 wprepository/searchform.php:14
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: template-parts/comment.php:14
+#: template-parts/comment.php:14 wprepository/template-parts/comment.php:14
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: template-parts/comment.php:22 template-parts/trackback.php:15
+#: wprepository/template-parts/comment.php:22
+#: wprepository/template-parts/trackback.php:15
 msgid "%1$s said on %2$s at %3$s"
 msgstr ""
 
-#: template-parts/comments.php:11
+#: template-parts/comments.php:11 wprepository/template-parts/comments.php:11
 msgid "Comments on this post"
 msgstr ""
 
-#: template-parts/comments.php:32
+#: template-parts/comments.php:32 wprepository/template-parts/comments.php:32
 msgid "Comments are closed."
 msgstr ""
 
-#: template-parts/comments.php:39
+#: template-parts/comments.php:39 wprepository/template-parts/comments.php:39
 msgid "No comments."
 msgstr ""
 
-#: template-parts/copyright.php:13
+#: template-parts/copyright.php:13 wprepository/template-parts/copyright.php:13
 msgid "Monkey Wrench"
 msgstr ""
 
-#: template-parts/copyright.php:18
+#: template-parts/copyright.php:18 wprepository/template-parts/copyright.php:18
 msgid "WordPress"
 msgstr ""
 
-#: template-parts/copyright.php:20
-msgid "Mimizuku theme by %s"
+#: template-parts/copyright.php:20 wprepository/template-parts/copyright.php:20
+msgid "mimizuku theme by %s"
 msgstr ""
 
-#: template-parts/copyright.php:21
+#: template-parts/copyright.php:21 wprepository/template-parts/copyright.php:21
 msgid "Powered by %s"
 msgstr ""
 
 #: template-parts/entry-meta.php:19
+#: wprepository/template-parts/entry-meta.php:19
 msgid "Published"
 msgstr ""
 
 #: template-parts/entry-meta.php:30
+#: wprepository/template-parts/entry-meta.php:30
 msgid "Author"
 msgstr ""
 
 #: template-parts/entry-meta.php:44
+#: wprepository/template-parts/entry-meta.php:44
 msgid "Categories"
 msgstr ""
 
 #: template-parts/entry-meta.php:59
+#: wprepository/template-parts/entry-meta.php:59
 msgid "Tags"
 msgstr ""
 
-#: template-parts/link-pages.php:26
+#: template-parts/link-pages.php:12
+#: wprepository/template-parts/link-pages.php:12
 msgid "Posts navigation"
 msgstr ""
 
-#: template-parts/pagination.php:17
+#: template-parts/pagination.php:19
+#: wprepository/template-parts/pagination.php:19
 msgid "Previous"
 msgstr ""
 
-#: template-parts/pagination.php:18
+#: template-parts/pagination.php:20
+#: wprepository/template-parts/pagination.php:20
 msgid "Next"
 msgstr ""
 
 #: template-parts/password-form.php:10
-msgid "This content is password protected. To view it please enter your password below:"
+#: wprepository/template-parts/password-form.php:10
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
 msgstr ""
 
 #: template-parts/password-form.php:14
+#: wprepository/template-parts/password-form.php:14
 msgid "Password:"
 msgstr ""
 
 #: template-parts/password-form.php:18
+#: wprepository/template-parts/password-form.php:18
 msgctxt "post password form"
 msgid "Enter"
 msgstr ""
 
-#: template-parts/pings.php:11
+#: template-parts/pings.php:11 wprepository/template-parts/pings.php:11
 msgid "Trackbacks and Pingbacks on this post"
 msgstr ""
 
-#: template-parts/pings.php:27
+#: template-parts/pings.php:27 wprepository/template-parts/pings.php:27
 msgid "No trackbacks."
 msgstr ""
 
-#: template-parts/pings.php:36
+#: template-parts/pings.php:36 wprepository/template-parts/pings.php:36
 msgid "TrackBack URL"
 msgstr ""
 
-#: vendor/inc2734/wp-breadcrumbs/src/FrontPage.php:29
-msgid "ホーム"
-msgstr ""
-
-#: vendor/inc2734/wp-breadcrumbs/src/FrontPage.php:31
-msgid "Home"
-msgstr ""
-
-#: vendor/inc2734/wp-breadcrumbs/src/NotFound.php:12
-msgid "ページが見つかりませんでした"
-msgstr ""
-
-#: vendor/inc2734/wp-breadcrumbs/src/Search.php:14
-msgid "「%s」の検索結果"
-msgstr ""
-
-#: views/content/content-404.php:9
+#: templates/view/404.php:9 wprepository/templates/view/404.php:9
 msgid "Woops! Page not found."
 msgstr ""
 
-#: views/content/content-404.php:10
+#: templates/view/404.php:10 wprepository/templates/view/404.php:10
 msgid "The page you are looking for may be moved or deleted."
 msgstr ""
 
-#: views/content/content-404.php:11
+#: templates/view/404.php:11 wprepository/templates/view/404.php:11
 msgid "Please search this search box."
 msgstr ""
 
-#: views/content/content-no-match.php:9
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+#: templates/view/no-match.php:9 wprepository/templates/view/no-match.php:9
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
-#: views/content/content-none.php:9
+#: templates/view/none.php:9 wprepository/templates/view/none.php:9
 msgid "No posts."
 msgstr ""
+
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/front-page.php:27
+msgid "ホーム"
+msgstr ""
+
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/front-page.php:29
+msgid "Home"
+msgstr ""
+
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/not-found.php:10
+msgid "ページが見つかりませんでした"
+msgstr ""
+
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/search.php:12
+msgid "「%s」の検索結果"
+msgstr ""
+
 #. Theme Name of the plugin/theme
-msgid "Mimizuku"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://github.com/inc2734/mimizuku/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid "Minizuku is a WordPress theme framework for child themes development."
+msgid "mimizuku"
 msgstr ""
 
 #. Author of the plugin/theme
@@ -184,5 +195,5 @@ msgid "inc2734"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://2inc.org"
+msgid "https://2inc.org"
 msgstr ""
