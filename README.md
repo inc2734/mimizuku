@@ -12,6 +12,7 @@ Minizuku is a WordPress theme framework for child themes development.
 * Packagist: https://packagist.org/packages/inc2734/mimizuku
 
 ## Requirements
+* WordPress 4.7
 * PHP 5.6+
 * WP-CLI
 * Composer

@@ -89,14 +89,10 @@ class Mimizuku_View {
 		$layout = apply_filters( 'mimizuku_layout', $this->layout );
 		$slug   = mimizuku_config( 'directory', 'layout' );
 
-		$template_file_name     = $slug . '/' . $layout . '.php';
-		$layout_child_path  = get_stylesheet_directory() . '/' . $template_file_name;
-		$layout_parent_path = get_template_directory() . '/' . $template_file_name;
-
-		if ( file_exists( $layout_child_path ) ) {
-			include( $layout_child_path );
-		} elseif ( file_exists( $layout_parent_path ) ) {
-			include( $layout_parent_path );
+		$template_file_name = $slug . '/' . $layout . '.php';
+		$template_file_path = get_theme_file_path( $slug . '/' . $layout . '.php' );
+		if ( file_exists( $template_file_path ) ) {
+			include( $template_file_path );
 		}
 	}
 
