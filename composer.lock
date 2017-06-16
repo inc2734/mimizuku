@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f2aad3b2a24ae9d30d5c3d2df13f2ee8",
-    "content-hash": "f8edf5cf758fcea6a0058f68932a64c8",
+    "hash": "480f19afa99e18084eb88e95ce78b78f",
+    "content-hash": "d6878475c99518358bd8df7098d861f5",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -84,6 +84,45 @@
             ],
             "description": "A library for WordPress breadcrumbs.",
             "time": "2017-06-13 03:25:15"
+        },
+        {
+            "name": "inc2734/wp-customizer-framework",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-customizer-framework.git",
+                "reference": "4992245f12a011a5c2c21c2dd9b718fbc9e8c250"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/4992245f12a011a5c2c21c2dd9b718fbc9e8c250",
+                "reference": "4992245f12a011a5c2c21c2dd9b718fbc9e8c250",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Customizer_Framework\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library for WordPress Customizer.",
+            "time": "2017-06-16 06:59:47"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
