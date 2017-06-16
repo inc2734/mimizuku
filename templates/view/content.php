@@ -19,8 +19,5 @@
 	</div>
 </article>
 
-
 <?php
-//if ( comments_open() || pings_open() || get_comments_number() ) {
-	comments_template( '', true );
-//}
+comments_template( '', true );
