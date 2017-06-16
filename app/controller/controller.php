@@ -8,37 +8,18 @@
 /**
  * View controller class
  */
-class Mimizuku_Controller {
-
-	/**
-	 * View object
-	 *
-	 * @var View
-	 */
-	protected $view;
+include_once( get_template_directory() . '/vendor/inc2734/wp-view-controller/src/wp-view-controller.php' );
+class Mimizuku_Controller extends Inc2734_WP_View_Controller {
 
 	public function __construct() {
-		$this->view = new Mimizuku_View();
-	}
+		parent::__construct();
 
-	/**
-	 * Rendering the page
-	 *
-	 * @param string $view view template path
-	 * @param string $view_suffix view template suffix
-	 * @return void
-	 */
-	public function render( $view, $view_suffix = '' ) {
-		$this->view->render( $view, $view_suffix );
-	}
+		add_filter( 'inc2734_wp_view_controller_layout', function( $layout ) {
+			return apply_filters( 'mimizuku_layout', $layout );
+		} );
 
-	/**
-	 * Sets the layout template
-	 *
-	 * @param string $layout layout template path
-	 * @return void
-	 */
-	public function layout( $layout ) {
-		$this->view->layout( $layout );
+		add_filter( 'inc2734_wp_view_controller_view', function( $view ) {
+			return apply_filters( 'mimizuku_view', $view );
+		} );
 	}
 }

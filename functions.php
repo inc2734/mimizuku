@@ -19,8 +19,6 @@ if ( ! isset( $content_width ) ) {
 $includes = array(
 	'/app/config',
 	'/app/controller',
-	'/app/model',
-	'/app/view',
 	'/app/setup',
 	'/app/template-tags',
 );

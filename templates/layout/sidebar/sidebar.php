@@ -5,5 +5,5 @@
  * @license GPL-2.0+
  */
 
-$slug = mimizuku_config( 'directory', 'sidebar' );
+$slug = wpvc_config( 'directory', 'sidebar' );
 get_template_part( $slug . '/simple' );

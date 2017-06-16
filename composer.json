@@ -42,6 +42,7 @@
   "require": {
     "inc2734/wp-breadcrumbs": "*",
     "inc2734/wp-ogp": "*",
-    "inc2734/wp-oembed-blog-card": "*"
+    "inc2734/wp-oembed-blog-card": "*",
+    "inc2734/wp-view-controller": "^0.1.0"
   }
 }

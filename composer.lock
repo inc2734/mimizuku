@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a2767d9db1a1bbc71d3e5f6dee1afab2",
-    "content-hash": "ed897ab09e920327b6eec5ae7ad6a6c1",
+    "hash": "f31a3851b9d03f1744688b7635831616",
+    "content-hash": "1983ef8a9a479b646903e8b0ae18f39e",
     "packages": [
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -123,6 +123,45 @@
             ],
             "description": "A library for WordPress OGP.",
             "time": "2017-06-13 05:18:31"
+        },
+        {
+            "name": "inc2734/wp-view-controller",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-view-controller.git",
+                "reference": "f8d56771b143dc1475dbfeb222315216cced3eda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/f8d56771b143dc1475dbfeb222315216cced3eda",
+                "reference": "f8d56771b143dc1475dbfeb222315216cced3eda",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_View_Controller\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library for WordPress theme view controller.",
+            "time": "2017-06-16 01:22:51"
         }
     ],
     "packages-dev": [

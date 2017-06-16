@@ -6,5 +6,5 @@
  */
 
 $header = apply_filters( 'mimizuku_header', 'header' );
-$slug   = mimizuku_config( 'directory', 'header' );
+$slug   = wpvc_config( 'directory', 'header' );
 get_template_part( $slug . '/' . $header );

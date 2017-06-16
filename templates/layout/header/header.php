@@ -5,5 +5,5 @@
  * @license GPL-2.0+
  */
 
-$slug = mimizuku_config( 'directory', 'header' );
+$slug = wpvc_config( 'directory', 'header' );
 get_template_part( $slug . '/2row' );
