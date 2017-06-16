@@ -5,26 +5,14 @@
  * @license GPL-2.0+
  */
 
-/**
- * Sets up password form markup
- *
- * @param string $output
- * @return string
- */
-add_action( 'the_password_form', function( $output ) {
-	ob_start();
-	get_template_part( 'template-parts/password-form' );
-	$output = ob_get_clean();
-	$output = str_replace( [ "\n", "\r", "\n\r", "\t" ], '', $output );
-	return $output;
+add_filter( 'inc2734_wp_basis_password_form_message', function( $message ) {
+	return __( 'This content is password protected. To view it please enter your password below:', 'mimizuku' );
 } );
 
-/**
- * Remove unnecessary tags
- *
- * @param string $content
- * @return string
- */
-add_action( 'the_content', function( $content ) {
-	return preg_replace( '/<p>(<input class="_c-input-group__btn")/', '$1', $content );
+add_filter( 'inc2734_wp_basis_password_form_label', function( $label ) {
+	return __( 'Password:', 'mimizuku' );
+} );
+
+add_filter( 'inc2734_wp_basis_password_form_submit_label', function( $submit_label ) {
+	return _x( 'Enter', 'post password form', 'mimizuku' );
 } );

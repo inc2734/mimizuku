@@ -18,3 +18,6 @@ add_action( 'after_setup_theme', function() {
 		'footer-nav' => esc_html__( 'Footer Navigation', 'mimizuku' ),
 	] );
 } );
+
+wp_basis_drawer_navigation( 'drawer-nav' );
+wp_basis_global_navigation( 'global-nav' );
