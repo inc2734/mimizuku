@@ -59,5 +59,11 @@ Minizuku is a WordPress theme framework for child themes development.
 ### inc2734/wp-view-controller
 * Source: https://github.com/inc2734/wp-view-controller
 
+### inc2734/wp-basis
+* Source: https://github.com/inc2734/wp-basis
+
+### inc2734/wp-customizer-framework
+* Source: https://github.com/inc2734/wp-customizer-framework
+
 ## Official goods store
 https://suzuri.jp/inc2734/products
