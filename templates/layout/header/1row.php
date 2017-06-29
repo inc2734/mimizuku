@@ -5,22 +5,22 @@
  * @license GPL-2.0+
  */
 ?>
-<header class="_l-header" role="banner" data-l="header">
-	<div class="_c-container">
-		<div class="_c-row _c-row--middle">
-			<div class="_c-row__col _c-row__col--auto">
+<header class="l-header" role="banner">
+	<div class="c-container">
+		<div class="c-row c-row--middle">
+			<div class="c-row__col c-row__col--auto">
 				<?php get_template_part( 'template-parts/site-branding' ); ?>
 			</div>
 
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
-			<div class="_c-row__col _c-row__col--auto _u-hidden-lg">
+			<div class="c-row__col c-row__col--auto u-hidden-lg">
 				<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
 			</div>
 			<?php endif; ?>
 
 			<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
-			<div class="_c-row__col _c-row__col--auto _u-hidden-sm _u-hidden-md">
-				<div class="_u-pull-right">
+			<div class="c-row__col c-row__col--auto u-hidden-sm u-hidden-md">
+				<div class="u-pull-right">
 					<?php get_template_part( 'template-parts/global-nav' ); ?>
 				</div>
 			</div>

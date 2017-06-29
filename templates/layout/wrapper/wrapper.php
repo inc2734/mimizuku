@@ -6,4 +6,4 @@
  */
 
 $slug = wpvc_config( 'directory', 'layout' );
-include( __DIR__ . '/../../../' . $slug . '/right-sidebar.php' );
+get_template_part( $slug . '/right-sidebar' );

@@ -40,11 +40,11 @@
     }
   },
   "require": {
-    "inc2734/wp-breadcrumbs": "~0.2.0",
-    "inc2734/wp-ogp": "~0.1.1",
-    "inc2734/wp-oembed-blog-card": "~0.2.1",
-    "inc2734/wp-view-controller": "~0.1.0",
-    "inc2734/wp-basis": "~0.2.1",
-    "inc2734/wp-customizer-framework": "~1.0.0"
+    "inc2734/wp-breadcrumbs": "~0.2.1",
+    "inc2734/wp-ogp": "~0.1.2",
+    "inc2734/wp-oembed-blog-card": "~0.2.2",
+    "inc2734/wp-view-controller": "~0.1.1",
+    "inc2734/wp-basis": "~0.2.2",
+    "inc2734/wp-customizer-framework": "~1.0.1"
   }
 }

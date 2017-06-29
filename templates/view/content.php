@@ -6,14 +6,14 @@
  */
 ?>
 <article <?php post_class(); ?>>
-	<header class="_c-entry__header">
-		<h1 class="_c-entry__title"><?php the_title(); ?></h1>
-		<div class="_c-entry__meta">
+	<header class="c-entry__header">
+		<h1 class="c-entry__title"><?php the_title(); ?></h1>
+		<div class="c-entry__meta">
 			<?php get_template_part( 'template-parts/entry-meta' ); ?>
 		</div>
 	</header>
 
-	<div class="_c-entry__content">
+	<div class="c-entry__content">
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>

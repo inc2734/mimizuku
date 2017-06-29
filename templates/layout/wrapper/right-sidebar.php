@@ -10,23 +10,23 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
-<div class="_c-drawer" data-c="drawer">
+
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
-	<div class="_l-container" data-l="container">
+	<div class="l-container">
 		<?php get_header(); ?>
 
-		<div class="_l-contents" role="document" data-l="contents">
-			<div class="_c-container">
+		<div class="l-contents" role="document">
+			<div class="c-container">
 				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 
-				<div class="_c-row _c-row--margin">
-					<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-3-4">
-						<main class="_l-main" role="main">
-							<?php $this->view(); ?>
+				<div class="c-row c-row--margin">
+					<div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4">
+						<main class="l-main" role="main">
+							<?php $_View_Controller->view(); ?>
 						</main>
 					</div>
 
-					<div class="_c-row__col _c-row__col--1-1 _c-row__col--lg-1-4">
+					<div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4">
 						<?php get_sidebar(); ?>
 					</div>
 				</div>
@@ -35,7 +35,6 @@
 
 		<?php get_footer(); ?>
 	</div>
-</div>
 
 <?php wp_footer(); ?>
 </body>

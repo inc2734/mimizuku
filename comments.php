@@ -9,7 +9,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<aside class="_p-response">
+<aside class="p-response">
 	<?php
 	get_template_part( 'template-parts/comments' );
 	get_template_part( 'template-parts/pings' );

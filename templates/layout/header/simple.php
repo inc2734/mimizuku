@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 ?>
-<header class="_l-header" role="banner" data-l="header">
-	<div class="_c-container">
+<header class="l-header" role="banner">
+	<div class="c-container">
 		<?php get_template_part( 'template-parts/site-branding' ); ?>
 	</div>
 </header>

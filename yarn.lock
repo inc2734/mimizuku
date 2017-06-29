@@ -3562,13 +3562,13 @@ safe-buffer@^5.0.1, safe-buffer@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
 
-sass-basis-layout@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/sass-basis-layout/-/sass-basis-layout-7.0.2.tgz#bc51dd77dfdd02ec9af5258ee0e18b782de9e620"
+sass-basis-layout@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/sass-basis-layout/-/sass-basis-layout-8.0.1.tgz#767778fd7c5e4834fa48f1abbb549febcb760034"
 
-sass-basis@^6.5.0:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/sass-basis/-/sass-basis-6.5.0.tgz#6312e4c9716ef09d724503a84c9971fb29dc0e42"
+sass-basis@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/sass-basis/-/sass-basis-7.0.0.tgz#32b53854f342e33ad5cdd19088f8b8afc7e1826e"
   dependencies:
     html5shiv "^3.7.3"
     node-normalize-scss "^3.0.0"

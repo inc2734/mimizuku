@@ -5,14 +5,14 @@
  * @license GPL-2.0+
  */
 ?>
-<section class="_c-entry-summary">
-	<header class="_c-entry-summary__header">
-		<h2 class="_c-entry-summary__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<div class="_c-entry-summary__meta">
+<section class="c-entry-summary">
+	<header class="c-entry-summary__header">
+		<h2 class="c-entry-summary__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<div class="c-entry-summary__meta">
 			<?php get_template_part( 'template-parts/entry-meta' ); ?>
 		</div>
 	</header>
-	<div class="_c-entry-summary__content">
+	<div class="c-entry-summary__content">
 		<?php the_excerpt(); ?>
 	</div>
 </section>

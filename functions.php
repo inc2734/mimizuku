@@ -24,6 +24,7 @@ $includes = array(
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-		require_once( $file );
+		$template_name = str_replace( __DIR__, '', $file );
+		require_once( get_theme_file_path( $template_name ) );
 	}
 }

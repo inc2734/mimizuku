@@ -25,6 +25,6 @@ $copyright  = sprintf(
 	$powered_by
 );
 ?>
-<div class="_c-copyright">
+<div class="c-copyright">
 	<?php echo wp_kses_post( apply_filters( 'mimizuku_copyright', $copyright ) ); ?>
 </div>

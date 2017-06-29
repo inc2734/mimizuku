@@ -5,15 +5,15 @@
  * @license GPL-2.0+
  */
 ?>
-<div class="_p-comment" id="comment-<?php comment_ID(); ?>">
-	<div class="_p-comment__figure">
+<div class="p-comment" id="comment-<?php comment_ID(); ?>">
+	<div class="p-comment__figure">
 		<?php echo get_avatar( $_comment, '48' ); ?>
 	</div>
-	<div class="_p-comment__body">
+	<div class="p-comment__body">
 		<?php if ( 0 === $_comment->comment_approved ) : ?>
 		<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'mimizuku' ) ?></em>
 		<?php endif; ?>
-		<div class="_p-comment__meta">
+		<div class="p-comment__meta">
 			<?php
 			$author = sprintf( '<cite>%s</cite>', get_comment_author_link() );
 			$date   = get_comment_date();
@@ -28,7 +28,7 @@
 			?>
 		</div>
 
-		<div class="_p-comment__content">
+		<div class="p-comment__content">
 			<?php comment_text() ?>
 		</div>
 
@@ -40,7 +40,7 @@
 		?>
 
 		<?php if ( ! empty( get_comment_reply_link( $args ) ) ) : ?>
-		<div class="_p-comment__reply">
+		<div class="p-comment__reply">
 			<?php comment_reply_link( $args ); ?>
 		</div>
 		<?php endif; ?>

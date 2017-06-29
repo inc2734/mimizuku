@@ -12,7 +12,7 @@
  */
 function mimizuku_the_pings() {
 	?>
-	<li <?php comment_class( [ '_c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID() ?>">
+	<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID() ?>">
 		<?php wpvc_get_template_part( 'template-parts/trackback' ); ?>
 	<?php
 }

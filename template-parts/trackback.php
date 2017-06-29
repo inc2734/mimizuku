@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 ?>
-<dl class="_p-trackback" id="comment-<?php comment_ID(); ?>">
-	<dt class="_p-trackback__meta">
+<dl class="p-trackback" id="comment-<?php comment_ID(); ?>">
+	<dt class="p-trackback__meta">
 		<?php
 		$author = sprintf( '<cite>%s</cite>', get_comment_author_link() );
 		$date   = get_comment_date();
@@ -20,7 +20,7 @@
 		edit_comment_link( 'edit', '  ', '' );
 		?>
 	</dt>
-	<dd class="_p-trackback__body">
+	<dd class="p-trackback__body">
 		<?php comment_text() ?>
 	</dd>
 </dl>

@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "480f19afa99e18084eb88e95ce78b78f",
-    "content-hash": "d6878475c99518358bd8df7098d861f5",
+    "hash": "97234d7735eea6f5a67c9bfadb16786a",
+    "content-hash": "d4c06d8caeacbdee71c48da8c8aec143",
     "packages": [
         {
             "name": "inc2734/wp-basis",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "75c3b723ce5e0c07b402ac5c5eabfe8329966e9a"
+                "reference": "82177a61888b8bafa17c8494304d27e1bad009bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/75c3b723ce5e0c07b402ac5c5eabfe8329966e9a",
-                "reference": "75c3b723ce5e0c07b402ac5c5eabfe8329966e9a",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/82177a61888b8bafa17c8494304d27e1bad009bd",
+                "reference": "82177a61888b8bafa17c8494304d27e1bad009bd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -44,24 +44,24 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2017-06-16 05:14:25"
+            "time": "2017-06-29 14:15:15"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "90d5a35840f35227abd2c21b4fcf414a36fe77eb"
+                "reference": "b689aa7bd8f9a43d906e93fbc877a6b778b25cee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/90d5a35840f35227abd2c21b4fcf414a36fe77eb",
-                "reference": "90d5a35840f35227abd2c21b4fcf414a36fe77eb",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/b689aa7bd8f9a43d906e93fbc877a6b778b25cee",
+                "reference": "b689aa7bd8f9a43d906e93fbc877a6b778b25cee",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -83,24 +83,24 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2017-06-13 03:25:15"
+            "time": "2017-06-29 14:18:56"
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "4992245f12a011a5c2c21c2dd9b718fbc9e8c250"
+                "reference": "708be9d8b04791ff7fcb5eec38088ffe930810ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/4992245f12a011a5c2c21c2dd9b718fbc9e8c250",
-                "reference": "4992245f12a011a5c2c21c2dd9b718fbc9e8c250",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/708be9d8b04791ff7fcb5eec38088ffe930810ef",
+                "reference": "708be9d8b04791ff7fcb5eec38088ffe930810ef",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -122,24 +122,24 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2017-06-16 06:59:47"
+            "time": "2017-06-29 14:21:33"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "a304c6ff8e58c68f8364464be3c3e27a0ac8c82b"
+                "reference": "4eaf373c4d8355bb556e29683f0086242837bd94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/a304c6ff8e58c68f8364464be3c3e27a0ac8c82b",
-                "reference": "a304c6ff8e58c68f8364464be3c3e27a0ac8c82b",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/4eaf373c4d8355bb556e29683f0086242837bd94",
+                "reference": "4eaf373c4d8355bb556e29683f0086242837bd94",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -161,24 +161,24 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2017-06-15 01:07:50"
+            "time": "2017-06-29 15:15:26"
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "550985c66e3ae1db6ab32839da7fb76e0bd6c011"
+                "reference": "f82b54deafd32f898be18a83665de14c47be6f2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/550985c66e3ae1db6ab32839da7fb76e0bd6c011",
-                "reference": "550985c66e3ae1db6ab32839da7fb76e0bd6c011",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/f82b54deafd32f898be18a83665de14c47be6f2a",
+                "reference": "f82b54deafd32f898be18a83665de14c47be6f2a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -200,24 +200,24 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2017-06-13 05:18:31"
+            "time": "2017-06-29 14:25:51"
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "f8d56771b143dc1475dbfeb222315216cced3eda"
+                "reference": "39643eaa3a473d0b2ae29e193a90372a7aed724e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/f8d56771b143dc1475dbfeb222315216cced3eda",
-                "reference": "f8d56771b143dc1475dbfeb222315216cced3eda",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/39643eaa3a473d0b2ae29e193a90372a7aed724e",
+                "reference": "39643eaa3a473d0b2ae29e193a90372a7aed724e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -239,7 +239,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-06-16 01:22:51"
+            "time": "2017-06-29 13:52:12"
         }
     ],
     "packages-dev": [
@@ -905,16 +905,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.20",
+            "version": "5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +983,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-05-22 07:42:55"
+            "time": "2017-06-21 08:11:54"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 ?>
-<div class="_c-hamburger-btn" data-c="drawer-btn" aria-expanded="false" aria-controls="drawer-nav">
-	<div class="_c-hamburger-btn__bar"></div>
-	<div class="_c-hamburger-btn__bar"></div>
-	<div class="_c-hamburger-btn__bar"></div>
+<div id="hamburger-btn" class="c-hamburger-btn" aria-expanded="false" aria-controls="drawer-nav">
+	<div class="c-hamburger-btn__bar"></div>
+	<div class="c-hamburger-btn__bar"></div>
+	<div class="c-hamburger-btn__bar"></div>
 </div>

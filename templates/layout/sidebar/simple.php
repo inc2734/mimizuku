@@ -5,5 +5,5 @@
  * @license GPL-2.0+
  */
 ?>
-<aside class="_l-sidebar" role="complementary">
+<aside class="l-sidebar" role="complementary">
 </aside>

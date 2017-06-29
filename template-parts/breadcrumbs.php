@@ -7,13 +7,13 @@
 ?>
 
 <?php
-include_once( get_stylesheet_directory() . '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' );
+include_once( get_theme_file_path( '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' ) );
 $breadcrumbs = new Inc2734_WP_Breadcrumbs();
 $items = apply_filters( 'mimizuku_breadcrumbs', $breadcrumbs->get() );
 ?>
-<ol class="_c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+<ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 	<?php foreach ( $items as $key => $item ) : ?>
-	<li class="_c-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+	<li class="c-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 		<?php if ( empty( $item['link'] ) ) : ?>
 		<span itemscope itemtype="http://schema.org/Thing" itemprop="item">
 			<span itemprop="name"><?php echo esc_html( $item['title'] ); ?></span>

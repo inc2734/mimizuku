@@ -3,8 +3,8 @@
   "license": "GPL-2.0+",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "sass-basis": "^6.5.0",
-    "sass-basis-layout": "^7.0.2"
+    "sass-basis": "^7.0.0",
+    "sass-basis-layout": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

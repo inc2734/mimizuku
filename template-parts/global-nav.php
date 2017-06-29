@@ -9,13 +9,13 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 	return;
 }
 ?>
-<nav class="_p-global-nav" role="navigation">
+<nav class="p-global-nav" role="navigation">
 	<?php
 	wp_nav_menu( [
 		'theme_location' => 'global-nav',
 		'container'      => false,
 		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-		'menu_class'     => '_c-navbar _c-navbar--auto',
+		'menu_class'     => 'c-navbar c-navbar--auto',
 		'depth'          => 0,
 	] );
 	?>
