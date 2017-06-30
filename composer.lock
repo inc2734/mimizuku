@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "inc2734/wp-basis",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "82177a61888b8bafa17c8494304d27e1bad009bd"
+                "reference": "269dc952f36935de1514297b2f406adc52eb023b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/82177a61888b8bafa17c8494304d27e1bad009bd",
-                "reference": "82177a61888b8bafa17c8494304d27e1bad009bd",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/269dc952f36935de1514297b2f406adc52eb023b",
+                "reference": "269dc952f36935de1514297b2f406adc52eb023b",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +44,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2017-06-29 14:15:15"
+            "time": "2017-06-30 04:37:02"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -126,16 +126,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "4eaf373c4d8355bb556e29683f0086242837bd94"
+                "reference": "a05b076a056c09b03d4ad7e7a4aebaca4762b2e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/4eaf373c4d8355bb556e29683f0086242837bd94",
-                "reference": "4eaf373c4d8355bb556e29683f0086242837bd94",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/a05b076a056c09b03d4ad7e7a4aebaca4762b2e9",
+                "reference": "a05b076a056c09b03d4ad7e7a4aebaca4762b2e9",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2017-06-29 15:15:26"
+            "time": "2017-06-30 04:01:46"
         },
         {
             "name": "inc2734/wp-ogp",
