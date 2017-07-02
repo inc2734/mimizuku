@@ -22,7 +22,7 @@
 				<div class="c-row c-row--margin c-row--reverse">
 					<div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4">
 						<main class="l-main" role="main">
-							<?php $_View_Controller->view(); ?>
+							<?php $_view_controller->view(); ?>
 						</main>
 					</div>
 

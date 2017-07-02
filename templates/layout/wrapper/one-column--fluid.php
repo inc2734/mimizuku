@@ -17,7 +17,7 @@
 
 		<div class="l-contents" role="document">
 			<main class="l-main" role="main">
-				<?php $_View_Controller->view(); ?>
+				<?php $_view_controller->view(); ?>
 			</main>
 		</div>
 

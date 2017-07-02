@@ -22,7 +22,7 @@
 				<div class="c-row c-row--margin">
 					<div class="c-row__col c-row__col--1-1 c-row__col--md-8-10 c-row__col--md-offset-1-10 c-row__col--lg-4-6 c-row__col--lg-offset-1-6">
 						<main class="l-main" role="main">
-							<?php $_View_Controller->view(); ?>
+							<?php $_view_controller->view(); ?>
 						</main>
 					</div>
 

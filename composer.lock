@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "97234d7735eea6f5a67c9bfadb16786a",
-    "content-hash": "d4c06d8caeacbdee71c48da8c8aec143",
+    "hash": "681a01819d101b0c8604aff6553934d7",
+    "content-hash": "8a455f7cbc8ce38d5cee6c2bf7bce27a",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -125,6 +125,45 @@
             "time": "2017-06-29 14:21:33"
         },
         {
+            "name": "inc2734/wp-github-theme-updater",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-github-theme-updater.git",
+                "reference": "8f23065eb2e53bec2918c227fdfea84e8bf77718"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/8f23065eb2e53bec2918c227fdfea84e8bf77718",
+                "reference": "8f23065eb2e53bec2918c227fdfea84e8bf77718",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_GitHub_Theme_Updater\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library for WordPress that automatic theme updater with GitHub API.",
+            "time": "2017-07-02 12:53:49"
+        },
+        {
             "name": "inc2734/wp-oembed-blog-card",
             "version": "0.2.3",
             "source": {
@@ -204,16 +243,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "39643eaa3a473d0b2ae29e193a90372a7aed724e"
+                "reference": "377fd9d85e388284fac9eeeca0626e63658d46a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/39643eaa3a473d0b2ae29e193a90372a7aed724e",
-                "reference": "39643eaa3a473d0b2ae29e193a90372a7aed724e",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/377fd9d85e388284fac9eeeca0626e63658d46a7",
+                "reference": "377fd9d85e388284fac9eeeca0626e63658d46a7",
                 "shasum": ""
             },
             "require": {
@@ -239,7 +278,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-06-29 13:52:12"
+            "time": "2017-07-02 13:08:31"
         }
     ],
     "packages-dev": [
