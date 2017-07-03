@@ -4,9 +4,9 @@
 [![Latest Stable Version](https://poser.pugx.org/inc2734/mimizuku/v/stable)](https://packagist.org/packages/inc2734/mimizuku)
 [![License](https://poser.pugx.org/inc2734/mimizuku/license)](https://packagist.org/packages/inc2734/mimizuku)
 
-Minizuku is a WordPress theme framework for child themes development.
+Minizuku is a WordPress starter theme or theme framework for child themes development.
 
-<img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/images/mimizuku.svg" alt="Mimizuku" width="96px">
+<img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/img/mimizuku.svg" alt="Mimizuku" width="96px">
 
 * GitHub: https://github.com/inc2734/mimizuku/
 * Packagist: https://packagist.org/packages/inc2734/mimizuku
@@ -28,7 +28,7 @@ Minizuku is a WordPress theme framework for child themes development.
 * Having layout and view templates
 * and having filter hooks filtered these templates
 * Using view controller
-* The fuunction which to pass the variables to WordPress's `get_template_part()`.
+* The function which to pass the variables to WordPress's `get_template_part()`.
 * Usuful scripts
 * CI
 * See more https://github.com/inc2734/mimizuku-child
@@ -64,6 +64,9 @@ Minizuku is a WordPress theme framework for child themes development.
 
 ### inc2734/wp-customizer-framework
 * Source: https://github.com/inc2734/wp-customizer-framework
+
+### inc2734/wp-github-theme-updater
+* Source: https://github.com/inc2734/wp-github-theme-updater
 
 ## Official goods store
 https://suzuri.jp/inc2734/products

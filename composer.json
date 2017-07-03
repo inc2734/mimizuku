@@ -1,6 +1,6 @@
 {
   "name": "inc2734/mimizuku",
-  "description": "Minizuku is a WordPress theme framework for child themes development.",
+  "description": "Minizuku is a WordPress starter theme or theme framework for child themes development.",
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
   "version": "3.0.0",
