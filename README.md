@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://poser.pugx.org/inc2734/mimizuku/v/stable)](https://packagist.org/packages/inc2734/mimizuku)
 [![License](https://poser.pugx.org/inc2734/mimizuku/license)](https://packagist.org/packages/inc2734/mimizuku)
 
-Minizuku is a WordPress starter theme or theme framework for child themes development.
+Mimizuku is a WordPress starter theme or theme framework for child themes development.
 
 <img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/img/mimizuku.svg" alt="Mimizuku" width="96px">
 

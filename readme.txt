@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: license.txt
 
 == Description ==
-Minizuku is a WordPress theme framework for child themes development.
+Mimizuku is a WordPress theme framework for child themes development.
 
 == Installation ==
 

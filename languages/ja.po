@@ -210,6 +210,6 @@ msgstr "https://2inc.org"
 #~ msgstr "https://github.com/inc2734/mimizuku/"
 
 #~ msgid ""
-#~ "Minizuku is a WordPress theme framework for child themes development."
+#~ "Mimizuku is a WordPress theme framework for child themes development."
 #~ msgstr ""
-#~ "Minizuku は子テーマの開発のための WordPress テーマフレームワークです。"
+#~ "Mimizuku は子テーマの開発のための WordPress テーマフレームワークです。"
