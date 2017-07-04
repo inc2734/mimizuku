@@ -26,7 +26,7 @@ yarn install
 yarn run gulp wprepository
 cd wprepository
 composer install --no-dev
-rm -rf composer.json composer.lock
+rm -rf composer.json composer.lock yarn.lock package.json gulpfile.js
 ls -la
 
 git add -A
