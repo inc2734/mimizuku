@@ -3,7 +3,7 @@
   "description": "Mimizuku is a WordPress starter theme or theme framework for child themes development.",
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "authors": [
     {
       "name": "Takashi Kitajima",
