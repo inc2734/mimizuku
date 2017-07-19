@@ -10,6 +10,10 @@
       }
     }
 
+    &__submenu {
+      z-index: 1;
+    }
+
     &__subitem {
       @include _font-size-line-height($_base-font-size-px - 2);
 

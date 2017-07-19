@@ -14,8 +14,27 @@
 	</header>
 
 	<div class="c-entry__content">
+		<?php
+		$share_buttons = get_theme_mod( 'share-buttons-buttons' );
+		$share_buttons_display_position = get_theme_mod( 'share-buttons-display-position' );
+
+		if ( $share_buttons ) {
+			if ( 'top' === $share_buttons_display_position || 'both' === $share_buttons_display_position ) {
+				get_template_part( 'template-parts/share-buttons' );
+			}
+		}
+		?>
+
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
+
+		<?php
+		if ( $share_buttons ) {
+			if ( 'bottom' === $share_buttons_display_position || 'both' === $share_buttons_display_position ) {
+				get_template_part( 'template-parts/share-buttons' );
+			}
+		}
+		?>
 	</div>
 </article>
 

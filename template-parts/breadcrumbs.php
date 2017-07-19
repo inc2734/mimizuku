@@ -7,7 +7,6 @@
 ?>
 
 <?php
-include_once( get_theme_file_path( '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' ) );
 $breadcrumbs = new Inc2734_WP_Breadcrumbs();
 $items = apply_filters( 'mimizuku_breadcrumbs', $breadcrumbs->get() );
 ?>
