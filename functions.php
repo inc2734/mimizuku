@@ -40,6 +40,11 @@ include_once( get_theme_file_path( '/vendor/inc2734/wp-ogp/src/wp-ogp.php' ) );
 include_once( get_theme_file_path( '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' ) );
 
 /**
+ * Activate Inc2734_WP_View_Controller
+ */
+include_once( get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/wp-view-controller.php' ) );
+
+/**
  * - Sets up the hooked functions
  * - Sets up the custom template tags
  */

@@ -22,7 +22,19 @@ Mimizuku is a WordPress starter theme or theme framework for child themes develo
 * IE10 + Modern browser
 
 ## Get Started
-**Mimizuku is a parent theme. So you should download the Mimizuku child theme. See https://github.com/inc2734/mimizuku-child. If you build this child theme, aloso downloaded Mimizuku by composer.**
+### Using as starter theme
+```
+$ cd /PATH/TO/wp-content/themes
+$ git clone https://github.com/inc2734/mimizuku.git your-theme-name
+$ cd your-theme-name
+$ composer install (and auto building)
+$ wp theme activate your-theme-name
+```
+Replace `mimizuku` to `your_theme_name` in \*\*.php and \*\*.js
+Replace `Mimizuku` to `Your_Theme_Name` in \*\*.php and \*\*.js
+
+### Using as parent theme
+See https://github.com/inc2734/mimizuku-child
 
 ## Theme features
 * Having layout and view templates
@@ -67,6 +79,12 @@ Mimizuku is a WordPress starter theme or theme framework for child themes develo
 
 ### inc2734/wp-github-theme-updater
 * Source: https://github.com/inc2734/wp-github-theme-updater
+
+### inc2734/wp-share-buttons
+* Source: https://github.com/inc2734/wp-share-buttons
+
+### inc2734/wp-seo
+* Source: https://github.com/inc2734/wp-seo
 
 ## Official goods store
 https://suzuri.jp/inc2734/products
