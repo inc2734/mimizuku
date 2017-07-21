@@ -6,7 +6,36 @@
  */
 
 /**
- * Sets up OGP
+ * og:description updated by wp-seo-meta-description
+ *
+ * @param string $description
+ * @return string
+ */
+add_filter( 'inc2734_wp_ogp_description', function( $description ) {
+	$meta_description = get_post_meta( get_the_ID(), 'wp-seo-meta-description', true );
+	if ( $meta_description ) {
+		return $meta_description;
+	}
+	return $description;
+} );
+
+/**
+ * og:image updated by get_theme_mod( 'default-og-image' )
+ *
+ * @param string $og_image URL of og:image
+ */
+add_filter( 'inc2734_wp_ogp_image', function( $og_image ) {
+	if ( empty( $og_image ) ) {
+		$default_og_image = get_theme_mod( 'default-og-image' );
+		if ( $default_og_image ) {
+			return $default_og_image;
+		}
+	}
+	return $og_image;
+} );
+
+/**
+ * Print OGP tags
  *
  * @return void
  */

@@ -1,11 +1,11 @@
 .DS_Store
 .sass-cache/
 npm-debug.log
-node_modules/
-assets/
+/node_modules/
+/assets/
 /vendor/
 packages/
 *.sql
-./bin/*.xml
+/bin/*.xml
 wprepository/
 mimizuku.zip

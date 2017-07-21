@@ -10,6 +10,7 @@
 <?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
+	<?php do_action( 'mimizuku_prepend_body' ); ?>
 
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<div class="l-container">

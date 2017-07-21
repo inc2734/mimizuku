@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "73ffc62e9ec18a4cba652abe33e8686d",
-    "content-hash": "3c5346c94ffb6b495376e1999c56e97a",
+    "hash": "49aacb95d7bc81af2ab8f0684da6cee2",
+    "content-hash": "a36167d9fae5d40e12634e13c156642c",
     "packages": [
         {
             "name": "inc2734/wp-basis",
-            "version": "0.2.3",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "269dc952f36935de1514297b2f406adc52eb023b"
+                "reference": "922b061fbea1a88d99c62545d852c185b8e97a31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/269dc952f36935de1514297b2f406adc52eb023b",
-                "reference": "269dc952f36935de1514297b2f406adc52eb023b",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/922b061fbea1a88d99c62545d852c185b8e97a31",
+                "reference": "922b061fbea1a88d99c62545d852c185b8e97a31",
                 "shasum": ""
             },
             "require": {
@@ -44,20 +44,20 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2017-06-30 04:37:02"
+            "time": "2017-07-21 00:43:43"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "0.2.2",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "494b61dad614f81e97d948a337b5db9ff08d778e"
+                "reference": "de1987c39d84edc116fb2a63f708cfb6c7360479"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/494b61dad614f81e97d948a337b5db9ff08d778e",
-                "reference": "494b61dad614f81e97d948a337b5db9ff08d778e",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/de1987c39d84edc116fb2a63f708cfb6c7360479",
+                "reference": "de1987c39d84edc116fb2a63f708cfb6c7360479",
                 "shasum": ""
             },
             "require": {
@@ -83,20 +83,20 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2017-07-16 04:19:52"
+            "time": "2017-07-21 00:49:53"
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "1.1.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "65bb921a9eaa8f615137485252ddbcd8c7a476ba"
+                "reference": "b56491dd7e49c7f282267257bd7dbb1e061f1f19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/65bb921a9eaa8f615137485252ddbcd8c7a476ba",
-                "reference": "65bb921a9eaa8f615137485252ddbcd8c7a476ba",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/b56491dd7e49c7f282267257bd7dbb1e061f1f19",
+                "reference": "b56491dd7e49c7f282267257bd7dbb1e061f1f19",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2017-07-19 07:50:33"
+            "time": "2017-07-20 11:49:28"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -204,16 +204,16 @@
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "0.1.2",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "f82b54deafd32f898be18a83665de14c47be6f2a"
+                "reference": "16fb33f502017d5e5199af757f974d183087767f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/f82b54deafd32f898be18a83665de14c47be6f2a",
-                "reference": "f82b54deafd32f898be18a83665de14c47be6f2a",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/16fb33f502017d5e5199af757f974d183087767f",
+                "reference": "16fb33f502017d5e5199af757f974d183087767f",
                 "shasum": ""
             },
             "require": {
@@ -239,20 +239,61 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2017-06-29 14:25:51"
+            "time": "2017-07-20 11:57:46"
         },
         {
-            "name": "inc2734/wp-share-buttons",
-            "version": "0.3.0",
+            "name": "inc2734/wp-seo",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "05e01ce4c6c381ae37103acaf118c6fa63be8438"
+                "url": "https://github.com/inc2734/wp-seo.git",
+                "reference": "844e0006c7cf5e19e722d3959a7a671658dd8e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/05e01ce4c6c381ae37103acaf118c6fa63be8438",
-                "reference": "05e01ce4c6c381ae37103acaf118c6fa63be8438",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/844e0006c7cf5e19e722d3959a7a671658dd8e49",
+                "reference": "844e0006c7cf5e19e722d3959a7a671658dd8e49",
+                "shasum": ""
+            },
+            "require": {
+                "inc2734/wp-customizer-framework": "~2.0.0",
+                "inc2734/wp-ogp": "~0.3.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_SEO\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library for SEO of WordPress.",
+            "time": "2017-07-21 00:31:06"
+        },
+        {
+            "name": "inc2734/wp-share-buttons",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-share-buttons.git",
+                "reference": "699a799f4e055ffb09a06de36271b794da2e5dbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/699a799f4e055ffb09a06de36271b794da2e5dbc",
+                "reference": "699a799f4e055ffb09a06de36271b794da2e5dbc",
                 "shasum": ""
             },
             "require": {
@@ -261,7 +302,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
             },
-            "type": "wordpress-plugin",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Inc2734\\WP_Share_Buttons\\": "src"
@@ -279,7 +320,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2017-07-17 13:39:09"
+            "time": "2017-07-21 02:50:28"
         },
         {
             "name": "inc2734/wp-view-controller",
@@ -2051,22 +2092,25 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "0.11.0",
+            "version": "0.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "407e4b85f547a5251185f89ceae6599917343388"
+                "reference": "300c15796584d6b63f31841daf674886303af573"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/407e4b85f547a5251185f89ceae6599917343388",
-                "reference": "407e4b85f547a5251185f89ceae6599917343388",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/300c15796584d6b63f31841daf674886303af573",
+                "reference": "300c15796584d6b63f31841daf674886303af573",
                 "shasum": ""
             },
             "require": {
-                "squizlabs/php_codesniffer": "^2.8.1"
+                "squizlabs/php_codesniffer": "^2.9.0"
             },
-            "type": "library",
+            "suggest": {
+                "dealerdirect/phpcodesniffer-composer-installer": "*"
+            },
+            "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -2083,7 +2127,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2017-03-20 23:17:58"
+            "time": "2017-07-20 20:11:03"
         }
     ],
     "aliases": [],
