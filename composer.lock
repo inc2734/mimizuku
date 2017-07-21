@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "49aacb95d7bc81af2ab8f0684da6cee2",
-    "content-hash": "a36167d9fae5d40e12634e13c156642c",
+    "hash": "58c914b94b3ab1004c2cfa5b156a8ead",
+    "content-hash": "a5fc3ac00763c97c1cf129815a61e98f",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -243,16 +243,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "844e0006c7cf5e19e722d3959a7a671658dd8e49"
+                "reference": "bc5a5aa32fee07824b6f90264d0ce78a5c5b2bdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/844e0006c7cf5e19e722d3959a7a671658dd8e49",
-                "reference": "844e0006c7cf5e19e722d3959a7a671658dd8e49",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/bc5a5aa32fee07824b6f90264d0ce78a5c5b2bdc",
+                "reference": "bc5a5aa32fee07824b6f90264d0ce78a5c5b2bdc",
                 "shasum": ""
             },
             "require": {
@@ -280,7 +280,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2017-07-21 00:31:06"
+            "time": "2017-07-21 03:31:13"
         },
         {
             "name": "inc2734/wp-share-buttons",

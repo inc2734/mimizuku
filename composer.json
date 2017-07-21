@@ -47,6 +47,6 @@
     "inc2734/wp-customizer-framework": "~2.0.0",
     "inc2734/wp-github-theme-updater": "~0.1.0",
     "inc2734/wp-share-buttons": "~0.4.0",
-    "inc2734/wp-seo": "~0.2.0"
+    "inc2734/wp-seo": "~0.2.1"
   }
 }

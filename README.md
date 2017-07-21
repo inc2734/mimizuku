@@ -30,8 +30,9 @@ $ cd your-theme-name
 $ composer install (and auto building)
 $ wp theme activate your-theme-name
 ```
-Replace `mimizuku` to `your_theme_name` in \*\*.php and \*\*.js
-Replace `Mimizuku` to `Your_Theme_Name` in \*\*.php and \*\*.js
+
+* Replace `mimizuku` to `your_theme_name` in \*\*.php and \*\*.js
+* Replace `Mimizuku` to `Your_Theme_Name` in \*\*.php and \*\*.js
 
 ### Using as parent theme
 See https://github.com/inc2734/mimizuku-child
