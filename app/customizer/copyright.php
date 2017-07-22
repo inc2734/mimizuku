@@ -5,7 +5,6 @@
  * @license GPL-2.0+
  */
 
-
 $theme_link = sprintf(
 	'<a href="https://2inc.org" target="_blank">%s</a>',
 	__( 'Monkey Wrench', 'mimizuku' )

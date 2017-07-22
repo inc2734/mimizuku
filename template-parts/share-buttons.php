@@ -4,7 +4,12 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+if ( ! get_theme_mod( 'share-buttons-buttons' ) ) {
+	return;
+}
 ?>
+
 <div class="wp-share-buttons wp-share-buttons--<?php echo esc_attr( get_theme_mod( 'share-buttons-type' ) ); ?>">
 	<ul class="wp-share-buttons__list">
 		<?php $buttons = explode( ',', get_theme_mod( 'share-buttons-buttons' ) ); ?>

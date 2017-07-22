@@ -1,0 +1,44 @@
+.c-like-me-box {
+  @include _media();
+  background-color: $_color-black;
+
+  &__figure {
+    width: 50%;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    @include _padding(2);
+
+    @include _media-min(md) {
+      @include _padding(1);
+    }
+
+    > * {
+      flex: 1 0 100%;
+    }
+  }
+
+  &__title {
+    @include _margin(0, 0, 1);
+    @include _font-size-line-height($_base-font-size * 1.5);
+    color: #fff;
+    font-weight: bold;
+  }
+
+  &__like {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: top;
+  }
+
+  &__lead {
+    @include _margin(1, 0, 0);
+    @include _font-size-line-height($_base-font-size);
+    color: _dark(#fff);
+  }
+}
