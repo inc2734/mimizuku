@@ -63,10 +63,11 @@ if ( $tags ) {
 
 $entry_meta = apply_filters( 'mimizuku_entry_meta_items', $entry_meta );
 ?>
+
 <ul class="c-meta">
 	<?php foreach ( $entry_meta as $key => $item ) : ?>
-	<li class="c-meta__item c-meta__item--<?php echo esc_attr( $key ); ?>">
-		<?php echo wp_kses_post( $item ); ?>
-	</li>
+		<li class="c-meta__item c-meta__item--<?php echo esc_attr( $key ); ?>">
+			<?php echo wp_kses_post( $item ); ?>
+		</li>
 	<?php endforeach; ?>
 </ul>

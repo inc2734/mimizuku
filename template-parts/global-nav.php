@@ -9,6 +9,7 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 	return;
 }
 ?>
+
 <nav class="p-global-nav" role="navigation">
 	<?php
 	wp_nav_menu( [

@@ -4,14 +4,13 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-
-$comments_by_type = $wp_query->comments_by_type;
 ?>
+
 <section class="p-comments">
 	<h2 class="p-comments__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h2>
 
+	<?php $comments_by_type = $wp_query->comments_by_type; ?>
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
-
 		<ol class="p-comments__list">
 			<?php
 			wp_list_comments( [
@@ -32,25 +31,17 @@ $comments_by_type = $wp_query->comments_by_type;
 				<?php esc_html_e( 'Comments are closed.', 'mimizuku' ); ?>
 			</p>
 		<?php endif; ?>
-
 	<?php else : ?>
-
 		<p class="p-comments__nocomments">
 			<?php esc_html_e( 'No comments.', 'mimizuku' ); ?>
 		</p>
-
 	<?php endif; ?>
 
 	<?php if ( comments_open() ) : ?>
-
 		<div id="respond" class="p-comments__respond">
-
 			<div class="p-comments__form">
 				<?php comment_form(); ?>
 			</div>
-
 		</div>
-
 	<?php endif; ?>
-
 </section>

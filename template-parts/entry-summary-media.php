@@ -10,7 +10,7 @@
 		<?php $thumbnail_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>
 		<div class="c-flex-media__figure"
 			<?php if ( $thumbnail_url ) : ?>
-			style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> );"
+				style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> );"
 			<?php endif; ?>
 		></div>
 		<div class="c-flex-media__body">
