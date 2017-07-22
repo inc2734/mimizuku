@@ -21,6 +21,6 @@
 		?>
 	</dt>
 	<dd class="p-trackback__body">
-		<?php comment_text() ?>
+		<?php comment_text(); ?>
 	</dd>
 </dl>

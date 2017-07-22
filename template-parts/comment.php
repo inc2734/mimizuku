@@ -11,7 +11,7 @@
 	</div>
 	<div class="p-comment__body">
 		<?php if ( 0 === $_comment->comment_approved ) : ?>
-		<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'mimizuku' ) ?></em>
+		<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'mimizuku' ); ?></em>
 		<?php endif; ?>
 		<div class="p-comment__meta">
 			<?php
@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="p-comment__content">
-			<?php comment_text() ?>
+			<?php comment_text(); ?>
 		</div>
 
 		<?php

@@ -15,7 +15,7 @@
  */
 function mimizuku_the_comments( $comment, $args, $depth ) {
 	?>
-	<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID() ?>">
+	<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 		<?php
 		wpvc_get_template_part( 'template-parts/comment', [
 			'_comment' => $comment,
