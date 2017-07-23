@@ -13,36 +13,22 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
- * Activate Inc2734_Customizer_Framework
+ * Include composer packages
  */
 include_once( get_theme_file_path( '/vendor/inc2734/wp-customizer-framework/src/wp-customizer-framework.php' ) );
-
-/**
- * Activate Inc2734_WP_Basis
- */
 include_once( get_theme_file_path( '/vendor/inc2734/wp-basis/src/wp-basis.php' ) );
-new Inc2734_WP_Basis();
-
-/**
- * Activate Inc2734_WP_oEmbed_Blog_Card
- */
 include_once( get_theme_file_path( '/vendor/inc2734/wp-oembed-blog-card/src/wp-oembed-blog-card.php' ) );
-new Inc2734_WP_oEmbed_Blog_Card();
-
-/**
- * Activate Inc2734_WP_OGP
- */
-include_once( get_theme_file_path( '/vendor/inc2734/wp-ogp/src/wp-ogp.php' ) );
-
-/**
- * Activate Inc2734_WP_Breadcrumbs
- */
 include_once( get_theme_file_path( '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' ) );
-
-/**
- * Activate Inc2734_WP_View_Controller
- */
 include_once( get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/wp-view-controller.php' ) );
+include_once( get_theme_file_path( '/vendor/inc2734/wp-share-buttons/src/wp-share-buttons.php' ) );
+include_once( get_theme_file_path( '/vendor/inc2734/wp-seo/src/wp-seo.php' ) );
+include_once( get_theme_file_path( '/vendor/inc2734/wp-like-me-box/src/wp-like-me-box.php' ) );
+
+new Inc2734_WP_Basis();
+new Inc2734_WP_oEmbed_Blog_Card();
+new Inc2734_WP_Share_Buttons();
+new Inc2734_WP_SEO();
+new Inc2734_WP_Like_Me_Box();
 
 /**
  * - Sets up the hooked functions
@@ -61,15 +47,3 @@ foreach ( $includes as $include ) {
 		require_once( get_theme_file_path( $template_name ) );
 	}
 }
-
-/**
- * Activate Inc2734_WP_Share_Buttons
- */
-include_once( get_theme_file_path( '/vendor/inc2734/wp-share-buttons/src/wp-share-buttons.php' ) );
-new Inc2734_WP_Share_Buttons();
-
-/**
- * Activate Inc2734_WP_SEO
- */
-include_once( get_theme_file_path( '/vendor/inc2734/wp-seo/src/wp-seo.php' ) );
-new Inc2734_WP_SEO();

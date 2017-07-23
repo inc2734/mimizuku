@@ -130,3 +130,20 @@ add_filter( 'post_gallery', function( $output, $attr, $instance ) {
 	<?php
 	return ob_get_clean();
 }, 10, 3 );
+
+/**
+ * Change style of gallery in wysiwyg
+ *
+ * @param array $mce_init
+ */
+add_filter( 'tiny_mce_before_init', function( $mce_init ) {
+	$styles  = '.wpview .gallery { margin: 0; display: block; border: 2px solid #666; text-align: center; height: 80px; }';
+	$styles .= '.wpview .gallery > * { display: none; }';
+	$styles .= '.wpview .gallery::before { margin-top: 20px; display: inline-block; content: \'\\\\f161\'; font-family: dashicons; font-size: 18px; color: #666 }';
+	if ( isset( $mce_init['content_style'] ) ) {
+		$mce_init['content_style'] .= $styles;
+	} else {
+		$mce_init['content_style'] = $styles;
+	}
+	return $mce_init;
+} );
