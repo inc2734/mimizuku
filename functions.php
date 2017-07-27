@@ -6,6 +6,13 @@
  */
 
 /**
+ * Make theme available for translation
+ *
+ * @return void
+ */
+load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
+
+/**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {

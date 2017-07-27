@@ -6,15 +6,6 @@
  */
 
 /**
- * Make theme available for translation
- *
- * @return void
- */
-add_action( 'after_setup_theme', function() {
-	load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
-} );
-
-/**
  * Enable plugins to manage the document title
  *
  * @return void

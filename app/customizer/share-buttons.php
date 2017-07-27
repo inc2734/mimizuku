@@ -9,7 +9,10 @@ $customizer = Inc2734_WP_Customizer_Framework::init();
 
 $customizer->section( 'share-buttons', [
 	'title' => __( 'Share buttons', 'mimizuku' ),
-	'description' => __( 'If you want to count of tweet then needs to register to <a href="https://opensharecount.com/" target="_blank">OpenShareCount</a>.', 'mimizuku' ),
+	'description' => sprintf(
+		__( 'If you want to count of tweet then needs to register to %1$s.', 'mimizuku' ),
+		'<a href="https://opensharecount.com/" target="_blank">OpenShareCount</a>'
+	),
 ] );
 
 $customizer->control( 'multiple-checkbox', 'share-buttons-buttons', [

@@ -2,10 +2,10 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mimizuku 2.0.0\n"
+"Project-Id-Version: Mimizuku 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mimizuku\n"
-"POT-Creation-Date: 2017-06-15 15:40+0900\n"
-"PO-Revision-Date: 2017-06-15 15:42+0900\n"
+"POT-Creation-Date: 2017-07-27 21:32+0900\n"
+"PO-Revision-Date: 2017-07-27 21:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -14,6 +14,234 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: app/customizer/copyright.php:10 wprepository/template-parts/copyright.php:13
+msgid "Monkey Wrench"
+msgstr "モンキーレンチ"
+
+#: app/customizer/copyright.php:15 wprepository/template-parts/copyright.php:18
+msgid "WordPress"
+msgstr "WordPress"
+
+#: app/customizer/copyright.php:18 wprepository/template-parts/copyright.php:20
+msgid "mimizuku theme by %s"
+msgstr "Mimizuku theme by %s"
+
+#: app/customizer/copyright.php:19 wprepository/template-parts/copyright.php:21
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: app/customizer/copyright.php:25 app/customizer/copyright.php:29
+msgid "Copyright"
+msgstr "コピーライト"
+
+#: app/customizer/copyright.php:30
+msgid "HTML usable"
+msgstr "HTML 使用可"
+
+#: app/customizer/layout.php:11
+msgid "Layout"
+msgstr "レイアウト"
+
+#: app/customizer/layout.php:15
+msgid "Basic layout"
+msgstr "基本レイアウト"
+
+#. Template Name of the plugin/theme
+#: app/customizer/layout.php:18
+msgid "Left sidebar"
+msgstr "左サイドバー"
+
+#. Template Name of the plugin/theme
+#: app/customizer/layout.php:19
+msgid "Right sidebar"
+msgstr "右サイドバー"
+
+#. Template Name of the plugin/theme
+#: app/customizer/layout.php:20
+msgid "One column"
+msgstr "1カラム"
+
+#. Template Name of the plugin/theme
+#: app/customizer/layout.php:21
+msgid "One column (fluid)"
+msgstr "1カラム（fluid）"
+
+#. Template Name of the plugin/theme
+#: app/customizer/layout.php:22
+msgid "One column (slim)"
+msgstr "1カラム（slim）"
+
+#: app/customizer/like-me-box.php:11
+msgid "Like me box"
+msgstr "いいね！ボックス"
+
+#: app/customizer/like-me-box.php:15
+msgid "Facebook page name"
+msgstr "Facebook ページ名"
+
+#: app/customizer/like-me-box.php:17
+msgctxt "facebook-page-name"
+msgid "Please enter %1$s of %2$s"
+msgstr "%2$sの%1$sを入力してください"
+
+#: app/customizer/seo.php:11
+#: vendor/inc2734/wp-seo/src/app/controller/meta-description.php:30
+msgid "SEO"
+msgstr "SEO"
+
+#: app/customizer/seo.php:15
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: app/customizer/seo.php:19
+msgid "Google Search Console"
+msgstr "Google Search Console"
+
+#: app/customizer/seo.php:23
+msgid "OGP"
+msgstr "OGP"
+
+#: app/customizer/seo.php:27
+msgid "Twitter Cards"
+msgstr "Twitter Cards"
+
+#: app/customizer/seo.php:29
+msgid "Application of URL is necessary for using Twitter Cards. %1$s"
+msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
+
+#: app/customizer/seo.php:35
+msgid "Tracking ID"
+msgstr "トラッキング ID"
+
+#: app/customizer/seo.php:36
+msgid "e.g. UA-1111111-11"
+msgstr "例: UA-1111111-11"
+
+#: app/customizer/seo.php:40
+msgid "Google site verification"
+msgstr "Google site verification"
+
+#: app/customizer/seo.php:42
+msgid "Please enter part %1$s of %2$s"
+msgstr "%2$sの%1$sの部分を入力してください"
+
+#: app/customizer/seo.php:49
+msgid "Default OGP image"
+msgstr "デフォルト OGP 画像"
+
+#: app/customizer/seo.php:50
+msgid ""
+"If a featured image is set in an article, that the featured image is used, "
+"if not set, this image will be used."
+msgstr ""
+"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設定"
+"されていない場合はこの画像が使用されます。"
+
+#: app/customizer/seo.php:54
+msgid "twitter:card"
+msgstr "twitter:card"
+
+#: app/customizer/seo.php:55
+msgid "Twitter Cards format"
+msgstr "Twitter Cards のフォーマット"
+
+#: app/customizer/seo.php:64
+msgid "twitter:site"
+msgstr "twitter:site"
+
+#: app/customizer/seo.php:66
+msgid "The Twitter account name of the site. Please enter in the form %1$s."
+msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
+
+#: app/customizer/share-buttons.php:11
+msgid "Share buttons"
+msgstr "シェアボタン"
+
+#: app/customizer/share-buttons.php:13
+msgid "If you want to count of tweet then needs to register to %1$s."
+msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
+
+#: app/customizer/share-buttons.php:19
+msgid "Display buttons"
+msgstr "ボタンを表示"
+
+#: app/customizer/share-buttons.php:22
+msgid "Facebook"
+msgstr "Facebook"
+
+#: app/customizer/share-buttons.php:23
+msgid "Twitter"
+msgstr "Twitter"
+
+#: app/customizer/share-buttons.php:24
+msgid "Hatena Bookmark"
+msgstr "はてなブックマーク"
+
+#: app/customizer/share-buttons.php:25
+#: vendor/inc2734/wp-share-buttons/src/app/view/feedly/feedly.php:13
+#: vendor/inc2734/wp-share-buttons/src/app/view/feedly/official.php:2
+msgid "Feedly"
+msgstr "Feedly"
+
+#: app/customizer/share-buttons.php:26
+#: vendor/inc2734/wp-share-buttons/src/app/view/line/line.php:9
+msgid "LINE"
+msgstr "LINE"
+
+#: app/customizer/share-buttons.php:27
+#: vendor/inc2734/wp-share-buttons/src/app/view/pocket/pocket.php:9
+msgid "Pocket"
+msgstr "Pocket"
+
+#: app/customizer/share-buttons.php:28
+#: vendor/inc2734/wp-share-buttons/src/app/view/feed/feed.php:9
+msgid "Feed"
+msgstr "フィード"
+
+#: app/customizer/share-buttons.php:33
+msgid "Type"
+msgstr "種類"
+
+#: app/customizer/share-buttons.php:36
+msgid "Balloon"
+msgstr "バルーン"
+
+#: app/customizer/share-buttons.php:37
+msgid "Horizontal"
+msgstr "水平"
+
+#: app/customizer/share-buttons.php:38
+msgid "Icon"
+msgstr "アイコン"
+
+#: app/customizer/share-buttons.php:39
+msgid "Block"
+msgstr "ブロック"
+
+#: app/customizer/share-buttons.php:40
+msgid "Official"
+msgstr "公式"
+
+#: app/customizer/share-buttons.php:45
+msgid "Display position"
+msgstr "表示する場所"
+
+#: app/customizer/share-buttons.php:48
+msgid "Top of contents"
+msgstr "コンテンツの上"
+
+#: app/customizer/share-buttons.php:49
+msgid "Bottom of contents"
+msgstr "コンテンツの下"
+
+#: app/customizer/share-buttons.php:50
+msgid "Both"
+msgstr "両方"
+
+#: app/customizer/share-buttons.php:55
+msgid "Share counts cache time (seconds)"
+msgstr "シェアカウントのキャッシュ時間（秒）"
 
 #: app/setup/nav-menus.php:16 wprepository/app/setup/nav-menus.php:16
 msgid "Global Navigation (For PC)"
@@ -27,64 +255,27 @@ msgstr "ドロワーナビゲーション（モバイル用）"
 msgid "Footer Navigation"
 msgstr "フッターナビゲーション"
 
-#: app/setup/widgets.php:15 app/setup/widgets.php:17
-#: wprepository/app/setup/widgets.php:15 wprepository/app/setup/widgets.php:17
-msgid "Sidebar"
-msgstr "サイドバー"
-
-#: searchform.php:9 searchform.php:12 wprepository/searchform.php:9
-#: wprepository/searchform.php:12
-msgctxt "label"
-msgid "Search for:"
-msgstr "検索："
-
-#: searchform.php:12 wprepository/searchform.php:12
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "検索 &hellip;"
-
-#: searchform.php:14 wprepository/searchform.php:14
-msgctxt "submit button"
-msgid "Search"
-msgstr "検索する"
-
 #: template-parts/comment.php:14 wprepository/template-parts/comment.php:14
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
-#: template-parts/comment.php:22 template-parts/trackback.php:15
+#: template-parts/comment.php:23 template-parts/trackback.php:15
 #: wprepository/template-parts/comment.php:22
 #: wprepository/template-parts/trackback.php:15
 msgid "%1$s said on %2$s at %3$s"
 msgstr "%1$s said on %2$s at %3$s"
 
-#: template-parts/comments.php:11 wprepository/template-parts/comments.php:11
+#: template-parts/comments.php:10 wprepository/template-parts/comments.php:11
 msgid "Comments on this post"
 msgstr "この投稿へのコメント"
 
-#: template-parts/comments.php:32 wprepository/template-parts/comments.php:32
+#: template-parts/comments.php:31 wprepository/template-parts/comments.php:32
 msgid "Comments are closed."
 msgstr "コメントは閉じられています。"
 
-#: template-parts/comments.php:39 wprepository/template-parts/comments.php:39
+#: template-parts/comments.php:36 wprepository/template-parts/comments.php:39
 msgid "No comments."
 msgstr "コメントはありません。"
-
-#: template-parts/copyright.php:13 wprepository/template-parts/copyright.php:13
-msgid "Monkey Wrench"
-msgstr "モンキーレンチ"
-
-#: template-parts/copyright.php:18 wprepository/template-parts/copyright.php:18
-msgid "WordPress"
-msgstr "WordPress"
-
-#: template-parts/copyright.php:20 wprepository/template-parts/copyright.php:20
-msgid "mimizuku theme by %s"
-msgstr "Mimizuku theme by %s"
-
-#: template-parts/copyright.php:21 wprepository/template-parts/copyright.php:21
-msgid "Powered by %s"
-msgstr "Powered by %s"
 
 #: template-parts/entry-meta.php:19
 #: wprepository/template-parts/entry-meta.php:19
@@ -106,50 +297,15 @@ msgstr "カテゴリー"
 msgid "Tags"
 msgstr "タグ"
 
-#: template-parts/link-pages.php:12
-#: wprepository/template-parts/link-pages.php:12
-msgid "Posts navigation"
-msgstr "ナビゲーション"
-
-#: template-parts/pagination.php:19
-#: wprepository/template-parts/pagination.php:19
-msgid "Previous"
-msgstr "前へ"
-
-#: template-parts/pagination.php:20
-#: wprepository/template-parts/pagination.php:20
-msgid "Next"
-msgstr "次へ"
-
-#: template-parts/password-form.php:10
-#: wprepository/template-parts/password-form.php:10
-msgid ""
-"This content is password protected. To view it please enter your password "
-"below:"
-msgstr ""
-"このコンテンツはパスワードで保護されています。閲覧する場合はパスワードを入力"
-"してください。"
-
-#: template-parts/password-form.php:14
-#: wprepository/template-parts/password-form.php:14
-msgid "Password:"
-msgstr "パスワード："
-
-#: template-parts/password-form.php:18
-#: wprepository/template-parts/password-form.php:18
-msgctxt "post password form"
-msgid "Enter"
-msgstr "確定"
-
-#: template-parts/pings.php:11 wprepository/template-parts/pings.php:11
+#: template-parts/pings.php:10 wprepository/template-parts/pings.php:11
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
 
-#: template-parts/pings.php:27 wprepository/template-parts/pings.php:27
+#: template-parts/pings.php:24 wprepository/template-parts/pings.php:27
 msgid "No trackbacks."
 msgstr "トラックバックはありません。"
 
-#: template-parts/pings.php:36 wprepository/template-parts/pings.php:36
+#: template-parts/pings.php:31 wprepository/template-parts/pings.php:36
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
@@ -177,21 +333,115 @@ msgstr ""
 msgid "No posts."
 msgstr "投稿がありません。"
 
-#: vendor/inc2734/wp-breadcrumbs/src/app/controller/front-page.php:27
-msgid "ホーム"
-msgstr "ホーム"
+#: vendor/inc2734/wp-basis/src/app/template-parts/password-form.php:10
+#: wprepository/template-parts/password-form.php:10
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+"このコンテンツはパスワードで保護されています。閲覧する場合はパスワードを入力"
+"してください。"
 
-#: vendor/inc2734/wp-breadcrumbs/src/app/controller/front-page.php:29
+#: vendor/inc2734/wp-basis/src/app/template-parts/password-form.php:14
+#: wprepository/template-parts/password-form.php:14
+msgid "Password:"
+msgstr "パスワード："
+
+#: vendor/inc2734/wp-basis/src/app/template-parts/password-form.php:19
+msgid "Enter"
+msgstr "確定"
+
+#: vendor/inc2734/wp-basis/src/app/template-parts/searchform.php:9
+msgid "Search for:"
+msgstr "検索："
+
+#: vendor/inc2734/wp-basis/src/app/template-parts/searchform.php:12
+msgid "Search &hellip;"
+msgstr "検索 &hellip;"
+
+#: vendor/inc2734/wp-basis/src/app/template-parts/searchform.php:15
+msgid "Search"
+msgstr "検索する"
+
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/front-page.php:32
 msgid "Home"
 msgstr "ホーム"
 
-#: vendor/inc2734/wp-breadcrumbs/src/app/controller/not-found.php:10
-msgid "ページが見つかりませんでした"
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/not-found.php:16
+msgid "Page not found"
 msgstr "ページが見つかりませんでした"
 
-#: vendor/inc2734/wp-breadcrumbs/src/app/controller/search.php:12
-msgid "「%s」の検索結果"
-msgstr "「%s」の検索結果"
+#: vendor/inc2734/wp-breadcrumbs/src/app/controller/search.php:18
+msgid "Search results of \"%1$s\""
+msgstr "「%1$s」の検索結果"
+
+#: vendor/inc2734/wp-like-me-box/src/app/view/like-me-box.php:21
+msgid "If you like this article,"
+msgstr "この記事が気に入ったら"
+
+#: vendor/inc2734/wp-like-me-box/src/app/view/like-me-box.php:22
+msgid "Let's press like button"
+msgstr "いいね！しよう"
+
+#: vendor/inc2734/wp-like-me-box/src/app/view/like-me-box.php:36
+msgid "We will deliver up-to-date information for you"
+msgstr "最新の情報をお届けします"
+
+#: vendor/inc2734/wp-seo/src/app/controller/meta-description.php:48
+msgid "Meta description"
+msgstr "Meta description"
+
+#: vendor/inc2734/wp-share-buttons/src/app/view/facebook/facebook.php:13
+#: vendor/inc2734/wp-share-buttons/src/app/view/facebook/official.php:19
+msgid "Share"
+msgstr "シェア"
+
+#: vendor/inc2734/wp-share-buttons/src/app/view/hatena/hatena.php:13
+#: vendor/inc2734/wp-share-buttons/src/app/view/hatena/official.php:9
+#: vendor/inc2734/wp-share-buttons/src/app/view/hatena/official.php:10
+msgid "Bookmark"
+msgstr "ブックマーク"
+
+#: vendor/inc2734/wp-share-buttons/src/app/view/twitter/official.php:1
+#: vendor/inc2734/wp-share-buttons/src/app/view/twitter/twitter.php:13
+msgid "Tweet"
+msgstr "ツイート"
+
+#: wprepository/app/setup/widgets.php:15 wprepository/app/setup/widgets.php:17
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: wprepository/searchform.php:9 wprepository/searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr "検索："
+
+#: wprepository/searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "検索 &hellip;"
+
+#: wprepository/searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr "検索する"
+
+#: wprepository/template-parts/link-pages.php:12
+msgid "Posts navigation"
+msgstr "ナビゲーション"
+
+#: wprepository/template-parts/pagination.php:19
+msgid "Previous"
+msgstr "前へ"
+
+#: wprepository/template-parts/pagination.php:20
+msgid "Next"
+msgstr "次へ"
+
+#: wprepository/template-parts/password-form.php:18
+msgctxt "post password form"
+msgid "Enter"
+msgstr "確定"
 
 #. Theme Name of the plugin/theme
 msgid "mimizuku"
@@ -204,6 +454,15 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "ホーム"
+#~ msgstr "ホーム"
+
+#~ msgid "ページが見つかりませんでした"
+#~ msgstr "ページが見つかりませんでした"
+
+#~ msgid "「%s」の検索結果"
+#~ msgstr "「%s」の検索結果"
 
 #, fuzzy
 #~ msgid "https://github.com/inc2734/mimizuku/"

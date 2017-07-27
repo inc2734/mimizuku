@@ -15,8 +15,8 @@ $customizer->control( 'text', 'facebook-page-name', [
 	'label'       => __( 'Facebook page name', 'mimizuku' ),
 	'description' => sprintf(
 		_x( 'Please enter %1$s of %2$s', 'facebook-page-name', 'mimizuku' ),
-		'<code>https://www.facebook.com/xxxxx</code>',
-		'<code>xxxxx</code>'
+		'<code>xxxxx</code>',
+		'<code>https://www.facebook.com/xxxxx</code>'
 	),
 ] );
 
