@@ -13,31 +13,13 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
- * Include composer packages
- */
-include_once( get_theme_file_path( '/vendor/inc2734/wp-customizer-framework/src/wp-customizer-framework.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-basis/src/wp-basis.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-oembed-blog-card/src/wp-oembed-blog-card.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/wp-view-controller.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-share-buttons/src/wp-share-buttons.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-seo/src/wp-seo.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-like-me-box/src/wp-like-me-box.php' ) );
-include_once( get_theme_file_path( '/vendor/inc2734/wp-pure-css-gallery/src/wp-pure-css-gallery.php' ) );
-
-new Inc2734_WP_Basis();
-new Inc2734_WP_oEmbed_Blog_Card();
-new Inc2734_WP_Share_Buttons();
-new Inc2734_WP_SEO();
-new Inc2734_WP_Like_Me_Box();
-new Inc2734_WP_Pure_CSS_Gallery();
-
-/**
+ * - Loads composer packages
  * - Sets up the hooked functions
+ * - Sets up the customizer
  * - Sets up the custom template tags
  */
 $includes = array(
-	'/app/config',
+	'/app/composer-packages',
 	'/app/controller',
 	'/app/setup',
 	'/app/customizer',
@@ -45,7 +27,7 @@ $includes = array(
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-		$template_name = str_replace( __DIR__, '', $file );
-		require_once( get_theme_file_path( $template_name ) );
+		$template_name = str_replace( array( trailingslashit( __DIR__ ), '.php' ), '', $file );
+		get_template_part( $template_name );
 	}
 }
