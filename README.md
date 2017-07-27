@@ -90,5 +90,8 @@ See https://github.com/inc2734/mimizuku-child
 ### inc2734/wp-like-me-box
 * Source: https://github.com/inc2734/wp-like-me-box
 
+### inc2734/wp-pure-css-gallery
+* Source: https://github.com/inc2734/wp-pure-css-gallery
+
 ## Official goods store
 https://suzuri.jp/inc2734/products

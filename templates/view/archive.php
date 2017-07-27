@@ -6,7 +6,8 @@
  */
 ?>
 <ul class="c-entries">
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
 		<li class="c-entries__item">
 			<?php get_template_part( 'template-parts/entry-summary' ); ?>
 		</li>
