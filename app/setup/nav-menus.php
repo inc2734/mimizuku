@@ -19,5 +19,10 @@ add_action( 'after_setup_theme', function() {
 	] );
 } );
 
-wp_basis_drawer_navigation( 'drawer-nav' );
-wp_basis_global_navigation( 'global-nav' );
+if ( class_exists( 'Inc2734_WP_Basis' ) ) {
+	wp_basis_drawer_navigation( 'drawer-nav' );
+}
+
+if ( class_exists( 'Inc2734_WP_Basis' ) ) {
+	wp_basis_global_navigation( 'global-nav' );
+}

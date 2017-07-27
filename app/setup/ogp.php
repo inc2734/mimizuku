@@ -40,6 +40,10 @@ add_filter( 'inc2734_wp_ogp_image', function( $og_image ) {
  * @return void
  */
 add_action( 'wp_head', function() {
+	if ( ! class_exists( 'Inc2734_WP_OGP' ) ) {
+		return;
+	}
+
 	$ogp = new Inc2734_WP_OGP();
 	?>
 	<meta property="og:title" content="<?php echo esc_attr( $ogp->get_title() ); ?>">

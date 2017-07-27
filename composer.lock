@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "252fa5c141c212ea7de6fbfc8a42316c",
-    "content-hash": "320a22fe9edc4bf6d308c61a0b3d18d4",
+    "hash": "f79f81e2084ca8c2976ae5fd5e1c1567",
+    "content-hash": "539cfbef5bda64a4ae4e9cdd56c33d63",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -281,6 +281,45 @@
             "time": "2017-07-23 11:24:59"
         },
         {
+            "name": "inc2734/wp-pure-css-gallery",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-pure-css-gallery.git",
+                "reference": "600ee729e06f6ae0522f8f91e821a6fe32c28aea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/600ee729e06f6ae0522f8f91e821a6fe32c28aea",
+                "reference": "600ee729e06f6ae0522f8f91e821a6fe32c28aea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Pure_CSS_Gallery\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library to change WordPress gallery to pure css gallery.",
+            "time": "2017-07-27 05:30:21"
+        },
+        {
             "name": "inc2734/wp-seo",
             "version": "0.2.1",
             "source": {
@@ -323,16 +362,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "20ade9bcbc8eecc5e3d4aa73d4220c2bd39c0d6b"
+                "reference": "d8d57eba8de8cffd7fd2b1cc9035c644ffa057a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/20ade9bcbc8eecc5e3d4aa73d4220c2bd39c0d6b",
-                "reference": "20ade9bcbc8eecc5e3d4aa73d4220c2bd39c0d6b",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/d8d57eba8de8cffd7fd2b1cc9035c644ffa057a1",
+                "reference": "d8d57eba8de8cffd7fd2b1cc9035c644ffa057a1",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +398,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2017-07-23 11:27:23"
+            "time": "2017-07-23 13:08:03"
         },
         {
             "name": "inc2734/wp-view-controller",

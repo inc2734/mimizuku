@@ -23,12 +23,14 @@ include_once( get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/wp-vi
 include_once( get_theme_file_path( '/vendor/inc2734/wp-share-buttons/src/wp-share-buttons.php' ) );
 include_once( get_theme_file_path( '/vendor/inc2734/wp-seo/src/wp-seo.php' ) );
 include_once( get_theme_file_path( '/vendor/inc2734/wp-like-me-box/src/wp-like-me-box.php' ) );
+include_once( get_theme_file_path( '/vendor/inc2734/wp-pure-css-gallery/src/wp-pure-css-gallery.php' ) );
 
 new Inc2734_WP_Basis();
 new Inc2734_WP_oEmbed_Blog_Card();
 new Inc2734_WP_Share_Buttons();
 new Inc2734_WP_SEO();
 new Inc2734_WP_Like_Me_Box();
+new Inc2734_WP_Pure_CSS_Gallery();
 
 /**
  * - Sets up the hooked functions
