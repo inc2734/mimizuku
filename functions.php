@@ -27,7 +27,7 @@ if ( ! isset( $content_width ) ) {
  */
 add_filter( 'inc2734_view_controller_config', function( $config ) {
 	return [
-		'templates' => 'resources/templates',
+		'templates' => 'resources',
 		'layout'    => 'resources/templates/layout/wrapper',
 		'header'    => 'resources/templates/layout/header',
 		'sidebar'   => 'resources/templates/layout/sidebar',
