@@ -10,7 +10,7 @@
  *
  * @return void
  */
-load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
+load_theme_textdomain( 'mimizuku', get_template_directory() . '/resources/languages' );
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -18,6 +18,24 @@ load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
 if ( ! isset( $content_width ) ) {
 	$content_width = apply_filters( 'mimizuku_content_width', 1152 );
 }
+
+/**
+ * Update view controller config
+ *
+ * @param array $config
+ * @return array
+ */
+add_filter( 'inc2734_view_controller_config', function( $config ) {
+	return [
+		'templates' => 'resources/templates',
+		'layout'    => 'resources/templates/layout/wrapper',
+		'header'    => 'resources/templates/layout/header',
+		'sidebar'   => 'resources/templates/layout/sidebar',
+		'footer'    => 'resources/templates/layout/footer',
+		'view'      => 'resources/templates/view',
+		'static'    => 'resources/templates/view/static',
+	];
+} );
 
 /**
  * - Loads composer packages
@@ -30,7 +48,6 @@ $includes = array(
 	'/app/controller',
 	'/app/setup',
 	'/app/customizer',
-	'/app/template-tags',
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {

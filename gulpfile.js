@@ -18,16 +18,16 @@ var babel        = require('rollup-plugin-babel');
 
 var dir = {
   src: {
-    css     : 'src/css',
-    js      : 'src/js',
-    img     : 'src/img',
+    css     : 'resources/src/css',
+    js      : 'resources/src/js',
+    img     : 'resources/src/img',
     packages: 'node_modules'
   },
   dist: {
-    css     : 'assets/css',
-    js      : 'assets/js',
-    img     : 'assets/img',
-    packages: 'assets/packages'
+    css     : 'resources/assets/css',
+    js      : 'resources/assets/js',
+    img     : 'resources/assets/img',
+    packages: 'resources/assets/packages'
   }
 }
 

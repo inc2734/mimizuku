@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a37e2e4ef257548e277bcb671b6e048",
-    "content-hash": "78ee447f749a5044f71da596c2c906ad",
+    "hash": "3cffa2b0db1fe0c41807ff8ff8cd227e",
+    "content-hash": "1d60151e61eef42cb29e9dc64e19a34b",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -361,16 +361,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "0.4.2",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "d8d57eba8de8cffd7fd2b1cc9035c644ffa057a1"
+                "reference": "400ae1fa6b464188e20b88896161e3d7cb14dce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/d8d57eba8de8cffd7fd2b1cc9035c644ffa057a1",
-                "reference": "d8d57eba8de8cffd7fd2b1cc9035c644ffa057a1",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/400ae1fa6b464188e20b88896161e3d7cb14dce1",
+                "reference": "400ae1fa6b464188e20b88896161e3d7cb14dce1",
                 "shasum": ""
             },
             "require": {
@@ -397,20 +397,20 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2017-07-23 13:08:03"
+            "time": "2017-07-28 14:48:34"
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "0.1.4",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "c818abdc386ab8fe83cbb5aecdf558a3d9da151c"
+                "reference": "ab51767dd52310d715497128e5a8ca25fbef8007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/c818abdc386ab8fe83cbb5aecdf558a3d9da151c",
-                "reference": "c818abdc386ab8fe83cbb5aecdf558a3d9da151c",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/ab51767dd52310d715497128e5a8ca25fbef8007",
+                "reference": "ab51767dd52310d715497128e5a8ca25fbef8007",
                 "shasum": ""
             },
             "require": {
@@ -436,7 +436,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-07-23 11:31:37"
+            "time": "2017-07-28 15:29:51"
         }
     ],
     "packages-dev": [
