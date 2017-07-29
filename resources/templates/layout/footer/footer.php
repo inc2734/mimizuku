@@ -6,4 +6,4 @@
  */
 
 $slug = wpvc_config( 'footer' );
-get_template_part( $slug . '/2row' );
+get_template_part( $slug . '/simple' );

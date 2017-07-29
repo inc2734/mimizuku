@@ -9,13 +9,14 @@
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	$src = get_theme_file_uri( '/resources/assets/css/style.min.css' );
+	$src  = get_theme_file_uri( '/resources/assets/css/style.min.css' );
+	$path = get_theme_file_path( '/resources/assets/css/style.min.css' );
 
 	wp_enqueue_style(
 		get_stylesheet(),
 		$src,
 		[],
-		mimizuku_get_theme_version()
+		filemtime( $path )
 	);
 } );
 
@@ -32,26 +33,14 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	$src = get_theme_file_uri( '/resources/assets/js/app.min.js' );
+	$src  = get_theme_file_uri( '/resources/assets/js/app.min.js' );
+	$path = get_theme_file_path( '/resources/assets/js/app.min.js' );
 
 	wp_enqueue_script(
 		get_stylesheet(),
 		$src,
 		[ 'jquery' ],
-		mimizuku_get_theme_version(),
+		$path,
 		true
 	);
 } );
-
-/**
- * Return the theme version
- *
- * @return string
- */
-function mimizuku_get_theme_version() {
-	$theme = wp_get_theme();
-	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
-		return $theme->get( 'Version' ) . '.' . time();
-	}
-	return $theme->get( 'Version' );
-}

@@ -54,14 +54,3 @@ add_action( 'after_setup_theme', function() {
 add_action( 'after_setup_theme', function() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 } );
-
-/**
- * Use main stylesheet for visual editor
- *
- * @return void
- */
-add_action( 'after_setup_theme', function() {
-	add_editor_style( [
-		'assets/css/editor-style.min.css',
-	] );
-} );

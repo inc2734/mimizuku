@@ -46,6 +46,27 @@ See https://github.com/inc2734/mimizuku-child
 * CI
 * See more https://github.com/inc2734/mimizuku-child
 
+## Directory structure
+```
+themes/mimizuku
+├─ core                    # Mimizuku core
+│  ├─ bin                  # Useful commands (shell script)
+│  ├─ composer-packages    # Loads composer packages
+│  ├─ controller           # View controller
+│  ├─ setup                # Setup mimizuku
+│  └─ customizer           # Theme customizer
+├─ resources               # Theme resources. Templates and assets that you normally use for themes are included here.
+│  ├─ app                  # Setup theme (customizable)
+│  ├─ templates
+│  │  ├─ layout            # Layout templates
+│  │  └─ view              # View templates
+│  ├─ index.php
+│  ├─ functions.php
+│  ├─ ...
+├─ functions.php           # Mimizuku bootstrap
+├─ style.css               # Theme meta information
+```
+
 ## Third-party resources
 
 ### Font Awesome (Web fonts)

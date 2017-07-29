@@ -15,7 +15,6 @@ add_action( 'after_setup_theme', function() {
 	register_nav_menus( [
 		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
 		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
-		'footer-nav' => esc_html__( 'Footer Navigation', 'mimizuku' ),
 	] );
 } );
 

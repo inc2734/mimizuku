@@ -19,14 +19,14 @@ else
   exit 1;
 fi
 
-phar extract -f $(which wp) "$themedir/app/bin/wp.phar">/dev/null 2>&1
-wpclidir="$themedir/app/bin/wp.phar$(which wp)"
+phar extract -f $(which wp) "$themedir/core/bin/wp.phar">/dev/null 2>&1
+wpclidir="$themedir/core/bin/wp.phar$(which wp)"
 
-if [ ! -e "$themedir/app/bin" ]; then
-	mkdir -p "$themedir/app/bin"
+if [ ! -e "$themedir/core/bin" ]; then
+	mkdir -p "$themedir/core/bin"
 fi
 
-cp -f "$wpclidir/templates/install-wp-tests.sh" "$themedir/app/bin/install-wp-tests.sh"
+cp -f "$wpclidir/templates/install-wp-tests.sh" "$themedir/core/bin/install-wp-tests.sh"
 
 cp -f "$wpclidir/templates/phpunit.xml.dist" "$themedir/phpunit.xml"
 
@@ -40,5 +40,5 @@ rm -f "$themedir/tests/plugin-bootstrap.mustache"
 
 cp -f "$wpclidir/templates/plugin-test-sample.mustache" "$themedir/tests/test-sample.php"
 
-rm -rf "$themedir/app/bin/wp.phar"
+rm -rf "$themedir/corebin/wp.phar"
 echo "done!"

@@ -11733,27 +11733,6 @@ html[data-window-scroll="false"] .l-container {
   display: block;
   width: 100%; }
 
-.p-footer-nav .menu {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0; }
-
-.p-footer-nav .menu-item {
-  display: block; }
-  .p-footer-nav .menu-item > a {
-    display: block;
-    padding: 0.75rem;
-    text-align: center;
-    text-decoration: none; }
-  @media (min-width: 40em) {
-    .p-footer-nav .menu-item {
-      display: inline-block;
-      margin: 0 0.75rem 0 0;
-      padding: 0; }
-      .p-footer-nav .menu-item > a {
-        display: inline-block;
-        padding: 0; } }
-
 .p-global-nav .c-navbar__submenu {
   background-color: rgba(17, 17, 17, 0.9); }
 

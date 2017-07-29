@@ -160,8 +160,8 @@ gulp.task('wprepository', ['build'], function(){
         '!node_modules/**',
         '!vendor',
         '!vendor/**',
-        '!app/bin',
-        '!app/bin/**',
+        '!core/bin',
+        '!core/bin/**',
         '!wprepository',
         '!wprepository/**',
         '!mimizuku.zip'

@@ -25,14 +25,14 @@
       "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
       "php vendor/bin/phpcs -p -s -v -n . --standard=./tests/codesniffer.ruleset.xml --extensions=php",
       "vendor/bin/phpmd ./ text tests/phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
-      "bash app/bin/phpunit.sh"
+      "bash core/bin/phpunit.sh"
     ],
-    "server": "bash app/bin/server.sh",
-    "scaffold-tests": "bash app/bin/scaffold-tests.sh",
-    "theme-unit-test": "bash app/bin/theme-unit-test.sh",
-    "theme-unit-test-ja": "bash app/bin/theme-unit-test-ja.sh",
-    "wpphpunit": "bash app/bin/wpphpunit.sh",
-    "phpunit": "bash app/bin/phpunit.sh"
+    "server": "bash core/bin/server.sh",
+    "scaffold-tests": "bash core/bin/scaffold-tests.sh",
+    "theme-unit-test": "bash core/bin/theme-unit-test.sh",
+    "theme-unit-test-ja": "bash core/bin/theme-unit-test-ja.sh",
+    "wpphpunit": "bash core/bin/wpphpunit.sh",
+    "phpunit": "bash core/bin/phpunit.sh"
   },
   "autoload": {
     "psr-4": {

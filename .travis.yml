@@ -28,15 +28,15 @@ install:
 - yarn install
 - npm rebuild node-sass
 before_script:
-- bash app/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- bash core/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 script:
 - yarn run gulp build
 - ls -la style.css index.php vendor/autoload.php
 - composer test
 after_success:
-- bash ./app/bin/wprepository.sh
+- bash ./core/bin/wprepository.sh
 before_deploy:
-- bash ./app/bin/zip.sh
+- bash ./core/bin/zip.sh
 deploy:
   provider: releases
   api_key:

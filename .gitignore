@@ -2,7 +2,7 @@
 .sass-cache/
 npm-debug.log
 /node_modules/
-/assets/
+/resources/assets/
 /vendor/
 packages/
 *.sql

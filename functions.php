@@ -44,14 +44,28 @@ add_filter( 'inc2734_view_controller_config', function( $config ) {
  * - Sets up the custom template tags
  */
 $includes = array(
-	'/app/composer-packages',
-	'/app/controller',
-	'/app/setup',
-	'/app/customizer',
+	'/core/composer-packages',
+	'/core/controller',
+	'/core/setup',
+	'/core/customizer',
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
 		$template_name = str_replace( array( trailingslashit( __DIR__ ), '.php' ), '', $file );
 		get_template_part( $template_name );
 	}
+}
+
+/**
+ * Loads functions.php
+ */
+if ( is_child_theme() ) {
+	$child_functions_path = get_stylesheet_directory() . '/resources/functions.php';
+	if ( file_exists( $child_functions_path ) ) {
+		include_once( $child_functions_path );
+	}
+}
+$functions_path = get_template_directory() . '/resources/functions.php';
+if ( file_exists( $functions_path ) ) {
+	include_once( $functions_path );
 }
