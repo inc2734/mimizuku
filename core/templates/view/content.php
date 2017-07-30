@@ -14,12 +14,20 @@
 	</header>
 
 	<div class="c-entry__content">
-		<?php wpvc_get_template_part( 'core/template-parts/share-buttons', [ '_position' => 'top' ] ); ?>
+		<?php
+		wpvc_get_template_part( 'core/template-parts/share-buttons', [
+			'_position' => 'top',
+		] );
+		?>
 
 		<?php the_content(); ?>
 		<?php get_template_part( 'resources/template-parts/link-pages' ); ?>
 
-		<?php wpvc_get_template_part( 'core/template-parts/share-buttons', [ '_position' => 'bottom' ] ); ?>
+		<?php
+		wpvc_get_template_part( 'core/template-parts/share-buttons', [
+			'_position' => 'bottom',
+		] );
+		?>
 
 		<?php get_template_part( 'core/template-parts/like-me-box' ); ?>
 	</div>
