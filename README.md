@@ -6,7 +6,7 @@
 
 Mimizuku is a WordPress starter theme or theme framework for child themes development.
 
-<img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/src/img/mimizuku.svg" alt="Mimizuku" width="96px">
+<img src="https://cdn.rawgit.com/inc2734/mimizuku/develop/core/mimizuku.svg" alt="Mimizuku" width="96px">
 
 * GitHub: https://github.com/inc2734/mimizuku/
 * Packagist: https://packagist.org/packages/inc2734/mimizuku
