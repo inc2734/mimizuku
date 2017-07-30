@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b9d0454baa6e86460984d2c54dfe5566",
-    "content-hash": "e2c5a1da1c06c82255db1879362ee1c9",
+    "hash": "76673427f9aea573860787293be38f0e",
+    "content-hash": "742e246909f13fb7b3717241761e92be",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -401,7 +401,7 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",

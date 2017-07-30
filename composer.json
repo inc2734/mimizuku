@@ -43,7 +43,7 @@
     "php": ">=5.6",
     "inc2734/wp-breadcrumbs": "~0.3.1",
     "inc2734/wp-oembed-blog-card": "~0.2.4",
-    "inc2734/wp-view-controller": "~2.0.0",
+    "inc2734/wp-view-controller": "~2.1.0",
     "inc2734/wp-basis": "~0.3.0",
     "inc2734/wp-customizer-framework": "~2.0.1",
     "inc2734/wp-github-theme-updater": "~0.1.0",

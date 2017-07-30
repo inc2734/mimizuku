@@ -72,6 +72,16 @@ themes/mimizuku
 ├─ style.css               # Theme meta information
 ```
 
+### Template hierarchical
+#### Layout templates
+1. /core/templates/\*\*/\*.php
+2. /resources/templates/\*\*/\*.php
+
+#### Base templates
+1. /core/\*.php
+2. /resources/\*.php
+3. /\*.php
+
 ## Third-party resources
 
 ### Font Awesome (Web fonts)
