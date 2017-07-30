@@ -6,5 +6,4 @@
  */
 
 $footer = apply_filters( 'mimizuku_footer', 'footer' );
-$slug   = wpvc_config( 'footer' );
-get_template_part( $slug . '/' . $footer );
+wpvc_get_footer_template( $footer );

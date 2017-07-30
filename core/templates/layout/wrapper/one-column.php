@@ -14,15 +14,27 @@
 
 	<?php get_template_part( 'resources/template-parts/drawer-nav' ); ?>
 	<div class="l-container">
-		<?php get_template_part( wpvc_config( 'templates' ) . '/header' ); ?>
+		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
-			<main class="l-main" role="main">
-				<?php $_view_controller->view(); ?>
-			</main>
+			<div class="c-container">
+				<?php get_template_part( 'resources/template-parts/breadcrumbs' ); ?>
+
+				<div class="c-row c-row--margin">
+					<div class="c-row__col c-row__col--1-1">
+						<main class="l-main" role="main">
+							<?php $_view_controller->view(); ?>
+						</main>
+					</div>
+
+					<div class="c-row__col c-row__col--1-1">
+						<?php wpvc_get_sidebar(); ?>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<?php get_template_part( wpvc_config( 'templates' ) . '/footer' ); ?>
+		<?php wpvc_get_footer(); ?>
 	</div>
 
 <?php wp_footer(); ?>

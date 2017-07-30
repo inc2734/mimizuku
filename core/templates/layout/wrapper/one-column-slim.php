@@ -14,7 +14,7 @@
 
 	<?php get_template_part( 'resources/template-parts/drawer-nav' ); ?>
 	<div class="l-container">
-		<?php get_template_part( wpvc_config( 'templates' ) . '/header' ); ?>
+		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
 			<div class="c-container">
@@ -28,13 +28,13 @@
 					</div>
 
 					<div class="c-row__col c-row__col--1-1 c-row__col--md-8-10 c-row__col--md-offset-1-10 c-row__col--lg-4-6 c-row__col--lg-offset-1-6">
-						<?php get_template_part( wpvc_config( 'templates' ) . '/sidebar' ); ?>
+						<?php wpvc_get_sidebar(); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<?php get_template_part( wpvc_config( 'templates' ) . '/footer' ); ?>
+		<?php wpvc_get_footer(); ?>
 	</div>
 
 <?php wp_footer(); ?>

@@ -6,5 +6,4 @@
  */
 
 $header = apply_filters( 'mimizuku_header', 'header' );
-$slug   = wpvc_config( 'header' );
-get_template_part( $slug . '/' . $header );
+wpvc_get_header_template( $header );

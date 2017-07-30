@@ -27,13 +27,32 @@ if ( ! isset( $content_width ) ) {
  */
 add_filter( 'inc2734_view_controller_config', function( $config ) {
 	return [
-		'templates' => 'resources',
-		'layout'    => 'resources/templates/layout/wrapper',
-		'header'    => 'resources/templates/layout/header',
-		'sidebar'   => 'resources/templates/layout/sidebar',
-		'footer'    => 'resources/templates/layout/footer',
-		'view'      => 'resources/templates/view',
-		'static'    => 'resources/templates/view/static',
+		'templates' => [
+			'resources',
+		],
+		'layout' => [
+			'resources/templates/layout/wrapper',
+			'core/templates/layout/wrapper',
+		],
+		'header' => [
+			'resources/templates/layout/header',
+			'core/templates/layout/header',
+		],
+		'sidebar' => [
+			'resources/templates/layout/sidebar',
+			'core/templates/layout/sidebar',
+		],
+		'footer' => [
+			'resources/templates/layout/footer',
+			'core/templates/layout/footer',
+		],
+		'view' => [
+			'resources/templates/view',
+			'core/templates/view',
+		],
+		'static' => [
+			'resources/templates/view/static',
+		],
 	];
 } );
 

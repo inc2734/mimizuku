@@ -6,5 +6,4 @@
  */
 
 $sidebar = apply_filters( 'mimizuku_sidebar', 'sidebar' );
-$slug    = wpvc_config( 'sidebar' );
-get_template_part( $slug . '/' . $sidebar );
+wpvc_get_sidebar_template( $sidebar );

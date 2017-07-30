@@ -54,16 +54,21 @@ themes/mimizuku
 │  ├─ composer-packages    # Loads composer packages
 │  ├─ controller           # View controller
 │  ├─ setup                # Setup mimizuku
-│  └─ customizer           # Theme customizer
+│  ├─ customizer           # Theme customizer
+│  └─ templates
+│     ├─ layout            # Mimizuku default layout templates
+│     └─ view              # Mimizuku default view templates
 ├─ resources               # Theme resources. Templates and assets that you normally use for themes are included here.
 │  ├─ app                  # Setup theme (customizable)
 │  ├─ templates
 │  │  ├─ layout            # Layout templates
-│  │  └─ view              # View templates
+│  │  ├─ view              # View templates
+│  │  └─ static            # Static view templates
 │  ├─ index.php
 │  ├─ functions.php
 │  ├─ ...
 ├─ functions.php           # Mimizuku bootstrap
+├─ index.php               # Never edit
 ├─ style.css               # Theme meta information
 ```
 

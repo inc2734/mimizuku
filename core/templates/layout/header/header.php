@@ -5,5 +5,4 @@
  * @license GPL-2.0+
  */
 
-$slug = wpvc_config( 'footer' );
-get_template_part( $slug . '/simple' );
+wpvc_get_header_template( '2row' );
