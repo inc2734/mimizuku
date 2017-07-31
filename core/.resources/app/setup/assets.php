@@ -12,6 +12,10 @@ add_action( 'wp_enqueue_scripts', function() {
 	$src  = get_theme_file_uri( '/resources/assets/css/style.min.css' );
 	$path = get_theme_file_path( '/resources/assets/css/style.min.css' );
 
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
+
 	wp_enqueue_style(
 		get_stylesheet(),
 		$src,
@@ -35,6 +39,10 @@ add_action( 'wp_enqueue_scripts', function() {
 add_action( 'wp_enqueue_scripts', function() {
 	$src  = get_theme_file_uri( '/resources/assets/js/app.min.js' );
 	$path = get_theme_file_path( '/resources/assets/js/app.min.js' );
+
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
 
 	wp_enqueue_script(
 		get_stylesheet(),
