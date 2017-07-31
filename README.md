@@ -79,6 +79,11 @@ themes/mimizuku
 1. /core/templates/\*\*/\*.php
 2. /resources/templates/\*\*/\*.php
 
+#### Custo page templates
+1. /core/page-templates/\*.php
+2. /resources/page-templates/\*.php
+3. /page-templats/\*.php
+
 #### Base templates
 1. /core/\*.php
 2. /resources/\*.php
