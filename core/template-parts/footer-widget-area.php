@@ -5,13 +5,15 @@
  * @license GPL-2.0+
  */
 
-if ( is_active_sidebar( 'footer-widgets-area' ) ) {
+if ( ! is_active_sidebar( 'footer-widget-area' ) ) {
 	return;
 }
 ?>
 
 <div class="l-footer-widget-area">
 	<div class="c-container">
-		<?php dynamic_sidebar( 'footer-widgets-area' ); ?>
+		<div class="c-row c-row--margin">
+			<?php dynamic_sidebar( 'footer-widget-area' ); ?>
+		</div>
 	</div>
 </div>

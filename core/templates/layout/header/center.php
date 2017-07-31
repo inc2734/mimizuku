@@ -8,13 +8,17 @@
 <header class="l-header" role="banner">
 	<div class="c-container">
 		<div class="c-row c-row--middle">
-			<div class="c-row__col c-row__col--auto c-row__col--lg-1-1">
-				<?php get_template_part( 'core/template-parts/site-branding' ); ?>
+			<div class="c-row__col c-row__col--3-5 c-row__col--offset-1-5 c-row__col--lg-1-1 c-row__col--lg-offset-0">
+				<div class="u-text-center">
+					<?php get_template_part( 'core/template-parts/site-branding' ); ?>
+				</div>
 			</div>
 
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
-				<div class="c-row__col c-row__col--auto u-hidden-lg u-text-right">
-					<?php get_template_part( 'core/template-parts/hamburger-btn' ); ?>
+				<div class="c-row__col c-row__col--1-5 u-hidden-lg">
+					<div class="u-pull-right">
+						<?php get_template_part( 'core/template-parts/hamburger-btn' ); ?>
+					</div>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -28,7 +32,6 @@
 					$args = array_merge( $args, [
 						'container'       => 'div',
 						'container_class' => 'c-container',
-						'menu_class'      => 'c-navbar',
 					] );
 				}
 				return $args;

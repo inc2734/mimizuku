@@ -13,8 +13,10 @@
 			</div>
 
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
-				<div class="c-row__col c-row__col--1-2 u-hidden-lg u-text-right">
-					<?php get_template_part( 'core/template-parts/hamburger-btn' ); ?>
+				<div class="c-row__col c-row__col--1-2 u-hidden-lg">
+					<div class="u-pull-right">
+						<?php get_template_part( 'core/template-parts/hamburger-btn' ); ?>
+					</div>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -24,7 +26,7 @@
 		<div class="u-hidden-sm u-hidden-md">
 			<?php
 			add_filter( 'wp_nav_menu_args', function( $args ) {
-				if ( 'global-nav' == $args['theme_location'] ) {
+				if ( 'global-nav' === $args['theme_location'] ) {
 					$args = array_merge( $args, [
 						'container'       => 'div',
 						'container_class' => 'c-container',

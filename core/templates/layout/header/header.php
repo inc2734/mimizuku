@@ -5,4 +5,4 @@
  * @license GPL-2.0+
  */
 
-wpvc_get_header_template( '2row' );
+wpvc_get_header_template( get_theme_mod( 'header-layout' ) );
