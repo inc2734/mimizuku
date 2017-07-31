@@ -31,6 +31,10 @@ add_filter( 'inc2734_view_controller_config', function( $config ) {
 			'resources',
 			'core',
 		],
+		'page-templates' => [
+			'resources/page-templates',
+			'core/page-templates',
+		],
 		'layout' => [
 			'resources/templates/layout/wrapper',
 			'core/templates/layout/wrapper',

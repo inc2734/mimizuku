@@ -55,11 +55,13 @@ themes/mimizuku
 │  ├─ controller           # View controller
 │  ├─ setup                # Setup mimizuku
 │  ├─ customizer           # Theme customizer
+│  ├─ page-template        # Default custom page templates
 │  └─ templates
-│     ├─ layout            # Mimizuku default layout templates
-│     └─ view              # Mimizuku default view templates
+│     ├─ layout            # Default layout templates
+│     └─ view              # Default view templates
 ├─ resources               # Theme resources. Templates and assets that you normally use for themes are included here.
 │  ├─ app                  # Setup theme (customizable)
+│  ├─ page-template        # Custom page templates
 │  ├─ templates
 │  │  ├─ layout            # Layout templates
 │  │  ├─ view              # View templates

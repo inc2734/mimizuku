@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76673427f9aea573860787293be38f0e",
-    "content-hash": "742e246909f13fb7b3717241761e92be",
+    "hash": "58e4ab4789152948708c616e4a7b17f1",
+    "content-hash": "042fc91ca1837b4541c650ec31b3525a",
     "packages": [
         {
             "name": "inc2734/wp-basis",
@@ -401,16 +401,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "10267f4866efe1eaad0b30b83305235488c3a2e4"
+                "reference": "2628522209bb9f6309b0ca08a3b67a409dd29cfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/10267f4866efe1eaad0b30b83305235488c3a2e4",
-                "reference": "10267f4866efe1eaad0b30b83305235488c3a2e4",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/2628522209bb9f6309b0ca08a3b67a409dd29cfd",
+                "reference": "2628522209bb9f6309b0ca08a3b67a409dd29cfd",
                 "shasum": ""
             },
             "require": {
@@ -436,7 +436,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-07-30 04:46:47"
+            "time": "2017-07-31 01:41:04"
         }
     ],
     "packages-dev": [
