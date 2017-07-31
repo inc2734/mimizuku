@@ -9,3 +9,5 @@ packages/
 /bin/*.xml
 wprepository/
 mimizuku.zip
+/resources/*
+!/resources/.gitkeep

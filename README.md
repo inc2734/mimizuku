@@ -27,11 +27,20 @@ Mimizuku is a WordPress starter theme or theme framework for child themes develo
 $ cd /PATH/TO/wp-content/themes
 $ git clone https://github.com/inc2734/mimizuku.git your-theme-name
 $ cd your-theme-name
-$ composer install (and auto building)
+$ composer install
+$ composer scaffold
+$ yarn install
+$ yarn run gulp build
 $ wp theme activate your-theme-name
 ```
 
-* Replace `mimizuku` to `your_theme_name` in \*\*.php and \*\*.js
+* Replace `/resources/languages/mimizuku.pot` to `/resources/languages/your-theme-name.pot`
+* Replace `Text Domain: mimizuku` to `Text Domain: your-theme-name` in `/style.css`
+* Replace `apply_filters( 'mimizuku` to `apply_filters( 'your_theme_name` in \*\*.php
+* Replace `do_action( 'mimizuku` to `do_action( 'your_theme_name` in \*\*.php
+* Replace `add_filter( 'mimizuku` to `add_filter( 'your_theme_name` in \*\*.php
+* Replace `add_action( 'mimizuku` to `add_action( 'your_theme_name` in \*\*.php
+* Replace `mimizuku` to `your-theme-name` in \*\*.php and \*\*.js
 * Replace `Mimizuku` to `Your_Theme_Name` in \*\*.php and \*\*.js
 
 ### Using as parent theme
@@ -72,6 +81,7 @@ themes/mimizuku
 ├─ functions.php           # Mimizuku bootstrap
 ├─ index.php               # Never edit
 ├─ style.css               # Theme meta information
+├─ .gitignore
 ```
 
 ### Template hierarchical
