@@ -7,12 +7,12 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
-<?php get_template_part( 'resources/template-parts/head' ); ?>
+<?php get_template_part( 'core/template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'mimizuku_prepend_body' ); ?>
 
-	<?php get_template_part( 'resources/template-parts/drawer-nav' ); ?>
+	<?php get_template_part( 'core/template-parts/drawer-nav' ); ?>
 	<div class="l-container">
 		<?php wpvc_get_header(); ?>
 

@@ -68,10 +68,10 @@ add_filter( 'inc2734_view_controller_config', function( $config ) {
  * - Sets up the custom template tags
  */
 $includes = array(
-	'/core/composer-packages',
-	'/core/controller',
-	'/core/setup',
-	'/core/customizer',
+	'/core/app/composer-packages',
+	'/core/app/controller',
+	'/core/app/setup',
+	'/core/app/customizer',
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {

@@ -19,7 +19,7 @@
 					?>
 					<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 						<?php
-						wpvc_get_template_part( 'resources/template-parts/comment', [
+						wpvc_get_template_part( 'core/template-parts/comment', [
 							'_comment' => $comment,
 							'_args'    => $args,
 							'_depth'   => $depth,

@@ -9,19 +9,19 @@
 	<div class="c-container">
 		<div class="c-row c-row--middle">
 			<div class="c-row__col c-row__col--auto">
-				<?php get_template_part( 'resources/template-parts/site-branding' ); ?>
+				<?php get_template_part( 'core/template-parts/site-branding' ); ?>
 			</div>
 
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
 				<div class="c-row__col c-row__col--auto u-hidden-lg">
-					<?php get_template_part( 'resources/template-parts/hamburger-btn' ); ?>
+					<?php get_template_part( 'core/template-parts/hamburger-btn' ); ?>
 				</div>
 			<?php endif; ?>
 
 			<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 				<div class="c-row__col c-row__col--auto u-hidden-sm u-hidden-md">
 					<div class="u-pull-right">
-						<?php get_template_part( 'resources/template-parts/global-nav' ); ?>
+						<?php get_template_part( 'core/template-parts/global-nav' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>

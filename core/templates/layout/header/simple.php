@@ -7,6 +7,6 @@
 ?>
 <header class="l-header" role="banner">
 	<div class="c-container">
-		<?php get_template_part( 'resources/template-parts/site-branding' ); ?>
+		<?php get_template_part( 'core/template-parts/site-branding' ); ?>
 	</div>
 </header>

@@ -12,7 +12,7 @@ if ( post_password_required() ) {
 
 <aside class="p-response">
 	<?php
-	get_template_part( 'resources/template-parts/comments' );
-	get_template_part( 'resources/template-parts/pings' );
+	get_template_part( 'core/template-parts/comments' );
+	get_template_part( 'core/template-parts/pings' );
 	?>
 </aside>
