@@ -401,7 +401,7 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",

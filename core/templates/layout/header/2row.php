@@ -9,13 +9,13 @@
 	<div class="c-container">
 		<div class="c-row c-row--middle">
 			<div class="c-row__col c-row__col--1-2 c-row__col--lg-1-1">
-				<?php get_template_part( 'core/template-parts/site-branding' ); ?>
+				<?php get_template_part( '../core/template-parts/site-branding' ); ?>
 			</div>
 
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
 				<div class="c-row__col c-row__col--1-2 u-hidden-lg">
 					<div class="u-pull-right">
-						<?php get_template_part( 'core/template-parts/hamburger-btn' ); ?>
+						<?php get_template_part( '../core/template-parts/hamburger-btn' ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -34,7 +34,7 @@
 				}
 				return $args;
 			} );
-			get_template_part( 'core/template-parts/global-nav' );
+			get_template_part( '../core/template-parts/global-nav' );
 			?>
 		</div>
 	<?php endif; ?>

@@ -6,5 +6,5 @@
  */
 
 if ( ! class_exists( 'Inc2734_WP_Breadcrumbs' ) ) {
-	include_once( get_theme_file_path( '/vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' ) );
+	include_once( get_template_directory() . '/../vendor/inc2734/wp-breadcrumbs/src/wp-breadcrumbs.php' );
 }

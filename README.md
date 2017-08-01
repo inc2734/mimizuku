@@ -68,19 +68,17 @@ themes/mimizuku
 │  └─ templates
 │     ├─ layout            # Default layout templates
 │     └─ view              # Default view templates
-├─ resources               # Theme resources. Templates and assets that you normally use for themes are included here.
-│  ├─ app                  # Setup theme (customizable)
+├─ resources               # The theme root
+│  ├─ app                  # Setup theme
 │  ├─ page-template        # Custom page templates
 │  ├─ templates
 │  │  ├─ layout            # Layout templates
 │  │  ├─ view              # View templates
 │  │  └─ static            # Static view templates
+│  ├─ style.css            # Theme meta information
 │  ├─ index.php
 │  ├─ functions.php
 │  ├─ ...
-├─ functions.php           # Mimizuku bootstrap
-├─ index.php               # Never edit
-├─ style.css               # Theme meta information
 ├─ .gitignore
 ```
 

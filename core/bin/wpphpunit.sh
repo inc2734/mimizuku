@@ -3,7 +3,7 @@
 set -e;
 
 themedir=$(pwd)
-if [ ! -e style.css ]; then
+if [ ! -e resources/style.css ]; then
   echo 'Current directory is not a theme.'
   echo $(pwd)
   exit 1
@@ -23,7 +23,7 @@ if [ -e ${themedir}/core/bin/install-wp-tests.sh ]; then
   fi
 
   bash "${themedir}/core/bin/install-wp-tests.sh" wordpress_test root '' localhost latest;
-  vendor/bin/phpunit --configuration= ${themedir}/tests/phpunit.xml
+  vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
 else
   echo "${themedir}/core/bin/install-wp-tests.sh not found."
 fi;

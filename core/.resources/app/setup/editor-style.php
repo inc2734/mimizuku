@@ -12,6 +12,6 @@
  */
 add_action( 'after_setup_theme', function() {
 	add_editor_style( [
-		'resources/assets/css/editor-style.min.css',
+		'assets/css/editor-style.min.css',
 	] );
 } );

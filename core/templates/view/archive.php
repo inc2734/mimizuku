@@ -9,9 +9,9 @@
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		<li class="c-entries__item">
-			<?php get_template_part( 'core/template-parts/entry-summary' ); ?>
+			<?php get_template_part( '../core/template-parts/entry-summary' ); ?>
 		</li>
 	<?php endwhile; ?>
 </ul>
 
-<?php get_template_part( 'core/template-parts/pagination' ); ?>
+<?php get_template_part( '../core/template-parts/pagination' ); ?>

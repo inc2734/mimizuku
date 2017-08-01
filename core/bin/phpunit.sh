@@ -3,14 +3,14 @@
 if [ -e /tmp/wordpress-tests-lib ]; then
 
   themedir=$(pwd)
-  if [ ! -e style.css ]; then
+  if [ ! -e resources/style.css ]; then
     echo 'Current directory is not a theme.'
     echo $(pwd)
     exit 1
   fi
 
   cd ${themedir};
-  vendor/bin/phpunit --configuration= ${themedir}/tests/phpunit.xml
+  vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
   exit 0
 fi
 

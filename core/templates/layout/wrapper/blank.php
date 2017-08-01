@@ -7,7 +7,7 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
-<?php get_template_part( 'core/template-parts/head' ); ?>
+<?php get_template_part( '../core/template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
 	<?php $_view_controller->view(); ?>

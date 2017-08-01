@@ -7,18 +7,18 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
-<?php get_template_part( 'core/template-parts/head' ); ?>
+<?php get_template_part( '../core/template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'mimizuku_prepend_body' ); ?>
 
-	<?php get_template_part( 'core/template-parts/drawer-nav' ); ?>
+	<?php get_template_part( '../core/template-parts/drawer-nav' ); ?>
 	<div class="l-container">
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
 			<div class="c-container">
-				<?php get_template_part( 'core/template-parts/breadcrumbs' ); ?>
+				<?php get_template_part( '../core/template-parts/breadcrumbs' ); ?>
 
 				<div class="c-row c-row--margin">
 					<div class="c-row__col c-row__col--1-1 c-row__col--md-8-10 c-row__col--md-offset-1-10 c-row__col--lg-4-6 c-row__col--lg-offset-1-6">

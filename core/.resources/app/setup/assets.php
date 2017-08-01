@@ -9,8 +9,8 @@
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	$src  = get_theme_file_uri( '/resources/assets/css/style.min.css' );
-	$path = get_theme_file_path( '/resources/assets/css/style.min.css' );
+	$src  = get_theme_file_uri( '/assets/css/style.min.css' );
+	$path = get_theme_file_path( '/assets/css/style.min.css' );
 
 	if ( ! file_exists( $path ) ) {
 		return;
@@ -37,8 +37,8 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	$src  = get_theme_file_uri( '/resources/assets/js/app.min.js' );
-	$path = get_theme_file_path( '/resources/assets/js/app.min.js' );
+	$src  = get_theme_file_uri( '/assets/js/app.min.js' );
+	$path = get_theme_file_path( '/assets/js/app.min.js' );
 
 	if ( ! file_exists( $path ) ) {
 		return;

@@ -12,7 +12,7 @@
 
 	<div class="c-entry__content">
 		<?php the_content(); ?>
-		<?php get_template_part( 'core/template-parts/link-pages' ); ?>
+		<?php get_template_part( '../core/template-parts/link-pages' ); ?>
 	</div>
 </article>
 
