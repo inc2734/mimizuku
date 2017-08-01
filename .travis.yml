@@ -32,7 +32,7 @@ before_script:
 script:
 - composer scaffold
 - yarn run gulp build
-- ls -la style.css index.php vendor/autoload.php
+- ls -la resources/style.css resources/index.php resources/vendor/autoload.php
 - composer test
 after_success:
 - bash ./core/bin/wprepository.sh
