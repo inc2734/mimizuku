@@ -1,7 +1,115 @@
 .#{$_prefix}l-header {
 	background-color: #fff;
+}
 
-	&--center {
-		text-align: center;
-	}
+/**
+ * 1row header
+ */
+.#{$_prefix}l-1row-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &__branding {
+    flex: 1 0 auto;
+  }
+
+  &__for-wide {
+    flex: 0 1 auto;
+
+    @include _hidden();
+    @include _media-min(lg) {
+      @include _visible();
+    }
+  }
+
+  &__for-narrow {
+    flex: 0 1 0%;
+
+    @include _media-min(lg) {
+      @include _hidden();
+    }
+  }
+}
+
+/**
+ * 2rows header
+ */
+.#{$_prefix}l-2row-header {
+  &__row {
+    @include _container();
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    @include _media-min(lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__branding {
+    flex: 1 0 auto;
+  }
+
+  &__for-wide {
+    flex: none;
+    width: 100%;
+
+    @include _hidden();
+    @include _media-min(lg) {
+      @include _visible();
+    }
+  }
+
+  &__for-narrow {
+    flex: 0 1 0%;
+
+    @include _media-min(lg) {
+      @include _hidden();
+    }
+  }
+}
+
+/**
+ * centered header
+ */
+.#{$_prefix}l-center-header {
+  &__row {
+    @include _container();
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    @include _media-min(lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__branding {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  &__for-wide {
+    flex: 0 1 auto;
+
+    @include _hidden();
+    @include _media-min(lg) {
+      @include _visible();
+    }
+  }
+
+  &__for-narrow {
+    flex: 0 0 50px;
+    max-width: 100%;
+    text-align: right;
+
+    @include _media-min(lg) {
+      @include _hidden();
+    }
+  }
 }

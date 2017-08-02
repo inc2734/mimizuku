@@ -54,15 +54,3 @@ $control->join( $section );
 
 $control = $customizer->get_control( 'footer-widget-area-column-size' );
 $control->join( $section );
-
-
-add_action( 'wp_head', function() {
-	$footer_widgets_area_size = get_theme_mod( 'footer-widget-area-column-size' );
-	$footer_widgets_area_size = explode( '-', $footer_widgets_area_size );
-	$footer_widgets_area_size = $footer_widgets_area_size[0] / $footer_widgets_area_size[1] * 100;
-	?>
-<style>
-.l-footer-widget-area__item { -ms-flex: 0 1 <?php echo esc_html( $footer_widgets_area_size ); ?>%; flex: 0 1 <?php echo esc_html( $footer_widgets_area_size ); ?>%; max-width: <?php echo esc_html( $footer_widgets_area_size ); ?>%; }
-</style>
-	<?php
-} );
