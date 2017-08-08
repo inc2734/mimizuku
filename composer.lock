@@ -4,9 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "58e4ab4789152948708c616e4a7b17f1",
-    "content-hash": "042fc91ca1837b4541c650ec31b3525a",
+    "hash": "27cf0ad4734f754d7ec3f9f87700ef50",
+    "content-hash": "35fc9ddfbfc3f63e414098cdf2521abb",
     "packages": [
+        {
+            "name": "inc2734/wp-awesome-widgets",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-awesome-widgets.git",
+                "reference": "40494a04553f837d43164bbb85a659ee52c188c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/40494a04553f837d43164bbb85a659ee52c188c4",
+                "reference": "40494a04553f837d43164bbb85a659ee52c188c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Awesome_Widgets\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library to add some awesome widgets for WordPress.",
+            "time": "2017-08-08 12:26:14"
+        },
         {
             "name": "inc2734/wp-basis",
             "version": "0.3.0",
@@ -87,16 +126,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "929e3b9007bb14f4dc9540c87cef5a8ebbfd1682"
+                "reference": "2d5c62f95b8ea2e104e777cb26042841cb066bd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/929e3b9007bb14f4dc9540c87cef5a8ebbfd1682",
-                "reference": "929e3b9007bb14f4dc9540c87cef5a8ebbfd1682",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/2d5c62f95b8ea2e104e777cb26042841cb066bd8",
+                "reference": "2d5c62f95b8ea2e104e777cb26042841cb066bd8",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +161,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2017-07-23 11:18:50"
+            "time": "2017-08-02 12:52:19"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -405,12 +444,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "2628522209bb9f6309b0ca08a3b67a409dd29cfd"
+                "reference": "75200eb4b88a23fe05f94c4aedfbd883bc57ffd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/2628522209bb9f6309b0ca08a3b67a409dd29cfd",
-                "reference": "2628522209bb9f6309b0ca08a3b67a409dd29cfd",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/75200eb4b88a23fe05f94c4aedfbd883bc57ffd2",
+                "reference": "75200eb4b88a23fe05f94c4aedfbd883bc57ffd2",
                 "shasum": ""
             },
             "require": {
@@ -436,7 +475,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-07-31 01:41:04"
+            "time": "2017-08-01 06:33:18"
         }
     ],
     "packages-dev": [

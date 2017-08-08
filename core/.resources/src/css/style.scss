@@ -22,6 +22,11 @@ $wp-share-buttons-font-path: '../../..' !default;
 @import '../../../vendor/inc2734/wp-pure-css-gallery/src/assets/scss/wp-pure-css-gallery';
 
 /**
+ * Import WP Awesome Widgets
+ */
+@import '../../../vendor/inc2734/wp-awesome-widgets/src/assets/scss/wp-awesome-widgets';
+
+/**
  * Import FontAwesome
  */
 $fa-font-path: '../../assets/packages/font-awesome/fonts' !default;

@@ -144,5 +144,8 @@ themes/mimizuku
 ### inc2734/wp-pure-css-gallery
 * Source: https://github.com/inc2734/wp-pure-css-gallery
 
+### inc2734/wp-awesome-widgets
+* Source: https://github.com/inc2734/wp-awesome-widgets
+
 ## Official goods store
 https://suzuri.jp/inc2734/products

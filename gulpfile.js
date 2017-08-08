@@ -98,10 +98,17 @@ function sassCompile(src, dest) {
  * Build javascript
  */
 gulp.task('js', function() {
-  gulp.src(dir.src.js + '/**/*.js')
+  runSequence('js:app');
+});
+gulp.task('js:app', function() {
+  return jsCompile('app.js');
+});
+
+function jsCompile(distFileName) {
+  return gulp.src(dir.src.js + '/**/*.js')
     .pipe(rollup({
       allowRealFiles: true,
-      entry: dir.src.js + '/app.js',
+      entry: dir.src.js + '/' + distFileName,
       format: 'iife',
       external: ['jquery', '_', 'Backbone'],
       globals: {
@@ -118,12 +125,12 @@ gulp.task('js', function() {
     }))
     .pipe(gulp.dest(dir.dist.js))
     .on('end', function() {
-      gulp.src([dir.dist.js + '/app.js'])
+      gulp.src([dir.dist.js + '/' + distFileName])
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(dir.dist.js));
     });
-});
+}
 
 /**
  * Build

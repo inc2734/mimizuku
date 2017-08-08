@@ -48,7 +48,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		get_stylesheet(),
 		$src,
 		[ 'jquery' ],
-		$path,
+		filemtime( $path ),
 		true
 	);
 } );
