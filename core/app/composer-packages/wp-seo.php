@@ -8,5 +8,3 @@
 if ( ! class_exists( 'Inc2734_WP_SEO' ) ) {
 	include_once( get_template_directory() . '/../vendor/inc2734/wp-seo/src/wp-seo.php' );
 }
-
-new Inc2734_WP_SEO();

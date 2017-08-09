@@ -32,7 +32,15 @@
     "theme-unit-test": "bash core/bin/theme-unit-test.sh",
     "theme-unit-test-ja": "bash core/bin/theme-unit-test-ja.sh",
     "wpphpunit": "bash core/bin/wpphpunit.sh",
-    "phpunit": "bash core/bin/phpunit.sh"
+    "phpunit": "bash core/bin/phpunit.sh",
+    "post-install-cmd": [
+      "cd vendor/inc2734/wp-basis && yarn install && yarn upgrade",
+      "yarn run gulp build"
+    ],
+    "post-update-cmd": [
+      "cd vendor/inc2734/wp-basis && yarn install && yarn upgrade",
+      "yarn run gulp build"
+    ]
   },
   "autoload": {
     "psr-4": {
@@ -44,13 +52,13 @@
     "inc2734/wp-breadcrumbs": "~0.3.1",
     "inc2734/wp-oembed-blog-card": "~0.2.4",
     "inc2734/wp-view-controller": "~2.1.2",
-    "inc2734/wp-basis": "~0.3.0",
+    "inc2734/wp-basis": "~0.4.0",
     "inc2734/wp-customizer-framework": "~2.0.3",
     "inc2734/wp-github-theme-updater": "~0.1.0",
     "inc2734/wp-share-buttons": "~0.5.0",
     "inc2734/wp-seo": "~0.3.0",
     "inc2734/wp-like-me-box": "~0.1.0",
     "inc2734/wp-pure-css-gallery": "~0.1.0",
-    "inc2734/wp-awesome-widgets": "^0.1.0"
+    "inc2734/wp-awesome-widgets": "~0.1.1"
   }
 }

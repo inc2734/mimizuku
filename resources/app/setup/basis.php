@@ -6,5 +6,7 @@
  */
 
 if ( ! class_exists( 'Inc2734_WP_Basis' ) ) {
-	include_once( get_template_directory() . '/../vendor/inc2734/wp-basis/src/wp-basis.php' );
+	return;
 }
+
+new Inc2734_WP_Basis();

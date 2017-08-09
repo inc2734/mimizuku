@@ -15,6 +15,7 @@ include_once( __DIR__ . '/../core/app/bootstrap.php' );
  */
 $includes = array(
 	'/app/setup',
+	'/app/customizer',
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {

@@ -43,9 +43,7 @@ gulp.task('remove-packages-dir', function(cb) {
  */
 gulp.task('packages', ['remove-packages-dir'], function(cb) {
   var packages = [
-    dir.src.packages + '/font-awesome/**',
-    dir.src.packages + '/sass-basis/**',
-    dir.src.packages + '/sass-basis-*/**'
+    dir.src.packages + '/font-awesome/**'
   ];
   return gulp.src(packages, {base: 'node_modules'})
     .pipe(gulp.dest(dir.dist.packages));

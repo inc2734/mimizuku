@@ -6,5 +6,7 @@
  */
 
 if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets' ) ) {
-	include_once( get_template_directory() . '/../vendor/inc2734/wp-awesome-widgets/src/wp-awesome-widgets.php' );
+	return;
 }
+
+new Inc2734_WP_Awesome_Widgets();

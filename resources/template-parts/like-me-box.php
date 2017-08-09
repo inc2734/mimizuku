@@ -5,6 +5,13 @@
  * @license GPL-2.0+
  */
 
+
+if ( ! class_exists( 'Inc2734_WP_Like_Me_Box' ) ) {
+	return;
+}
+
+new Inc2734_WP_Like_Me_Box();
+
 if ( ! get_theme_mod( 'facebook-page-name' ) ) {
 	return;
 }

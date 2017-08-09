@@ -6,5 +6,5 @@
  */
 ?>
 <aside class="l-sidebar" role="complementary">
-	<?php get_template_part( '../core/template-parts/sidebar-widget-area' ); ?>
+	<?php get_template_part( 'template-parts/sidebar-widget-area' ); ?>
 </aside>

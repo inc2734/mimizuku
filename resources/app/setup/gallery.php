@@ -6,5 +6,7 @@
  */
 
 if ( ! class_exists( 'Inc2734_WP_Pure_CSS_Gallery' ) ) {
-	include_once( get_template_directory() . '/../vendor/inc2734/wp-pure-css-gallery/src/wp-pure-css-gallery.php' );
+	return;
 }
+
+new Inc2734_WP_Pure_CSS_Gallery();

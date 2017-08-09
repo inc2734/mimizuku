@@ -5,6 +5,12 @@
  * @license GPL-2.0+
  */
 
+if ( ! class_exists( 'Inc2734_WP_Share_Buttons' ) ) {
+	return;
+}
+
+new Inc2734_WP_Share_Buttons();
+
 /**
  * Set count cache time
  *

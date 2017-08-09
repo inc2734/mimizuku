@@ -6,5 +6,7 @@
  */
 
 if ( ! class_exists( 'Inc2734_WP_oEmbed_Blog_Card' ) ) {
-	include_once( get_template_directory() . '/../vendor/inc2734/wp-oembed-blog-card/src/wp-oembed-blog-card.php' );
+	return;
 }
+
+new Inc2734_WP_oEmbed_Blog_Card();

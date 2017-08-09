@@ -4,6 +4,5 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-?>
-<aside role="complementary">
-</aside>
+
+wpvc_get_wrapper_template( 'right-sidebar' );

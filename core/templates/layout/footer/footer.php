@@ -4,5 +4,7 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-
-wpvc_get_footer_template( 'simple' );
+?>
+<footer role="content-info">
+	<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+</footer>

@@ -6,31 +6,12 @@
  */
 ?>
 <article <?php post_class(); ?>>
-	<header class="c-entry__header">
-		<h1 class="c-entry__title"><?php the_title(); ?></h1>
-		<div class="c-entry__meta">
-			<?php get_template_part( '../core/template-parts/entry-meta' ); ?>
-		</div>
+	<header>
+		<h1><?php the_title(); ?></h1>
 	</header>
 
-	<div class="c-entry__content">
-		<?php
-		wpvc_get_template_part( '../core/template-parts/share-buttons', [
-			'_position' => 'top',
-		] );
-		?>
-
-		<?php the_content(); ?>
-		<?php get_template_part( '../core/template-parts/link-pages' ); ?>
-
-		<?php
-		wpvc_get_template_part( '../core/template-parts/share-buttons', [
-			'_position' => 'bottom',
-		] );
-		?>
-
-		<?php get_template_part( '../core/template-parts/like-me-box' ); ?>
-	</div>
+	<?php the_content(); ?>
+	<?php wp_link_pages(); ?>
 </article>
 
 <?php

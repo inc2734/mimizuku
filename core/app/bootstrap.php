@@ -70,7 +70,6 @@ $includes = array(
 	'/composer-packages',
 	'/controller',
 	'/setup',
-	'/customizer',
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {

@@ -11,13 +11,13 @@
 
 <body <?php body_class(); ?>>
 
-	<?php get_template_part( '../core/template-parts/drawer-nav' ); ?>
+	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<div class="l-container">
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents">
 			<div class="c-container">
-				<?php get_template_part( '../core/template-parts/breadcrumbs' ); ?>
+				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 
 				<div class="c-row c-row--margin c-row--reverse">
 					<div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4">

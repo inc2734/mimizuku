@@ -9,18 +9,18 @@
 	<div class="c-container">
 		<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header">
 			<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header__branding">
-				<?php get_template_part( '../core/template-parts/site-branding' ); ?>
+				<?php get_template_part( 'template-parts/site-branding' ); ?>
 			</div>
 
 			<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 				<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header__for-wide">
-					<?php get_template_part( '../core/template-parts/global-nav' ); ?>
+					<?php get_template_part( 'template-parts/global-nav' ); ?>
 				</div>
 			<?php endif; ?>
 
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
 				<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header__for-narrow">
-					<?php get_template_part( '../core/template-parts/hamburger-btn' ); ?>
+					<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
 				</div>
 			<?php endif; ?>
 		</div>
