@@ -28,7 +28,6 @@ $ cd /PATH/TO/wp-content/themes
 $ git clone https://github.com/inc2734/mimizuku.git your-theme-name
 $ cd your-theme-name
 $ composer install
-$ composer scaffold
 $ yarn install
 $ yarn run gulp build
 $ wp theme activate your-theme-name

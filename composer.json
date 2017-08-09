@@ -28,7 +28,6 @@
       "bash core/bin/phpunit.sh"
     ],
     "server": "bash core/bin/server.sh",
-    "scaffold": "bash core/bin/scaffold.sh",
     "scaffold-tests": "bash core/bin/scaffold-tests.sh",
     "theme-unit-test": "bash core/bin/theme-unit-test.sh",
     "theme-unit-test-ja": "bash core/bin/theme-unit-test-ja.sh",

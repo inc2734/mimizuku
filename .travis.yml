@@ -30,7 +30,6 @@ install:
 before_script:
 - bash core/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 script:
-- composer scaffold
 - yarn run gulp build
 - ls -la resources/style.css resources/index.php vendor/autoload.php
 - composer test
