@@ -16,7 +16,8 @@
     "wp-coding-standards/wpcs": "*",
     "phpmd/phpmd": "2.*",
     "phpunit/phpunit": "^5.7",
-    "doctrine/instantiator": "1.0.5"
+    "doctrine/instantiator": "1.0.5",
+    "phpunit/php-token-stream": "1.4.11"
   },
   "config": {
     "process-timeout": 0
