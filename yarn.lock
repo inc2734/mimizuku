@@ -2574,6 +2574,10 @@ node-gyp@^3.3.1:
     tar "^2.0.0"
     which "1"
 
+node-normalize-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/node-normalize-scss/-/node-normalize-scss-3.0.0.tgz#119bf5d5bb71160465e9f1204c41f691d26ecf77"
+
 node-pre-gyp@^0.6.36:
   version "0.6.36"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.36.tgz#db604112cb74e0d477554e9b505b17abddfab786"
