@@ -159,7 +159,7 @@ gulp.task('release', function(){
   return gulp.src(
       [
         '**',
-        '.git'
+        '.git',
         '!README.md',
         '!tests',
         '!tests/**',
