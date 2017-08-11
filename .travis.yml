@@ -36,7 +36,7 @@ script:
 - # yarn run gulp build  # Because Mimizuku builded after composer install
 - ls -la resources/style.css resources/index.php vendor/autoload.php
 - composer test
-- bash ./core/bin/create-release-breanch.sh
+- bash ./core/bin/create-release-branch.sh
 after_success:
 - pwd
 before_deploy:
