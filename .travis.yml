@@ -22,6 +22,8 @@ cache:
   - "$HOME/.composer/cache"
 before_install:
 - openssl aes-256-cbc -K $encrypted_73c066875ca0_key -iv $encrypted_73c066875ca0_iv -in .travis/github_deploy_key.enc -out .travis/github_deploy_key -d
+- mv .travis/github_deploy_key ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
 install:
 - nvm install 6
 - npm install -g yarn
@@ -43,6 +45,7 @@ deploy:
   api_key:
     secure: c0SMC9+92PsvtyxEtweKCaYD2W6jMKECdVe7a0Arq7A8rMEO2ZkbewauBNAVagV51+WcTaboomAVlWz4P71WkwEv12/O0bB22e2qa2UIAIx8JhlR4Apkl/8HhydPP8fmqUGTnVs4t2sWuDBeL5Nz6sGHUKJXAWrAoyVsVbBlrk1cNfTwwKqIFTVgblUanzY+g0K4OivHdM06Pb9PvTDowE8ojo6oss8yT4BH40IDofhLasVFsp60LMJ7duvCjxt+Y69e//DIiVitCvHqk+VmoTDS7aT/+B4I35MH/diAhTfjuTYH3Dl6fNFFmUjuM0Re54ZFsSErMcgpjc/BL0LwuK42fYzzXs2QBQ7sLcEdkndHovtWOX8tSOz8HH75JsgZMjBxUUUOrOMBvRgqrCTC0D1R+cdYlvvPz4FtYBRiuQDL3uhugAUM60BKIMVG3TS9BA+hVwuVbfANuIARVMEHx77p8a8fsD3qofORqnAR4TcgsUa9Mtzqw6WrOoPT1NBVvxhFXpuFSZwXhMYXrenecuLqi0T3MvKQEf4cEOLEiu9/zznjH3xgXmXtczlp11arunU+Ar1NaMDSYlgNhO/ix8QJM3oAVYrfUXkIA5/3kVR/Lou+yN2ZopQhL3MQpjHJZyCjksZpKyPfqHb77mCp1QMWe1ruJLDZRh/XgRYGNC0=
   file: mimizuku.zip
+  skip_cleanup: true
   on:
     tags: true
     repo: inc2734/mimizuku
