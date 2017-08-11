@@ -4,24 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9162773515825504b931837731330128",
-    "content-hash": "a9040631b5ece2920d8cf0e36b60f6c9",
+    "hash": "60e2c0c62a30655aabab988e11ae5291",
+    "content-hash": "c016eb424db47d88f5a06e98a540b7dd",
     "packages": [
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "fad05244f1af3cdfd796ad0b5034466090a32c8c"
+                "reference": "e255618fa9940c317d274a51730ce53dd934ccb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/fad05244f1af3cdfd796ad0b5034466090a32c8c",
-                "reference": "fad05244f1af3cdfd796ad0b5034466090a32c8c",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/e255618fa9940c317d274a51730ce53dd934ccb6",
+                "reference": "e255618fa9940c317d274a51730ce53dd934ccb6",
                 "shasum": ""
             },
             "require": {
+                "inc2734/wp-view-controller": "^2.1",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -44,7 +45,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2017-08-09 13:13:03"
+            "time": "2017-08-10 10:43:08"
         },
         {
             "name": "inc2734/wp-basis",
@@ -485,12 +486,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
                 "shasum": ""
             },
             "require": {

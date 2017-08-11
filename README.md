@@ -74,7 +74,8 @@ themes/mimizuku
 │  ├─ templates
 │  │  ├─ layout            # Layout templates
 │  │  ├─ view              # View templates
-│  │  └─ static            # Static view templates
+│  │  ├─ static            # Static view templates
+│  │  └─ widget            # Templates for WP Awesome Widgets
 │  ├─ style.css            # Theme meta information
 │  ├─ index.php
 │  ├─ functions.php

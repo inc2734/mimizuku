@@ -8,7 +8,7 @@
 <section class="c-entry-summary">
 	<div class="c-flex-media">
 		<?php $thumbnail_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>
-		<div class="c-flex-media__figure"
+		<div class="c-flex-media__figure c-entry-summary__figure"
 			<?php if ( $thumbnail_url ) : ?>
 				style="background-image: url( <?php echo esc_url( $thumbnail_url ); ?> );"
 			<?php endif; ?>
