@@ -26,7 +26,7 @@ yarn install
 yarn run gulp release
 cd release
 composer install --no-dev
-rm -rf composer.json composer.lock
+rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js
 ls -la
 
 git add -A

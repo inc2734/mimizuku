@@ -171,8 +171,6 @@ gulp.task('release', ['build'], function(){
         '!release',
         '!release/**',
         '!.*',
-        '!package.json',
-        '!yarn.lock',
         '!codesniffer.ruleset.xml',
         '!phpmd.ruleset.xml',
         '!phpunit.xml',
