@@ -159,7 +159,6 @@ gulp.task('release', function(){
   return gulp.src(
       [
         '**',
-        '.git',
         '!README.md',
         '!tests',
         '!tests/**',
@@ -176,10 +175,7 @@ gulp.task('release', function(){
         '!phpunit.xml',
         '!mimizuku.zip'
       ],
-      {
-        base: './',
-        dot: true
-      }
+      {base: './'}
     )
     .pipe(gulp.dest('release'));
 });
@@ -192,8 +188,8 @@ gulp.task('zip', ['build'], function(){
   return gulp.src(
       [
         '**',
-      ]
-      , {base: './'}
+      ],
+      {base: './'}
     )
     .pipe(zip('mimizuku.zip'))
     .pipe(gulp.dest('./'));
