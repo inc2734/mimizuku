@@ -162,6 +162,8 @@ gulp.task('release', ['build'], function(){
         '!README.md',
         '!tests',
         '!tests/**',
+        '!node_modules',
+        '!node_modules/**',
         '!vendor',
         '!vendor/**',
         '!core/bin',
