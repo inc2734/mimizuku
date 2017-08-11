@@ -39,7 +39,10 @@ script:
 after_success:
 - bash ./core/bin/release.sh
 before_deploy:
-- bash ./core/bin/zip.sh
+- git clone -b release --quiet git@github.com:inc2734/mimizuku.git release
+- cd release
+- yarn run gulp zip
+- mv mimizuku.zip ../
 deploy:
   provider: releases
   api_key:
