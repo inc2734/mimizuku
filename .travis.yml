@@ -36,11 +36,14 @@ script:
 - # yarn run gulp build  # Because Mimizuku builded after composer install
 - ls -la resources/style.css resources/index.php vendor/autoload.php
 - composer test
+- bash ./core/bin/create-release-dir.sh
 after_success:
-- bash ./core/bin/release.sh
-before_deploy:
-- git clone -b release --quiet git@github.com:inc2734/mimizuku.git release
 - cd release
+- git add -A
+- git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
+- git push origin release
+before_deploy:
+- pwd
 - yarn run gulp zip
 - mv mimizuku.zip ../
 deploy:

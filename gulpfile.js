@@ -177,7 +177,10 @@ gulp.task('release', ['build'], function(){
         '!phpunit.xml',
         '!mimizuku.zip'
       ],
-      {base: './'}
+      {
+        base: './',
+        dot: true
+      }
     )
     .pipe(gulp.dest('release'));
 });
