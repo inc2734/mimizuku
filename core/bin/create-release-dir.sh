@@ -29,3 +29,4 @@ ls -la
 yarn install
 composer install --no-dev
 rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js node_modules .gitignore
+cd ../

@@ -42,8 +42,9 @@ after_success:
 - git add -A
 - git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
 - git push origin release
+- cd ../
 before_deploy:
-- pwd
+- cd release
 - yarn run gulp zip
 - mv mimizuku.zip ../
 deploy:
