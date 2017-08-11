@@ -25,9 +25,9 @@ cd ../
 yarn install
 yarn run gulp release
 cd release
+ls -la
 composer install --no-dev
 rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js node_modules
-ls -la
 
 git add -A
 git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
