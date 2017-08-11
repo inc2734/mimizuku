@@ -160,6 +160,8 @@ gulp.task('release', ['build'], function(){
       [
         '**',
         '!README.md',
+        '!.editorconfig',
+        '!.travis.yml',
         '!tests',
         '!tests/**',
         '!node_modules',
