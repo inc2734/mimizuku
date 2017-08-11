@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-if ( ! class_exists( 'Inc2734_WP_SEO' ) ) {
-	return;
-}
+use Inc2734\WP_SEO\SEO;
 
-new Inc2734_WP_SEO();
+new SEO();
 
 /**
  * Google Analytics Tracking ID

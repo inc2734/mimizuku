@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-if ( ! class_exists( 'Inc2734_WP_Share_Buttons' ) ) {
-	return;
-}
+use Inc2734\WP_Share_Buttons\Share_Buttons;
 
-new Inc2734_WP_Share_Buttons();
+new Share_Buttons();
 
 /**
  * Set count cache time

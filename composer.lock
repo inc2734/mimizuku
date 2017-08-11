@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "60e2c0c62a30655aabab988e11ae5291",
-    "content-hash": "c016eb424db47d88f5a06e98a540b7dd",
+    "hash": "618255ac9ce58cf22cc8385d07643d9f",
+    "content-hash": "c539bdffc9499b85e38f64043a870a4b",
     "packages": [
         {
             "name": "inc2734/wp-awesome-widgets",
@@ -49,16 +49,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "0.4.0",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "58e5765122e87e34efb3460bb93a0dc1e5bb4ca3"
+                "reference": "c2ed18defb5e1e0aeec2efb99b16d3547725b250"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/58e5765122e87e34efb3460bb93a0dc1e5bb4ca3",
-                "reference": "58e5765122e87e34efb3460bb93a0dc1e5bb4ca3",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/c2ed18defb5e1e0aeec2efb99b16d3547725b250",
+                "reference": "c2ed18defb5e1e0aeec2efb99b16d3547725b250",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2017-08-09 13:12:18"
+            "time": "2017-08-11 07:34:12"
         },
         {
             "name": "inc2734/wp-breadcrumbs",

@@ -5,10 +5,12 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_View_Controller\View_Controller;
+
 /**
  * View controller class
  */
-class Mimizuku_Controller extends Inc2734_WP_View_Controller {
+class Mimizuku_Controller extends View_Controller {
 
 	public function __construct() {
 		parent::__construct();

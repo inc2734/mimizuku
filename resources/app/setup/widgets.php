@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets' ) ) {
-	return;
-}
+use Inc2734\WP_Awesome_Widgets\Awesome_Widgets;
 
-new Inc2734_WP_Awesome_Widgets();
+new Awesome_Widgets();

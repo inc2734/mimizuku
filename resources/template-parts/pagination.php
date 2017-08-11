@@ -5,14 +5,12 @@
  * @license GPL-2.0+
  */
 
-global $wp_query;
+use Inc2734\WP_Basis\App\Model\Pagination;
 
-if ( ! class_exists( 'Inc2734_WP_Basis' ) ) {
-	return;
-}
+global $wp_query;
 
 if ( empty( $wp_query->max_num_pages ) || $wp_query->max_num_pages < 2 ) {
 	return;
 }
 
-wpbasis_the_posts_pagination();
+Pagination::the_posts_pagination();

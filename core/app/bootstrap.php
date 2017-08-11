@@ -13,6 +13,11 @@
 load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
 
 /**
+ * Uses composer autoloader
+ */
+require_once( get_theme_file_path( '/../vendor/autoload.php' ) );
+
+/**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -61,13 +66,11 @@ add_filter( 'inc2734_view_controller_config', function( $config ) {
 } );
 
 /**
- * - Loads composer packages
  * - Sets up the hooked functions
  * - Sets up the customizer
  * - Sets up the custom template tags
  */
 $includes = array(
-	'/composer-packages',
 	'/controller',
 	'/setup',
 );

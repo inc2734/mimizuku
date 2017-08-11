@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-if ( ! class_exists( 'Inc2734_WP_Pure_CSS_Gallery' ) ) {
-	return;
-}
+use Inc2734\WP_Pure_CSS_Gallery\Pure_CSS_Gallery;
 
-new Inc2734_WP_Pure_CSS_Gallery();
+new Pure_CSS_Gallery();

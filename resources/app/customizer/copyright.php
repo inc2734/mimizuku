@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+
 $theme_link = sprintf(
 	'<a href="https://2inc.org" target="_blank">%s</a>',
 	__( 'Monkey Wrench', 'mimizuku' )
@@ -19,7 +21,7 @@ $theme_by   = sprintf( __( 'mimizuku theme by %s', 'mimizuku' ), $theme_link );
 $powered_by = sprintf( __( 'Powered by %s', 'mimizuku' ), $wordpress_link );
 $copyright  = $theme_by . ' ' . $powered_by;
 
-$customizer = Inc2734_WP_Customizer_Framework::init();
+$customizer = Customizer_Framework::init();
 
 $customizer->section( 'copyright', [
 	'title' => __( 'Copyright', 'mimizuku' ),

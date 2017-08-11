@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-if ( ! class_exists( 'Inc2734_WP_Basis' ) ) {
-	return;
-}
+use Inc2734\WP_Basis\App\Model\Pagination;
 
-wpbasis_the_wp_link_pages();
+Pagination::the_wp_link_pages();

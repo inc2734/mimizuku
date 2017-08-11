@@ -4,10 +4,10 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-?>
 
-<?php
-$breadcrumbs = new Inc2734_WP_Breadcrumbs();
+use Inc2734\WP_Breadcrumbs\Breadcrumbs;
+
+$breadcrumbs = new Breadcrumbs();
 $items = apply_filters( 'mimizuku_breadcrumbs', $breadcrumbs->get() );
 ?>
 

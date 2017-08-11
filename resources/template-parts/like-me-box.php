@@ -5,12 +5,9 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_Like_Me_Box\Like_Me_Box;
 
-if ( ! class_exists( 'Inc2734_WP_Like_Me_Box' ) ) {
-	return;
-}
-
-new Inc2734_WP_Like_Me_Box();
+new Like_Me_Box();
 
 if ( ! get_theme_mod( 'facebook-page-name' ) ) {
 	return;

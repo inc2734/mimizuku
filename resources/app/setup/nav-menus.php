@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_Basis\App\Model\Global_Nav;
+use Inc2734\WP_Basis\App\Model\Drawer_Nav;
+
 /**
  * Registers wp_nav_menu() menus
  *
@@ -18,10 +21,5 @@ add_action( 'after_setup_theme', function() {
 	] );
 } );
 
-if ( class_exists( 'Inc2734_WP_Basis' ) ) {
-	wp_basis_drawer_navigation( 'drawer-nav' );
-}
-
-if ( class_exists( 'Inc2734_WP_Basis' ) ) {
-	wp_basis_global_navigation( 'global-nav' );
-}
+new Global_Nav( 'global-nav' );
+new Drawer_Nav( 'drawer-nav' );

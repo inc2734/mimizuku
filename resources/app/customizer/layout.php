@@ -5,7 +5,9 @@
  * @license GPL-2.0+
  */
 
-$customizer = Inc2734_WP_Customizer_Framework::init();
+use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+
+$customizer = Customizer_Framework::init();
 
 $customizer->section( 'layout', [
 	'title' => __( 'Layout', 'mimizuku' ),

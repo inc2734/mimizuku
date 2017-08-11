@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-if ( ! class_exists( 'Inc2734_WP_oEmbed_Blog_Card' ) ) {
-	return;
-}
+use Inc2734\WP_oEmbed_Blog_Card\oEmbed_Blog_Card;
 
-new Inc2734_WP_oEmbed_Blog_Card();
+new oEmbed_Blog_Card();
