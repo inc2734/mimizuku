@@ -26,8 +26,9 @@ yarn install
 yarn run gulp release
 cd release
 ls -la
+npm install -g gulp && npm install --save-dev gulp # Because somehow gulp: not found
 composer install --no-dev
-rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js node_modules
+rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js node_modules .*
 
 git add -A
 git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"

@@ -36,7 +36,7 @@
     "wpphpunit": "bash core/bin/wpphpunit.sh",
     "phpunit": "bash core/bin/phpunit.sh",
     "post-install-cmd": [
-      "cd vendor/inc2734/wp-basis && yarn install && yarn upgrade && cd ../../../ && pwd && ls -la && yarn run gulp build"
+      "cd vendor/inc2734/wp-basis && yarn install && yarn upgrade && cd ../../../ && yarn run gulp build"
     ],
     "post-update-cmd": [
       "composer run post-install-cmd"

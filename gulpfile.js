@@ -168,7 +168,6 @@ gulp.task('release', ['build'], function(){
         '!core/bin/**',
         '!release',
         '!release/**',
-        '!.*',
         '!codesniffer.ruleset.xml',
         '!phpmd.ruleset.xml',
         '!phpunit.xml',
