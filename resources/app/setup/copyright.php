@@ -6,5 +6,5 @@
  */
 
 add_filter( 'mimizuku_copyright', function( $copyright ) {
-	return get_theme_mod( 'copyright' );
+	return get_option( 'inc2734-theme-option-copyright' );
 } );

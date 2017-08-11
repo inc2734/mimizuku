@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "618255ac9ce58cf22cc8385d07643d9f",
-    "content-hash": "c539bdffc9499b85e38f64043a870a4b",
+    "hash": "29f80eb81ad78166f93d55e340618d7c",
+    "content-hash": "2f4c676ed0ccb42b9402882e8d28e258",
     "packages": [
         {
             "name": "inc2734/wp-awesome-widgets",
@@ -127,16 +127,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "2d5c62f95b8ea2e104e777cb26042841cb066bd8"
+                "reference": "2daf7f92bc9e593df15af5f3bf4973fc20199bfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/2d5c62f95b8ea2e104e777cb26042841cb066bd8",
-                "reference": "2d5c62f95b8ea2e104e777cb26042841cb066bd8",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/2daf7f92bc9e593df15af5f3bf4973fc20199bfb",
+                "reference": "2daf7f92bc9e593df15af5f3bf4973fc20199bfb",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2017-08-02 12:52:19"
+            "time": "2017-08-11 08:54:53"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -361,16 +361,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "d8989334f3d473627ceaa18725f594de1e9e2ef6"
+                "reference": "b98cc2b40b62823dc3d04a48f61ee4be74f39028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/d8989334f3d473627ceaa18725f594de1e9e2ef6",
-                "reference": "d8989334f3d473627ceaa18725f594de1e9e2ef6",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/b98cc2b40b62823dc3d04a48f61ee4be74f39028",
+                "reference": "b98cc2b40b62823dc3d04a48f61ee4be74f39028",
                 "shasum": ""
             },
             "require": {
@@ -397,7 +397,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2017-07-27 12:19:12"
+            "time": "2017-08-11 08:51:38"
         },
         {
             "name": "inc2734/wp-share-buttons",

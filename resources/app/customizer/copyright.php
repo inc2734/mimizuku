@@ -27,12 +27,13 @@ $customizer->section( 'copyright', [
 	'title' => __( 'Copyright', 'mimizuku' ),
 ] );
 
-$customizer->control( 'text', 'copyright', [
+$customizer->control( 'text', 'inc2734-theme-option-copyright', [
 	'label'       => __( 'Copyright', 'mimizuku' ),
 	'description' => __( 'HTML usable', 'mimizuku' ),
 	'default'     => $copyright,
+	'type'        => 'option',
 ] );
 
 $section = $customizer->get_section( 'copyright' );
-$control = $customizer->get_control( 'copyright' );
+$control = $customizer->get_control( 'inc2734-theme-option-copyright' );
 $control->join( $section );

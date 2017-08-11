@@ -9,7 +9,9 @@ use Inc2734\WP_Like_Me_Box\Like_Me_Box;
 
 new Like_Me_Box();
 
-if ( ! get_theme_mod( 'facebook-page-name' ) ) {
+$facebook_page_name = get_option( 'inc2734-theme-option-facebook-page-name' );
+
+if ( ! $facebook_page_name ) {
 	return;
 }
 
@@ -29,4 +31,4 @@ add_filter( 'inc2734_wp_like_me_box_thumbnail', function( $thumbnail ) {
 	return $thumbnail;
 } );
 
-echo do_shortcode( '[wp_like_me_box facebook_page_name="' . get_theme_mod( 'facebook-page-name' ) . '"]' );
+echo do_shortcode( '[wp_like_me_box facebook_page_name="' . $facebook_page_name . '"]' );
