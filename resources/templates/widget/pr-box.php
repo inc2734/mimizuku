@@ -6,7 +6,7 @@
  */
 ?>
 
-<?php echo $args['before_widget']; ?>
+<?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div class="wpaw-pr-box" id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>">
 		<div class="c-container">
@@ -22,7 +22,7 @@
 			<?php endif; ?>
 
 			<div class="wpaw-pr-box__row wpaw-pr-box__row--<?php echo esc_attr( $instance['sm-columns'] ); ?> wpaw-pr-box__row--md-<?php echo esc_attr( $instance['md-columns'] ); ?>  wpaw-pr-box__row--lg-<?php echo esc_attr( $instance['lg-columns'] ); ?>">
-				<?php foreach( $instance['items'] as $item ) : ?>
+				<?php foreach ( $instance['items'] as $item ) : ?>
 					<div class="wpaw-pr-box__item">
 						<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $instance['thumbnail-aspect-ratio'] ); ?>"
 							style="background-image: url( <?php echo esc_url( wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] ) ); ?> );"
@@ -47,4 +47,4 @@
 		</div>
 	</div>
 
-<?php echo $args['after_widget']; ?>
+<?php echo wp_kses_post( $args['after_widget'] ); ?>

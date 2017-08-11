@@ -6,7 +6,7 @@
  */
 ?>
 
-<?php echo $args['before_widget']; ?>
+<?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-showcase"
@@ -15,7 +15,7 @@
 		>
 
 		<div class="wpaw-showcase__mask"
-			style="background-color: <?php echo sanitize_hex_color( $instance['mask-color'] ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
+			style="background-color: <?php echo esc_attr( sanitize_hex_color( $instance['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
 		></div>
 
 		<div class="c-container">
@@ -52,4 +52,4 @@
 
 	</div>
 
-<?php echo $args['after_widget']; ?>
+<?php echo wp_kses_post( $args['after_widget'] ); ?>
