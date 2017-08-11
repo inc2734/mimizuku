@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-rm -rf wprepository
-yarn run gulp wprepository
-cd wprepository
-composer install --no-dev
-cd ../
+git clone -b release --quiet git@github.com:inc2734/mimizuku.git release
+cd release
 yarn run gulp zip
+mv mimizuku.zip ../

@@ -7,5 +7,5 @@ npm-debug.log
 packages/
 *.sql
 /bin/*.xml
-wprepository/
+release/
 mimizuku.zip

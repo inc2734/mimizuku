@@ -152,9 +152,10 @@ gulp.task('browsersync', function() {
 });
 
 /**
- * Creates directory for wprepository
+ * Creates directory for release branch.
+ * Copy needed source files and build on Travis CI.
  */
-gulp.task('wprepository', ['build'], function(){
+gulp.task('release', ['build'], function(){
   return gulp.src(
       [
         '**',
@@ -167,24 +168,31 @@ gulp.task('wprepository', ['build'], function(){
         '!vendor/**',
         '!core/bin',
         '!core/bin/**',
-        '!wprepository',
-        '!wprepository/**',
+        '!release',
+        '!release/**',
+        '!.*',
+        '!package.json',
+        '!yarn.lock',
+        '!codesniffer.ruleset.xml',
+        '!phpmd.ruleset.xml',
+        '!phpunit.xml',
         '!mimizuku.zip'
       ],
       {base: './'}
     )
-    .pipe(gulp.dest('wprepository'));
+    .pipe(gulp.dest('release'));
 });
 
 /**
  * Creates the zip file
+ * This command must be build beforehand on Travis CI !!
  */
-gulp.task('zip', ['wprepository'], function(){
+gulp.task('zip', ['build'], function(){
   return gulp.src(
       [
-        'wprepository/**',
+        '**',
       ]
-      , {base: './wprepository'}
+      , {base: './'}
     )
     .pipe(zip('mimizuku.zip'))
     .pipe(gulp.dest('./'));
