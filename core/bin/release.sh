@@ -8,7 +8,7 @@ if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
 fi
 
 if [[ "master" != "$TRAVIS_BRANCH" ]]; then
-  #echo "Not on the 'master' branch."
+  echo "Not on the 'master' branch."
   #exit
 fi
 
