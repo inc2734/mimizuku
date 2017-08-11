@@ -155,13 +155,12 @@ gulp.task('browsersync', function() {
  * Creates directory for release branch.
  * Copy needed source files and build on Travis CI.
  */
-gulp.task('release', ['build'], function(){
+gulp.task('release', function(){
   return gulp.src(
       [
         '**',
+        '.git'
         '!README.md',
-        '!.editorconfig',
-        '!.travis.yml',
         '!tests',
         '!tests/**',
         '!node_modules',
