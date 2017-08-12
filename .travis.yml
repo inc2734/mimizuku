@@ -39,6 +39,7 @@ script:
 - bash core/bin/create-release-branch.sh
 after_success:
 - pwd
+- ls -al
 before_deploy:
 - cd release
 - yarn run gulp zip
