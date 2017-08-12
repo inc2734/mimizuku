@@ -42,7 +42,9 @@ after_success:
 - ls -al
 before_deploy:
 - git clone -b release --quiet git@github.com:inc2734/mimizuku.git release
+- cp package.json gulpfile.js yarn.lock release
 - cd release
+- yarn install
 - yarn run gulp zip
 - mv mimizuku.zip ../
 deploy:

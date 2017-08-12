@@ -184,10 +184,15 @@ gulp.task('release', function(){
  * Creates the zip file
  * This command must be build beforehand on Travis CI !!
  */
-gulp.task('zip', ['build'], function(){
+gulp.task('zip', function(){
   return gulp.src(
       [
         '**',
+        '!node_modules',
+        '!node_modules/**',
+        '!package.json',
+        '!gulpfile.js',
+        '!yarn.lock',
       ],
       {base: './'}
     )
