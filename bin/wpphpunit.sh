@@ -11,7 +11,7 @@ fi
 
 cd ${themedir}
 
-if [ -e ${themedir}/core/bin/install-wp-tests.sh ]; then
+if [ -e ${themedir}/bin/install-wp-tests.sh ]; then
   echo 'DROP DATABASE IF EXISTS wordpress_test;' | mysql -u root
 
   if [ -e /tmp/wordpress ]; then
@@ -22,8 +22,8 @@ if [ -e ${themedir}/core/bin/install-wp-tests.sh ]; then
     rm -fr /tmp/wordpress-tests-lib
   fi
 
-  bash "${themedir}/core/bin/install-wp-tests.sh" wordpress_test root '' localhost latest;
+  bash "${themedir}/bin/install-wp-tests.sh" wordpress_test root '' localhost latest;
   vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
 else
-  echo "${themedir}/core/bin/install-wp-tests.sh not found."
+  echo "${themedir}/bin/install-wp-tests.sh not found."
 fi;

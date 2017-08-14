@@ -3,7 +3,7 @@
   "description": "Mimizuku is a WordPress starter theme or theme framework for child themes development.",
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "authors": [
     {
       "name": "Takashi Kitajima",
@@ -19,6 +19,10 @@
     "doctrine/instantiator": "1.0.4",
     "phpunit/php-token-stream": "1.4.11"
   },
+  "require": {
+    "php": ">=5.6",
+    "inc2734/mimizuku-core": "^0.1.0"
+  },
   "config": {
     "process-timeout": 0
   },
@@ -27,14 +31,14 @@
       "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
       "vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
       "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
-      "bash core/bin/phpunit.sh"
+      "bash bin/phpunit.sh"
     ],
-    "server": "bash core/bin/server.sh",
-    "scaffold-tests": "bash core/bin/scaffold-tests.sh",
-    "theme-unit-test": "bash core/bin/theme-unit-test.sh",
-    "theme-unit-test-ja": "bash core/bin/theme-unit-test-ja.sh",
-    "wpphpunit": "bash core/bin/wpphpunit.sh",
-    "phpunit": "bash core/bin/phpunit.sh",
+    "server": "bash bin/server.sh",
+    "scaffold-tests": "bash bin/scaffold-tests.sh",
+    "theme-unit-test": "bash bin/theme-unit-test.sh",
+    "theme-unit-test-ja": "bash bin/theme-unit-test-ja.sh",
+    "wpphpunit": "bash bin/wpphpunit.sh",
+    "phpunit": "bash bin/phpunit.sh",
     "post-install-cmd": [
       "cd vendor/inc2734/wp-basis && yarn install && yarn upgrade && cd ../../../ && yarn run gulp build"
     ],
@@ -46,19 +50,5 @@
     "psr-4": {
       "Mimizuku\\": ""
     }
-  },
-  "require": {
-    "php": ">=5.6",
-    "inc2734/wp-breadcrumbs": "~0.3.1",
-    "inc2734/wp-oembed-blog-card": "~0.2.4",
-    "inc2734/wp-view-controller": "~2.1.2",
-    "inc2734/wp-basis": "~0.4.1",
-    "inc2734/wp-customizer-framework": "~2.0.4",
-    "inc2734/wp-github-theme-updater": "~0.1.0",
-    "inc2734/wp-share-buttons": "~0.5.0",
-    "inc2734/wp-seo": "~0.3.1",
-    "inc2734/wp-like-me-box": "~0.1.0",
-    "inc2734/wp-pure-css-gallery": "~0.1.0",
-    "inc2734/wp-awesome-widgets": "~0.2.0"
   }
 }

@@ -5,10 +5,31 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Core;
+
+/**
+* Uses composer autoloader
+*/
+require_once( get_theme_file_path( '/../vendor/autoload.php' ) );
+
+/**
+ * Make theme available for translation
+ *
+ * @return void
+ */
+load_theme_textdomain( 'mimizuku', get_template_directory() . '/languages' );
+
 /**
  * Loads Mimizuku Bootstrap
  */
-include_once( __DIR__ . '/../core/app/bootstrap.php' );
+new Core();
+
+/**
+ * Sets the content width in pixels, based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = apply_filters( 'mimizuku_content_width', 1152 );
+}
 
 /**
  * Loads theme setup files

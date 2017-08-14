@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30047adf3214fb5f0b96b8d7d7eeb687",
-    "content-hash": "51b02c559ec98fa36bd187858c3b774d",
+    "hash": "b7b559e05f3e8c8c76d54e5490ec620a",
+    "content-hash": "a4158f683f1b6eac5515445f6654afd6",
     "packages": [
+        {
+            "name": "inc2734/mimizuku-core",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/mimizuku-core.git",
+                "reference": "bfbc5a3d0065d5fd080e783ce38cb5c29ba2fe6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/bfbc5a3d0065d5fd080e783ce38cb5c29ba2fe6d",
+                "reference": "bfbc5a3d0065d5fd080e783ce38cb5c29ba2fe6d",
+                "shasum": ""
+            },
+            "require": {
+                "inc2734/wp-awesome-widgets": "~0.2.0",
+                "inc2734/wp-basis": "~0.4.1",
+                "inc2734/wp-breadcrumbs": "~0.3.1",
+                "inc2734/wp-customizer-framework": "~2.0.4",
+                "inc2734/wp-github-theme-updater": "~0.1.0",
+                "inc2734/wp-like-me-box": "~0.1.0",
+                "inc2734/wp-oembed-blog-card": "~0.2.4",
+                "inc2734/wp-pure-css-gallery": "~0.1.0",
+                "inc2734/wp-seo": "~0.3.1",
+                "inc2734/wp-share-buttons": "~0.5.0",
+                "inc2734/wp-view-controller": "~2.1.2",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\Mimizuku_Core\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "This library is core of WordPress theme mimizuku",
+            "time": "2017-08-14 00:55:07"
+        },
         {
             "name": "inc2734/wp-awesome-widgets",
             "version": "0.2.0",

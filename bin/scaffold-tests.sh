@@ -19,15 +19,15 @@ else
   exit 1;
 fi
 
-phar extract -f $(which wp) "$themedir/core/bin/wp.phar">/dev/null 2>&1
-wpclidir="$themedir/core/bin/wp.phar$(which wp)"
+phar extract -f $(which wp) "$themedir/bin/wp.phar">/dev/null 2>&1
+wpclidir="$themedir/bin/wp.phar$(which wp)"
 
-if [ ! -e "$themedir/core/bin" ]; then
-	echo "$themedir/core/bin is not exsists."
+if [ ! -e "$themedir/bin" ]; then
+	echo "$themedir/bin is not exsists."
   exit 1;
 fi
 
-cp -f "$wpclidir/templates/install-wp-tests.sh" "$themedir/core/bin/install-wp-tests.sh"
+cp -f "$wpclidir/templates/install-wp-tests.sh" "$themedir/bin/install-wp-tests.sh"
 
 cp -f "$wpclidir/templates/phpunit.xml.dist" "$themedir/phpunit.xml"
 
@@ -51,5 +51,5 @@ else
   echo "$themedir/tests/test-sample.php is alerady exsists."
 fi
 
-rm -rf "$themedir/core/bin/wp.phar"
+rm -rf "$themedir/bin/wp.phar"
 echo "done!"

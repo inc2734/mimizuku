@@ -31,12 +31,12 @@ install:
 - npm rebuild node-sass
 - composer install
 before_script:
-- bash core/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 script:
 - # yarn run gulp build  # Because Mimizuku builded after composer install
 - ls -la resources/style.css resources/index.php vendor/autoload.php
 - composer test
-- bash core/bin/create-release-branch.sh
+- bash bin/create-release-branch.sh
 after_success:
 - pwd
 - ls -al
