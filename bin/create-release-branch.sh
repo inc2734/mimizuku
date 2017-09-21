@@ -12,7 +12,7 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
   exit
 fi
 
-if [[ "7" != "$TRAVIS_PHP_VERSION" ]]; then
+if [[ "7.1" != "$TRAVIS_PHP_VERSION" ]]; then
 	echo "deploy only PHP 7"
 	exit
 fi
@@ -22,13 +22,13 @@ cd release
 ls | xargs rm -rf
 ls -la
 cd ../
+rm -rf node_modules
 yarn install
-yarn run gulp release
+rm -rf vendor
+composer install --no-dev
+cp -r resources/. release/
 cd release
 ls -la
-yarn install
-composer install --no-dev
-rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js node_modules .editorconfig .gitignore .travis.yml .travis
 sed -i.org -e '/^node_modules/d' vendor/inc2734/wp-basis/.gitignore
 echo node_modules/* >> vendor/inc2734/wp-basis/.gitignore
 echo !node_modules/sass-basis >> vendor/inc2734/wp-basis/.gitignore

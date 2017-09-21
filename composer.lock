@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69afe02e06999134945f5d9abe414b58",
-    "content-hash": "839473959cb9d49abb94d9fecd0a0274",
+    "hash": "b8eb852cc3663bc6398cff7547489cc0",
+    "content-hash": "60f9279a00f7ab65b4fd79fb85e9b759",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "0.5.2",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "350aae4c679b1d9414d40ca5633fa4e057304d92"
+                "reference": "c0c6f6a056d21fec0e156f52412aa5cf99864dcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/350aae4c679b1d9414d40ca5633fa4e057304d92",
-                "reference": "350aae4c679b1d9414d40ca5633fa4e057304d92",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c0c6f6a056d21fec0e156f52412aa5cf99864dcb",
+                "reference": "c0c6f6a056d21fec0e156f52412aa5cf99864dcb",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-09-15 09:25:04"
+            "time": "2017-09-21 14:00:12"
         },
         {
             "name": "inc2734/wp-awesome-components",

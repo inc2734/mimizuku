@@ -61,7 +61,7 @@ if ( ! $related_posts ) {
 }
 ?>
 <aside class="p-related-posts c-entry-aside">
-	<h2 class="p-related-posts__title c-entry-aside__title"><span><?php esc_html_e( 'Related posts', 'snow-monkey' ); ?></span></h2>
+	<h2 class="p-related-posts__title c-entry-aside__title"><span><?php esc_html_e( 'Related posts', 'mimizuku' ); ?></span></h2>
 	<ul class="c-entries">
 		<?php foreach ( $related_posts as $post ) : ?>
 			<?php setup_postdata( $post ); ?>

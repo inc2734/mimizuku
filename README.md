@@ -66,6 +66,7 @@ themes/mimizuku
 │  │  ├─ view              # View templates
 │  │  ├─ static            # Static view templates
 │  │  └─ widget            # Templates for WP Awesome Widgets
+│  ├─ vendor               # Composer packages
 │  ├─ style.css            # Theme meta information
 │  ├─ index.php
 │  ├─ functions.php
@@ -75,7 +76,7 @@ themes/mimizuku
 
 ### Template hierarchical
 #### Layout templates
-1. /vendor/inc2734/mimizuku-core/src/view/templates/\*\*/\*.php
+1. /resources/vendor/inc2734/mimizuku-core/src/view/templates/\*\*/\*.php
 2. /resources/templates/\*\*/\*.php
 
 #### Custo page templates
@@ -83,7 +84,7 @@ themes/mimizuku
 2. /page-templats/\*.php
 
 #### Base templates
-1. /vendor/inc2734/mimizuku-core/src/view/\*.php
+1. /resources/vendor/inc2734/mimizuku-core/src/view/\*.php
 2. /resources/\*.php
 3. /\*.php
 
