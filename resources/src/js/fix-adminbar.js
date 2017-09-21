@@ -5,9 +5,9 @@ import $ from 'jquery';
 export default class FixAdminBar {
   constructor() {
     this.min       = 599;
-    this.container = $('[data-l="container"]');
-    this.header    = $('[data-l="header"]');
-    this.contents  = $('[data-l="contents"]');
+    this.container = $('.l-container');
+    this.header    = $('.l-header');
+    this.contents  = $('.l-contents');
 
     $(() => {
       this.adminBar  = $('#wpadminbar');

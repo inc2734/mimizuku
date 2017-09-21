@@ -1,82 +1,35 @@
 @charset 'utf-8';
 
-/**
- * Import WP oEmbed Blog Card
- */
-@import '../../../vendor/inc2734/wp-oembed-blog-card/src/assets/scss/wp-oembed-blog-card';
+@import 'setting';
 
-/**
- * Import WP Share Buttons
- */
-@import '../../../vendor/inc2734/wp-share-buttons/src/assets/scss/wp-share-buttons';
+#tinymce {
+  margin: 10px;
+}
 
-/**
- * Import WP Like Me Box
- */
-@import '../../../vendor/inc2734/wp-like-me-box/src/assets/scss/wp-like-me-box';
+@import 'foundation/_foundation/foundation';
+@import 'object/component/_entry/entry';
 
-/**
- * Import WP Pure CSS Gallery
- */
-@import '../../../vendor/inc2734/wp-pure-css-gallery/src/assets/scss/wp-pure-css-gallery';
+body.#{$_prefix}c-entry__content {
+  @import 'foundation/wordpress/_align/align';
+  @import 'foundation/wordpress/_bypostauthor/bypostauthor';
+  @import 'foundation/wordpress/_gallery/gallery';
+  @import 'foundation/wordpress/_screen-reader-text/screen-reader-text';
+  @import 'foundation/wordpress/_single-attachment/single-attachment';
+  @import 'foundation/wordpress/_sticky/sticky';
+  @import 'foundation/wordpress/_wp-caption/wp-caption';
 
-/**
- * Import FontAwesome
- */
-$fa-font-path: '../../assets/packages/font-awesome/fonts' !default;
-@import '../../assets/packages/font-awesome/scss/font-awesome';
+  @import 'object/component/_drawer/drawer';
+  @import 'object/component/_entries/entries';
+  @import 'object/component/_entry-summary/entry-summary';
+  @import 'object/component/_hamburger-btn/hamburger-btn';
+  @import 'object/component/_meta/meta';
+  @import 'object/component/_site-branding/site-branding';
+  @import 'object/component/_responsive-container/responsive-container';
+  @import 'object/component/_comment/comment';
 
-/**
- * Import Basis
- */
-$_font-path: '../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
-@import '../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/css/basis';
-
-/**
- * Foundation
- */
-@import 'foundation/foundation';
-@import 'foundation/wordpress/align';
-@import 'foundation/wordpress/bypostauthor';
-@import 'foundation/wordpress/gallery';
-@import 'foundation/wordpress/screen-reader-text';
-@import 'foundation/wordpress/single-attachment';
-@import 'foundation/wordpress/sticky';
-@import 'foundation/wordpress/wp-caption';
-
-/**
- * Layout
- */
-@import 'layout/container';
-@import 'layout/contents';
-@import 'layout/footer';
-@import 'layout/header';
-@import 'layout/main';
-
-/**
- * Object - Component
- */
-@import 'object/component/drawer';
-@import 'object/component/entries';
-@import 'object/component/entry';
-@import 'object/component/entry-summary';
-@import 'object/component/hamburger-btn';
-@import 'object/component/meta';
-@import 'object/component/site-branding';
-@import 'object/component/responsive-container';
-
-/**
- * Object - Project
- */
-@import 'object/project/comment';
-@import 'object/project/comments';
-@import 'object/project/global-nav';
-@import 'object/project/search-form';
-@import 'object/project/trackbacks';
-
-/**
- * TinyMCE
- */
-body#tinymce {
-	margin: 10px;
+  @import 'object/project/_comments/comments';
+  @import 'object/project/_global-nav/global-nav';
+  @import 'object/project/_search-form/search-form';
+  @import 'object/project/_trackbacks/trackbacks';
+  @import 'object/project/_social-nav/social-nav';
 }

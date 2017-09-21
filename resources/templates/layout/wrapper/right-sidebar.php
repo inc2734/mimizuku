@@ -9,7 +9,7 @@
 <html <?php language_attributes(); ?> data-sticky-footer="true">
 <?php get_template_part( '../vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( [ 'l-body--right-sidebar' ] ); ?>>
 	<?php do_action( 'mimizuku_prepend_body' ); ?>
 
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
@@ -17,19 +17,18 @@
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
+
 			<div class="c-container">
 				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 
-				<div class="c-row c-row--margin">
-					<div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4">
-						<main class="l-main" role="main">
-							<?php $_view_controller->view(); ?>
-						</main>
-					</div>
+				<div class="l-contents__inner">
+					<main class="l-contents__main" role="main">
+						<?php $_view_controller->view(); ?>
+					</main>
 
-					<div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4">
+					<aside class="l-contents__sidebar" role="complementary">
 						<?php wpvc_get_sidebar(); ?>
-					</div>
+					</aside>
 				</div>
 			</div>
 		</div>

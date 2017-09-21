@@ -3,7 +3,8 @@
   "license": "GPL-2.0+",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "node-normalize-scss": "^3.0.0"
+    "node-normalize-scss": "^3.0.0",
+    "slick-carousel": "^1.7.1"
   },
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",

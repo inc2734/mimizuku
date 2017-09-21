@@ -16,7 +16,7 @@ new SEO();
  * @return string
  */
 add_filter( 'inc2734_wp_seo_google_analytics_tracking_id', function( $tracking_id ) {
-	return get_option( 'inc2734-theme-option-google-analytics-tracking-id' );
+	return get_option( 'mwt-google-analytics-tracking-id' );
 } );
 
 /**
@@ -26,7 +26,7 @@ add_filter( 'inc2734_wp_seo_google_analytics_tracking_id', function( $tracking_i
  * @return string
  */
 add_filter( 'inc2734_wp_seo_google_site_verification', function( $google_site_verification ) {
-	return get_option( 'inc2734-theme-option-google-site-verification' );
+	return get_option( 'mwt-google-site-verification' );
 } );
 
 /**
@@ -36,7 +36,7 @@ add_filter( 'inc2734_wp_seo_google_site_verification', function( $google_site_ve
  * @return string
  */
 add_filter( 'inc2734_wp_seo_defult_ogp_image_url', function( $default_ogp_image_url ) {
-	return get_option( 'inc2734-theme-option-default-og-image' );
+	return get_option( 'mwt-default-og-image' );
 } );
 
 /**
@@ -45,7 +45,9 @@ add_filter( 'inc2734_wp_seo_defult_ogp_image_url', function( $default_ogp_image_
  * @param bool false
  * @return bool
  */
-add_filter( 'inc2734_wp_seo_ogp', '__return_true' );
+add_filter( 'inc2734_wp_seo_ogp', function( $bool ) {
+	return get_option( 'mwt-ogp' );
+} );
 
 /**
  * twitter:card
@@ -54,7 +56,7 @@ add_filter( 'inc2734_wp_seo_ogp', '__return_true' );
  * @return string
  */
 add_filter( 'inc2734_wp_seo_twitter_card', function( $twitter_card ) {
-	return get_option( 'inc2734-theme-option-twitter-card' );
+	return get_option( 'mwt-twitter-card' );
 } );
 
 /**
@@ -64,5 +66,5 @@ add_filter( 'inc2734_wp_seo_twitter_card', function( $twitter_card ) {
  * @return string
  */
 add_filter( 'inc2734_wp_seo_twitter_site', function( $twitter_site ) {
-	return get_option( 'inc2734-theme-option-twitter-site' );
+	return get_option( 'mwt-twitter-site' );
 } );

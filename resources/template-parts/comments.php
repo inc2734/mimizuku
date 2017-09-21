@@ -6,8 +6,8 @@
  */
 ?>
 
-<section class="p-comments">
-	<h2 class="p-comments__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h2>
+<section class="p-comments c-entry-aside">
+	<h2 class="p-comments__title c-entry-aside__title"><?php esc_html_e( 'Comments on this post', 'mimizuku' ); ?></h2>
 
 	<?php $comments_by_type = $wp_query->comments_by_type; ?>
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>

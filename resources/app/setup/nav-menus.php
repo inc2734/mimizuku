@@ -18,8 +18,10 @@ add_action( 'after_setup_theme', function() {
 	register_nav_menus( [
 		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
 		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
+		'social-nav' => esc_html__( 'Social Navigation', 'snow-monkey' ),
 	] );
 } );
 
 new Global_Nav( 'global-nav' );
 new Drawer_Nav( 'drawer-nav' );
+new Global_Nav( 'social-nav' );

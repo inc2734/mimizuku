@@ -58,16 +58,6 @@ See https://github.com/inc2734/mimizuku-child
 ## Directory structure
 ```
 themes/mimizuku
-├─ core                    # Mimizuku core
-│  ├─ bin                  # Useful commands (shell script)
-│  ├─ composer-packages    # Loads composer packages
-│  ├─ controller           # View controller
-│  ├─ setup                # Setup mimizuku
-│  ├─ customizer           # Theme customizer
-│  ├─ page-template        # Default custom page templates
-│  └─ templates
-│     ├─ layout            # Default layout templates
-│     └─ view              # Default view templates
 ├─ resources               # The theme root
 │  ├─ app                  # Setup theme
 │  ├─ page-template        # Custom page templates

@@ -23,17 +23,15 @@ $copyright  = $theme_by . ' ' . $powered_by;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'copyright', [
-	'title' => __( 'Copyright', 'mimizuku' ),
-] );
+$customizer->section( 'title_tagline', [] );
 
-$customizer->control( 'text', 'inc2734-theme-option-copyright', [
+$customizer->control( 'text', 'mwt-copyright', [
 	'label'       => __( 'Copyright', 'mimizuku' ),
 	'description' => __( 'HTML usable', 'mimizuku' ),
 	'default'     => $copyright,
 	'type'        => 'option',
 ] );
 
-$section = $customizer->get_section( 'copyright' );
-$control = $customizer->get_control( 'inc2734-theme-option-copyright' );
+$section = $customizer->get_section( 'title_tagline' );
+$control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );

@@ -3,6 +3,26 @@
 }
 
 /**
+ * simple header
+ */
+.#{$_prefix}l-simple-header {
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  &__branding {
+    flex: 1 0 auto;
+  }
+
+  &__nav {
+    flex: 0 1 0%;
+  }
+}
+
+/**
  * 1row header
  */
 .#{$_prefix}l-1row-header {
