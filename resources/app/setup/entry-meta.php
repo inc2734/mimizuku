@@ -8,8 +8,8 @@
 $entry_meta = [];
 
 /**
-* Published
-*/
+ * Published
+ */
 function mimizuku_entry_meta_items_published() {
 	?>
 	<li class="c-meta__item c-meta__item--published">
@@ -24,8 +24,8 @@ function mimizuku_entry_meta_items_published() {
 add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_published', 10 );
 
 /**
-* Modified
-*/
+ * Modified
+ */
 function mimizuku_entry_meta_items_modified() {
 	if ( get_the_time( 'Ymd' ) === get_the_modified_time( 'Ymd' ) ) {
 		return;
@@ -43,8 +43,8 @@ function mimizuku_entry_meta_items_modified() {
 add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_modified', 20 );
 
 /**
-* Author
-*/
+ * Author
+ */
 function mimizuku_entry_meta_items_author() {
 	?>
 	<li class="c-meta__item c-meta__item--author">
@@ -57,8 +57,8 @@ function mimizuku_entry_meta_items_author() {
 add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_author', 30 );
 
 /**
-* Categories
-*/
+ * Categories
+ */
 function mimizuku_entry_meta_items_categories() {
 	$categories = get_the_terms( get_the_ID(), 'category' );
 	if ( ! $categories ) {
@@ -75,8 +75,8 @@ function mimizuku_entry_meta_items_categories() {
 add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_categories', 40 );
 
 /**
-* Tags
-*/
+ * Tags
+ */
 function mimizuku_entry_meta_items_tags() {
 	$tags = get_the_tag_list( '', ', ' );
 	if ( ! $tags ) {

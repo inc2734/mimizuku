@@ -19,7 +19,7 @@ $section = $customizer->get_section( 'design' );
  * Layout
  */
 $customizer->control( 'select', 'layout', [
-	'label'   =>  __( 'Page layout', 'mimizuku' ),
+	'label'   => __( 'Page layout', 'mimizuku' ),
 	'default' => 'right-sidebar',
 	'choices' => mimizuku_get_page_templates(),
 ] );
