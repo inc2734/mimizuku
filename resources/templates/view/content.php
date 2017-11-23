@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 ?>
-<article <?php post_class(); ?>>
+<article <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 	<header class="c-entry__header">
-		<h1 class="c-entry__title"><?php the_title(); ?></h1>
+		<h1 class="c-entry__title" itemprop="name"><?php the_title(); ?></h1>
 		<div class="c-entry__meta">
 			<?php get_template_part( 'template-parts/entry-meta' ); ?>
 		</div>
@@ -19,12 +19,14 @@
 	] );
 	?>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content" itemprop="articleBody">
 		<?php get_template_part( 'template-parts/contents-outline' ); ?>
 
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
+	</div>
 
+	<footer class="c-entry__footer">
 		<?php
 		wpvc_get_template_part( 'template-parts/share-buttons', [
 			'_position' => 'bottom',
@@ -34,7 +36,7 @@
 		<?php get_template_part( 'template-parts/profile-box' ); ?>
 
 		<?php get_template_part( 'template-parts/like-me-box' ); ?>
-	</div>
+	</footer>
 </article>
 
 <?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>

@@ -18,29 +18,14 @@ $section = $customizer->get_section( 'design' );
 /**
  * Layout
  */
-$post_types = get_post_types( [
-	'public' => true,
+$customizer->control( 'select', 'layout', [
+	'label'   =>  __( 'Page layout', 'mimizuku' ),
+	'default' => 'right-sidebar',
+	'choices' => mimizuku_get_page_templates(),
 ] );
-unset( $post_types['attachment'] );
-foreach ( $post_types as $post_type ) {
-	$post_type_object = get_post_type_object( $post_type );
-	$customizer->control( 'select', $post_type_object->name . '-layout', [
-		// @codingStandardsIgnoreStart
-		'label'   => sprintf( __( '%1$s layout', 'mimizuku' ), __( $post_type_object->label ) ),
-		// @codingStandardsIgnoreEnd
-		'default' => 'right-sidebar',
-		'choices' => [
-			'left-sidebar'     => __( 'Left sidebar', 'mimizuku' ),
-			'right-sidebar'    => __( 'Right sidebar', 'mimizuku' ),
-			'one-column'       => __( 'One column', 'mimizuku' ),
-			'one-column-fluid' => __( 'One column (fluid)', 'mimizuku' ),
-			'one-column-slim'  => __( 'One column (slim)', 'mimizuku' ),
-		],
-	] );
 
-	$control = $customizer->get_control( $post_type_object->name . '-layout' );
-	$control->join( $section );
-}
+$control = $customizer->get_control( 'layout' );
+$control->join( $section );
 
 /**
  * Header layout
@@ -74,28 +59,4 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 ] );
 
 $control = $customizer->get_control( 'footer-widget-area-column-size' );
-$control->join( $section );
-
-/**
- * Contents outline
- */
-$customizer->control( 'checkbox', 'mwt-display-contents-outline', [
-	'label' => __( 'Display contents outline in posts', 'mimizuku' ),
-	'type'  => 'option',
-] );
-
-$section = $customizer->get_section( 'design' );
-$control = $customizer->get_control( 'mwt-display-contents-outline' );
-$control->join( $section );
-
-/**
- * Profile Box
- */
-$customizer->control( 'checkbox', 'mwt-display-profile-box', [
-	'label' => __( 'Display profile box in posts', 'mimizuku' ),
-	'type'  => 'option',
-] );
-
-$section = $customizer->get_section( 'design' );
-$control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section );

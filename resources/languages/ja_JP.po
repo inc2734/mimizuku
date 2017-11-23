@@ -1,0 +1,441 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mimizuku\n"
+"POT-Creation-Date: 2017-11-23 17:42+0900\n"
+"PO-Revision-Date: 2017-11-23 17:45+0900\n"
+"Last-Translator: inc2734 <inc@2inc.org>\n"
+"Language-Team: inc2734 <inc@2inc.org>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: app/customizer/design.php:13
+msgid "Design"
+msgstr "デザイン"
+
+#: app/customizer/design.php:22
+msgid "Page layout"
+msgstr "ページレイアウト"
+
+#: app/customizer/design.php:34
+msgid "Header layout"
+msgstr "ヘッダーレイアウト"
+
+#: app/customizer/design.php:37
+msgid "Simple"
+msgstr "シンプル"
+
+#: app/customizer/design.php:38
+msgid "One row"
+msgstr "1行"
+
+#: app/customizer/design.php:39
+msgid "Two rows"
+msgstr "2行"
+
+#: app/customizer/design.php:40
+msgid "Center logo"
+msgstr "中央ロゴ"
+
+#: app/customizer/design.php:51
+msgid "Number of columns in the footer widget aera"
+msgstr "フッターウィジェットエリアのカラム数"
+
+#: app/customizer/design.php:54
+msgid "1 column"
+msgstr "1カラム"
+
+#: app/customizer/design.php:55
+msgid "2 columns"
+msgstr "2カラム"
+
+#: app/customizer/design.php:56
+msgid "3 columns"
+msgstr "3カラム"
+
+#: app/customizer/design.php:57
+msgid "4 columns"
+msgstr "4カラム"
+
+#: app/customizer/seo-sns.php:13
+msgid "SEO/SNS"
+msgstr "SEO/SNS"
+
+#: app/customizer/seo-sns.php:22
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: app/customizer/seo-sns.php:26
+msgid "Tracking ID"
+msgstr "トラッキング ID"
+
+#: app/customizer/seo-sns.php:27
+msgid "e.g. UA-1111111-11"
+msgstr "例: UA-1111111-11"
+
+#: app/customizer/seo-sns.php:39
+msgid "Google Search Console"
+msgstr "Google Search Console"
+
+#: app/customizer/seo-sns.php:43
+msgid "Google site verification"
+msgstr "Google site verification"
+
+#: app/customizer/seo-sns.php:45
+#, php-format
+msgid "Please enter part %1$s of %2$s"
+msgstr "%2$sの%1$sの部分を入力してください"
+
+#: app/customizer/seo-sns.php:60
+msgid "OGP"
+msgstr "OGP"
+
+#: app/customizer/seo-sns.php:64
+msgid "Output OGP meta tag"
+msgstr "OGP メタタグを出力する"
+
+#: app/customizer/seo-sns.php:70
+msgid "Default OGP image"
+msgstr "デフォルト OGP 画像"
+
+#: app/customizer/seo-sns.php:71
+msgid ""
+"If a featured image is set in an article, that the featured image is used, "
+"if not set, this image will be used."
+msgstr ""
+"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設"
+"定されていない場合はこの画像が使用されます。"
+
+#: app/customizer/seo-sns.php:85
+msgid "Twitter Cards"
+msgstr "Twitter Cards"
+
+#: app/customizer/seo-sns.php:87
+#, php-format
+msgid "Application of URL is necessary for using Twitter Cards. %1$s"
+msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
+
+#: app/customizer/seo-sns.php:93
+msgid "twitter:card"
+msgstr "twitter:card"
+
+#: app/customizer/seo-sns.php:94
+msgid "Twitter Cards format"
+msgstr "Twitter Cards のフォーマット"
+
+#: app/customizer/seo-sns.php:98
+msgid "Not use"
+msgstr "使用しない"
+
+#: app/customizer/seo-sns.php:105
+msgid "twitter:site"
+msgstr "twitter:site"
+
+#: app/customizer/seo-sns.php:107
+#, php-format
+msgid "The Twitter account name of the site. Please enter in the form %1$s."
+msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
+
+#: app/customizer/seo-sns.php:124
+msgid "Like me box"
+msgstr "いいね！ボックス"
+
+#: app/customizer/seo-sns.php:128
+msgid "Facebook page name"
+msgstr "Facebook ページ名"
+
+#: app/customizer/seo-sns.php:130
+#, php-format
+msgctxt "facebook-page-name"
+msgid "Please enter %1$s of %2$s"
+msgstr "%2$sの%1$sを入力してください"
+
+#: app/customizer/seo-sns.php:145
+msgid "Share buttons"
+msgstr "シェアボタン"
+
+#: app/customizer/seo-sns.php:147
+#, php-format
+msgid "If you want to count of tweet then needs to register to %1$s."
+msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
+
+#: app/customizer/seo-sns.php:153
+msgid "Display buttons"
+msgstr "ボタンを表示"
+
+#: app/customizer/seo-sns.php:156
+msgid "Facebook"
+msgstr "Facebook"
+
+#: app/customizer/seo-sns.php:157
+msgid "Twitter"
+msgstr "Twitter"
+
+#: app/customizer/seo-sns.php:158
+msgid "Hatena Bookmark"
+msgstr "はてなブックマーク"
+
+#: app/customizer/seo-sns.php:159
+msgid "Feedly"
+msgstr "Feedly"
+
+#: app/customizer/seo-sns.php:160
+msgid "LINE"
+msgstr "LINE"
+
+#: app/customizer/seo-sns.php:161
+msgid "Pocket"
+msgstr "Pocket"
+
+#: app/customizer/seo-sns.php:162
+msgid "Feed"
+msgstr "フィード"
+
+#: app/customizer/seo-sns.php:168
+msgid "Type"
+msgstr "種類"
+
+#: app/customizer/seo-sns.php:171
+msgid "Balloon"
+msgstr "吹き出し"
+
+#: app/customizer/seo-sns.php:172
+msgid "Horizontal"
+msgstr "水平"
+
+#: app/customizer/seo-sns.php:173
+msgid "Icon"
+msgstr "アイコン"
+
+#: app/customizer/seo-sns.php:174
+msgid "Block"
+msgstr "ブロック"
+
+#: app/customizer/seo-sns.php:175
+msgid "Official"
+msgstr "公式"
+
+#: app/customizer/seo-sns.php:181
+msgid "Display position"
+msgstr "表示する場所"
+
+#: app/customizer/seo-sns.php:184
+msgid "Top of contents"
+msgstr "コンテンツの上"
+
+#: app/customizer/seo-sns.php:185 app/setup/widget-area.php:32
+msgid "Bottom of contents"
+msgstr "コンテンツの下"
+
+#: app/customizer/seo-sns.php:186
+msgid "Both"
+msgstr "両方"
+
+#: app/customizer/seo-sns.php:192
+msgid "Share counts cache time (seconds)"
+msgstr "シェアカウントのキャッシュ時間（秒）"
+
+#: app/customizer/singular.php:16
+#, php-format
+msgid "Settings of %1$s page"
+msgstr "%1$sページの設定"
+
+#: app/customizer/singular.php:17
+#, php-format
+msgid "Applies to singular page of %1$s."
+msgstr "%1$sのページに適用されます。"
+
+#: app/customizer/singular.php:35
+msgid "Display contents outline in posts"
+msgstr "記事に目次を表示する"
+
+#: app/customizer/singular.php:53
+msgid "Display profile box in posts"
+msgstr "記事にプロフィールボックスを表示する"
+
+#: app/customizer/title-tagline.php:12 template-parts/copyright.php:10
+msgid "Monkey Wrench"
+msgstr "モンキーレンチ"
+
+#: app/customizer/title-tagline.php:17 template-parts/copyright.php:15
+msgid "WordPress"
+msgstr "WordPress"
+
+#: app/customizer/title-tagline.php:20 template-parts/copyright.php:18
+#, php-format
+msgid "Mimizuku theme by %s"
+msgstr "Mimizuku theme by %s"
+
+#: app/customizer/title-tagline.php:21 template-parts/copyright.php:19
+#, php-format
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: app/customizer/title-tagline.php:29
+msgid "Copyright"
+msgstr "コピーライト"
+
+#: app/customizer/title-tagline.php:30
+msgid "HTML usable"
+msgstr "HTML 使用可"
+
+#: app/setup/entry-meta.php:18
+msgid "Published"
+msgstr "投稿日"
+
+#: app/setup/entry-meta.php:37
+msgid "Modified"
+msgstr "更新日"
+
+#: app/setup/entry-meta.php:51
+msgid "Author"
+msgstr "著者"
+
+#: app/setup/entry-meta.php:69
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: app/setup/entry-meta.php:87
+msgid "Tags"
+msgstr "タグ"
+
+#: app/setup/nav-menus.php:19
+msgid "Global Navigation (For PC)"
+msgstr "グローバルナビゲーション（PC用）"
+
+#: app/setup/nav-menus.php:20
+msgid "Drawer Navigation (For Mobile)"
+msgstr "ドロワーナビゲーション（モバイル用）"
+
+#: app/setup/nav-menus.php:21
+msgid "Social Navigation"
+msgstr "ソーシャルナビゲーション"
+
+#: app/setup/widget-area.php:15
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: app/setup/widget-area.php:16
+msgid "This widgets are displayed in the sidebar."
+msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
+
+#: app/setup/widget-area.php:33
+msgid "This widgets are displayed in the bottom of contents."
+msgstr "このウィジェットは記事下に表示されます。"
+
+#: app/setup/widget-area.php:49
+msgid "Footer"
+msgstr "フッター"
+
+#: app/setup/widget-area.php:51
+msgid "This widgets are displayed in the footer of all pages."
+msgstr "このウィジェットは各ページのフッターに表示されます。"
+
+#: template-parts/comment.php:14
+msgid "Your comment is awaiting moderation."
+msgstr "あなたのコメントは承認待ちです。"
+
+#: template-parts/comment.php:23 template-parts/trackback.php:15
+#, php-format
+msgid "%1$s said on %2$s at %3$s"
+msgstr "%1$s said on %2$s at %3$s"
+
+#: template-parts/comment.php:28
+msgid "Edit this comment"
+msgstr "コメントを編集"
+
+#: template-parts/comments.php:10
+msgid "Comments on this post"
+msgstr "この投稿へのコメント"
+
+#: template-parts/comments.php:42
+msgid "Comments are closed."
+msgstr "コメントは閉じられています。"
+
+#: template-parts/comments.php:47
+msgid "No comments."
+msgstr "コメントはありません。"
+
+#: template-parts/hamburger-btn.php:12
+msgid "Menu"
+msgstr "メニュー"
+
+#: template-parts/pings.php:10
+msgid "Trackbacks and Pingbacks on this post"
+msgstr "この投稿へのトラックバック"
+
+#: template-parts/pings.php:29
+msgid "No trackbacks."
+msgstr "トラックバックはありません。"
+
+#: template-parts/pings.php:36
+msgid "TrackBack URL"
+msgstr "トラックバック URL"
+
+#: template-parts/related-posts.php:64
+msgid "Related posts"
+msgstr "関連記事"
+
+#: templates/view/404.php:11
+msgid "Woops! Page not found."
+msgstr "ページが見つかりませんでした。"
+
+#: templates/view/404.php:12
+msgid "The page you are looking for may be moved or deleted."
+msgstr "お探しのページは移動したか削除されています。"
+
+#: templates/view/404.php:13
+msgid "Please search this search box."
+msgstr "この検索ボックスから検索してください。"
+
+#. Theme Name of the plugin/theme
+msgid "Mimizuku"
+msgstr "Mimizuku"
+
+#. Author of the plugin/theme
+msgid "inc2734"
+msgstr "inc2734"
+
+#. Author URI of the plugin/theme
+msgid "https://2inc.org"
+msgstr "https://2inc.org"
+
+#. Template Name of the plugin/theme
+msgid "Blank"
+msgstr "空"
+
+#. Template Name of the plugin/theme
+msgid "Left sidebar"
+msgstr "左サイドバー"
+
+#. Template Name of the plugin/theme
+msgid "One column (fluid)"
+msgstr "1カラム（fluid）"
+
+#. Template Name of the plugin/theme
+msgid "One column (slim)"
+msgstr "1カラム（slim）"
+
+#. Template Name of the plugin/theme
+msgid "One column"
+msgstr "1カラム"
+
+#. Template Name of the plugin/theme
+msgid "Right sidebar"
+msgstr "右サイドバー"
+
+#~ msgid "mimizuku theme by %s"
+#~ msgstr "Mimizuku theme by %s"

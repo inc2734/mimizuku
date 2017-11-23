@@ -1,15 +1,2 @@
 .#{$_prefix}c-entry-summary {
-  &__figure {
-    background-color: _lighter($_color-gray);
-
-    &::before {
-      content: '';
-      display: block;
-      padding-top: 75%;
-    }
-
-    @include _media-min(md) {
-      width: 25%;
-    }
-  }
 }

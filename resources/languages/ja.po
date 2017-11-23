@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimizuku\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-09-21 23:48+0900\n"
-"PO-Revision-Date: 2017-09-21 23:48+0900\n"
+"POT-Creation-Date: 2017-11-06 11:26+0900\n"
+"PO-Revision-Date: 2017-11-06 11:27+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -185,7 +185,7 @@ msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
 #: app/customizer/seo-sns.php:130
-#, fuzzy, php-format
+#, php-format
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
@@ -397,6 +397,10 @@ msgstr "カテゴリー"
 msgid "Tags"
 msgstr "タグ"
 
+#: template-parts/hamburger-btn.php:12
+msgid "Menu"
+msgstr "メニュー"
+
 #: template-parts/pings.php:10
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
@@ -413,14 +417,17 @@ msgstr "トラックバック URL"
 msgid "Related posts"
 msgstr "関連記事"
 
-#~ msgid "Woops! Page not found."
-#~ msgstr "ページが見つかりませんでした。"
+#: templates/view/404.php:11
+msgid "Woops! Page not found."
+msgstr "ページが見つかりませんでした。"
 
-#~ msgid "The page you are looking for may be moved or deleted."
-#~ msgstr "お探しのページは移動したか削除されています。"
+#: templates/view/404.php:12
+msgid "The page you are looking for may be moved or deleted."
+msgstr "お探しのページは移動したか削除されています。"
 
-#~ msgid "Please search this search box."
-#~ msgstr "この検索ボックスから検索してください。"
+#: templates/view/404.php:13
+msgid "Please search this search box."
+msgstr "この検索ボックスから検索してください。"
 
 #~ msgid ""
 #~ "Sorry, but nothing matched your search terms. Please try again with some "

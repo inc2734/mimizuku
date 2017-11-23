@@ -3,5 +3,12 @@
     & + & {
       padding-left: .75em;
     }
+
+    &--author {
+      img {
+        @include _circle(24px);
+        margin-right: 5px;
+      }
+    }
   }
 }

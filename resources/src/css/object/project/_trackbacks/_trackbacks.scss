@@ -1,10 +1,4 @@
 .#{$_prefix}p-trackbacks {
-  &__title {
-    @include _margin(0, 0, 1);
-    @include _font-size-line-height($_base-font-size-px * $_h3-font-size-scale);
-    font-weight: bold;
-  }
-
   &__trackback-url {
     @include _margin(1, 0, 0);
 

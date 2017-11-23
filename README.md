@@ -138,5 +138,8 @@ themes/mimizuku
 ### inc2734/wp-awesome-widgets
 * Source: https://github.com/inc2734/wp-awesome-widgets
 
+### inc2734/wp-awesome-compponents
+* Source: https://github.com/inc2734/wp-awesome-compponents
+
 ## Official goods store
 https://suzuri.jp/inc2734/products

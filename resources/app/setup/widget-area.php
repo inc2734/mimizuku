@@ -11,53 +11,31 @@
  * @return void
  */
 add_action( 'widgets_init', function() {
-	$post_types = get_post_types( [
-		'public' => true,
+	register_sidebar( [
+		'name'          => __( 'Sidebar', 'mimizuku' ),
+		'description'   => __( 'This widgets are displayed in the sidebar.', 'mimizuku' ),
+		'id'            => 'sidebar-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
 	] );
-	unset( $post_types['attachment'] );
-	foreach ( $post_types as $post_type ) {
-		$post_type_object = get_post_type_object( $post_type );
-
-		register_sidebar( [
-			// @codingStandardsIgnoreStart
-			'name'          => sprintf( __( '%1$s sidebar', 'mimizuku' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed in the %1$s page sidebar.', 'mimizuku' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'id'            => $post_type_object->name . '-post-type-sidebar-widget-area',
-			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title"><span>',
-			'after_title'   => '</span></h2>',
-		] );
-
-		register_sidebar( [
-			// @codingStandardsIgnoreStart
-			'name'          => sprintf( __( '%1$s bottom of contents', 'mimizuku' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed in the bottom of %1$s contents.', 'mimizuku' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'id'            => $post_type_object->name . '-post-type-contents-bottom-widget-area',
-			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title"><span>',
-			'after_title'   => '</span></h2>',
-		] );
-	}
 } );
 
 /**
-* Add sidebar widget area
-*
-* @return void
-*/
+ * Add bottom of contents widget area
+ *
+ * @return void
+ */
 add_action( 'widgets_init', function() {
 	register_sidebar( [
-		'name'          => __( 'Archive sidebar', 'mimizuku' ),
-		'id'            => 'archive-sidebar-widget-area',
-		'description'   => __( 'This widgets are displayed in the sidebar of archive pages.', 'mimizuku' ),
+		'name'          => __( 'Bottom of contents', 'mimizuku' ),
+		'description'   => __( 'This widgets are displayed in the bottom of contents.', 'mimizuku' ),
+		'id'            => 'contents-bottom-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
 	] );
 } );
 
@@ -74,40 +52,6 @@ add_action( 'widgets_init', function() {
 		'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--lg-' . esc_attr( get_theme_mod( 'footer-widget-area-column-size' ) ) . '"><div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="c-widget__title">',
-		'after_title'   => '</h2>',
-	] );
-} );
-
-/**
- * Add front page widget area
- *
- * @return void
- */
-add_action( 'widgets_init', function() {
-	register_sidebar( [
-		'name'          => __( 'Front page (Top of page)', 'mimizuku' ),
-		'id'            => 'front-page-top-widget-area',
-		'description'   => __( 'This widgets are displayed in the static front page.', 'mimizuku' ),
-		'before_widget' => '<div class="l-front-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="c-section__title">',
-		'after_title'   => '</h2>',
-	] );
-} );
-
-/**
- * Add front page widget area
- *
- * @return void
- */
-add_action( 'widgets_init', function() {
-	register_sidebar( [
-		'name'          => __( 'Front page (Bottom of page)', 'mimizuku' ),
-		'id'            => 'front-page-bottom-widget-area',
-		'description'   => __( 'This widgets are displayed in the static front page.', 'mimizuku' ),
-		'before_widget' => '<div class="l-front-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="c-section__title">',
 		'after_title'   => '</h2>',
 	] );
 } );

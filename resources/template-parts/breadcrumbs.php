@@ -7,6 +7,10 @@
 
 use Inc2734\WP_Breadcrumbs\Breadcrumbs;
 
+if ( is_front_page() ) {
+	return;
+}
+
 $breadcrumbs = new Breadcrumbs();
 $items = apply_filters( 'mimizuku_breadcrumbs', $breadcrumbs->get() );
 ?>

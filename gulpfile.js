@@ -43,7 +43,8 @@ gulp.task('remove-packages-dir', function(cb) {
  */
 gulp.task('packages', ['remove-packages-dir'], function(cb) {
   var packages = [
-    dir.src.packages + '/font-awesome/**'
+    dir.src.packages + '/font-awesome/**',
+    dir.src.packages + '/slick-carousel/**'
   ];
   return gulp.src(packages, {base: 'node_modules'})
     .pipe(gulp.dest(dir.dist.packages));
@@ -110,7 +111,7 @@ function jsCompile(distFileName) {
   return gulp.src(dir.src.js + '/**/*.js')
     .pipe(rollup({
       allowRealFiles: true,
-      entry: dir.src.js + '/' + distFileName,
+      input: dir.src.js + '/' + distFileName,
       format: 'iife',
       external: ['jquery', '_', 'Backbone'],
       globals: {
@@ -120,7 +121,17 @@ function jsCompile(distFileName) {
         nodeResolve({ jsnext: true }),
         commonjs(),
         babel({
-          presets: ['es2015-rollup'],
+          presets: [
+            [
+              "env", {
+                "modules": false,
+                "targets": {
+                  "browsers": ['last 2 versions']
+                }
+              }
+            ]
+          ],
+          plugins: ["external-helpers"],
           babelrc: false
         })
       ]

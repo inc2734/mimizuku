@@ -1,4 +1,6 @@
 .#{$_prefix}c-drawer {
+  z-index: 100000;
+
   &__body {
     z-index: 100000;
   }

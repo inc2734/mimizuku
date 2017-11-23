@@ -15,7 +15,7 @@ $wordpress_link = sprintf(
 	__( 'WordPress', 'mimizuku' )
 );
 
-$theme_by   = sprintf( __( 'mimizuku theme by %s', 'mimizuku' ), $theme_link );
+$theme_by   = sprintf( __( 'Mimizuku theme by %s', 'mimizuku' ), $theme_link );
 $powered_by = sprintf( __( 'Powered by %s', 'mimizuku' ), $wordpress_link );
 $copyright  = $theme_by . ' ' . $powered_by;
 ?>
