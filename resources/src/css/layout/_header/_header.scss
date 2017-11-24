@@ -14,11 +14,13 @@
   }
 
   &__branding {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
+    @include _margin-right(1);
   }
 
   &__nav {
-    flex: 0 1 0%;
+    flex: 0 0 auto;
+    margin-left: auto;
   }
 }
 
@@ -32,20 +34,23 @@
   align-items: center;
 
   &__branding {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
+    @include _margin-right(1);
   }
 
   &__for-wide {
     flex: 0 1 auto;
-
+    margin-left: auto;
     @include _hidden();
+
     @include _media-min(lg) {
       @include _visible();
     }
   }
 
   &__for-narrow {
-    flex: 0 1 0%;
+    flex: 0 0 auto;
+    margin-left: auto;
 
     @include _media-min(lg) {
       @include _hidden();
@@ -70,21 +75,23 @@
   }
 
   &__branding {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
+    @include _margin-right(1);
   }
 
   &__for-wide {
     flex: none;
     width: 100%;
-
     @include _hidden();
+
     @include _media-min(lg) {
       @include _visible();
     }
   }
 
   &__for-narrow {
-    flex: 0 1 0%;
+    flex: 0 0 auto;
+    margin-left: auto;
 
     @include _media-min(lg) {
       @include _hidden();
@@ -116,8 +123,8 @@
 
   &__for-wide {
     flex: 0 1 auto;
-
     @include _hidden();
+
     @include _media-min(lg) {
       @include _visible();
     }
