@@ -8,3 +8,4 @@ vendor/
 /bin/*.xml
 release/
 mimizuku.zip
+.travis/github_deploy_key
