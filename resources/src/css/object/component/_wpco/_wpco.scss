@@ -1,0 +1,7 @@
+.wpco {
+  visibility: hidden;
+
+  .wpco-wrapper[aria-hidden="false"] & {
+    visibility: visible;
+  }
+}

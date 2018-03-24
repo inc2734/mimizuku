@@ -1,21 +1,4 @@
-$_font-path: '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
-
-@import '../../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/css/basis';
-
 body {
   word-wrap: break-word;
   background-color: #fff;
-}
-
-/**
- * Entry content
- */
-@mixin entry-content() {
-  @include _content();
-
-  > h2, > h3, > h4, > h5, > h6 {
-    & + h2, & + h3, & + h4, & + h5, & + h6 {
-      margin-top: 0;
-    }
-  }
 }

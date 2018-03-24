@@ -32,11 +32,23 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
+ * Loads template tags
+ */
+$includes = [
+	'/app/template-tags',
+];
+foreach ( $includes as $include ) {
+	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
+		$template_name = str_replace( [ trailingslashit( __DIR__ ), '.php' ], '', $file );
+		get_template_part( $template_name );
+	}
+}
+
+/**
  * Loads theme setup files
  */
 $includes = array(
 	'/app/setup',
-	'/app/customizer',
 );
 foreach ( $includes as $include ) {
 	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
@@ -46,61 +58,43 @@ foreach ( $includes as $include ) {
 }
 
 /**
- * Returns array of page templates for layout selector in customizer
- *
- * @return array
- *           @var string Template slug  e.g. right-sidebar
- *           @var string Template name  e.g. Right Sidebar
+ * Loads customizer
  */
-function mimizuku_get_page_templates() {
-	$wrappers = [];
-
-	foreach ( wpvc_config( 'layout' ) as $wrapper_dirs ) {
-		foreach ( glob( get_theme_file_path( $wrapper_dirs . '/*' ) ) as $file ) {
-			$name = rtrim( basename( $file ), '.php' );
-			if ( 'blank' === $name || 'wrapper' === $name ) {
-				continue;
-			}
-
-			$page_template_path = null;
-			$template_name = wpvc_locate_template( (array) wpvc_config( 'page-templates' ), $name );
-			if ( $template_name ) {
-				$page_template_path = get_theme_file_path( $template_name . '.php' );
-
-				$page_template_data = get_file_data( $page_template_path, [
-					'template-name' => 'Template Name',
-				] );
-			}
-
-			$template_name = $name;
-			if ( ! empty( $page_template_data ) && ! empty( $page_template_data['template-name'] ) ) {
-				$template_name = $page_template_data['template-name'];
-			}
-
-			// @codingStandardsIgnoreStart
-			$wrappers[ $name ] = __( $template_name, 'mimizuku' );
-			// @codingStandardsIgnoreEnd
-		}
+$includes = [
+	'/app/customizer/*',
+	'/app/customizer/*/sections/*',
+	'/app/customizer/*/sections/*/controls',
+	'/app/customizer/*/controls',
+];
+foreach ( $includes as $include ) {
+	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
+		$template_name = str_replace( array( trailingslashit( __DIR__ ), '.php' ), '', $file );
+		get_template_part( $template_name );
 	}
-
-	return $wrappers;
 }
 
 /**
- * Returns public post type objects
- *
- * @return array
+ * Output comment for get_template_part()
  */
-function mimizuku_get_public_post_types() {
-	$_post_types = get_post_types( [
-		'public' => true,
-	] );
-	unset( $_post_types['attachment'] );
-
-	$post_types = [];
-	foreach ( $_post_types as $post_type ) {
-		$post_types[ $post_type ] = get_post_type_object( $post_type );
+if ( defined( 'WP_DEBUG' ) && WP_DEBUG && ! is_customize_preview() ) {
+	$slugs = [];
+	$files = mimizuku_glob_recursive( get_template_directory() );
+	if ( is_child_theme() ) {
+		$files = array_merge( $files, mimizuku_glob_recursive( get_stylesheet_directory() ) );
 	}
 
-	return $post_types;
+	foreach ( $files as $file ) {
+		$slug = str_replace( [ get_template_directory() . '/', get_stylesheet_directory() . '/', '.php' ], '', $file );
+		$slugs[ $slug ] = $slug;
+	}
+
+	foreach ( $slugs as $slug ) {
+		add_action( 'get_template_part_' . $slug, function( $slug, $name ) {
+			if ( $name ) {
+				$slug = $slug . '-' . $name;
+			}
+
+			printf( "\n" . '<!-- Start : %1$s -->' . "\n", esc_html( $slug ) );
+		}, 10, 2 );
+	}
 }

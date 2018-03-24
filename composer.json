@@ -1,6 +1,6 @@
 {
   "type": "wordpress-theme",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Takashi Kitajima",
@@ -15,11 +15,12 @@
     "phpunit/phpunit": "^5.7",
     "doctrine/instantiator": "1.0.4",
     "phpunit/php-token-stream": "1.4.11",
-    "phpdocumentor/reflection-docblock": "3.2.2"
+    "phpdocumentor/reflection-docblock": "3.2.2",
+    "symfony/yaml": "3.4.1"
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": ">=1.2.7"
+    "inc2734/mimizuku-core": ">=1.10.3"
   },
   "config": {
     "process-timeout": 0,
@@ -39,7 +40,7 @@
     "wpphpunit": "bash bin/wpphpunit.sh",
     "phpunit": "bash bin/phpunit.sh",
     "post-install-cmd": [
-      "cd resources/vendor/inc2734/wp-basis && yarn install && yarn upgrade && cd ../../../../ && yarn run gulp build"
+      "yarn run gulp build"
     ],
     "post-update-cmd": [
       "composer run post-install-cmd"
