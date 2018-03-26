@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
   echo "Not deploying pull requests."
@@ -32,4 +32,4 @@ ls -la
 
 git add -A
 git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
-git push origin release
+git push -f origin release
