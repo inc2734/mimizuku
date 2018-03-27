@@ -78,3 +78,11 @@ add_filter( 'inc2734_wp_seo_twitter_card', function( $twitter_card ) {
 add_filter( 'inc2734_wp_seo_twitter_site', function( $twitter_site ) {
 	return get_option( 'mwt-twitter-site' );
 } );
+
+/**
+ * Print Google Tag Manager script in body
+ *
+ * @return void
+ */
+remove_action( 'wp_footer', 'inc2734_wp_seo_googletagmanager_noscript_tag_install' );
+add_action( 'mimizuku_prepend_body', 'inc2734_wp_seo_googletagmanager_noscript_tag_install' );
