@@ -11,3 +11,5 @@ new Inc2734_WP_Share_Buttons();
 
 import FixAdminBar from './fix-adminbar.js';
 new FixAdminBar();
+
+import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
