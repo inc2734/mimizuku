@@ -20,14 +20,12 @@
 			<div class="c-container">
 				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 
-				<div class="l-contents__inner">
-					<main class="l-contents__main" role="main">
-						<?php $_view_controller->view(); ?>
-					</main>
-
-					<aside class="l-contents__sidebar" role="complementary">
-						<?php wpvc_get_sidebar(); ?>
-					</aside>
+				<div class="u-slim-width">
+					<div class="l-contents__inner">
+						<main class="l-contents__main" role="main">
+							<?php $_view_controller->view(); ?>
+						</main>
+					</div>
 				</div>
 			</div>
 		</div>

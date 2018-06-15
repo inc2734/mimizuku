@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Left sidebar
+ * Template Post Type: post, page
  *
  * @package mimizuku
  * @author inc2734

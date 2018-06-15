@@ -12,12 +12,11 @@ $panel      = $customizer->get_panel( 'seo-sns' );
 $section    = $customizer->get_section( 'share-buttons' );
 
 $customizer->control( 'select', 'mwt-share-buttons-type', [
-	'transport' => 'postMessage',
-	'type'      => 'option',
-	'label'     => __( 'Type', 'mimizuku' ),
-	'priority'  => 110,
-	'default'   => 'balloon',
-	'choices'   => [
+	'type'     => 'option',
+	'label'    => __( 'Type', 'mimizuku' ),
+	'priority' => 110,
+	'default'  => 'balloon',
+	'choices'  => [
 		'balloon'    => __( 'Balloon', 'mimizuku' ),
 		'horizontal' => __( 'Horizontal', 'mimizuku' ),
 		'icon'       => __( 'Icon', 'mimizuku' ),
@@ -28,9 +27,3 @@ $customizer->control( 'select', 'mwt-share-buttons-type', [
 
 $control = $customizer->get_control( 'mwt-share-buttons-type' );
 $control->join( $section )->join( $panel );
-$control->partial( [
-	'selector' => '.wp-share-buttons',
-	'render_callback'     => function() {
-		get_template_part( 'template-parts/share-buttons' );
-	},
-] );

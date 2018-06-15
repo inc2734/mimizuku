@@ -17,8 +17,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'sidebar-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 
@@ -34,8 +34,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'contents-bottom-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 

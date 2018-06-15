@@ -14,7 +14,7 @@ function mimizuku_entry_meta_items_published() {
 	?>
 	<li class="c-meta__item c-meta__item--published">
 		<time datetime="<?php the_time( 'c' ); ?>">
-			<i class="fa fa-clock-o" aria-hidden="true"></i>
+			<i class="far fa-clock" aria-hidden="true"></i>
 			<span class="screen-reader-text"><?php esc_html_e( 'Published', 'mimizuku' ); ?></span>
 			<?php the_time( get_option( 'date_format' ) ); ?>
 		</time>
@@ -33,7 +33,7 @@ function mimizuku_entry_meta_items_modified() {
 	?>
 	<li class="c-meta__item c-meta__item--modified">
 		<time datetime="<?php the_modified_time( 'c' ); ?>">
-			<i class="fa fa-refresh" aria-hidden="true"></i>
+			<i class="fas fa-sync-alt" aria-hidden="true"></i>
 			<span class="screen-reader-text"><?php esc_html_e( 'Modified', 'mimizuku' ); ?></span>
 			<?php the_modified_time( get_option( 'date_format' ) ); ?>
 		</time>
@@ -67,7 +67,7 @@ function mimizuku_entry_meta_items_categories() {
 	?>
 	<li class="c-meta__item c-meta__item--categories">
 		<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'mimizuku' ); ?></span>
-		<i class="fa fa-folder" aria-hidden="true"></i>
+		<i class="fas fa-folder" aria-hidden="true"></i>
 		<a href="<?php echo esc_url( get_term_link( $categories[0] ) ); ?>"><?php echo esc_html( $categories[0]->name ); ?></a>
 	</li>
 	<?php
@@ -85,7 +85,7 @@ function mimizuku_entry_meta_items_tags() {
 	?>
 	<li class="c-meta__item c-meta__item--categories">
 		<span class="screen-reader-text"><?php esc_html_e( 'Tags', 'mimizuku' ); ?></span>
-		<i class="fa fa-tags" aria-hidden="true"></i>
+		<i class="fas fa-tags" aria-hidden="true"></i>
 		<?php the_tags( '', ', ', '' ); ?>
 	</li>
 	<?php

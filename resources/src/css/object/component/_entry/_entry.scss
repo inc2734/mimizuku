@@ -1,5 +1,6 @@
 .#{$_prefix}c-entry {
   &__content {
+    @include _clearfix();
     @include entry-content();
   }
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: One column (fluid)
+ * Template Post Type: post, page
  *
  * @package mimizuku
  * @author inc2734

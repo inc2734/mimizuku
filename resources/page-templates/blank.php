@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Blank
+ * Template Post Type: post, page
  *
  * @package mimizuku
  * @author inc2734
@@ -9,4 +10,4 @@
 
 $controller = new Mimizuku_Controller();
 $controller->layout( 'blank' );
-$controller->render( 'content', get_post_type() );
+$controller->render( 'content-full', get_post_type() );
