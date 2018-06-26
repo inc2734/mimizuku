@@ -14,30 +14,28 @@
  * Alert
  */
 .wpac-alert {
-  $color: #bdb53c;
+  $color: #fff9e6;
   @include _alert();
   @include _content(.75);
-  background-color: _lighter($color);
-  border: 1px solid $color;
+  background-color: $color;
+  border: 1px solid darken(desaturate($color, 10%), 10%);
   border-radius: $_border-radius;
-  color: _dark($color);
+  color: darken(desaturate($color, 60%), 60%);
   @include _padding(.5);
 
   &--warning {
-    $color: #bd543c;
-    background-color: _lighter($color);
-    border-color: $color;
-    color: _dark($color);
+    background-color: adjust-hue($color, -30deg);
+    border-color: adjust-hue(darken(desaturate($color, 10%), 10%), -30deg);
+    color: adjust-hue(darken(desaturate($color, 60%), 60%), -30deg);
   }
 
   &--success {
-    $color: #90bd3c;
-    background-color: _lighter($color);
-    border-color: $color;
-    color: _dark($color);
+    background-color: adjust-hue($color, 40deg);
+    border-color: adjust-hue(darken(desaturate($color, 15%), 15%), 40deg);
+    color: adjust-hue(darken(desaturate($color, 70%), 70%), 40deg);
   }
 
-  > .mceEditable, &__body {
+  > .mceEditable {
     @include _content(.75);
   }
 }
@@ -69,8 +67,9 @@
 
   &__figure {
     position: relative;
-    flex: none;
+    flex: 0 0 60px;
     @include _circle(60px);
+    max-width: 60px;
     border: 2px solid _lighter($_color-gray);
 
     > img {
@@ -109,6 +108,7 @@
     }
 
     @include _media-min(md) {
+      max-width: calc(100% - 80px);
       @include _balloon-triangle(left, 10px, #fff, 1px, _light($_color-gray));
     }
   }
@@ -200,7 +200,8 @@
 
   .#{$_prefix}l-body--one-column &,
   .#{$_prefix}l-body--one-column-fluid &,
-  .#{$_prefix}l-body--one-column-slim & {
+  .#{$_prefix}l-body--one-column-slim &,
+  .#{$_prefix}l-body--one-column-full & {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
   }
