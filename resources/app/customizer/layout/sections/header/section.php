@@ -8,8 +8,9 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
+$panel      = $customizer->get_panel( 'layout' );
 
-$customizer->section( 'design', [
-	'title' => __( 'Design', 'mimizuku' ),
-	'priority' => 1100,
+$customizer->section( 'header', [
+	'title'    => __( 'Header', 'mimizuku' ),
+	'priority' => 100,
 ] );

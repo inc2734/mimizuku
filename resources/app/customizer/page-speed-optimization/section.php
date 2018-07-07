@@ -12,5 +12,5 @@ $customizer = Customizer_Framework::init();
 $customizer->section( 'page-speed-optimization', [
 	'title'       => __( 'Page speed optimization', 'mimizuku' ),
 	'description' => __( 'This feature is a beta version.', 'mimizuku' ),
-	'priority'    => 2000,
+	'priority'    => 1070,
 ] );

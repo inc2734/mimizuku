@@ -8,7 +8,8 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'design' );
+$panel      = $customizer->get_panel( 'layout' );
+$section    = $customizer->get_section( 'layout' );
 
 $customizer->control( 'select', 'layout', [
 	'label'   => __( 'Page layout', 'mimizuku' ),
@@ -17,4 +18,4 @@ $customizer->control( 'select', 'layout', [
 ] );
 
 $control = $customizer->get_control( 'layout' );
-$control->join( $section );
+$control->join( $section )->join( $panel );

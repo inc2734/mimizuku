@@ -9,7 +9,12 @@
 <html <?php language_attributes(); ?> data-sticky-footer="true">
 <?php get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
-<body <?php body_class( [ 'l-body--one-column' ] ); ?>>
+<body <?php body_class( [ 'l-body--one-column' ] ); ?>
+	data-has-sidebar="false"
+	data-is-fluid-template="false"
+	data-is-slim-width="false"
+	>
+
 	<?php do_action( 'mimizuku_prepend_body' ); ?>
 
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>

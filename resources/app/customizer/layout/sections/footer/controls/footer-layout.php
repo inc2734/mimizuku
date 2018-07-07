@@ -8,14 +8,15 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'design' );
+$panel      = $customizer->get_panel( 'layout' );
+$section    = $customizer->get_section( 'footer' );
 
 $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'transport' => 'postMessage',
 	'label'     => __( 'Number of columns in the footer widget area', 'mimizuku' ),
-	'priority'  => 140,
+	'priority'  => 100,
 	'default'   => '1-4',
-	'choices' => [
+	'choices'   => [
 		'1-1' => __( '1 column', 'mimizuku' ),
 		'1-2' => __( '2 columns', 'mimizuku' ),
 		'1-3' => __( '3 columns', 'mimizuku' ),
@@ -24,7 +25,7 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 ] );
 
 $control = $customizer->get_control( 'footer-widget-area-column-size' );
-$control->join( $section );
+$control->join( $section )->join( $panel );
 $control->partial( [
 	'selector'            => '.l-footer-widget-area',
 	'container_inclusive' => true,

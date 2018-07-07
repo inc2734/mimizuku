@@ -12,4 +12,12 @@
       transform: rotate(90deg);
     }
   }
+
+  &__item {
+    @include _padding(.5, .5, 0);
+  }
+
+  &__submenu {
+    @include _margin-right(-.5);
+  }
 }

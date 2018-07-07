@@ -8,8 +8,9 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
+$panel      = $customizer->get_panel( 'design' );
 
-$customizer->panel( 'seo-sns', array(
-	'title'    => __( 'SEO/SNS', 'mimizuku' ),
-	'priority' => 1040,
-) );
+$customizer->section( 'base-design', [
+	'title'    => __( 'Base design settings', 'mimizuku' ),
+	'priority' => 100,
+] );

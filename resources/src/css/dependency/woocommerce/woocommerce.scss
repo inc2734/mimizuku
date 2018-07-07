@@ -1,3 +1,7 @@
+@charset 'utf-8';
+
+@import '../../core/core';
+
 .woocommerce-input-wrapper,
 .quantity,
 .woocommerce-EditAccountForm,
@@ -17,10 +21,20 @@
 }
 
 .woocommerce-MyAccount-content,
-.woocommerce-MyAccount-content > [class^="woocommerce-"],
-.woocommerce-MyAccount-content > header,
-.woocommerce-checkout {
+.woocommerce-MyAccount-content > section[class^="woocommerce-"],
+.woocommerce-checkout,
+.woocommerce-order,
+.woocommerce-order > section[class^="woocommerce-"] {
   @include _content();
+
+  > h2,
+  > header > h2 {
+    @include _margin-bottom(.5);
+  }
+
+  > header + .shop_table {
+    @include _margin-top(.5);
+  }
 }
 
 .woocommerce-MyAccount-navigation {
@@ -62,6 +76,11 @@
   max-height: 37px;
 }
 
-.woocommerce-Tabs-panel {
+.woocommerce-Tabs-panel,
+.related.products {
   @include entry-content();
+}
+
+.related.products {
+  @include _margin-top(2);
 }

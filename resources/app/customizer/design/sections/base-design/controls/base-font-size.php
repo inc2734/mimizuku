@@ -8,7 +8,8 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'design' );
+$panel      = $customizer->get_panel( 'design' );
+$section    = $customizer->get_section( 'base-design' );
 
 $customizer->control( 'number', 'base-font-size', [
 	'label'    => __( 'Base font size(px)', 'mimizuku' ),
@@ -17,4 +18,4 @@ $customizer->control( 'number', 'base-font-size', [
 ] );
 
 $control = $customizer->get_control( 'base-font-size' );
-$control->join( $section );
+$control->join( $section )->join( $panel );
