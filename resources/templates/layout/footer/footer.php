@@ -7,6 +7,7 @@
 ?>
 <footer class="l-footer" role="content-info">
 	<?php get_template_part( 'template-parts/footer-widget-area' ); ?>
+	<?php get_template_part( 'template-parts/footer-sub-nav' ); ?>
 
 	<div class="c-container">
 		<?php get_template_part( 'template-parts/copyright' ); ?>

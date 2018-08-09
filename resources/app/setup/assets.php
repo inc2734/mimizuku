@@ -60,7 +60,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'fontawesome5',
 		'https://use.fontawesome.com/releases/v5.0.9/js/all.js',
 		[ mimizuku_get_main_script_handle() ],
-		false,
+		'5.0.9',
 		true
 	);
 
@@ -68,7 +68,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'fontawesome5-v4-shims',
 		'https://use.fontawesome.com/releases/v5.0.9/js/v4-shims.js',
 		[ 'fontawesome5' ],
-		false,
+		'5.0.9',
 		true
 	);
 } );

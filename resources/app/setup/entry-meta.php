@@ -65,11 +65,13 @@ function mimizuku_entry_meta_items_categories() {
 		return;
 	}
 	?>
-	<li class="c-meta__item c-meta__item--categories">
-		<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'mimizuku' ); ?></span>
-		<i class="fas fa-folder" aria-hidden="true"></i>
-		<a href="<?php echo esc_url( get_term_link( $categories[0] ) ); ?>"><?php echo esc_html( $categories[0]->name ); ?></a>
-	</li>
+	<?php foreach ( $categories as $category ) : ?>
+		<li class="c-meta__item c-meta__item--categories">
+			<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'mimizuku' ); ?></span>
+			<i class="fas fa-folder" aria-hidden="true"></i>
+			<a href="<?php echo esc_url( get_term_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
+		</li>
+	<?php endforeach; ?>
 	<?php
 }
 add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_categories', 40 );
@@ -78,16 +80,18 @@ add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_categories',
  * Tags
  */
 function mimizuku_entry_meta_items_tags() {
-	$tags = get_the_tag_list( '', ', ' );
+	$tags = get_the_terms( get_the_ID(), 'post_tag' );
 	if ( ! $tags ) {
 		return;
 	}
 	?>
-	<li class="c-meta__item c-meta__item--categories">
-		<span class="screen-reader-text"><?php esc_html_e( 'Tags', 'mimizuku' ); ?></span>
-		<i class="fas fa-tags" aria-hidden="true"></i>
-		<?php the_tags( '', ', ', '' ); ?>
-	</li>
+	<?php foreach ( $tags as $tag ) : ?>
+		<li class="c-meta__item c-meta__item--categories">
+			<span class="screen-reader-text"><?php esc_html_e( 'Tags', 'mimizuku' ); ?></span>
+			<i class="fas fa-tags" aria-hidden="true"></i>
+			<a href="<?php echo esc_url( get_term_link( $tag ) ); ?>"><?php echo esc_html( $tag->name ); ?></a>
+		</li>
+	<?php endforeach; ?>
 	<?php
 }
 add_action( 'mimizuku_entry_meta_items', 'mimizuku_entry_meta_items_tags', 50 );

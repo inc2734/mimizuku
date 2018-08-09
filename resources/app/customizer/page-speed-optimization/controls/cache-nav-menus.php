@@ -9,9 +9,9 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'http2-server-push', [
-	'label'    => __( 'Use HTTP2 Server Push', 'mimizuku' ),
-	'priority' => 110,
+$customizer->control( 'checkbox', 'cache-nav-menus', [
+	'label'    => __( 'Cache nav menus', 'mimizuku' ),
+	'priority' => 150,
 	'default'  => false,
 ] );
 
@@ -20,5 +20,5 @@ if ( ! is_customize_preview() ) {
 }
 
 $section = $customizer->get_section( 'page-speed-optimization' );
-$control = $customizer->get_control( 'http2-server-push' );
+$control = $customizer->get_control( 'cache-nav-menus' );
 $control->join( $section );

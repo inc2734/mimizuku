@@ -14,7 +14,7 @@
 	</header>
 
 	<?php
-	wpvc_get_template_part( 'template-parts/share-buttons', [
+	wpvc_get_template_part( 'template-parts/share-buttons', null, [
 		'_position' => 'top',
 	] );
 	?>
@@ -32,7 +32,7 @@
 
 	<footer class="c-entry__footer">
 		<?php
-		wpvc_get_template_part( 'template-parts/share-buttons', [
+		wpvc_get_template_part( 'template-parts/share-buttons', null, [
 			'_position' => 'bottom',
 		] );
 		?>

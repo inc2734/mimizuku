@@ -35,7 +35,8 @@
     color: adjust-hue(darken(desaturate($color, 70%), 70%), 40deg);
   }
 
-  > .mceEditable {
+  > .mceEditable,
+  &__body {
     @include _content(.75);
   }
 }
@@ -198,17 +199,15 @@
     margin-top: 0 !important;
   }
 
-  .#{$_prefix}l-body--one-column &,
-  .#{$_prefix}l-body--one-column-fluid &,
-  .#{$_prefix}l-body--one-column-slim &,
-  .#{$_prefix}l-body--one-column-full & {
+  [data-has-sidebar="false"] & {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
   }
 
   .#{$_prefix}l-body--one-column-slim & {
-    &__body {
-      margin: 0 auto;
+    &__container > * {
+      margin-right: auto;
+      margin-left: auto;
       max-width: $one-column-slim-max-width;
     }
   }

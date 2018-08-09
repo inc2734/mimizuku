@@ -1,59 +1,27 @@
 .#{$_prefix}l-header {
 	background-color: #fff;
+
+  .#{$_prefix}c-row {
+    &,
+    &__col {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /**
  * simple header
  */
 .#{$_prefix}l-simple-header {
-  &__row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-
-  &__branding {
-    flex: 0 0 auto;
-    @include _margin-right(1);
-  }
-
-  &__nav {
-    flex: 0 0 auto;
-    margin-left: auto;
-  }
 }
 
 /**
  * 1row header
  */
 .#{$_prefix}l-1row-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-
-  &__branding {
-    flex: 0 0 auto;
-    @include _margin-right(1);
-  }
-
-  &__for-wide {
-    flex: 0 1 auto;
-    margin-left: auto;
-    @include _hidden();
-
-    @include _media-min(lg) {
-      @include _visible();
-    }
-  }
-
-  &__for-narrow {
-    flex: 0 0 auto;
-    margin-left: auto;
-
-    @include _media-min(lg) {
-      @include _hidden();
+  .#{$_prefix}p-global-nav .#{$_prefix}c-navbar {
+    &__item {
+      flex: 0 1 auto;
     }
   }
 }
@@ -62,81 +30,17 @@
  * 2rows header
  */
 .#{$_prefix}l-2row-header {
-  &__row {
-    @include _container();
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    @include _media-min(lg) {
-      flex-wrap: wrap;
-    }
-  }
-
-  &__branding {
-    flex: 0 0 auto;
-    @include _margin-right(1);
-  }
-
-  &__for-wide {
-    flex: none;
-    width: 100%;
-    @include _hidden();
-
-    @include _media-min(lg) {
-      @include _visible();
-    }
-  }
-
-  &__for-narrow {
-    flex: 0 0 auto;
-    margin-left: auto;
-
-    @include _media-min(lg) {
-      @include _hidden();
-    }
-  }
 }
 
 /**
  * centered header
  */
 .#{$_prefix}l-center-header {
-  &__row {
-    @include _container();
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+  .#{$_prefix}p-global-nav .#{$_prefix}c-navbar {
+    justify-content: center;
 
-    @include _media-min(lg) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  &__branding {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  &__for-wide {
-    flex: 0 1 auto;
-    @include _hidden();
-
-    @include _media-min(lg) {
-      @include _visible();
-    }
-  }
-
-  &__for-narrow {
-    flex: 0 0 50px;
-    max-width: 100%;
-    text-align: right;
-
-    @include _media-min(lg) {
-      @include _hidden();
+    &__item {
+      flex: 0 1 auto;
     }
   }
 }

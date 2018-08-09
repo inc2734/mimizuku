@@ -16,12 +16,11 @@ use Inc2734\WP_Basis\App\Model\Drawer_Nav;
  */
 add_action( 'after_setup_theme', function() {
 	register_nav_menus( [
-		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
-		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
-		'social-nav' => esc_html__( 'Social Navigation', 'mimizuku' ),
+		'global-nav'     => esc_html__( 'Global Navigation (For PC)', 'mimizuku' ),
+		'drawer-nav'     => esc_html__( 'Drawer Navigation (For Mobile)', 'mimizuku' ),
+		'social-nav'     => esc_html__( 'Social Navigation', 'mimizuku' ),
+		'header-sub-nav' => esc_html__( 'Header Sub Navigation', 'mimizuku' ),
+		'footer-sub-nav' => esc_html__( 'Footer Sub Navigation', 'mimizuku' ),
+		'drawer-sub-nav' => esc_html__( 'Drawer Sub Navigation (For Mobile)', 'mimizuku' ),
 	] );
 } );
-
-new Global_Nav( 'global-nav' );
-new Drawer_Nav( 'drawer-nav' );
-new Global_Nav( 'social-nav' );

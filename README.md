@@ -17,7 +17,6 @@ Mimizuku is a WordPress starter theme or theme framework for child themes develo
 * WP-CLI
 * Composer
 * Node.js
-* Yarn
 
 ## Browser support
 * IE10 + Modern browser
@@ -28,9 +27,9 @@ Mimizuku is a WordPress starter theme or theme framework for child themes develo
 $ cd /PATH/TO/wp-content/themes
 $ git clone https://github.com/inc2734/mimizuku.git your-theme-name
 $ cd your-theme-name
-$ yarn install
+$ npm install
 $ composer install
-$ yarn run gulp build
+$ npm run build
 $ wp theme activate your-theme-name
 ```
 

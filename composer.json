@@ -22,7 +22,7 @@
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": ">=2.4.11"
+    "inc2734/mimizuku-core": ">=2.7.1"
   },
   "config": {
     "process-timeout": 0,
@@ -42,7 +42,7 @@
     "wpphpunit": "bash bin/wpphpunit.sh",
     "phpunit": "bash bin/phpunit.sh",
     "post-install-cmd": [
-      "yarn run gulp build"
+      "npm run build"
     ],
     "post-update-cmd": [
       "composer run post-install-cmd"

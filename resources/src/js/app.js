@@ -8,6 +8,7 @@ import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.cont
 import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
 import '../../vendor/inc2734/wp-contents-outline/src/assets/js/wp-contents-outline.js';
 import './_wpaw-pickup-slider.js';
+import './_active-menu.js';
 
 import BasisStickyHeader from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/js/sticky-header.js';
 new BasisStickyHeader();
@@ -34,3 +35,5 @@ $(window).on('elementor/frontend/init', () => {
     }
   });
 });
+
+$('.p-global-nav').MimizukuActiveMenu();
