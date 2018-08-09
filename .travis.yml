@@ -32,7 +32,7 @@ script:
 before_deploy:
 - npm run zip
 - ls -la mimizuku.zip
-- export RELEASE_FILE=$(ls .zip)mimizuku
+- export RELEASE_FILE=$(ls mimizuku.zip)
 deploy:
   provider: releases
   api_key:
