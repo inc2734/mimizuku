@@ -10,3 +10,4 @@ release/
 mimizuku.zip
 .travis/github_deploy_key
 yarn-error.log
+mimizuku/
