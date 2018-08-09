@@ -53,3 +53,4 @@ deploy:
   on:
     tags: true
     repo: inc2734/mimizuku
+    php: 7.1
